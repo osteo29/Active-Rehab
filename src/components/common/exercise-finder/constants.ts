@@ -151,3 +151,23 @@ export const EXERCISE_FINDER_QUICK_GROUPS = [
   {slug: 'core' as StaticMuscleSlug, accent: 'bg-emerald-50 text-emerald-700 border-emerald-200'},
   {slug: 'legs' as StaticMuscleSlug, accent: 'bg-orange-50 text-orange-700 border-orange-200'},
 ];
+
+export const LEVEL_COLOR_MAP: Record<string, string> = {
+  beginner: 'border-emerald-300 bg-emerald-50 text-emerald-700',
+  intermediate: 'border-amber-300 bg-amber-50 text-amber-700',
+  advanced: 'border-red-300 bg-red-50 text-red-700',
+};
+
+export const EQUIPMENT_COLOR_MAP: Record<string, string> = {
+  bodyweight: 'border-violet-300 bg-violet-50 text-violet-700',
+  dumbbell: 'border-sky-300 bg-sky-50 text-sky-700',
+  barbell: 'border-slate-400 bg-slate-100 text-slate-700',
+  machine: 'border-orange-300 bg-orange-50 text-orange-700',
+  band: 'border-pink-300 bg-pink-50 text-pink-700',
+};
+
+export const TYPE_COLOR_MAP: Record<string, string> = {
+  strength: 'border-red-300 bg-red-50 text-red-700',
+  hypertrophy: 'border-blue-300 bg-blue-50 text-blue-700',
+  endurance: 'border-green-300 bg-green-50 text-green-700',
+};

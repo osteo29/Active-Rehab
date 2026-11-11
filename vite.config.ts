@@ -120,18 +120,6 @@ export default defineConfig(({mode}) => {
               return 'supabase-vendor';
             }
 
-            if (id.includes('node_modules/html2canvas')) {
-              return 'html2canvas-renderer';
-            }
-
-            if (id.includes('node_modules/jspdf')) {
-              return 'jspdf-renderer';
-            }
-
-            if (id.includes('node_modules/qrcode')) {
-              return 'pdf-branding';
-            }
-
             if (id.includes('node_modules/@google/genai')) {
               return 'ai-vendor';
             }

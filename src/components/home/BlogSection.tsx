@@ -22,7 +22,7 @@ const BlogSection = memo(
     const isAr = lang === 'ar';
 
     return (
-      <section id="blog" className="section-surface bg-slate-50 py-24">
+      <section className="section-surface bg-slate-50 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>

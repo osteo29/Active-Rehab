@@ -68,6 +68,8 @@ const Navigation = memo(
     const [user, setUser] = useState<User | null>(null);
 
     const isActivePath = (path: string) => location.pathname.startsWith(path);
+    const homePath = navigationPaths.home(lang);
+    const homeSectionHref = (id: string) => (location.pathname === homePath ? `#${id}` : `${homePath}#${id}`);
 
     const generateLanguageSwitchUrl = (targetLang: Language): string => {
       const cleanPath = removeLangPrefix(location.pathname);
@@ -109,6 +111,23 @@ const Navigation = memo(
         subscription?.unsubscribe();
       };
     }, []);
+
+    useEffect(() => {
+      if (!isSidebarOpen) return;
+
+      const previousOverflow = document.body.style.overflow;
+      const closeOnEscape = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') setIsSidebarOpen(false);
+      };
+
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', closeOnEscape);
+
+      return () => {
+        document.body.style.overflow = previousOverflow;
+        window.removeEventListener('keydown', closeOnEscape);
+      };
+    }, [isSidebarOpen, setIsSidebarOpen]);
 
     const handleLogout = async () => {
       try {
@@ -159,17 +178,17 @@ const Navigation = memo(
         label: isAr ? 'لوحة المتابعة' : 'Tracking dashboard',
       },
       {
-        href: '#architect',
+        href: homeSectionHref('architect'),
         icon: <Brain className="h-5 w-5" />,
         label: t.architect.title,
       },
       {
-        href: '#food-db',
+        href: homeSectionHref('food-db'),
         icon: <Search className="h-5 w-5" />,
         label: isAr ? 'قاعدة الطعام' : 'Food data',
       },
       {
-        href: '#drug-nutrient-checker',
+        href: homeSectionHref('drug-nutrient-checker'),
         icon: <Pill className="h-5 w-5" />,
         label: isAr ? 'فحص الدواء والغذاء' : 'Drug-nutrient checker',
       },
@@ -179,7 +198,7 @@ const Navigation = memo(
         label: isAr ? 'الدايت والريجيم' : 'Diet & regimens',
       },
       {
-        href: '#blog',
+        href: homeSectionHref('blog'),
         icon: <BookOpen className="h-5 w-5" />,
         label: t.nav.insights,
       },
@@ -194,6 +213,10 @@ const Navigation = memo(
               className="fixed inset-0 z-[60] bg-slate-900/60 backdrop-blur-sm"
             />
             <aside
+              id="main-navigation-drawer"
+              role="dialog"
+              aria-modal="true"
+              aria-label={isAr ? 'القائمة الرئيسية' : 'Main menu'}
               className={`fixed top-0 z-[70] flex h-full w-[88vw] max-w-sm flex-col bg-white shadow-2xl ${
                 isAr ? 'right-0' : 'left-0'
               }`}
@@ -315,6 +338,7 @@ const Navigation = memo(
                               ? 'border border-health-green/20 bg-health-green/10 text-health-green'
                               : 'bg-slate-50 text-slate-700 hover:bg-soft-blue'
                           }`}
+                          aria-current={location.pathname.startsWith(item.href) ? 'page' : undefined}
                         >
                           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-health-green shadow-sm">
                             {item.icon}
@@ -391,6 +415,8 @@ const Navigation = memo(
                 onClick={() => setIsSidebarOpen(true)}
                 className="rounded-xl border border-transparent p-2 text-slate-200 transition-colors hover:border-white/10 hover:bg-white/6"
                 aria-label={isAr ? 'فتح القائمة الرئيسية' : 'Open main menu'}
+                aria-expanded={isSidebarOpen}
+                aria-controls="main-navigation-drawer"
               >
                 <Menu className="h-5 w-5" />
               </button>
@@ -398,24 +424,27 @@ const Navigation = memo(
             </div>
 
             <div className="hidden items-center gap-4 xl:flex">
-              <a href="#calculators" className="nav-link">
+              <a href={homeSectionHref('calculators')} className="nav-link">
                 {t.nav.calculators}
               </a>
               <Link
                 to={navigationPaths.injuries(lang)}
                 className={`nav-link ${isActivePath(navigationPaths.injuries(lang)) ? 'border-b-2 border-health-green pb-1 text-health-green' : ''}`}
+                aria-current={isActivePath(navigationPaths.injuries(lang)) ? 'page' : undefined}
               >
                 {isAr ? 'الإصابات' : 'Injuries'}
               </Link>
               <Link
                 to={navigationPaths.exercises(lang)}
                 className={`nav-link ${isActivePath(navigationPaths.exercises(lang)) ? 'border-b-2 border-health-green pb-1 text-health-green' : ''}`}
+                aria-current={isActivePath(navigationPaths.exercises(lang)) ? 'page' : undefined}
               >
                 {isAr ? 'التمارين' : 'Exercises'}
               </Link>
               <Link
                 to={navigationPaths.dashboard(lang)}
                 className={`nav-link ${isActivePath(navigationPaths.dashboard(lang)) ? 'border-b-2 border-health-green pb-1 text-health-green' : ''}`}
+                aria-current={isActivePath(navigationPaths.dashboard(lang)) ? 'page' : undefined}
               >
                 {isAr ? 'المتابعة' : 'Tracking'}
               </Link>
@@ -456,6 +485,7 @@ const Navigation = memo(
                   className={`rounded-full px-3 py-1 text-xs font-bold ${
                     lang === 'en' ? 'bg-white text-health-green shadow-sm' : 'text-slate-200'
                   }`}
+                  aria-pressed={lang === 'en'}
                 >
                   EN
                 </button>
@@ -464,6 +494,7 @@ const Navigation = memo(
                   className={`rounded-full px-3 py-1 text-xs font-bold ${
                     lang === 'ar' ? 'bg-white text-health-green shadow-sm' : 'text-slate-200'
                   }`}
+                  aria-pressed={lang === 'ar'}
                 >
                   AR
                 </button>
@@ -473,6 +504,7 @@ const Navigation = memo(
                 onClick={onToggleTheme}
                 className="hidden rounded-xl border border-white/10 bg-white/6 px-3 py-2 text-slate-100 transition-all hover:border-health-green/30 hover:bg-white/10 sm:flex"
                 aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                aria-pressed={theme === 'dark'}
               >
                 {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
               </button>

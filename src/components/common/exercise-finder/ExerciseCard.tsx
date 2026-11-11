@@ -1,9 +1,31 @@
-import {useEffect, useState, type ReactNode} from 'react';
+import {useState, type ReactNode} from 'react';
+import {Dumbbell, Flame, Timer, type LucideProps} from 'lucide-react';
 
 import {Badge} from './FilterField';
-import {EXERCISE_FALLBACK_THUMBNAIL} from './media';
 import {toTitle, translateBadge} from './filter-utils';
-import type {Exercise} from './types';
+import type {Exercise, ExerciseType, MainMuscle} from './types';
+
+const MUSCLE_GRADIENT: Record<MainMuscle, string> = {
+  chest: 'from-rose-500/90 to-pink-400/80',
+  back: 'from-sky-500/90 to-cyan-400/80',
+  shoulders: 'from-amber-500/90 to-orange-400/80',
+  biceps: 'from-violet-500/90 to-purple-400/80',
+  triceps: 'from-indigo-500/90 to-blue-400/80',
+  forearms: 'from-teal-500/90 to-emerald-400/80',
+  abs: 'from-emerald-500/90 to-green-400/80',
+  obliques: 'from-green-600/90 to-lime-500/80',
+  lower_back: 'from-cyan-500/90 to-sky-400/80',
+  glutes: 'from-pink-500/90 to-rose-400/80',
+  quadriceps: 'from-blue-500/90 to-indigo-400/80',
+  hamstrings: 'from-orange-500/90 to-amber-400/80',
+  calves: 'from-slate-500/90 to-gray-400/80',
+};
+
+const TYPE_ICON: Record<ExerciseType, React.ComponentType<LucideProps>> = {
+  strength: Dumbbell,
+  hypertrophy: Flame,
+  endurance: Timer,
+};
 
 function highlightText(text: string, query: string): ReactNode {
   if (!query.trim()) return text;
@@ -29,42 +51,15 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
   };
   const isMultiMuscle = new Set(exercise.muscles.map((item) => item.split('_')[0])).size > 1;
   const [isExpanded, setIsExpanded] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageErrored, setImageErrored] = useState(false);
-  const imageSrc = imageErrored ? EXERCISE_FALLBACK_THUMBNAIL : exercise.imageUrl || EXERCISE_FALLBACK_THUMBNAIL;
-
-  useEffect(() => {
-    setImageLoaded(false);
-    setImageErrored(false);
-  }, [exercise.imageUrl, exercise.name]);
+  const gradient = MUSCLE_GRADIENT[exercise.mainMuscle] || 'from-slate-500/90 to-gray-400/80';
+  const TypeIcon = TYPE_ICON[exercise.exerciseType] || Dumbbell;
 
   return (
     <article className={`medical-card h-full border-l-4 p-5 sm:p-6 ${difficultyBorderMap[exercise.level]}`}>
       <div className="flex h-full flex-col gap-4">
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-[linear-gradient(180deg,#f8fafc,#eef2ff)]">
-          <div className="relative aspect-[16/10]">
-            {!imageLoaded ? (
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 animate-pulse bg-[linear-gradient(110deg,rgba(226,232,240,0.85),rgba(241,245,249,1),rgba(226,232,240,0.85))]"
-              />
-            ) : null}
-            <img
-              src={imageSrc}
-              alt={exercise.imageAlt || `${exercise.name} exercise illustration`}
-              className={`h-full w-full object-cover transition duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-              loading="lazy"
-              onLoad={() => setImageLoaded(true)}
-              onError={() => {
-                if (!imageErrored) {
-                  setImageLoaded(false);
-                  setImageErrored(true);
-                  return;
-                }
-                setImageLoaded(true);
-              }}
-            />
-          </div>
+        <div className={`-mx-5 -mt-5 sm:-mx-6 sm:-mt-6 flex items-center gap-3 rounded-t-[inherit] bg-gradient-to-r ${gradient} px-5 py-3 sm:px-6`}>
+          <TypeIcon className="h-5 w-5 text-white/90" aria-hidden="true" />
+          <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/95">{toTitle(exercise.mainMuscle)}</span>
         </div>
 
         {isExpanded && exercise.videoUrl ? (

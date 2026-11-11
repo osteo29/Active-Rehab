@@ -51,6 +51,7 @@
         "autoprefixer": "^10.4.21",
         "jsdom": "^29.0.2",
         "rimraf": "^6.0.1",
+        "sharp": "^0.35.5",
         "supabase": "^2.101.0",
         "tailwindcss": "^4.1.14",
         "tsx": "^4.21.0",

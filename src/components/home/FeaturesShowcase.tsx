@@ -20,24 +20,24 @@ const FeaturesShowcase = memo(({lang, quickSections}: FeaturesShowcaseProps) => 
   const principles = [
     {
       icon: HeartPulse,
-      title: isEn ? 'Recovery-first structure' : 'ترتيب يبدأ من التعافي',
+      title: isEn ? 'Start with the issue' : 'ابدأ بالمشكلة التي تواجهك',
       desc: isEn
-        ? 'The homepage now highlights the actions people usually need first instead of flattening everything into one long scroll.'
-        : 'الواجهة الآن تبرز الخطوات التي يحتاجها المستخدم أولًا بدل وضع كل شيء بنفس الوزن البصري.',
+        ? 'Find an injury guide first, then move to the exercises and advice that make sense for that stage.'
+        : 'ابدأ بدليل الإصابة، ثم انتقل للتمارين والنصائح التي تناسب مرحلتك الحالية.',
     },
     {
       icon: Target,
-      title: isEn ? 'Sharper visual hierarchy' : 'أولوية بصرية أوضح',
+      title: isEn ? 'Use the tools you need' : 'استخدم الأداة التي تحتاجها',
       desc: isEn
-        ? 'Dark-gold brand accents create stronger focus around actions, sections, and transition points.'
-        : 'الهوية الداكنة مع اللمسات الذهبية توضح مناطق الحركة والانتقال بين الأقسام بشكل أفضل.',
+        ? 'Use calculators for a quick check, then save the numbers you want to follow over time.'
+        : 'استخدم الحاسبات لتقييم سريع، ثم سجّل الأرقام التي تريد متابعتها مع الوقت.',
     },
     {
       icon: ShieldCheck,
-      title: isEn ? 'Professional medical tone' : 'طابع مهني أنضف',
+      title: isEn ? 'Keep it safe and realistic' : 'تدرّج بشكل آمن وواقعي',
       desc: isEn
-        ? 'The brand feels more clinical and premium without losing the educational safety framing.'
-        : 'الهوية أصبحت أقرب لعلامة احترافية في التأهيل مع الحفاظ على الطابع التعليمي الآمن.',
+        ? 'Use the cautions and progression notes to make decisions without pushing through warning signs.'
+        : 'راجع التنبيهات ومعايير التدرّج حتى لا تضغط على نفسك رغم إشارات الألم أو التهيّج.',
     },
   ];
 
@@ -48,15 +48,15 @@ const FeaturesShowcase = memo(({lang, quickSections}: FeaturesShowcaseProps) => 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 max-w-3xl">
           <div className="text-xs font-bold uppercase tracking-[0.18em] text-health-green">
-            {isEn ? 'One clear entry point' : 'بداية واحدة واضحة'}
+            {isEn ? 'Start here' : 'ابدأ من هنا'}
           </div>
           <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            {isEn ? 'Everything important is easier to reach from the first screen' : 'كل ما يهم أصبح أقرب من أول شاشة'}
+            {isEn ? 'Choose the next useful step, not another long list' : 'اختر خطوتك التالية بدل ما تتوه بين خيارات كثيرة'}
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
             {isEn
-              ? 'Instead of repeating similar blocks, the homepage now routes visitors into the right area with stronger emphasis and calmer spacing.'
-              : 'بدل تكرار بطاقات متشابهة، الصفحة الرئيسية توجه الزائر الآن إلى القسم الصحيح بهوية أقوى ومسافات أهدأ.'}
+              ? 'Whether you are returning after pain, rebuilding your routine, or checking a health number, each section has a clear purpose.'
+              : 'سواء كنت راجع بعد ألم، أو تبني روتينك من جديد، أو تراجع رقمًا صحيًا، كل قسم هنا له وظيفة واضحة.'}
           </p>
         </div>
 
@@ -79,7 +79,7 @@ const FeaturesShowcase = memo(({lang, quickSections}: FeaturesShowcaseProps) => 
                 <h3 className="text-lg font-bold text-slate-900">{section.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-600">{section.desc}</p>
                 <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-health-green">
-                  <span>{isEn ? 'Open section' : 'افتح القسم'}</span>
+                  <span>{isEn ? 'Go to this section' : 'اذهب إلى القسم'}</span>
                   <ArrowRight className={`h-4 w-4 ${lang === 'ar' ? 'rotate-180' : ''}`} />
                 </div>
               </a>
@@ -88,7 +88,7 @@ const FeaturesShowcase = memo(({lang, quickSections}: FeaturesShowcaseProps) => 
 
           <div className="panel-strong rounded-[2rem] p-6 text-white">
             <div className="text-xs font-bold uppercase tracking-[0.18em] text-amber-100/80">
-              {isEn ? 'Why the new identity works' : 'لماذا الهوية الجديدة أفضل'}
+              {isEn ? 'What you can do here' : 'ماذا يمكنك أن تفعل هنا'}
             </div>
             <div className="mt-5 space-y-4">
               {principles.map((item) => (

@@ -1,4 +1,4 @@
-import {lazy, Suspense, useEffect, useMemo, useState} from 'react';
+import {lazy, useEffect, useMemo, useState} from 'react';
 import {buildQuickSections} from './features/tools/app/config';
 import type {CalculatorType} from './features/tools/app/types';
 import {useAIDietPlan} from './hooks/useAIDietPlan';
@@ -8,7 +8,7 @@ import {useCalculatorWorkspace} from './hooks/useCalculatorWorkspace';
 import {setPreferredLanguage} from './services/languagePreference';
 import {translations, type Language} from './services/translations';
 import {usePublishedArticles} from './services/articleStudio';
-import {HomeSectionFallback, IconComponent} from './components/home/AppShellHelpers';
+import {DeferredHomeSection, IconComponent} from './components/home/AppShellHelpers';
 import Hero from './components/home/Hero';
 import FeaturesShowcase from './components/home/FeaturesShowcase';
 import InjuryProtocolsHighlight from './components/home/InjuryProtocolsHighlight';
@@ -107,7 +107,7 @@ export default function App({
 
         <InjuryProtocolsHighlight lang={lang} />
 
-        <Suspense fallback={<HomeSectionFallback className="bg-slate-50 py-20" />}>
+        <DeferredHomeSection id="architect" className="bg-slate-50 py-20">
           <HealthProfileSection
             aiDietPlan={aiDietPlan}
             architectDraft={architectDraft}
@@ -122,9 +122,9 @@ export default function App({
             t={t}
             updateArchitectDraft={updateArchitectDraft}
           />
-        </Suspense>
+        </DeferredHomeSection>
 
-        <Suspense fallback={<HomeSectionFallback className="bg-white py-20" />}>
+        <DeferredHomeSection id="calculators" className="bg-white py-20">
           <CalculatorSection
             assessmentSnapshot={assessmentSnapshot}
             controller={calculator}
@@ -132,9 +132,9 @@ export default function App({
             practicalGuide={practicalGuide}
             t={t}
           />
-        </Suspense>
+        </DeferredHomeSection>
 
-        <Suspense fallback={<HomeSectionFallback className="bg-white py-20" />}>
+        <DeferredHomeSection className="bg-white py-20">
           <SupportToolsSection
             lang={lang}
             t={t}
@@ -148,11 +148,11 @@ export default function App({
             addFoodToMeal={calculator.addFoodToMeal}
             setIsCustomModalOpen={calculator.setIsCustomModalOpen}
           />
-        </Suspense>
+        </DeferredHomeSection>
 
-        <Suspense fallback={<HomeSectionFallback className="bg-white py-16" />}>
+        <DeferredHomeSection className="bg-white py-16">
           <WhatsNew lang={lang} />
-        </Suspense>
+        </DeferredHomeSection>
 
         <section className="bg-slate-50 py-8">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -165,22 +165,22 @@ export default function App({
           </div>
         </section>
 
-        <Suspense fallback={<HomeSectionFallback className="bg-white py-12" />}>
+        <DeferredHomeSection className="bg-white py-12">
           <TrustSection lang={lang} />
-        </Suspense>
+        </DeferredHomeSection>
 
-        <Suspense fallback={<HomeSectionFallback className="bg-slate-50 py-20" />}>
+        <DeferredHomeSection id="blog" className="bg-slate-50 py-20">
           <BlogSection
             t={t}
             lang={lang}
             articles={articles}
             IconComponent={IconComponent}
           />
-        </Suspense>
+        </DeferredHomeSection>
 
-        <Suspense fallback={<HomeSectionFallback className="bg-white py-16" />}>
+        <DeferredHomeSection id="about" className="bg-white py-16">
           <AboutSection lang={lang} />
-        </Suspense>
+        </DeferredHomeSection>
       </main>
 
       <Footer t={t} lang={lang} />

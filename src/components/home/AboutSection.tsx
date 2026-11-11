@@ -14,7 +14,7 @@ const AboutSection = memo(({lang}: {lang: Language}) => {
   const isAr = lang === 'ar';
 
   return (
-    <section id="about" className="relative overflow-hidden bg-[linear-gradient(180deg,rgba(255,252,247,0.98),rgba(248,242,232,0.96))] py-24">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,rgba(255,252,247,0.98),rgba(248,242,232,0.96))] py-24">
       <div className="pointer-events-none absolute left-0 top-0 h-full w-full overflow-hidden">
         <div className="absolute -left-20 top-1/4 h-96 w-96 rounded-full bg-health-green/5 blur-[100px]" />
         <div className="absolute -right-20 bottom-1/4 h-96 w-96 rounded-full bg-medical-blue/5 blur-[100px]" />

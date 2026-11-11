@@ -1,5 +1,5 @@
-import {useEffect, useMemo, useState, type ComponentType} from 'react';
-import {Accessibility, Activity, ArrowRight, Bone, ChevronRight, Dumbbell, Network, type LucideProps} from 'lucide-react';
+import {useEffect, useMemo, useState} from 'react';
+import {Activity, ArrowRight, ChevronRight, Dumbbell, Network} from 'lucide-react';
 import {Link, Navigate, useParams} from 'react-router-dom';
 
 import {ExerciseCard} from '../components/common/exercise-finder/ExerciseCard';
@@ -18,7 +18,7 @@ import {
 import {TrainingSystemCard} from '../components/common/exercise-finder/TrainingSystemCard';
 import {WeeklyPlanCard} from '../components/common/exercise-finder/WeeklyPlanCard';
 import type {StaticMuscleSlug} from '../components/common/exercise-finder/types';
-import {REGION_VISUAL_ACCENTS} from '../components/common/exercise-finder/media';
+
 import Seo from '../components/seo/Seo';
 import {getLocalCatalogInjuries, getRelatedCatalogInjuriesByIds, type InjuryCatalogEntry} from '../services/injuryService';
 import {REHAB_REGION_CONFIG} from '../services/rehabRegionConfig';
@@ -32,11 +32,7 @@ function isStaticMuscleSlug(value: string | undefined): value is StaticMuscleSlu
   return Boolean(value && EXERCISE_FINDER_STATIC_SLUGS.includes(value as StaticMuscleSlug));
 }
 
-const REGION_ICON_MAP: Partial<Record<StaticMuscleSlug, ComponentType<LucideProps>>> = {
-  chest: Activity,
-  back: Bone,
-  shoulders: Accessibility,
-};
+
 
 export default function ExerciseRegionPage() {
   const lang = usePreferredLang();
@@ -88,8 +84,7 @@ export default function ExerciseRegionPage() {
   const systems = getSystemsForRegion(region).slice(0, 3);
   const visibleRelatedInjuries = relatedInjuries.length ? relatedInjuries : fallbackRelatedInjuries;
   const canonicalPath = `/exercises/${normalizeExerciseUrlSlug(region)}`;
-  const AnatomyIcon = REGION_ICON_MAP[region] || Network;
-  const anatomyAccent = REGION_VISUAL_ACCENTS[region] || 'from-slate-100 via-white to-slate-50';
+
   const seoTitle = isAr
     ? safeText(`تمارين ${label} | تشريح مبسط وخطة تمارين كاملة`)
     : safeText(`${label} Exercises | Anatomy, exercise library, and workout systems`);
@@ -210,23 +205,7 @@ export default function ExerciseRegionPage() {
               <Network className="h-4 w-4 text-health-green" />
               <span>{isAr ? 'عرض محايد للمنطقة' : 'Neutral region visual'}</span>
             </div>
-            <div className={`mt-5 overflow-hidden rounded-[1.5rem] border border-slate-200 bg-gradient-to-br ${anatomyAccent} p-5`}>
-              <div className="flex min-h-[240px] flex-col items-center justify-center rounded-[1.25rem] border border-white/80 bg-white/85 px-6 py-8 text-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-700">
-                  <AnatomyIcon className="h-10 w-10" aria-hidden="true" />
-                </div>
-                <div className="mt-5 max-w-md space-y-2">
-                  <div className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500">
-                    {isAr ? 'الرسوم التشريحية قيد الاستبدال' : 'Anatomy visual paused'}
-                  </div>
-                  <p className="mixed-text text-sm leading-7 text-slate-600">
-                    {isAr
-                      ? 'تم إيقاف الرسوم التشريحية المؤقتة لأننا لا نعرض إلا صورًا طبية موثقة. هذه المساحة تعرض الآن أيقونة محايدة إلى حين إضافة ملفات معتمدة.'
-                      : 'The temporary anatomy SVG has been removed. We only surface verified medical visuals here, so this section uses a neutral icon until curated anatomy assets are approved.'}
-                  </p>
-                </div>
-              </div>
-            </div>
+
             <div className="mt-4 space-y-3">
               {(isAr ? content.anatomyAr : content.anatomyEn).map((item) => (
                 <div key={item} className="mixed-text rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-7 text-slate-700">

@@ -106,7 +106,7 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
 
   return (
     <>
-      <section id="calculators" className="bg-white py-16 sm:py-20 lg:py-24">
+      <section className="bg-white py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-col gap-6 sm:mb-12">
             <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">

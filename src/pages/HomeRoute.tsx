@@ -1,4 +1,5 @@
 import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
 import App from '../App';
 import ManagedSeo from '../components/seo/ManagedSeo';
 import {getCalculatorPageBySlug, type CalculatorPageSlug} from '../services/calculatorPages';
@@ -17,6 +18,7 @@ export default function HomeRoute({
   onToggleTheme: () => void;
 }) {
   const lang = usePreferredLang();
+  const location = useLocation();
   const calculatorPage = getCalculatorPageBySlug(calculatorSlug);
   const canonicalPath = calculatorPage
     ? `/calculators/${calculatorPage.slug}`
@@ -32,6 +34,17 @@ export default function HomeRoute({
     }, 0);
     return () => clearTimeout(t);
   }, [scrollToId]);
+
+  useEffect(() => {
+    const id = location.hash.slice(1);
+    if (!id) return;
+
+    const timer = window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [location.hash]);
 
   return (
     <>

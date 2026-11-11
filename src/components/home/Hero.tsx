@@ -8,34 +8,34 @@ const Hero = memo(({lang}: {lang: Language}) => {
   const isAr = lang === 'ar';
 
   const proofPoints = isAr
-    ? ['بروتوكولات إصابات عملية', 'تغذية وتأهيل في نفس المسار', 'متابعة أوضح بعد كل خطوة']
-    : ['Practical injury protocols', 'Nutrition and rehab in one flow', 'Clearer follow-up after each step'];
+    ? ['خطوات مناسبة لمرحلة التعافي', 'تمارين وتغذية في مكان واحد', 'متابعة بسيطة لتقدمك']
+    : ['Guidance for each recovery stage', 'Training and nutrition in one place', 'Simple progress tracking'];
 
   const spotlightCards = isAr
     ? [
         {
-          title: 'ابدأ من البروتوكول المناسب',
-          description: 'صفحات إصابات مرتبة حسب التعافي بدل التشتت بين أدوات كثيرة.',
+          title: 'اعرف من أين تبدأ',
+          description: 'اختر الإصابة، ثم راجع التمارين والتنبيهات وخطوات التدرّج المناسبة لها.',
           href: navigationPaths.injuries(lang),
           icon: ClipboardList,
         },
         {
-          title: 'راجع تقدمك بسرعة',
-          description: 'لوحة متابعة أخف بصريًا وتخليك تعرف أنت وصلت لفين.',
+          title: 'سجّل ما تغيّر',
+          description: 'تابع الألم، الحركة، والالتزام حتى تعرف ما الذي يتحسن وما يحتاج تعديلًا.',
           href: navigationPaths.dashboard(lang),
           icon: BarChart3,
         },
       ]
     : [
         {
-          title: 'Start from the right protocol',
-          description: 'Recovery pages are organized around the injury journey, not scattered tools.',
+          title: 'Know where to start',
+          description: 'Choose the injury, then review suitable exercises, cautions, and progressions.',
           href: navigationPaths.injuries(lang),
           icon: ClipboardList,
         },
         {
-          title: 'Check progress faster',
-          description: 'A lighter tracking view helps you see what changed at a glance.',
+          title: 'Track what changes',
+          description: 'Log pain, movement, and consistency so you can see what is improving.',
           href: navigationPaths.dashboard(lang),
           icon: BarChart3,
         },
@@ -52,18 +52,18 @@ const Hero = memo(({lang}: {lang: Language}) => {
           <div className={`max-w-3xl ${isAr ? 'lg:text-right' : 'lg:text-left'}`}>
             <div className="glass-panel inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-amber-100 sm:text-xs">
               <Sparkles className="h-4 w-4 text-health-green" />
-              <span>{isAr ? 'هوية جديدة وتجربة أوضح للتعافي' : 'Refined identity for recovery-first care'}</span>
+              <span>{isAr ? 'دليل عملي للتعافي والحركة' : 'Practical guidance for recovery and movement'}</span>
             </div>
 
             <h1 className="mt-6 max-w-3xl text-4xl font-black leading-[0.98] tracking-[-0.04em] text-white sm:text-5xl lg:text-[4.2rem]">
-              {isAr ? 'التعافي بواجهة' : 'Recovery with a'}{' '}
-              <span className="brand-metal-text">{isAr ? 'أقوى وأوضح' : 'sharper identity'}</span>
+              {isAr ? 'ارجع للحركة' : 'Get back to'}{' '}
+              <span className="brand-metal-text">{isAr ? 'بثقة وبدون استعجال' : 'movement with confidence'}</span>
             </h1>
 
             <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
               {isAr
-                ? 'Active Rehab الآن أقرب لشخصية اللوجو الجديد: واجهة أنضف، حضور بصري أقوى، ومسار واضح يبدأ من الإصابة ثم ينتقل للتغذية والمتابعة بدون ازدحام.'
-                : 'Active Rehab now feels closer to the new logo: cleaner structure, stronger visual presence, and a homepage that guides people from injury support into nutrition and follow-up without clutter.'}
+                ? 'ابدأ من المشكلة التي تواجهك، واختر خطوات تناسب وضعك الحالي. ستجد تمارين، إرشادات غذائية، وأدوات متابعة تساعدك على التقدم بهدوء.'
+                : 'Start with the issue you are dealing with, then choose steps that fit where you are today. Find exercises, nutrition guidance, and simple tools to help you progress steadily.'}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2.5">
@@ -84,14 +84,14 @@ const Hero = memo(({lang}: {lang: Language}) => {
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-health-green px-5 py-3.5 text-sm font-bold text-slate-950 shadow-[0_18px_36px_rgba(196,154,66,0.22)] transition-transform hover:-translate-y-0.5 hover:bg-[#d3aa54]"
               >
                 <ClipboardList className="h-5 w-5" />
-                <span>{isAr ? 'ابدأ ببروتوكولات الإصابات' : 'Explore injury protocols'}</span>
+                <span>{isAr ? 'ابحث عن إصابتك' : 'Find your injury guide'}</span>
               </Link>
               <a
                 href="#calculators"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/14 bg-white/10 px-5 py-3.5 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/16"
               >
                 <ArrowRight className={`h-5 w-5 ${isAr ? 'rotate-180' : ''}`} />
-                <span>{isAr ? 'افتح الحاسبات' : 'Open calculators'}</span>
+                <span>{isAr ? 'استخدم أدوات التقييم' : 'Use assessment tools'}</span>
               </a>
             </div>
 
@@ -101,7 +101,7 @@ const Hero = memo(({lang}: {lang: Language}) => {
                 className="inline-flex items-center gap-2 text-sm font-semibold text-amber-100 transition-colors hover:text-white"
               >
                 <Bot className="h-4 w-4 text-health-green" />
-                <span>{isAr ? 'أو اسأل المساعد السريري مباشرة' : 'Or jump straight into the clinical assistant'}</span>
+                <span>{isAr ? 'لست متأكدًا من البداية؟ اسأل المساعد' : 'Not sure where to begin? Ask the assistant'}</span>
               </Link>
             </div>
           </div>

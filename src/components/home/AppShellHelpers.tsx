@@ -1,5 +1,5 @@
 import {Activity, BookOpen, Brain, Calculator, Calendar, ChevronRight, ClipboardList, Droplets, Filter, Flame, Globe, GraduationCap, HeartPulse, HelpCircle, Info, Menu, Percent, Plus, Scale, Search, ShieldAlert, Sparkles, Stethoscope, Tag, Trash2, Utensils, X, Zap} from 'lucide-react';
-import type {ComponentType} from 'react';
+import {Suspense, useEffect, useRef, useState, type ComponentType, type ReactNode} from 'react';
 
 const ICONS: Record<string, ComponentType<{className?: string}>> = {
   Activity,
@@ -63,5 +63,54 @@ export function HomeSectionFallback({
         </div>
       </div>
     </section>
+  );
+}
+
+export function DeferredHomeSection({
+  children,
+  className,
+  id,
+  lines,
+}: {
+  children: ReactNode;
+  className?: string;
+  id?: string;
+  lines?: number;
+}) {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [shouldRender, setShouldRender] = useState(false);
+
+  useEffect(() => {
+    const element = sectionRef.current;
+    if (!element || shouldRender) return;
+
+    if (!('IntersectionObserver' in window)) {
+      setShouldRender(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setShouldRender(true);
+        observer.disconnect();
+      },
+      {rootMargin: '700px 0px'},
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [shouldRender]);
+
+  return (
+    <div ref={sectionRef} id={id} className={id ? 'scroll-mt-20' : undefined}>
+      {shouldRender ? (
+        <Suspense fallback={<HomeSectionFallback className={className} lines={lines} />}>
+          {children}
+        </Suspense>
+      ) : (
+        <HomeSectionFallback className={className} lines={lines} />
+      )}
+    </div>
   );
 }
