@@ -244,6 +244,8 @@ export const translations = {
         contact: 'Contact',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
+        cookies: 'Cookie Policy',
+        disclaimer: 'Medical Disclaimer',
         social: 'Social Media'
       },
       contact: {
@@ -500,6 +502,8 @@ export const translations = {
         contact: 'اتصل بنا',
         privacy: 'سياسة الخصوصية',
         terms: 'شروط الخدمة',
+        cookies: 'سياسة الكوكيز',
+        disclaimer: 'إخلاء المسؤولية الطبي',
         social: 'وسائل التواصل'
       },
       contact: {

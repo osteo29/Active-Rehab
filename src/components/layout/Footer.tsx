@@ -79,7 +79,7 @@ const Footer = memo(({t, lang}: {t: any; lang: Language}) => {
                 {label: t.footer.links.privacy, href: navigationPaths.privacy(lang)},
                 {label: t.footer.links.terms, href: navigationPaths.terms(lang)},
                 {
-                  label: lang === 'en' ? 'Medical Disclaimer' : 'إخلاء المسؤولية الطبي',
+                  label: t.footer.links.disclaimer,
                   href: navigationPaths.disclaimer(lang),
                 },
               ].map((link) => (
@@ -150,10 +150,10 @@ const Footer = memo(({t, lang}: {t: any; lang: Language}) => {
               {t.footer.links.terms}
             </Link>
             <Link to={navigationPaths.cookies(lang)} className="text-sm text-slate-400 transition-colors hover:text-white">
-              {lang === 'en' ? 'Cookie Policy' : 'سياسة الكوكيز'}
+              {t.footer.links.cookies}
             </Link>
             <Link to={navigationPaths.disclaimer(lang)} className="text-sm text-slate-400 transition-colors hover:text-white">
-              {lang === 'en' ? 'Medical Disclaimer' : 'إخلاء المسؤولية الطبي'}
+              {t.footer.links.disclaimer}
             </Link>
           </div>
         </div>

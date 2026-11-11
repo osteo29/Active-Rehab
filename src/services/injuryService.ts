@@ -108,7 +108,9 @@ export async function getInjuryProtocolBySlugWithFallback(
   slug: string,
   lang: Language,
 ): Promise<{injury: InjuryProtocol | null; source: InjuryCatalogSource; remoteIds: string[]}> {
-  const [protocol, rows] = await Promise.all([fetchCompleteRehabProtocol(slug, lang), getRemoteInjuryRows()]);
+  const rowsPromise = getRemoteInjuryRows();
+  const protocolPromise = rowsPromise.then((rows) => fetchCompleteRehabProtocol(slug, lang, rows));
+  const [protocol, rows] = await Promise.all([protocolPromise, rowsPromise]);
   const source = getLastRehabProtocolSource() === 'supabase' ? 'supabase' : 'generated';
 
   return {

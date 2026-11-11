@@ -124,6 +124,30 @@ export async function fetchSupplementsByPhaseId(phaseId: string): Promise<Supple
 }
 
 /**
+ * Fetch supplements for several phases in one request. Complete-protocol
+ * loading uses this to avoid one network round trip per phase.
+ */
+export async function fetchSupplementsByPhaseIds(phaseIds: string[]): Promise<SupplementRow[]> {
+  if (!phaseIds.length) return [];
+
+  try {
+    const db = getSupabaseClient();
+    const { data, error } = await db
+      .from('supplements')
+      .select('*')
+      .in('phase_id', phaseIds)
+      .order('phase_id')
+      .order('order_index');
+
+    if (error) throw error;
+    return MedicalTextCore.parseDeep(data || []);
+  } catch (err) {
+    console.error('Error fetching supplements for phases:', err);
+    return [];
+  }
+}
+
+/**
  * Fetch meal examples for a phase
  */
 export async function fetchMealsByPhaseId(phaseId: string): Promise<MealRow[]> {
@@ -138,6 +162,29 @@ export async function fetchMealsByPhaseId(phaseId: string): Promise<MealRow[]> {
     return MedicalTextCore.parseDeep(data || []);
   } catch (err) {
     console.error(`Error fetching meals for phase ${phaseId}:`, err);
+    return [];
+  }
+}
+
+/**
+ * Fetch meal examples for several phases in one request. Keeping this batched
+ * prevents complete protocol views from producing an N+1 request pattern.
+ */
+export async function fetchMealsByPhaseIds(phaseIds: string[]): Promise<MealRow[]> {
+  if (!phaseIds.length) return [];
+
+  try {
+    const db = getSupabaseClient();
+    const { data, error } = await db
+      .from('meal_examples')
+      .select('*')
+      .in('phase_id', phaseIds)
+      .order('phase_id');
+
+    if (error) throw error;
+    return MedicalTextCore.parseDeep(data || []);
+  } catch (err) {
+    console.error('Error fetching meals for phases:', err);
     return [];
   }
 }
@@ -211,11 +258,29 @@ export async function fetchCompleteInjuryProtocol(
       return useArabic && arabicList.length ? arabicList : englishList;
     };
 
-    // Fetch supplements and meals for each phase
-    const phasesWithData = await Promise.all(
-      phases.map(async (phase) => {
-        const supplements = await fetchSupplementsByPhaseId(phase.id);
-        const mealRows = await fetchMealsByPhaseId(phase.id);
+    // Batch related records rather than making two requests for every phase.
+    const phaseIds = phases.map((phase) => phase.id);
+    const [allSupplements, allMeals] = await Promise.all([
+      fetchSupplementsByPhaseIds(phaseIds),
+      fetchMealsByPhaseIds(phaseIds),
+    ]);
+    const supplementsByPhaseId = new Map<string, SupplementRow[]>();
+    const mealsByPhaseId = new Map<string, MealRow[]>();
+
+    allSupplements.forEach((supplement) => {
+      const items = supplementsByPhaseId.get(supplement.phase_id) || [];
+      items.push(supplement);
+      supplementsByPhaseId.set(supplement.phase_id, items);
+    });
+    allMeals.forEach((meal) => {
+      const items = mealsByPhaseId.get(meal.phase_id) || [];
+      items.push(meal);
+      mealsByPhaseId.set(meal.phase_id, items);
+    });
+
+    const phasesWithData = phases.map((phase) => {
+        const supplements = supplementsByPhaseId.get(phase.id) || [];
+        const mealRows = mealsByPhaseId.get(phase.id) || [];
 
         // Convert supplements
         const supplementsConverted: SupplementProtocol[] = supplements.map((s) => ({
@@ -297,8 +362,7 @@ export async function fetchCompleteInjuryProtocol(
           vitaminCMg: phase.vitamin_c_mg || undefined,
           calciumMg: phase.calcium_mg || undefined,
         } as InjuryPhase;
-      })
-    );
+      });
 
     const faqItems = Array.isArray(pageContent?.faq_items) ? pageContent.faq_items : [];
     const mappedPageContent: InjuryPageContentData | undefined =

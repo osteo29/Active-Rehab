@@ -51,12 +51,12 @@ export default function AdminContentPage() {
     },
     {
       key: 'media',
-      title: isAr ? 'Ø§Ù„ÙˆØ³Ø§Ø¦Ø·' : 'Media',
-      description: isAr ? 'Ø±ÙØ¹ Ø§Ù„ØµÙˆØ±ØŒ ØªÙ†Ø¸ÙŠÙ…Ù‡Ø§ØŒ ÙˆÙ…ØªØ§Ø¨Ø¹Ø© Ù…ÙˆØ§Ø¶Ø¹ Ø§Ø³ØªØ®Ø¯Ø§Ù…Ù‡Ø§ ÙÙŠ Ø§Ù„Ù…Ø­ØªÙˆÙ‰.' : 'Upload images, organize them, and track where they are used in content.',
+      title: isAr ? 'الوسائط' : 'Media',
+      description: isAr ? 'رفع الصور، تنظيمها، ومتابعة مواضع استخدامها في المحتوى.' : 'Upload images, organize them, and track where they are used in content.',
       icon: UploadCloud,
       to: navigationPaths.adminMedia(uiLang),
       enabled: access.canManageMedia,
-      status: isAr ? 'Ø¬Ø¯ÙŠØ¯' : 'New',
+      status: isAr ? 'جديد' : 'New',
     },
     {
       key: 'seo',

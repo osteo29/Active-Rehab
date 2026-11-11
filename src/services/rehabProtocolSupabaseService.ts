@@ -316,8 +316,13 @@ export async function fetchRehabExercisesByPhaseIds(phaseIds: number[]): Promise
 export async function fetchCompleteRehabProtocol(
   slug: string,
   lang: Language = 'en',
+  protocolRows?: RehabProtocolRow[],
 ): Promise<InjuryProtocol | null> {
-  const protocolRow = await fetchRehabProtocolBySlug(slug);
+  // Detail pages commonly already requested the catalog. Reuse those rows so
+  // opening a protocol does not issue a second full protocols-table request.
+  const protocolRow = protocolRows
+    ? protocolRows.find((row) => getGeneratedRehabProtocolSlug(row.name) === slug) || null
+    : await fetchRehabProtocolBySlug(slug);
   if (!protocolRow) {
     lastRehabProtocolSource = 'generated';
     return getGeneratedInjuryProtocolBySlug(slug, lang);

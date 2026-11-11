@@ -5,6 +5,7 @@ import BrandLogo from '../components/common/BrandLogo';
 import {useStoredTheme} from '../hooks/useStoredTheme';
 import {setPreferredLanguage} from '../services/languagePreference';
 import {injuryUiStrings} from '../services/injuryI18n/uiStrings';
+import {navigationPaths, removeLangPrefix} from '../utils/langUrlHelper';
 import usePreferredLang from './usePreferredLang';
 
 export type PageLayoutRelatedLink = {
@@ -58,10 +59,9 @@ export default function PageLayout({
   };
 
   const generateLanguageSwitchUrl = (targetLang: 'en' | 'ar'): string => {
-    const pathname = location.pathname;
-    const match = pathname.match(/^\/(en|ar)\//);
-    if (match) return pathname.replace(/^\/(en|ar)\//, `/${targetLang}/`);
-    return `/${targetLang}${pathname}`;
+    const cleanPath = removeLangPrefix(location.pathname);
+    const nextPath = cleanPath === '/' ? navigationPaths.home(targetLang) : `/${targetLang}${cleanPath}`;
+    return `${nextPath}${location.search}${location.hash}`;
   };
 
   const handleLanguageSwitch = (targetLang: 'en' | 'ar') => {
