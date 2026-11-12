@@ -5855,5 +5855,1123 @@
     "clinical_cue": "Awareness of daytime clenching habits — biofeedback app or timer reminders",
     "default_tags": [],
     "status": "validated"
+  },
+  {
+    "id": "back_squat",
+    "canonical_name": "Back Squat (Barbell)",
+    "clinical_cue": "Set a barbell across the upper trapezius (high-bar) or posterior deltoids/scapular spine (low-bar), unrack, and stand with feet shoulder-width apart a",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "quadriceps",
+      "gluteus-maximus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "front_squat",
+    "canonical_name": "Front Squat",
+    "clinical_cue": "Rack a barbell across the front of the shoulders in a clean grip (elbows high, fingertips under the bar) or crossed-arm position. Squat down by bendin",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "quadriceps",
+      "gluteus-maximus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "dumbbell_bench_press",
+    "canonical_name": "Dumbbell Bench Press",
+    "clinical_cue": "Lie supine on a flat bench with feet planted on the floor, holding a dumbbell in each hand at chest level with wrists stacked over elbows. Press both ",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "supine on flat bench",
+      "pectoralis-major"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "barbell_row",
+    "canonical_name": "Barbell Row",
+    "clinical_cue": "Stand with feet hip-width apart, hinge at the hips to roughly 30-45 degrees of trunk lean (or near-parallel for the strict variation) with a neutral s",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing, hip-hinged (bent-over)",
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboid-major"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "bent_over_row",
+    "canonical_name": "Bent-Over Row",
+    "clinical_cue": "Stand holding a barbell or dumbbells, hinge at the hips to roughly 30-45 degrees of trunk inclination with a neutral spine and soft knees, and let the",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing, hip-hinged trunk",
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboid-major"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "lat_pulldown",
+    "canonical_name": "Lat Pulldown",
+    "clinical_cue": "Sit at a cable pulldown station with thighs secured under the pad, grasp the bar with a pronated grip slightly wider than shoulder width, and lean bac",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "latissimus-dorsi"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "seated_cable_row",
+    "canonical_name": "Seated Cable Row",
+    "clinical_cue": "Sit tall at a cable row station with knees slightly bent and feet braced on the platform, holding the handle with arms extended. Pull the handle towar",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboid-major"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "pull_up",
+    "canonical_name": "Pull-Up",
+    "clinical_cue": "Hang from an overhead bar with a pronated (palms-away) grip slightly wider than shoulder width, arms fully extended. Initiate by depressing and downwa",
+    "default_tags": [
+      "body_iq_verified",
+      "advanced",
+      "vertical hang from overhead bar",
+      "latissimus-dorsi"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "chin_up",
+    "canonical_name": "Chin-Up",
+    "clinical_cue": "Hang from a bar with a supinated (palms-facing-you) grip about shoulder-width apart, arms fully extended. Initiate by drawing the shoulder blades down",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "vertical hang (suspended from bar)",
+      "latissimus-dorsi",
+      "biceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "parallel_bar_dip",
+    "canonical_name": "Dip",
+    "clinical_cue": "Support yourself on parallel bars with elbows locked and shoulders down. Bend the elbows and let the shoulders travel back into extension, lowering un",
+    "default_tags": [
+      "body_iq_verified",
+      "advanced",
+      "Upright, suspended between parallel bars supporting full bodyweight on the hands",
+      "pectoralis-major",
+      "triceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "dumbbell_shoulder_press",
+    "canonical_name": "Dumbbell Shoulder Press",
+    "clinical_cue": "Hold a dumbbell in each hand at shoulder height, palms facing forward or slightly inward, forearms vertical. Press both dumbbells overhead until the e",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "seated (upright, feet flat) or standing",
+      "anterior-deltoid",
+      "middle-deltoid"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "lateral_raise",
+    "canonical_name": "Lateral Raise",
+    "clinical_cue": "Stand tall holding a dumbbell in each hand at your sides with a soft bend in the elbows. Raise both arms out to the sides in the frontal plane until t",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "middle-deltoid"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "biceps_curl",
+    "canonical_name": "Biceps Curl",
+    "clinical_cue": "Stand or sit holding a dumbbell in each hand with arms at your sides, palms facing forward. Keeping the upper arms pinned to your torso, bend the elbo",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "biceps-brachii",
+      "brachialis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "hammer_curl",
+    "canonical_name": "Hammer Curl",
+    "clinical_cue": "Stand holding a dumbbell in each hand at your sides with palms facing your thighs (neutral grip). Keeping the elbows pinned to your ribs and the thumb",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "brachioradialis",
+      "brachialis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "triceps_pushdown",
+    "canonical_name": "Triceps Pushdown",
+    "clinical_cue": "Stand facing a cable column with a straight bar or rope attachment set at upper-chest height. With elbows pinned to your sides and a slight forward hi",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "triceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "skull_crusher",
+    "canonical_name": "Skull Crusher (Lying Triceps Extension)",
+    "clinical_cue": "Lie supine on a flat bench holding an EZ-curl bar or dumbbells with arms extended over the chest, shoulders flexed to roughly 90 degrees. Keeping the ",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "supine on flat bench",
+      "triceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "leg_extension",
+    "canonical_name": "Leg Extension",
+    "clinical_cue": "An open-kinetic-chain, single-joint knee extension performed on a leg extension machine. Sit tall with your back and hips against the pads, hips flexe",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "quadriceps",
+      "vastus-lateralis",
+      "vastus-medialis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "leg_curl",
+    "canonical_name": "Leg Curl",
+    "clinical_cue": "A single-joint knee-flexion exercise that isolates the hamstrings, performed on a machine (prone/lying or seated) or with a band/ankle weight. Set up ",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "Prone (lying) on a leg-curl machine bench, hips and torso supported; the seated leg-curl variation places the hip in flexion with the back against a pad.",
+      "hamstrings",
+      "biceps-femoris-long",
+      "semitendinosus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "seated_calf_raise",
+    "canonical_name": "Seated Calf Raise",
+    "clinical_cue": "Sit upright on a bench or seated calf-raise machine with the knees bent to roughly 90 degrees and the balls of both feet on a raised platform or foot ",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "soleus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "sit_up",
+    "canonical_name": "Sit-Up",
+    "clinical_cue": "Lie supine with knees bent to about 90 degrees and feet flat on the floor, arms crossed over the chest or hands lightly behind the ears. Curl the trun",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "supine, hook-lying (knees bent, feet flat)",
+      "rectus-abdominis",
+      "iliopsoas"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "crunch",
+    "canonical_name": "Crunch",
+    "clinical_cue": "Lie supine with knees bent about 90 degrees and feet flat on the floor, hands lightly supporting the head or crossed over the chest. Exhale and curl t",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "supine",
+      "rectus-abdominis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "russian_twist",
+    "canonical_name": "Russian Twist",
+    "clinical_cue": "Sit on the floor with knees bent and heels resting lightly on the ground, then lean the trunk back about 45 degrees while keeping the spine long and c",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "seated (reclined V-sit)",
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "mountain_climber",
+    "canonical_name": "Mountain Climber",
+    "clinical_cue": "Begin in a high plank with hands under shoulders, body in a straight line from head to heels. Drive one knee toward the chest, then quickly switch leg",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "high plank (prone support on hands and toes)",
+      "iliopsoas",
+      "rectus-abdominis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "burpee",
+    "canonical_name": "Burpee",
+    "clinical_cue": "From standing, squat down and place both hands on the floor just inside the feet, jump or step the feet back into a rigid high plank, perform an optio",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing, transitioning through squat and prone plank each repetition",
+      "quadriceps",
+      "gluteus-maximus",
+      "gastrocnemius"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "jumping_jack",
+    "canonical_name": "Jumping Jack",
+    "clinical_cue": "Stand tall with feet together and arms at your sides. Jump both feet out wider than hip-width while swinging straight arms out and overhead, then imme",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "gluteus-medius",
+      "middle-deltoid",
+      "gastrocnemius"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "jump_squat",
+    "canonical_name": "Jump Squat",
+    "clinical_cue": "Stand with feet shoulder-width apart, descend quickly into a quarter-to-half squat with arms swinging back, then explosively extend the hips, knees, a",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "quadriceps",
+      "gluteus-maximus",
+      "gastrocnemius"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "wall_sit",
+    "canonical_name": "Wall Sit",
+    "clinical_cue": "Stand with your back flat against a wall, feet hip-width apart and about 1.5-2 foot-lengths away from the wall. Slide down until your hips and knees a",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "wall-supported standing (isometric squat hold)",
+      "quadriceps"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "superman",
+    "canonical_name": "Superman",
+    "clinical_cue": "Lie prone with arms extended overhead and legs straight. Simultaneously lift both arms, chest, and both legs a few centimeters off the floor by extend",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "prone",
+      "erector-spinae",
+      "gluteus-maximus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "bear_crawl",
+    "canonical_name": "Bear Crawl",
+    "clinical_cue": "Start in quadruped with hands under shoulders, toes tucked, and knees lifted about 2-5 cm off the floor. Crawl forward by moving the opposite hand and",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "quadruped (knees hovering, hands and toes weight-bearing)",
+      "serratus-anterior",
+      "anterior-deltoid",
+      "triceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "chest_fly",
+    "canonical_name": "Chest Fly",
+    "clinical_cue": "Lie supine on a flat bench holding dumbbells above the chest with palms facing each other and a soft bend in the elbows. Lower the arms out to the sid",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "supine",
+      "pectoralis-major"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "pec_deck",
+    "canonical_name": "Pec Deck",
+    "clinical_cue": "Sit tall on the machine with your back and head against the pad, feet flat, and forearms or hands on the lever pads with elbows at roughly chest heigh",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "pectoralis-major"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "hanging_leg_raise",
+    "canonical_name": "Hanging Leg Raise",
+    "clinical_cue": "Hang from a pull-up bar with an overhand grip, shoulders actively packed (pulled down away from the ears). Keeping the knees straight or nearly straig",
+    "default_tags": [
+      "body_iq_verified",
+      "advanced",
+      "Vertical hang from overhead bar (open-chain lower body)",
+      "iliopsoas",
+      "rectus-abdominis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "cobra_pose",
+    "canonical_name": "Cobra Pose",
+    "clinical_cue": "Lie prone with legs extended, tops of the feet on the mat, and palms flat under the shoulders with elbows tucked close to the ribs. Press the pubic bo",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "prone",
+      "erector-spinae",
+      "multifidus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "downward_dog",
+    "canonical_name": "Downward Dog (Adho Mukha Svanasana)",
+    "clinical_cue": "From hands-and-knees, tuck the toes and lift the hips up and back until the body forms an inverted V, arms and spine in one long line and knees softly",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "quadruped / inverted-V weight-bearing on hands and feet",
+      "anterior-deltoid",
+      "serratus-anterior",
+      "triceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "worlds_greatest_stretch",
+    "canonical_name": "World's Greatest Stretch",
+    "clinical_cue": "A multi-segment dynamic mobility drill that chains a deep lunge, a hip/adductor opener, a thoracic rotation reach, and a hamstring lengthening in one ",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing-to-lunge (forward lunge with hands on floor, transitioning to a half-kneeling rotational reach)",
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "copenhagen_adduction",
+    "canonical_name": "Copenhagen Adduction Exercise",
+    "clinical_cue": "Side-lying with top leg on a bench, performing hip adduction by lifting body with the bottom leg. Produces 108% MVIC adductor longus — the highest amo",
+    "default_tags": [
+      "body_iq_verified",
+      "advanced",
+      "sidelying",
+      "adductor-group"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "side_lying_hip_adduction",
+    "canonical_name": "Side-Lying Hip Adduction",
+    "clinical_cue": "Lying on one side with the top leg crossed over and supported in front, the bottom leg is lifted toward the ceiling against gravity, isolating the hip",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "sidelying",
+      "adductor-longus",
+      "adductor-brevis",
+      "adductor-magnus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "thumb_radial_abduction",
+    "canonical_name": "Thumb Radial Abduction",
+    "clinical_cue": "A targeted hand-strengthening exercise in which the thumb is moved away from the index finger within the plane of the palm (radial abduction / extensi",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "abductor-pollicis-longus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "resisted_forearm_pronation",
+    "canonical_name": "Resisted Forearm Pronation",
+    "clinical_cue": "A targeted forearm-strengthening exercise in which the seated athlete rotates the palm from a face-up (supinated) or neutral position toward face-down",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "pronator-quadratus",
+      "pronator-teres"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "prone_cervical_extension",
+    "canonical_name": "Prone Cervical Extension",
+    "clinical_cue": "A prone neck-strengthening exercise in which the client lies face-down with the head off the edge of a table (or over a rolled towel) and lifts the he",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "prone",
+      "semispinalis-cervicis",
+      "semispinalis-capitis",
+      "splenius-cervicis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "deep_neck_extensor_endurance",
+    "canonical_name": "Deep Neck Extensor Endurance",
+    "clinical_cue": "A low-load motor-control exercise that trains the endurance and tonic activation of the deep cervical extensors — chiefly semispinalis cervicis and ce",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "quadruped",
+      "semispinalis-cervicis",
+      "multifidus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "single_leg_sit_to_stand",
+    "canonical_name": "Single-Leg Sit-to-Stand",
+    "clinical_cue": "Sit on the front edge of a sturdy chair, extend one leg out in front, and stand up using only the planted leg, then lower back down under control. The",
+    "default_tags": [
+      "body_iq_verified",
+      "advanced",
+      "seated-to-standing",
+      "quadriceps",
+      "gluteus-maximus",
+      "vastus-medialis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "wall_angel",
+    "canonical_name": "Wall Angel",
+    "clinical_cue": "Stand with your back, hips, and head lightly touching a wall, arms raised into a goalpost with the backs of the hands and forearms pressed to the wall",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "trapezius-lower",
+      "serratus-anterior"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "countertop_incline_push_up",
+    "canonical_name": "Countertop Incline Push-Up",
+    "clinical_cue": "A scaled push-up performed with both hands planted shoulder-width on the edge of a kitchen countertop while the feet stay back on the floor, creating ",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "pectoralis-major",
+      "triceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "knee_to_wall_ankle",
+    "canonical_name": "Knee-to-Wall Ankle Mobilization",
+    "clinical_cue": "Stand facing a wall in a short lunge with the front foot a few inches away, keep that heel firmly planted, and drive the knee straight forward until i",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "tibialis-anterior"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "legs_up_the_wall",
+    "canonical_name": "Legs-Up-the-Wall",
+    "clinical_cue": "A restorative pose (Viparita Karani): lie on your back with your buttocks close to a wall and rest your straight legs vertically up the wall, arms rel",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "supine",
+      "diaphragm"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "wall_hamstring_stretch",
+    "canonical_name": "Wall Hamstring Stretch",
+    "clinical_cue": "Lie on your back in a doorway with the leg to be stretched raised and resting straight against the wall or door frame; the other leg extends flat thro",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "supine",
+      "general_conditioning"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "doorway_lat_stretch",
+    "canonical_name": "Doorway Lat Stretch",
+    "clinical_cue": "Standing in an open doorway, grip the frame or the top of the jamb with one hand at or above shoulder height, keep that elbow straight, then hinge the",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "general_conditioning"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "doorway_isometric_row",
+    "canonical_name": "Doorway Isometric Row",
+    "clinical_cue": "Stand in a doorway, grip both sides of the doorframe with elbows bent about 90 degrees, and pull as though rowing while the fixed frame prevents any m",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "latissimus-dorsi",
+      "rhomboid-major",
+      "trapezius-middle"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "chair_supported_balance",
+    "canonical_name": "Chair-Supported Single-Leg Balance",
+    "clinical_cue": "Stand tall behind or beside a sturdy chair, resting your fingertips lightly on the chair back for support. Shift your weight onto one leg and lift the",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "gluteus-medius"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "tandem_stance",
+    "canonical_name": "Tandem Stance Balance",
+    "clinical_cue": "Stand with one foot placed directly in front of the other in a heel-to-toe line, so the heel of the front foot touches the toes of the back foot, and ",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "general_conditioning"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "heel_to_toe_walk",
+    "canonical_name": "Heel-to-Toe Walk",
+    "clinical_cue": "Standing in a clear hallway, walk forward in a straight line placing the heel of the front foot directly in front of (and touching) the toes of the ba",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "general_conditioning"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "desk_wrist_flexor_stretch",
+    "canonical_name": "Desk Wrist Flexor Stretch",
+    "clinical_cue": "Seated at a desk, place the palm flat on the desktop with the fingers pointing back toward the body and the elbow straight, then gently lean away from",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "general_conditioning"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "desk_wrist_extensor_stretch",
+    "canonical_name": "Desk Wrist Extensor Stretch",
+    "clinical_cue": "Standing or sitting at a desk, place the back of the affected hand flat on the desk with the palm facing up and fingers pointing toward your body, elb",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "general_conditioning"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "towel_row",
+    "canonical_name": "Towel Row",
+    "clinical_cue": "Standing horizontal pull done at home by looping a towel around both handles of a sturdy closed door; hold an end in each hand, walk the feet in and l",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "rhomboid-major",
+      "trapezius-middle",
+      "latissimus-dorsi"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "towel_scapular_retraction",
+    "canonical_name": "Towel Scapular Retraction",
+    "clinical_cue": "Sit or stand tall and grip a rolled bath towel with both hands roughly shoulder-width apart, arms out in front at about chest height. Keeping the elbo",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated or standing, upright with a neutral spine",
+      "trapezius-middle",
+      "rhomboid-major"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "stair_calf_raise",
+    "canonical_name": "Stair Calf Raise",
+    "clinical_cue": "Standing on a stair with the balls of both feet on the edge and heels hanging off, hold the handrail or wall for balance, press up onto your toes, the",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "gastrocnemius",
+      "soleus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "eccentric_stair_descent",
+    "canonical_name": "Eccentric Stair Descent",
+    "clinical_cue": "Standing at the top of a staircase, slowly lower yourself one step at a time, letting the trailing (top-step) leg bend under control to accept most of",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "quadriceps"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "backpack_weighted_carry",
+    "canonical_name": "Backpack Weighted Carry",
+    "clinical_cue": "Load a sturdy backpack with books or water bottles, wear it snug on both shoulders with the load high and close to the spine, brace the trunk, and wal",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "erector-spinae"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "water_bottle_lateral_raise",
+    "canonical_name": "Water Bottle Lateral Raise",
+    "clinical_cue": "Standing tall, hold a filled water bottle in each hand at your sides. With a soft elbow, raise both arms out to the sides in the frontal plane until t",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "middle-deltoid"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "prone_press_up",
+    "canonical_name": "Prone Press-Up (McKenzie)",
+    "clinical_cue": "Lie face-down on the floor (no equipment needed) and press your upper body up with your arms while your hips and low back stay relaxed, letting the lu",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "prone",
+      "triceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "hollow_body_hold",
+    "canonical_name": "Hollow Body Hold",
+    "clinical_cue": "Lie supine on the floor (or an exercise mat), flatten your low back into the ground, then lift the shoulder blades, arms, and straight legs a few inch",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "supine",
+      "rectus-abdominis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "bodyweight_hip_hinge",
+    "canonical_name": "Bodyweight Hip Hinge",
+    "clinical_cue": "Standing hip-dominant bend performed with bodyweight only, optionally holding a broomstick vertically against the spine (touching the back of the head",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "gluteus-maximus",
+      "hamstrings"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "wall_sit_isometric",
+    "canonical_name": "Wall Sit Isometric",
+    "clinical_cue": "Stand with your back flat against a wall, then slide down until your hips and knees are bent toward 90 degrees, as if sitting in an invisible chair, a",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "quadriceps",
+      "vastus-medialis",
+      "vastus-lateralis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "doorframe_calf_stretch",
+    "canonical_name": "Doorframe Calf Stretch",
+    "clinical_cue": "Standing facing a doorway, place both hands on the doorframe at chest height and step one leg back. Keep the back knee straight and the heel flat on t",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "general_conditioning"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "countertop_supported_squat",
+    "canonical_name": "Countertop-Supported Squat",
+    "clinical_cue": "Stand facing a sturdy kitchen countertop with feet shoulder-width apart, resting your hands lightly on the edge. Push your hips back and bend your kne",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "quadriceps",
+      "gluteus-maximus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "chair_triceps_dip",
+    "canonical_name": "Chair Triceps Dip",
+    "clinical_cue": "Sit at the edge of a sturdy chair, grip the front edge with hands beside your hips, slide your hips off the seat, then bend and straighten your elbows",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "seated-supported (hands on chair edge, hips off seat, weight through arms)",
+      "triceps-brachii"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "bird_dog_elbow_knee",
+    "canonical_name": "Bird Dog to Elbow-Knee",
+    "clinical_cue": "On the floor (a mat or carpet cushions the knees), start in quadruped with hands under shoulders and knees under hips. Reach the opposite arm forward ",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "quadruped",
+      "multifidus",
+      "erector-spinae",
+      "gluteus-maximus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "prone_ytw_raise",
+    "canonical_name": "Prone Y-T-W Raise",
+    "clinical_cue": "Lie face down on the floor (a carpet or exercise mat for comfort), arms hanging off to the sides. With thumbs pointing up, lift the arms just off the ",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "prone",
+      "trapezius-lower",
+      "trapezius-middle",
+      "posterior-deltoid"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "standing_hip_abduction_support",
+    "canonical_name": "Standing Hip Abduction (Counter Support)",
+    "clinical_cue": "Stand tall beside a kitchen countertop, resting one hand on it for balance. Keeping the moving leg straight and the toes pointing forward, lift that l",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "gluteus-medius"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "stair_edge_calf_raise",
+    "canonical_name": "Calf Raise off Stair Edge",
+    "clinical_cue": "Standing on a stair with the balls of both feet on the step edge and heels hanging off, rise onto the toes then lower the heels below the edge through",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "standing",
+      "gastrocnemius",
+      "soleus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "towel_hamstring_curl",
+    "canonical_name": "Towel Hamstring Curl",
+    "clinical_cue": "Lie face-up with knees bent and heels resting on a folded towel on a smooth floor. Lift into a bridge, then slowly slide the heels away from you until",
+    "default_tags": [
+      "body_iq_verified",
+      "intermediate",
+      "supine",
+      "hamstrings"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "wall_ball_squat",
+    "canonical_name": "Wall Ball Squat",
+    "clinical_cue": "Standing with an exercise ball pinned between the low back and a wall (a plain wall works too), slide down until the knees bend toward roughly 90 degr",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "quadriceps",
+      "vastus-medialis",
+      "vastus-lateralis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "stair_step_up",
+    "canonical_name": "Step-Up on Stairs",
+    "clinical_cue": "Standing at the bottom of a staircase, place one whole foot on the first step, then drive through that leg to lift your body up until you are standing",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "quadriceps",
+      "gluteus-maximus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "seated_knee_extension",
+    "canonical_name": "Seated Knee Extension (Bodyweight)",
+    "clinical_cue": "Sit tall on a sturdy chair with feet flat. Straighten one knee to lift the foot until the leg is nearly parallel to the floor, hold briefly at the top",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "quadriceps",
+      "vastus-medialis",
+      "vastus-lateralis"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "standing_calf_stretch_step",
+    "canonical_name": "Standing Calf Stretch on Step",
+    "clinical_cue": "Stand on a stair or step with the balls of both feet on the edge and heels hanging off the back. Hold the railing or wall for balance and let your hee",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "general_conditioning"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "active_anterior_pelvic_tilt",
+    "canonical_name": "Active Anterior Pelvic Tilt",
+    "clinical_cue": "A foundational pelvic motor-control drill in which you actively roll the top of the pelvis forward (rotating the sitting bones back and up), producing",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "iliopsoas",
+      "erector-spinae"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "pelvic_clock_mobilization",
+    "canonical_name": "Pelvic Clock Mobilization",
+    "clinical_cue": "Add the supine pelvic clock mobilization drill to the pelvis region.",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "supine",
+      "rectus-abdominis",
+      "iliopsoas"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "standing_hip_hike",
+    "canonical_name": "Standing Hip Hike",
+    "clinical_cue": "A standing frontal-plane exercise for the pelvis and hip. Standing on one leg at the edge of a low step with the other leg hanging free, you let the p",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "standing",
+      "gluteus-medius",
+      "quadratus-lumborum"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "cervical_protraction_awareness",
+    "canonical_name": "Cervical Protraction Awareness",
+    "clinical_cue": "A slow, controlled motor-control drill that teaches you to feel and steer your head between a forward \"protracted\" glide and a neutral, stacked positi",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "sternocleidomastoid"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "upper_cervical_rotation_drill",
+    "canonical_name": "Upper Cervical Rotation Drill",
+    "clinical_cue": "A gentle, controlled drill that isolates rotation at the top of the neck — the atlanto-axial (C1-C2) joint, which produces roughly half of the head's ",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "suboccipitals"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "seated_cervical_flexion_arom",
+    "canonical_name": "Seated Cervical Flexion AROM",
+    "clinical_cue": "A seated active range-of-motion drill in which you slowly nod and lower your chin toward your chest, moving the neck through its available forward-ben",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "deep-cervical-flexors",
+      "sternocleidomastoid"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "upper_cervical_extension_control",
+    "canonical_name": "Upper Cervical Extension Control",
+    "clinical_cue": "A slow, small-range motor-control drill that trains you to extend the head at the top of the neck (the skull rocking back on the first vertebra) while",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "suboccipitals"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "radial_deviation_strengthening",
+    "canonical_name": "Radial Deviation Strengthening",
+    "clinical_cue": "A targeted wrist exercise that trains radial deviation — tilting the hand toward the thumb side. Sitting with the forearm supported and the thumb poin",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "flexor-carpi-radialis",
+      "extensor-carpi-radialis-longus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "ulnar_deviation_strengthening",
+    "canonical_name": "Ulnar Deviation Strengthening",
+    "clinical_cue": "A targeted wrist exercise that trains the muscles moving the hand toward the little-finger side (ulnar deviation). With the forearm supported and thum",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "flexor-carpi-ulnaris",
+      "extensor-carpi-ulnaris"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "dart_throwers_motion",
+    "canonical_name": "Dart Thrower's Motion",
+    "clinical_cue": "A controlled wrist movement along the natural diagonal (oblique) plane the wrist prefers for everyday tasks. The hand travels from a \"cocked-back\" pos",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "extensor-carpi-radialis-longus",
+      "extensor-carpi-radialis-brevis",
+      "flexor-carpi-ulnaris"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "wrist_circles_arom",
+    "canonical_name": "Wrist Circles (AROM)",
+    "clinical_cue": "A gentle active range-of-motion drill in which the hand is drawn through slow, full circles at the wrist, blending flexion, extension, radial deviatio",
+    "default_tags": [
+      "body_iq_verified",
+      "beginner",
+      "seated",
+      "flexor-carpi-radialis",
+      "flexor-carpi-ulnaris",
+      "extensor-carpi-radialis-longus"
+    ],
+    "status": "validated"
   }
 ]

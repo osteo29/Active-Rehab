@@ -482,6 +482,7 @@ function mapGeneratedProtocol(protocolId: number, lang: Language): InjuryProtoco
       exercises: phase.exercises.map((exercise) => getExerciseName(exercise)),
       prohibitedMovements: nutrition.prohibitedMovements,
       exercisePlans: phase.exercises.map((exercise) => ({
+        exerciseId: exercise.exercise_ref,
         label: getExerciseName(exercise),
         sets: formatJsonDosage(exercise.dosage) || undefined,
         alternatives: cleanList(exercise.tags),

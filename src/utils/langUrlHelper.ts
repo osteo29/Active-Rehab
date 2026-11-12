@@ -77,6 +77,8 @@ export const navigationPaths = {
   exercisesMuscle: (lang: Language, slug: string) => `/${lang}/exercises/${normalizeExerciseUrlSlug(slug)}`,
   exerciseSystems: (lang: Language) => `/${lang}/exercises/systems`,
   exerciseSystemDetail: (lang: Language, slug: string) => `/${lang}/exercises/systems/${slug}`,
+  anatomy: (lang: Language) => `/${lang}/anatomy`,
+  muscles: (lang: Language) => `/${lang}/anatomy`,
   
   // Injury pages
   injuries: (lang: Language) => `/${lang}/injuries`,

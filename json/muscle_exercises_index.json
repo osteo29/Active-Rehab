@@ -1,0 +1,7091 @@
+{
+  "flexor-pollicis-longus": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "adductor-pollicis": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "latissimus-dorsi": {
+    "primary": [
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps Pushdown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_lat_stretch",
+        "name": "Doorway Lat Stretch",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "levator-scapulae": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_rotation_drill",
+        "name": "Upper Cervical Rotation Drill",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "rectus-femoris": {
+    "primary": [
+      {
+        "id": "straight_leg_raise",
+        "name": "Straight Leg Raise",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "diaphragm": {
+    "primary": [
+      {
+        "id": "diaphragmatic_breathing",
+        "name": "Diaphragmatic Breathing",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "legs_up_the_wall",
+        "name": "Legs-Up-the-Wall",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": []
+  },
+  "vastus-lateralis": {
+    "primary": [
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "sternocleidomastoid": {
+    "primary": [
+      {
+        "id": "cervical_protraction_awareness",
+        "name": "Cervical Protraction Awareness",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cervical_flexion_arom",
+        "name": "Seated Cervical Flexion AROM",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "deep_neck_flexor_training",
+        "name": "Deep Neck Flexor Training",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "crunch",
+        "name": "Crunch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_rotation_drill",
+        "name": "Upper Cervical Rotation Drill",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "flexor-carpi-ulnaris": {
+    "primary": [
+      {
+        "id": "ulnar_deviation_strengthening",
+        "name": "Ulnar Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dart_throwers_motion",
+        "name": "Dart Thrower's Motion",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wrist_circles_arom",
+        "name": "Wrist Circles (AROM)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "skull_crusher",
+        "name": "Skull Crusher (Lying Triceps Extension)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "desk_wrist_flexor_stretch",
+        "name": "Desk Wrist Flexor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "radial_deviation_strengthening",
+        "name": "Radial Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "infraspinatus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "overhead_press",
+        "name": "Overhead Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "supinator": {
+    "primary": [
+      {
+        "id": "forearm_pronation_supination",
+        "name": "Forearm Pronation/Supination",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "resisted_forearm_pronation",
+        "name": "Resisted Forearm Pronation",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "adductor-magnus": {
+    "primary": [
+      {
+        "id": "side_lying_hip_adduction",
+        "name": "Side-Lying Hip Adduction",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bodyweight_hip_hinge",
+        "name": "Bodyweight Hip Hinge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "suboccipitals": {
+    "primary": [
+      {
+        "id": "upper_cervical_rotation_drill",
+        "name": "Upper Cervical Rotation Drill",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_extension_control",
+        "name": "Upper Cervical Extension Control",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deep_neck_extensor_endurance",
+        "name": "Deep Neck Extensor Endurance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cervical_protraction_awareness",
+        "name": "Cervical Protraction Awareness",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cervical_flexion_arom",
+        "name": "Seated Cervical Flexion AROM",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "quadriceps": {
+    "primary": [
+      {
+        "id": "quad_sets",
+        "name": "Quad Sets",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "heel_slides",
+        "name": "Heel Slides",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "mini_squats",
+        "name": "Mini Squats",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_press",
+        "name": "Leg Press",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "terminal_knee_extension",
+        "name": "Terminal Knee Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_press",
+        "name": "Single Leg Press",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "wall_squat",
+        "name": "Wall Squat (Isometric)",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hack_squat",
+        "name": "Hack Squat",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "spanish_squat",
+        "name": "Spanish Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_bounds",
+        "name": "Lateral Bounds",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_to_stand",
+        "name": "Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_stabiliser",
+        "name": "Lateral stabiliser",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "back_squat_goblet_squat",
+        "name": "Back Squat / Goblet Squat",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "begin_straight_line_jogging_week_3_4",
+        "name": "Begin straight-line jogging week 3–4",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "training",
+        "name": "Training",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "sit_to_stand_progression",
+        "name": "Sit-to-Stand Progression",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "short_arc_quads",
+        "name": "Short Arc Quads",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "prone_knee_flexion_stretch",
+        "name": "Prone Knee Flexion Stretch",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hamstring_curl",
+        "name": "Hamstring Curl",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "maintenance_strengthening",
+        "name": "Maintenance Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "nordic_curl_progression_reverse_nordic",
+        "name": "Nordic Curl Progression + Reverse Nordic",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "prone_quad_stretch",
+        "name": "Prone Quad Stretch",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "quadriceps_stretching",
+        "name": "Quadriceps Stretching",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "straight_leg_raise",
+        "name": "Straight Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_hamstring_stretch",
+        "name": "Wall Hamstring Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "trapezius-middle": {
+    "primary": [
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "semispinalis-thoracis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "palmaris-longus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "desk_wrist_flexor_stretch",
+        "name": "Desk Wrist Flexor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wrist_circles_arom",
+        "name": "Wrist Circles (AROM)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "posterior-deltoid": {
+    "primary": [
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps Pushdown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "biceps-femoris-short": {
+    "primary": [
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": []
+  },
+  "splenius-cervicis": {
+    "primary": [
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "deep_neck_extensor_endurance",
+        "name": "Deep Neck Extensor Endurance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_rotation_drill",
+        "name": "Upper Cervical Rotation Drill",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "multifidus": {
+    "primary": [
+      {
+        "id": "cat_camel",
+        "name": "Cat-Camel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deep_neck_extensor_endurance",
+        "name": "Deep Neck Extensor Endurance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog",
+        "name": "Bird Dog",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bodyweight_hip_hinge",
+        "name": "Bodyweight Hip Hinge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_rotation_drill",
+        "name": "Upper Cervical Rotation Drill",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "external-intercostals": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "pronator-quadratus": {
+    "primary": [
+      {
+        "id": "resisted_forearm_pronation",
+        "name": "Resisted Forearm Pronation",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": []
+  },
+  "quadratus-femoris": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "opponens-pollicis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "grip_strengthening",
+        "name": "Grip Strengthening",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "extensor-carpi-radialis-longus": {
+    "primary": [
+      {
+        "id": "radial_deviation_strengthening",
+        "name": "Radial Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dart_throwers_motion",
+        "name": "Dart Thrower's Motion",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wrist_circles_arom",
+        "name": "Wrist Circles (AROM)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "desk_wrist_extensor_stretch",
+        "name": "Desk Wrist Extensor Stretch",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "extensor-pollicis-brevis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "thumb_radial_abduction",
+        "name": "Thumb Radial Abduction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "radial_deviation_strengthening",
+        "name": "Radial Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "brachialis": {
+    "primary": [
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps Pushdown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "skull_crusher",
+        "name": "Skull Crusher (Lying Triceps Extension)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "tibialis-anterior": {
+    "primary": [
+      {
+        "id": "ankle_pumps",
+        "name": "Ankle Pumps",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "lateral_band_walk",
+        "name": "Lateral Band Walks",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "resistance_band_eversion",
+        "name": "Resistance Band Eversion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "alphabet_tracing",
+        "name": "Alphabet Tracing",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "jump_rope",
+        "name": "Jump Rope",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "ankle_rom",
+        "name": "Ankle ROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "neural_mobilisation",
+        "name": "Neural Mobilisation",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "step_up_with_lateral_load",
+        "name": "Step-up with Lateral Load",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "maintain_ankle_mobility_and_reduce_oedema",
+        "name": "Maintain ankle mobility and reduce oedema",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "peroneal_eversion",
+        "name": "Peroneal Eversion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "ankle_arom",
+        "name": "Ankle Active Range of Motion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "peroneal_strengthening",
+        "name": "Peroneal Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "knee_and_hip_rom_strengthening",
+        "name": "Knee and Hip ROM / Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "resisted_dorsiflexion",
+        "name": "Resisted Dorsiflexion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "sciatic_neural_mobilisation",
+        "name": "Sciatic Neural Mobilisation",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "afo_provision",
+        "name": "AFO Provision",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "passive_ankle_prom",
+        "name": "Passive Ankle PROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "sit_to_stand",
+        "name": "Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorframe_calf_stretch",
+        "name": "Doorframe Calf Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "flexor-carpi-radialis": {
+    "primary": [
+      {
+        "id": "radial_deviation_strengthening",
+        "name": "Radial Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wrist_circles_arom",
+        "name": "Wrist Circles (AROM)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "skull_crusher",
+        "name": "Skull Crusher (Lying Triceps Extension)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "resisted_forearm_pronation",
+        "name": "Resisted Forearm Pronation",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "desk_wrist_flexor_stretch",
+        "name": "Desk Wrist Flexor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dart_throwers_motion",
+        "name": "Dart Thrower's Motion",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "scalenes": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "cervical_protraction_awareness",
+        "name": "Cervical Protraction Awareness",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cervical_flexion_arom",
+        "name": "Seated Cervical Flexion AROM",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "extensor-digitorum-longus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "peroneus-longus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "gluteus-medius": {
+    "primary": [
+      {
+        "id": "clamshell",
+        "name": "Clamshell",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_bounds",
+        "name": "Lateral Bounds",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_abduction_support",
+        "name": "Standing Hip Abduction (Counter Support)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_hike",
+        "name": "Standing Hip Hike",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "mini_squats",
+        "name": "Mini Squats",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bridge",
+        "name": "Bridge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "glute_bridge",
+        "name": "Glute Bridge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "copenhagen_adduction",
+        "name": "Copenhagen Adduction Exercise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "gracilis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "side_lying_hip_adduction",
+        "name": "Side-Lying Hip Adduction",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "flexor-digitorum-profundus": {
+    "primary": [
+      {
+        "id": "grip_strengthening",
+        "name": "Grip Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tendon_gliding_exercises",
+        "name": "Tendon Gliding Exercises",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "desk_wrist_flexor_stretch",
+        "name": "Desk Wrist Flexor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "ulnar_deviation_strengthening",
+        "name": "Ulnar Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "tibialis-posterior": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorframe_calf_stretch",
+        "name": "Doorframe Calf Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "palmar-interossei": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "splenius-capitis": {
+    "primary": [
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "deep_neck_extensor_endurance",
+        "name": "Deep Neck Extensor Endurance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cervical_protraction_awareness",
+        "name": "Cervical Protraction Awareness",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_rotation_drill",
+        "name": "Upper Cervical Rotation Drill",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cervical_flexion_arom",
+        "name": "Seated Cervical Flexion AROM",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_extension_control",
+        "name": "Upper Cervical Extension Control",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "vastus-intermedius": {
+    "primary": [
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "flexor-digitorum-longus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorframe_calf_stretch",
+        "name": "Doorframe Calf Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "flexor-hallucis-longus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorframe_calf_stretch",
+        "name": "Doorframe Calf Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "adductor-longus": {
+    "primary": [
+      {
+        "id": "side_lying_hip_adduction",
+        "name": "Side-Lying Hip Adduction",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": []
+  },
+  "brachioradialis": {
+    "primary": [
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "resisted_forearm_pronation",
+        "name": "Resisted Forearm Pronation",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "desk_wrist_extensor_stretch",
+        "name": "Desk Wrist Extensor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "radial_deviation_strengthening",
+        "name": "Radial Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "opponens-digiti-minimi": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "gluteus-minimus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "clamshell",
+        "name": "Clamshell",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_abduction_support",
+        "name": "Standing Hip Abduction (Counter Support)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_hike",
+        "name": "Standing Hip Hike",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "semitendinosus": {
+    "primary": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_hamstring_stretch",
+        "name": "Wall Hamstring Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "vastus-medialis": {
+    "primary": [
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "sartorius": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "gemelli": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "upper-trapezius": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "seated_cervical_flexion_arom",
+        "name": "Seated Cervical Flexion AROM",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "trapezius-upper": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "full_can_exercise",
+        "name": "Full Can Exercise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "overhead_press",
+        "name": "Overhead Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "extensor-digitorum": {
+    "primary": [
+      {
+        "id": "tendon_gliding_exercises",
+        "name": "Tendon Gliding Exercises",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "grip_strengthening",
+        "name": "Grip Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "desk_wrist_extensor_stretch",
+        "name": "Desk Wrist Extensor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wrist_circles_arom",
+        "name": "Wrist Circles (AROM)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "internal-oblique": {
+    "primary": [
+      {
+        "id": "pallof_press",
+        "name": "Pallof Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "diaphragmatic_breathing",
+        "name": "Diaphragmatic Breathing",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "crunch",
+        "name": "Crunch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "side_lying_hip_adduction",
+        "name": "Side-Lying Hip Adduction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_press_up",
+        "name": "Prone Press-Up (McKenzie)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_hike",
+        "name": "Standing Hip Hike",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "triceps-brachii": {
+    "primary": [
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps Pushdown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "skull_crusher",
+        "name": "Skull Crusher (Lying Triceps Extension)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_incline_push_up",
+        "name": "Countertop Incline Push-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_press_up",
+        "name": "Prone Press-Up (McKenzie)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_triceps_dip",
+        "name": "Chair Triceps Dip",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_lat_stretch",
+        "name": "Doorway Lat Stretch",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "external-oblique": {
+    "primary": [
+      {
+        "id": "side_plank",
+        "name": "Side Plank",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pallof_press",
+        "name": "Pallof Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cat_camel",
+        "name": "Cat-Camel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "diaphragmatic_breathing",
+        "name": "Diaphragmatic Breathing",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog",
+        "name": "Bird Dog",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "crunch",
+        "name": "Crunch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "copenhagen_adduction",
+        "name": "Copenhagen Adduction Exercise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_press_up",
+        "name": "Prone Press-Up (McKenzie)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_hike",
+        "name": "Standing Hip Hike",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "soleus": {
+    "primary": [
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "mini_squats",
+        "name": "Mini Squats",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorframe_calf_stretch",
+        "name": "Doorframe Calf Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "anterior-deltoid": {
+    "primary": [
+      {
+        "id": "overhead_press",
+        "name": "Overhead Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "pendulum_exercise",
+        "name": "Pendulum Exercise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "push_up_plus",
+        "name": "Push-up Plus",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "skull_crusher",
+        "name": "Skull Crusher (Lying Triceps Extension)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_incline_push_up",
+        "name": "Countertop Incline Push-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_press_up",
+        "name": "Prone Press-Up (McKenzie)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_triceps_dip",
+        "name": "Chair Triceps Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "erector-spinae": {
+    "primary": [
+      {
+        "id": "knee_to_chest_stretch",
+        "name": "Knee-to-Chest Stretch",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cat_camel",
+        "name": "Cat-Camel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_lying",
+        "name": "Prone Lying",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "dead_bug",
+        "name": "Dead Bug",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "bird_dog",
+        "name": "Bird Dog",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_plank",
+        "name": "Prone Plank",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_flexor_stretch",
+        "name": "Hip Flexor Stretch",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "lumbar_traction",
+        "name": "Lumbar Traction",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "lumbar_rotation_stretches",
+        "name": "Lumbar Rotation Stretches",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "upper_cervical_traction",
+        "name": "Upper Cervical Traction",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_rom",
+        "name": "Cervical ROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "thoracic_extension_mobilisation",
+        "name": "Thoracic Extension Mobilisation",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "shoulder_shrugs_strengthening",
+        "name": "Shoulder Shrugs + Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "pelvic_tilt",
+        "name": "Pelvic Tilt",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "step_ups_and_split_squat",
+        "name": "Step-Ups and Split Squat",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "stationary_bike_pool_walking",
+        "name": "Stationary Bike / Pool Walking",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "thoracic_extension",
+        "name": "Thoracic Extension",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "shoulder_er_ir_band",
+        "name": "Shoulder ER/IR Band",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "seated_lumbar_flexion",
+        "name": "Seated Lumbar Flexion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "treadmill_walking",
+        "name": "Treadmill Walking",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "nordic_walking",
+        "name": "Nordic Walking",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "lumbar_rotation_stretch",
+        "name": "Lumbar Rotation Stretch",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "posterior_pelvic_tilt",
+        "name": "Posterior Pelvic Tilt",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "heat_soft_tissue_therapy",
+        "name": "Heat + Soft Tissue Therapy",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "deep_cervical_flexor_training",
+        "name": "Deep Cervical Flexor Training",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_rotation_arom",
+        "name": "Cervical Rotation AROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_lateral_flexion_stretch",
+        "name": "Cervical Lateral Flexion Stretch",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "isometric_cervical_strengthening",
+        "name": "Isometric Cervical Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "postural_habit_education",
+        "name": "Postural Habit Education",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_arom",
+        "name": "Cervical AROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "scapular_retraction_prone_y_t_w",
+        "name": "Scapular Retraction + Prone Y/T/W",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_isometrics",
+        "name": "Cervical Isometrics",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_extension_in_standing",
+        "name": "Hip Extension in Standing",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_hinge",
+        "name": "Hip Hinge",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "impact_loading",
+        "name": "Impact Loading",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "chin_tuck_cervical_retraction",
+        "name": "Chin Tuck + Cervical Retraction",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "ergonomic_and_lifting_education",
+        "name": "Ergonomic and Lifting Education",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_rom_neural_tension_check",
+        "name": "Cervical ROM & Neural Tension Check",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "wrist_extensor_stretching",
+        "name": "Wrist Extensor Stretching",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "ice_cryotherapy",
+        "name": "Ice / Cryotherapy",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_proprioception_training",
+        "name": "Cervical Proprioception Training",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_strength_maintenance",
+        "name": "Cervical Strength Maintenance",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cervical_spine_treatment",
+        "name": "Cervical Spine Treatment",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "postural_maintenance_program",
+        "name": "Postural Maintenance Program",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "mini_squats",
+        "name": "Mini Squats",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_to_stand",
+        "name": "Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "diaphragmatic_breathing",
+        "name": "Diaphragmatic Breathing",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bridge",
+        "name": "Bridge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "side_plank",
+        "name": "Side Plank",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pallof_press",
+        "name": "Pallof Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "glute_bridge",
+        "name": "Glute Bridge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "crunch",
+        "name": "Crunch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deep_neck_extensor_endurance",
+        "name": "Deep Neck Extensor Endurance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "legs_up_the_wall",
+        "name": "Legs-Up-the-Wall",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_press_up",
+        "name": "Prone Press-Up (McKenzie)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bodyweight_hip_hinge",
+        "name": "Bodyweight Hip Hinge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_hike",
+        "name": "Standing Hip Hike",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "obturator-internus": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "flexor-pollicis-brevis": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "pronator-teres": {
+    "primary": [
+      {
+        "id": "forearm_pronation_supination",
+        "name": "Forearm Pronation/Supination",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "resisted_forearm_pronation",
+        "name": "Resisted Forearm Pronation",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "desk_wrist_flexor_stretch",
+        "name": "Desk Wrist Flexor Stretch",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "popliteus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "rectus-abdominis": {
+    "primary": [
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "crunch",
+        "name": "Crunch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps Pushdown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_incline_push_up",
+        "name": "Countertop Incline Push-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_press_up",
+        "name": "Prone Press-Up (McKenzie)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "rotatores-thoracis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "extensor-carpi-ulnaris": {
+    "primary": [
+      {
+        "id": "ulnar_deviation_strengthening",
+        "name": "Ulnar Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wrist_circles_arom",
+        "name": "Wrist Circles (AROM)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "desk_wrist_extensor_stretch",
+        "name": "Desk Wrist Extensor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "radial_deviation_strengthening",
+        "name": "Radial Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dart_throwers_motion",
+        "name": "Dart Thrower's Motion",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "subscapularis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "abductor-digiti-minimi": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "dorsal-interossei": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "biceps-femoris-long": {
+    "primary": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_hamstring_stretch",
+        "name": "Wall Hamstring Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "lumbricals": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "grip_strengthening",
+        "name": "Grip Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tendon_gliding_exercises",
+        "name": "Tendon Gliding Exercises",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "abductor-pollicis-longus": {
+    "primary": [
+      {
+        "id": "thumb_radial_abduction",
+        "name": "Thumb Radial Abduction",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "radial_deviation_strengthening",
+        "name": "Radial Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dart_throwers_motion",
+        "name": "Dart Thrower's Motion",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "extensor-pollicis-longus": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "pectineus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "side_lying_hip_adduction",
+        "name": "Side-Lying Hip Adduction",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "semimembranosus": {
+    "primary": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "wall_hamstring_stretch",
+        "name": "Wall Hamstring Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "adductor-group": {
+    "primary": [
+      {
+        "id": "copenhagen_adduction",
+        "name": "Copenhagen Adduction Exercise",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_abduction_support",
+        "name": "Standing Hip Abduction (Counter Support)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "extensor-carpi-radialis-brevis": {
+    "primary": [
+      {
+        "id": "dart_throwers_motion",
+        "name": "Dart Thrower's Motion",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wrist_circles_arom",
+        "name": "Wrist Circles (AROM)",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "desk_wrist_extensor_stretch",
+        "name": "Desk Wrist Extensor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "radial_deviation_strengthening",
+        "name": "Radial Deviation Strengthening",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "teres-minor": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "anconeus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps Pushdown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "skull_crusher",
+        "name": "Skull Crusher (Lying Triceps Extension)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_incline_push_up",
+        "name": "Countertop Incline Push-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_triceps_dip",
+        "name": "Chair Triceps Dip",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "supraspinatus": {
+    "primary": [
+      {
+        "id": "full_can_exercise",
+        "name": "Full Can Exercise",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "pendulum_exercise",
+        "name": "Pendulum Exercise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "overhead_press",
+        "name": "Overhead Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "plantaris": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorframe_calf_stretch",
+        "name": "Doorframe Calf Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "iliopsoas": {
+    "primary": [
+      {
+        "id": "straight_leg_raise",
+        "name": "Straight Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "crunch",
+        "name": "Crunch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_hamstring_stretch",
+        "name": "Wall Hamstring Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "serratus-anterior": {
+    "primary": [
+      {
+        "id": "push_up_plus",
+        "name": "Push-up Plus",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "full_can_exercise",
+        "name": "Full Can Exercise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "overhead_press",
+        "name": "Overhead Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_incline_push_up",
+        "name": "Countertop Incline Push-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_triceps_dip",
+        "name": "Chair Triceps Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "semispinalis-cervicis": {
+    "primary": [
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deep_neck_extensor_endurance",
+        "name": "Deep Neck Extensor Endurance",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": []
+  },
+  "tensor-fasciae-latae": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "straight_leg_raise",
+        "name": "Straight Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_abduction_support",
+        "name": "Standing Hip Abduction (Counter Support)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_hike",
+        "name": "Standing Hip Hike",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "gluteus-maximus": {
+    "primary": [
+      {
+        "id": "mini_squats",
+        "name": "Mini Squats",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hip_abduction",
+        "name": "Hip Abduction",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_press",
+        "name": "Single Leg Press",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hack_squat",
+        "name": "Hack Squat",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "sit_to_stand",
+        "name": "Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prom_er",
+        "name": "PROM ER",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_and_glute_strengthening",
+        "name": "Hip and Glute Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "bridge",
+        "name": "Bridge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_bridge_when_bilateral_mastered",
+        "name": "Single Leg Bridge Progression",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "back_squat_goblet_squat",
+        "name": "Back Squat / Goblet Squat",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "supine_hip_arom",
+        "name": "Supine Hip AROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "single_leg_bridge",
+        "name": "Single-Leg Bridge",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "step_up",
+        "name": "Step-up",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "side_lying_hip_abduction",
+        "name": "Side-lying Hip Abduction",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "stance",
+        "name": "Stance",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "heavy_slow_resistance",
+        "name": "Heavy slow resistance",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "foam_roll_it_band_glutes",
+        "name": "Foam Roll IT Band / Glutes",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "application",
+        "name": "Application",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "bridge_single_leg_bridge",
+        "name": "Bridge + Single-Leg Bridge",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "region",
+        "name": "Region",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "strengthening_maintenance",
+        "name": "Strengthening Maintenance",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_abductor_glute_strengthening",
+        "name": "Hip Abductor & Glute Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "step_up_and_step_down",
+        "name": "Step-up and Step-down",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "sit_to_stand_progression",
+        "name": "Sit-to-Stand Progression",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_romanian_deadlift",
+        "name": "Single Leg Romanian Deadlift",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "prone_hip_extension",
+        "name": "Prone Hip Extension",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "isometric_gluteal_sets",
+        "name": "Isometric Gluteal Sets",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "nerve_gliding",
+        "name": "Nerve Gliding",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "intrinsic_hand_strengthening",
+        "name": "Intrinsic Hand Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "ulnar_nerve_slider",
+        "name": "Ulnar Nerve Slider",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "palmar_abduction_opposition",
+        "name": "Palmar Abduction / Opposition",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "isometric_rotator_cuff",
+        "name": "Isometric Rotator Cuff",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_abductor_and_glute_strengthening",
+        "name": "Hip Abductor and Glute Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "isometric_gluteal_squeeze",
+        "name": "Isometric Gluteal Squeeze",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "isometric_hip_abduction",
+        "name": "Isometric Hip Abduction",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "glute_bridge",
+        "name": "Glute Bridge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "step_ups_and_reverse_lunges",
+        "name": "Step-Ups and Reverse Lunges",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "lateral_and_multidirectional_agility_drills",
+        "name": "Lateral and Multidirectional Agility Drills",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "maintenance_strengthening_program",
+        "name": "Maintenance Strengthening Program",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_abductor_isometrics",
+        "name": "Hip Abductor Isometrics",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_external_rotator_strengthening",
+        "name": "Hip External Rotator Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "cable_chest_fly",
+        "name": "Cable Chest Fly",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_abduction_arom",
+        "name": "Hip Abduction AROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hip_extensor_strengthening",
+        "name": "Hip Extensor Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bodyweight_hip_hinge",
+        "name": "Bodyweight Hip Hinge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "clamshell",
+        "name": "Clamshell",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_incline_push_up",
+        "name": "Countertop Incline Push-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "legs_up_the_wall",
+        "name": "Legs-Up-the-Wall",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_abduction_support",
+        "name": "Standing Hip Abduction (Counter Support)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_hike",
+        "name": "Standing Hip Hike",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "adductor-brevis": {
+    "primary": [
+      {
+        "id": "side_lying_hip_adduction",
+        "name": "Side-Lying Hip Adduction",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": []
+  },
+  "abductor-pollicis-brevis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "thumb_radial_abduction",
+        "name": "Thumb Radial Abduction",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "transversus-abdominis": {
+    "primary": [
+      {
+        "id": "single_leg_bridge_when_bilateral_mastered",
+        "name": "Single Leg Bridge Progression",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "abdominal_isometrics",
+        "name": "Abdominal Isometrics",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "breathing_exercises",
+        "name": "Breathing Exercises",
+        "provenance": "protocol_inferred"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "straight_leg_raise",
+        "name": "Straight Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mini_squats",
+        "name": "Mini Squats",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_to_stand",
+        "name": "Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cat_camel",
+        "name": "Cat-Camel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "diaphragmatic_breathing",
+        "name": "Diaphragmatic Breathing",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog",
+        "name": "Bird Dog",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bridge",
+        "name": "Bridge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pallof_press",
+        "name": "Pallof Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "glute_bridge",
+        "name": "Glute Bridge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "sit_up",
+        "name": "Sit-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "crunch",
+        "name": "Crunch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_incline_push_up",
+        "name": "Countertop Incline Push-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_lat_stretch",
+        "name": "Doorway Lat Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bodyweight_hip_hinge",
+        "name": "Bodyweight Hip Hinge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "gastrocnemius": {
+    "primary": [
+      {
+        "id": "ankle_pumps",
+        "name": "Ankle Pumps",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "lateral_band_walk",
+        "name": "Lateral Band Walks",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "resistance_band_eversion",
+        "name": "Resistance Band Eversion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "alphabet_tracing",
+        "name": "Alphabet Tracing",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "jump_rope",
+        "name": "Jump Rope",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "ankle_rom",
+        "name": "Ankle ROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "neural_mobilisation",
+        "name": "Neural Mobilisation",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "step_up_with_lateral_load",
+        "name": "Step-up with Lateral Load",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "maintain_ankle_mobility_and_reduce_oedema",
+        "name": "Maintain ankle mobility and reduce oedema",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "peroneal_eversion",
+        "name": "Peroneal Eversion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "ankle_arom",
+        "name": "Ankle Active Range of Motion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "peroneal_strengthening",
+        "name": "Peroneal Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "knee_and_hip_rom_strengthening",
+        "name": "Knee and Hip ROM / Strengthening",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "resisted_dorsiflexion",
+        "name": "Resisted Dorsiflexion",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "sciatic_neural_mobilisation",
+        "name": "Sciatic Neural Mobilisation",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "afo_provision",
+        "name": "AFO Provision",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "passive_ankle_prom",
+        "name": "Passive Ankle PROM",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "mini_squats",
+        "name": "Mini Squats",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "legs_up_the_wall",
+        "name": "Legs-Up-the-Wall",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_hamstring_stretch",
+        "name": "Wall Hamstring Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorframe_calf_stretch",
+        "name": "Doorframe Calf Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_calf_stretch_step",
+        "name": "Standing Calf Stretch on Step",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "pectoralis-major": {
+    "primary": [
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_incline_push_up",
+        "name": "Countertop Incline Push-Up",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "skull_crusher",
+        "name": "Skull Crusher (Lying Triceps Extension)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "mountain_climber",
+        "name": "Mountain Climber",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_press_up",
+        "name": "Prone Press-Up (McKenzie)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_triceps_dip",
+        "name": "Chair Triceps Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "deep-cervical-flexors": {
+    "primary": [
+      {
+        "id": "deep_neck_flexor_training",
+        "name": "Deep Neck Flexor Training",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cervical_flexion_arom",
+        "name": "Seated Cervical Flexion AROM",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "deep_neck_extensor_endurance",
+        "name": "Deep Neck Extensor Endurance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cervical_protraction_awareness",
+        "name": "Cervical Protraction Awareness",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_rotation_drill",
+        "name": "Upper Cervical Rotation Drill",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_extension_control",
+        "name": "Upper Cervical Extension Control",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "quadratus-lumborum": {
+    "primary": [
+      {
+        "id": "side_plank",
+        "name": "Side Plank",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_hike",
+        "name": "Standing Hip Hike",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "russian_twist",
+        "name": "Russian Twist",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "side_lying_hip_adduction",
+        "name": "Side-Lying Hip Adduction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_lat_stretch",
+        "name": "Doorway Lat Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bodyweight_hip_hinge",
+        "name": "Bodyweight Hip Hinge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "standing_hip_abduction_support",
+        "name": "Standing Hip Abduction (Counter Support)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "active_anterior_pelvic_tilt",
+        "name": "Active Anterior Pelvic Tilt",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pelvic_clock_mobilization",
+        "name": "Pelvic Clock Mobilization",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "teres-major": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_lat_stretch",
+        "name": "Doorway Lat Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "biceps-brachii": {
+    "primary": [
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps Pushdown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "skull_crusher",
+        "name": "Skull Crusher (Lying Triceps Extension)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "resisted_forearm_pronation",
+        "name": "Resisted Forearm Pronation",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "semispinalis-capitis": {
+    "primary": [
+      {
+        "id": "prone_cervical_extension",
+        "name": "Prone Cervical Extension",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "deep_neck_extensor_endurance",
+        "name": "Deep Neck Extensor Endurance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cervical_flexion_arom",
+        "name": "Seated Cervical Flexion AROM",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "upper_cervical_extension_control",
+        "name": "Upper Cervical Extension Control",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "piriformis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "clamshell",
+        "name": "Clamshell",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "flexor-digiti-minimi-brevis": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "internal-intercostals": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "rhomboid-major": {
+    "primary": [
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_bench_press",
+        "name": "Barbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_bench_press",
+        "name": "Dumbbell Bench Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chest_fly",
+        "name": "Chest Fly",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec Deck",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "obturator-externus": {
+    "primary": [],
+    "stabilizer": []
+  },
+  "trapezius-lower": {
+    "primary": [
+      {
+        "id": "push_up_plus",
+        "name": "Push-up Plus",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_angel",
+        "name": "Wall Angel",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "prone_ytw_raise",
+        "name": "Prone Y-T-W Raise",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "face_pull",
+        "name": "Face Pull",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lat_pulldown",
+        "name": "Lat Pulldown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "parallel_bar_dip",
+        "name": "Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps Pushdown",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bear_crawl",
+        "name": "Bear Crawl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_isometric_row",
+        "name": "Doorway Isometric Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_row",
+        "name": "Towel Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_scapular_retraction",
+        "name": "Towel Scapular Retraction",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_triceps_dip",
+        "name": "Chair Triceps Dip",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "extensor-hallucis-longus": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "knee_to_wall_ankle",
+        "name": "Knee-to-Wall Ankle Mobilization",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "flexor-digitorum-superficialis": {
+    "primary": [
+      {
+        "id": "grip_strengthening",
+        "name": "Grip Strengthening",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tendon_gliding_exercises",
+        "name": "Tendon Gliding Exercises",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "romanian_deadlift",
+        "name": "Romanian Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "deadlift",
+        "name": "Deadlift",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_row",
+        "name": "Seated Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_cable_row",
+        "name": "Seated Cable Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "pull_up",
+        "name": "Pull-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chin_up",
+        "name": "Chin-Up",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "biceps_curl",
+        "name": "Biceps Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "doorway_lat_stretch",
+        "name": "Doorway Lat Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "desk_wrist_flexor_stretch",
+        "name": "Desk Wrist Flexor Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wrist_circles_arom",
+        "name": "Wrist Circles (AROM)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "peroneus-brevis": {
+    "primary": [],
+    "stabilizer": [
+      {
+        "id": "seated_calf_raise",
+        "name": "Seated Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "chair_supported_balance",
+        "name": "Chair-Supported Single-Leg Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "tandem_stance",
+        "name": "Tandem Stance Balance",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "heel_to_toe_walk",
+        "name": "Heel-to-Toe Walk",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_calf_raise",
+        "name": "Stair Calf Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_edge_calf_raise",
+        "name": "Calf Raise off Stair Edge",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "hamstrings": {
+    "primary": [
+      {
+        "id": "toe_curls_marble_pickups",
+        "name": "Toe Curls / Marble pickups",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "short_foot_exercise",
+        "name": "Short Foot Exercise",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "single_leg_bridge_when_bilateral_mastered",
+        "name": "Single Leg Bridge Progression",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "eccentric",
+        "name": "+ eccentric)",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "isolated_eccentric_hamstring_loading",
+        "name": "Isolated eccentric hamstring loading",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "stretching",
+        "name": "Stretching",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "nordic_walking",
+        "name": "Nordic Walking",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "single_leg_romanian_deadlift",
+        "name": "Single Leg Romanian Deadlift",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "resisted_finger_curls",
+        "name": "Resisted Finger Curls",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hamstring_curl",
+        "name": "Hamstring Curl",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "nordic_curl_progression_reverse_nordic",
+        "name": "Nordic Curl Progression + Reverse Nordic",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "reverse_nordic_curl",
+        "name": "Reverse Nordic Curl",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "eccentric_maintenance_program",
+        "name": "Eccentric Maintenance Program",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "wrist_curls_and_reverse_curls",
+        "name": "Wrist Curls and Reverse Curls",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "barbell_curl",
+        "name": "Barbell Curl",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "eccentric_bicep_curls",
+        "name": "Eccentric Bicep Curls",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "hamstring_stretching",
+        "name": "Hamstring Stretching",
+        "provenance": "protocol_inferred"
+      },
+      {
+        "id": "leg_curl",
+        "name": "Leg Curl",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bodyweight_hip_hinge",
+        "name": "Bodyweight Hip Hinge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "towel_hamstring_curl",
+        "name": "Towel Hamstring Curl",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": [
+      {
+        "id": "mini_squats",
+        "name": "Mini Squats",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hip_thrust",
+        "name": "Hip Thrust",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "spanish_squat",
+        "name": "Spanish Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "reverse_lunge",
+        "name": "Reverse Lunge",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "goblet_squat",
+        "name": "Goblet Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "back_squat",
+        "name": "Back Squat (Barbell)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "front_squat",
+        "name": "Front Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "barbell_row",
+        "name": "Barbell Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bent_over_row",
+        "name": "Bent-Over Row",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "leg_extension",
+        "name": "Leg Extension",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "burpee",
+        "name": "Burpee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jump_squat",
+        "name": "Jump Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit",
+        "name": "Wall Sit",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "superman",
+        "name": "Superman",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "hanging_leg_raise",
+        "name": "Hanging Leg Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "cobra_pose",
+        "name": "Cobra Pose",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "downward_dog",
+        "name": "Downward Dog (Adho Mukha Svanasana)",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "worlds_greatest_stretch",
+        "name": "World's Greatest Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "single_leg_sit_to_stand",
+        "name": "Single-Leg Sit-to-Stand",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "legs_up_the_wall",
+        "name": "Legs-Up-the-Wall",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_hamstring_stretch",
+        "name": "Wall Hamstring Stretch",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "eccentric_stair_descent",
+        "name": "Eccentric Stair Descent",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "backpack_weighted_carry",
+        "name": "Backpack Weighted Carry",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_sit_isometric",
+        "name": "Wall Sit Isometric",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "countertop_supported_squat",
+        "name": "Countertop-Supported Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "bird_dog_elbow_knee",
+        "name": "Bird Dog to Elbow-Knee",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "wall_ball_squat",
+        "name": "Wall Ball Squat",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "stair_step_up",
+        "name": "Step-Up on Stairs",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "seated_knee_extension",
+        "name": "Seated Knee Extension (Bodyweight)",
+        "provenance": "body_iq_verified"
+      }
+    ]
+  },
+  "middle-deltoid": {
+    "primary": [
+      {
+        "id": "lateral_raises",
+        "name": "Lateral Raises",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "overhead_press",
+        "name": "Overhead Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "dumbbell_shoulder_press",
+        "name": "Dumbbell Shoulder Press",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral Raise",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "jumping_jack",
+        "name": "Jumping Jack",
+        "provenance": "body_iq_verified"
+      },
+      {
+        "id": "water_bottle_lateral_raise",
+        "name": "Water Bottle Lateral Raise",
+        "provenance": "body_iq_verified"
+      }
+    ],
+    "stabilizer": []
+  }
+}

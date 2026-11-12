@@ -29,6 +29,7 @@ const AdminInjuryManager = lazy(() => import('../pages/AdminInjuryManager'));
 const DietsRegimensPage = lazy(() => import('../pages/DietsRegimensPage'));
 const DietDetailPage = lazy(() => import('../pages/DietDetailPage'));
 const ExercisesPage = lazy(() => import('../pages/ExercisesPage'));
+const AnatomyPage = lazy(() => import('../pages/AnatomyPage'));
 const ExerciseRegionPage = lazy(() => import('../pages/ExerciseRegionPage'));
 const ExerciseSystemsPage = lazy(() => import('../pages/ExerciseSystemsPage'));
 const ExerciseSystemDetailPage = lazy(() => import('../pages/ExerciseSystemDetailPage'));
@@ -103,6 +104,8 @@ export default function AppRoutes({theme, onToggleTheme}: {theme: 'light' | 'dar
       <Route path="/:lang/diets" element={<DietsRegimensPage />} />
       <Route path="/:lang/diets/:slug" element={<DietDetailPage />} />
       <Route path="/:lang/exercises" element={<ExercisesPage />} />
+      <Route path="/:lang/anatomy" element={<AnatomyPage />} />
+      <Route path="/:lang/muscles" element={<AnatomyPage />} />
       <Route path="/:lang/exercises/systems" element={<ExerciseSystemsPage />} />
       <Route path="/:lang/exercises/systems/:systemId" element={<ExerciseSystemDetailPage />} />
       <Route path="/:lang/exercises/lower_back" element={<LegacyExerciseSlugRedirect />} />
@@ -145,6 +148,8 @@ export default function AppRoutes({theme, onToggleTheme}: {theme: 'light' | 'dar
         '/dashboard',
         '/diets',
         '/exercises',
+        '/anatomy',
+        '/muscles',
         '/exercises/systems',
         '/exercises/systems/:systemId',
         '/exercises/lower_back',

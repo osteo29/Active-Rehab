@@ -279,6 +279,22 @@ const Navigation = memo(
                   </Link>
 
                   <Link
+                    to={navigationPaths.anatomy(lang)}
+                    onClick={() => setIsSidebarOpen(false)}
+                    className={`flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-semibold transition ${
+                      isActivePath(navigationPaths.anatomy(lang))
+                        ? 'bg-health-green/15 text-health-green dark:bg-health-green/20'
+                        : 'text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <Activity className="h-4 w-4 text-health-green" />
+                      <span>{isAr ? 'مكتبة العضلات والتشريح' : 'Anatomy & Muscles'}</span>
+                    </div>
+                    <ChevronRight className={`h-4 w-4 opacity-40 ${isAr ? 'rotate-180' : ''}`} />
+                  </Link>
+
+                  <Link
                     to={navigationPaths.diets(lang)}
                     onClick={() => setIsSidebarOpen(false)}
                     className={`flex items-center justify-between rounded-xl px-3.5 py-2.5 text-sm font-semibold transition ${
@@ -528,6 +544,16 @@ const Navigation = memo(
                 }`}
               >
                 {isAr ? 'دليل التمارين' : 'Exercises'}
+              </Link>
+              <Link
+                to={navigationPaths.anatomy(lang)}
+                className={`rounded-xl px-3 py-1.5 text-xs font-bold transition ${
+                  isActivePath(navigationPaths.anatomy(lang))
+                    ? 'text-health-green'
+                    : 'text-slate-300 hover:text-white'
+                }`}
+              >
+                {isAr ? 'التشريح والعضلات' : 'Anatomy'}
               </Link>
               <Link
                 to={navigationPaths.dashboard(lang)}

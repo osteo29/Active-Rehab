@@ -1,4 +1,4 @@
-﻿import {ArrowRight, ChevronRight, Layers3, Network} from 'lucide-react';
+﻿import {Activity, ArrowRight, ChevronRight, Layers3, Network} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
 import ExerciseFinder, {
@@ -36,7 +36,16 @@ export default function ExercisesPage() {
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-3 sm:grid-cols-3">
+              <Link to={navigationPaths.anatomy(lang)} className="rounded-[1.6rem] border border-health-green/30 bg-health-green/10 p-5 transition hover:-translate-y-0.5 hover:border-health-green/50">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-health-green-dark">
+                  <Activity className="h-4 w-4 text-health-green" />
+                  <span>{isAr ? 'مكتبة العضلات' : 'Anatomy'}</span>
+                </div>
+                <div className="mt-3 text-lg font-black text-slate-900">{isAr ? 'التشريح والعضلات' : 'Muscle Anatomy Index'}</div>
+                <div className="mt-2 text-sm leading-7 text-slate-700">{isAr ? '107 عضلات موثقة ومربوطة بتمارين التأهيل والقوة.' : '107 verified muscles linked directly to exercises.'}</div>
+              </Link>
+
               <Link to={navigationPaths.exerciseSystems(lang)} className="rounded-[1.6rem] border border-slate-200 bg-white/85 p-5 transition hover:-translate-y-0.5 hover:border-health-green/30">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
                   <Network className="h-4 w-4 text-health-green" />

@@ -60,6 +60,7 @@ export interface ExercisePlan {
   equipment?: string;
   alternatives?: string[];
   cues?: string[];
+  exerciseId?: string;
 }
 
 export interface InjuryPageContentData {
