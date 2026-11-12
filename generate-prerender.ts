@@ -408,25 +408,25 @@ function calculatorDetailRoute(
     description,
     body: layout(
       lang,
-      'Focused calculator',
+      isAr ? 'حاسبة سريرية' : 'Focused calculator',
       title,
       description,
       [
         section(
-          'What you will find here',
+          isAr ? 'عن هذه الحاسبة' : 'About this calculator',
           `<ul>
-            <li>Direct access to the matching calculator without browsing the full tool hub.</li>
-            <li>A concise purpose statement so the page is indexable and easier to understand.</li>
-            <li>Helpful next steps into diets, injuries, and the tracking dashboard.</li>
+            <li>${isAr ? 'وصول مباشر وفوري لحساب المؤشرات الدقيقة دون الحاجة لتصفح باقي الأقسام.' : 'Direct access to the matching calculator without browsing the full tool hub.'}</li>
+            <li>${isAr ? 'معادلات معتمدة علمياً ومبنية على الأدلة لتقدير الاحتياجات بدقة.' : 'Evidence-based formulas and concise purpose statements for easier clinical reference.'}</li>
+            <li>${isAr ? 'خطوات عملية وتوصيات لربط النتائج ببرامج التأهيل والأنظمة الغذائية المناسبة.' : 'Helpful next steps into diets, injuries, and personalized recovery guidance.'}</li>
           </ul>`,
         ),
         section(
-          'Helpful next steps',
+          isAr ? 'أقسام وروابط ذات صلة' : 'Helpful next steps',
           `<ul class="link-list">
-            <li><a href="/${lang}/calculators">Back to the calculators hub</a></li>
-            <li><a href="/${lang}/injuries">Open the injury library</a></li>
-            <li><a href="/${lang}/diets">Review diet guides</a></li>
-            <li><a href="/${lang}/dashboard">Track results in the dashboard</a></li>
+            <li><a href="/${lang}/calculators">${isAr ? 'العودة لجميع الحاسبات السريرية' : 'Back to the calculators hub'}</a></li>
+            <li><a href="/${lang}/injuries">${isAr ? 'مكتبة بروتوكولات الإصابات' : 'Open the injury library'}</a></li>
+            <li><a href="/${lang}/diets">${isAr ? 'دليل الأنظمة الغذائية العلاجية' : 'Review diet guides'}</a></li>
+            <li><a href="/${lang}/insights">${isAr ? 'مقالات التغذية والتعافي الرياضي' : 'Read recovery and nutrition insights'}</a></li>
           </ul>`,
         ),
       ],
@@ -539,36 +539,63 @@ function articleRoute(lang: Lang, article: ReturnType<typeof getArticles>[number
 
 function injuriesRoute(lang: Lang): RouteDefinition {
   const isAr = lang === 'ar';
-  const injuries = getAllInjuries();
+  const injuries = getCanonicalInjuries();
+  const regions = Array.from(new Set(injuries.map((injury) => injury.bodyRegion))).sort();
+
   return {
     path: `/${lang}/injuries`,
     lang,
-    title: isAr ? 'مكتبة بروتوكولات الإصابات' : 'Injury protocol library',
+    title: isAr ? 'مكتبة بروتوكولات الإصابات والتعافي' : 'Injury protocol library',
     description: isAr
-      ? 'صفحات مستقلة لبروتوكولات الإصابات الشائعة مع مراحل التعافي والتغذية والتمارين.'
-      : 'Standalone injury pages with rehab stages, nutrition guidance, and exercise focus for common conditions.',
+      ? `صفحات مستقلة لـ ${injuries.length} بروتوكول إصابة مع مراحل التعافي السريري والتمارين والتغذية.`
+      : `Standalone injury pages with rehab stages, exercises, nutrition guidance, and recovery timelines for ${injuries.length} conditions.`,
     body: layout(
       lang,
       isAr ? 'إصابات وتعافي' : 'Injury recovery',
-      isAr ? 'مكتبة إصابات قابلة للفهرسة مع صفحات مستقلة لكل حالة' : 'An indexable injury library with dedicated pages for each condition',
+      isAr ? 'مكتبة الإصابات وبروتوكولات التأهيل الشاملة' : 'Comprehensive Injury Protocol Library',
       isAr
-        ? `تضم المكتبة ${injuries.length} صفحة إصابة تغطي الأعراض الشائعة، مراحل التعافي، التركيز الغذائي، وروابط داخلية للحالات المرتبطة.`
-        : `The library includes ${injuries.length} injury pages covering symptoms, staged recovery focus, nutrition, and related internal links.`,
-      [
-        section(
-          isAr ? 'صفحات الإصابات' : 'Injury pages',
-          `<div class="grid two">${injuries
-            .slice(0, 36)
-            .map(
-              (injury) => `<article class="card">
-                <h3><a href="${getInjuryPath(injury, lang)}">${text(injury.name)}</a></h3>
-                <p class="meta">${text(injury.category)} · ${text(injury.bodyRegion)}</p>
-                <p>${text(getLocalizedOverview(injury, lang))}</p>
-              </article>`,
-            )
+        ? `تضم المكتبة ${injuries.length} صفحة إصابة تغطي الأعراض الشائعة، مراحل التعافي، التمارين، والتركيز الغذائي لمختلف مناطق الجسم.`
+        : `The library includes ${injuries.length} dedicated injury protocols covering symptoms, staged exercises, nutrition focus, and recovery progression.`,
+      regions.map((region) => {
+        const regionInjuries = injuries.filter((item) => item.bodyRegion === region);
+        const localizedRegion = isAr
+          ? translateInjury(
+              {
+                slugOrId: '',
+                nameEn: '',
+                category: 'Joint',
+                regionEn: region,
+                overviewEn: '',
+              },
+              'ar',
+            ).bodyRegion
+          : region;
+
+        return section(
+          isAr ? `إصابات ${localizedRegion} (${regionInjuries.length})` : `${region} Injuries (${regionInjuries.length})`,
+          `<div class="grid two">${regionInjuries
+            .map((injury) => {
+              const injuryTrans = translateInjury(
+                {
+                  slugOrId: injury.id.replace(/_/g, '-'),
+                  nameEn: injury.name,
+                  category: injury.category,
+                  regionEn: injury.bodyRegion,
+                  overviewEn: injury.overview,
+                },
+                lang,
+              );
+              const displayName = isAr ? decodeMojibake(injuryTrans.name) : injury.name;
+              const displayCategory = isAr ? injuryTrans.category : injury.category;
+              return `<article class="card">
+                <h3><a href="${getInjuryPath(injury, lang)}">${escapeHtml(displayName)}</a></h3>
+                <p class="meta">${escapeHtml(displayCategory)} · ${escapeHtml(localizedRegion)}</p>
+                <p>${escapeHtml(text(getLocalizedOverview(injury, lang)))}</p>
+              </article>`;
+            })
             .join('')}</div>`,
-        ),
-      ],
+        );
+      }),
     ),
   };
 }
@@ -611,6 +638,139 @@ function injuryRoute(lang: Lang, injury: InjuryProtocol): RouteDefinition {
   ];
   const faqItems = injury.pageContent?.faq?.length ? injury.pageContent.faq : fallbackFaqItems;
 
+  const allCanonical = getCanonicalInjuries();
+  const relatedInjuries = allCanonical
+    .filter(
+      (other) =>
+        other.id !== injury.id &&
+        (other.bodyRegion === injury.bodyRegion || other.category === injury.category),
+    )
+    .slice(0, 4);
+
+  const sections = [
+    section(
+      isAr ? 'ملخص الحالة والتعافي' : 'Condition Summary & Rehab',
+      `<p><strong>${isAr ? 'التصنيف:' : 'Category:'}</strong> ${text(localizedCategory)}</p>
+       <p><strong>${isAr ? 'المنطقة:' : 'Body region:'}</strong> ${text(localizedBodyRegion)}</p>
+       <p><strong>${isAr ? 'شائع في:' : 'Common in:'}</strong> ${formatList(getLocalizedCommonIn(lang, injury.commonIn), isAr ? '، ' : ', ')}</p>
+       ${injury.rehabSummary ? `<p><strong>${isAr ? 'ملخص خطة التأهيل:' : 'Rehab summary:'}</strong> ${text(injury.rehabSummary)}</p>` : ''}`,
+    ),
+  ];
+
+  if (injury.redFlags?.length) {
+    sections.push(
+      section(
+        isAr ? 'علامات التحذير والمحاذير (Red Flags)' : 'Safety Notes & Red Flags',
+        `<ul>${injury.redFlags.map((flag) => `<li>${text(flag)}</li>`).join('')}</ul>`,
+      ),
+    );
+  }
+
+  sections.push(
+    section(
+      isAr ? 'مراحل التعافي والتمارين' : 'Recovery Phases & Exercises',
+      injury.phases
+        .map((phase) => {
+          const exerciseList = phase.exercisePlans?.length
+            ? `<div class="grid two" style="margin-top:12px">${phase.exercisePlans
+                .map(
+                  (plan) => `<div class="card" style="margin-top:8px;padding:12px">
+                    <strong>${escapeHtml(plan.label)}</strong>
+                    <p class="meta" style="margin:4px 0">${plan.sets ? `${isAr ? 'المجموعات:' : 'Sets:'} ${escapeHtml(plan.sets)} · ` : ''}${plan.reps ? `${isAr ? 'التكرار:' : 'Reps:'} ${escapeHtml(plan.reps)}` : ''}</p>
+                  </div>`,
+                )
+                .join('')}</div>`
+            : phase.exercises?.length
+              ? `<ul>${phase.exercises.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+              : '';
+
+          const avoidSection = phase.prohibitedMovements?.length
+            ? `<p><strong>${isAr ? 'حركات ومحاذير يُنصح بتجنبها:' : 'Movements to avoid:'}</strong> ${formatList(phase.prohibitedMovements, isAr ? '، ' : ', ')}</p>`
+            : '';
+
+          const supplementSection = phase.supplements?.length
+            ? `<p><strong>${isAr ? 'المكملات الداعمة:' : 'Supplements:'}</strong> ${phase.supplements
+                .map((s) => `${escapeHtml(s.name)} (${escapeHtml(s.dose)})`)
+                .join(isAr ? '، ' : ', ')}</p>`
+            : '';
+
+          return `<div class="card">
+            <h3>${text(getPhaseLabel(phase, lang))} <span class="meta">(${text(phase.duration)})</span></h3>
+            <p><strong>${isAr ? 'الأهداف:' : 'Goals:'}</strong> ${formatList(getPhaseGoals(phase, lang), isAr ? '، ' : ', ')}</p>
+            ${exerciseList ? `<p><strong>${isAr ? 'التمارين المقترحة لهذه المرحلة:' : 'Prescribed phase exercises:'}</strong></p>${exerciseList}` : ''}
+            ${avoidSection}
+            <p><strong>${isAr ? 'التركيز الغذائي:' : 'Nutrition focus:'}</strong> ${formatList(getPhaseNutritionFocus(phase, lang), isAr ? '، ' : ', ')}</p>
+            ${supplementSection}
+            <p><strong>${isAr ? 'أمثلة الوجبات:' : 'Meal examples:'}</strong> ${text(getPhaseBreakfast(phase, lang))} / ${text(phase.meals.lunch)} / ${text(phase.meals.dinner)}</p>
+          </div>`;
+        })
+        .join(''),
+    ),
+  );
+
+  if (faqItems.length) {
+    sections.push(
+      section(
+        isAr ? 'الأسئلة الشائعة حول الإصابة والتعافي' : 'Frequently Asked Questions',
+        `<div class="grid">${faqItems
+          .map(
+            (item) => `<div class="card" style="margin-top:12px">
+              <h3>${text(item.q)}</h3>
+              <p>${text(item.a)}</p>
+            </div>`,
+          )
+          .join('')}</div>`,
+      ),
+    );
+  }
+
+  if (relatedInjuries.length) {
+    sections.push(
+      section(
+        isAr ? 'بروتوكولات وإصابات مرتبطة' : 'Related Injury Protocols',
+        `<div class="grid two">${relatedInjuries
+          .map((rel) => {
+            const relTrans = translateInjury(
+              {
+                slugOrId: rel.id.replace(/_/g, '-'),
+                nameEn: rel.name,
+                category: rel.category,
+                regionEn: rel.bodyRegion,
+                overviewEn: rel.overview,
+              },
+              lang,
+            );
+            const relName = isAr ? decodeMojibake(relTrans.name) : rel.name;
+            return `<article class="card">
+              <h3><a href="${getInjuryPath(rel, lang)}">${escapeHtml(relName)}</a></h3>
+              <p class="meta">${escapeHtml(isAr ? relTrans.category : rel.category)} · ${escapeHtml(isAr ? relTrans.bodyRegion : rel.bodyRegion)}</p>
+              <p>${escapeHtml(text(getLocalizedOverview(rel, lang)))}</p>
+            </article>`;
+          })
+          .join('')}</div>`,
+      ),
+    );
+  }
+
+  sections.push(
+    section(
+      isAr ? 'روابط مفيدة مرتبطة بالتعافي' : 'Helpful recovery links',
+      `<ul class="link-list">
+        <li><a href="/${lang}/calculators">${isAr ? 'حاسبات البروتين والسعرات والماء' : 'Protein, calorie, and hydration calculators'}</a></li>
+        <li><a href="/${lang}/diets">${isAr ? 'أنواع الدايت المناسبة للتعافي' : 'Diet styles that support recovery'}</a></li>
+        <li><a href="/${lang}/insights">${isAr ? 'مقالات تعليمية عن الألم والتعافي' : 'Articles about pain, nutrition, and recovery'}</a></li>
+      </ul>
+      <div class="grid two">${relatedArticles
+        .map(
+          (article) => `<article class="card">
+            <h3><a href="/${lang}/insights/${article.slug}">${text(article.title)}</a></h3>
+            <p>${text(article.excerpt)}</p>
+          </article>`,
+        )
+        .join('')}</div>`,
+    ),
+  );
+
   return {
     path: injuryPath,
     lang,
@@ -621,44 +781,7 @@ function injuryRoute(lang: Lang, injury: InjuryProtocol): RouteDefinition {
       isAr ? 'بروتوكول إصابة' : 'Injury protocol',
       decodeMojibake(localizedName),
       text(getLocalizedOverview(injury, lang)),
-      [
-        section(
-          isAr ? 'ملخص الحالة' : 'Condition summary',
-          `<p><strong>${isAr ? 'التصنيف:' : 'Category:'}</strong> ${text(localizedCategory)}</p>
-           <p><strong>${isAr ? 'المنطقة:' : 'Body region:'}</strong> ${text(localizedBodyRegion)}</p>
-           <p><strong>${isAr ? 'شائع في:' : 'Common in:'}</strong> ${formatList(getLocalizedCommonIn(lang, injury.commonIn), isAr ? '، ' : ', ')}</p>`,
-        ),
-        section(
-          isAr ? 'مراحل التعافي' : 'Recovery phases',
-          injury.phases
-            .slice(0, 3)
-            .map(
-              (phase) => `<div class="card">
-                <h3>${text(getPhaseLabel(phase, lang))} <span class="meta">(${text(phase.duration)})</span></h3>
-                <p><strong>${isAr ? 'الأهداف:' : 'Goals:'}</strong> ${formatList(getPhaseGoals(phase, lang), isAr ? '، ' : ', ')}</p>
-                <p><strong>${isAr ? 'التركيز الغذائي:' : 'Nutrition focus:'}</strong> ${formatList(getPhaseNutritionFocus(phase, lang), isAr ? '، ' : ', ')}</p>
-                <p><strong>${isAr ? 'أمثلة الوجبات:' : 'Meal examples:'}</strong> ${text(getPhaseBreakfast(phase, lang))} / ${text(phase.meals.lunch)} / ${text(phase.meals.dinner)}</p>
-              </div>`,
-            )
-            .join(''),
-        ),
-        section(
-          isAr ? 'روابط مفيدة مرتبطة بالتعافي' : 'Helpful recovery links',
-          `<ul class="link-list">
-            <li><a href="/${lang}/calculators">${isAr ? 'حاسبات البروتين والسعرات والماء' : 'Protein, calorie, and hydration calculators'}</a></li>
-            <li><a href="/${lang}/diets">${isAr ? 'أنواع الدايت المناسبة للتعافي' : 'Diet styles that support recovery'}</a></li>
-            <li><a href="/${lang}/insights">${isAr ? 'مقالات تعليمية عن الألم والتعافي' : 'Articles about pain, nutrition, and recovery'}</a></li>
-          </ul>
-          <div class="grid two">${relatedArticles
-            .map(
-              (article) => `<article class="card">
-                <h3><a href="/${lang}/insights/${article.slug}">${text(article.title)}</a></h3>
-                <p>${text(article.excerpt)}</p>
-              </article>`,
-            )
-            .join('')}</div>`,
-        ),
-      ],
+      sections,
     ),
     structuredData: [
       {
@@ -773,37 +896,37 @@ function dietDetailRoute(lang: Lang, diet: (typeof dietRegimensCatalog)[number])
     description: decodeMojibake(summary),
     body: layout(
       lang,
-      isAr ? 'Ø¯Ù„ÙŠÙ„ ØºØ°Ø§Ø¦ÙŠ' : 'Diet guide',
+      isAr ? 'دليل غذائي' : 'Diet guide',
       title,
       summary,
       [
         section(
-          isAr ? 'Ø§Ù„Ø£Ù‡Ø¯Ø§Ù' : 'Goals',
+          isAr ? 'الأهداف' : 'Goals',
           `<ul>${goals.map((item) => `<li>${text(item)}</li>`).join('')}</ul>`,
         ),
         section(
-          isAr ? 'Ø§Ù„Ù…Ø¨Ø§Ø¯Ø¦ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ©' : 'Key principles',
+          isAr ? 'المبادئ الأساسية' : 'Key principles',
           `<ul>${principles.map((item) => `<li>${text(item)}</li>`).join('')}</ul>`,
         ),
         section(
-          isAr ? 'ØªØ·Ø¨ÙŠÙ‚ Ø¹Ù…Ù„ÙŠ' : 'Practical guide',
+          isAr ? 'تطبيق عملي' : 'Practical guide',
           `<ul>${practicalGuide.map((item) => `<li>${text(item)}</li>`).join('')}</ul>`,
         ),
         section(
-          isAr ? 'Ù…Ø«Ø§Ù„ ÙŠÙˆÙ… ØºØ°Ø§Ø¦ÙŠ' : 'Example day',
+          isAr ? 'مثال يوم غذائي' : 'Example day',
           `<ul>
-            <li><strong>${isAr ? 'Ø§Ù„ÙØ·Ø§Ø±' : 'Breakfast'}:</strong> ${text(isAr ? exampleDay.breakfast.ar : exampleDay.breakfast.en)}</li>
-            <li><strong>${isAr ? 'Ø§Ù„ØºØ¯Ø§Ø¡' : 'Lunch'}:</strong> ${text(isAr ? exampleDay.lunch.ar : exampleDay.lunch.en)}</li>
-            <li><strong>${isAr ? 'Ø§Ù„Ø¹Ø´Ø§Ø¡' : 'Dinner'}:</strong> ${text(isAr ? exampleDay.dinner.ar : exampleDay.dinner.en)}</li>
+            <li><strong>${isAr ? 'الإفطار' : 'Breakfast'}:</strong> ${text(isAr ? exampleDay.breakfast.ar : exampleDay.breakfast.en)}</li>
+            <li><strong>${isAr ? 'الغداء' : 'Lunch'}:</strong> ${text(isAr ? exampleDay.lunch.ar : exampleDay.lunch.en)}</li>
+            <li><strong>${isAr ? 'العشاء' : 'Dinner'}:</strong> ${text(isAr ? exampleDay.dinner.ar : exampleDay.dinner.en)}</li>
             ${
               exampleDay.snack
-                ? `<li><strong>${isAr ? 'ÙˆØ¬Ø¨Ø© Ø®ÙÙŠÙØ©' : 'Snack'}:</strong> ${text(isAr ? exampleDay.snack.ar : exampleDay.snack.en)}</li>`
+                ? `<li><strong>${isAr ? 'وجبة خفيفة' : 'Snack'}:</strong> ${text(isAr ? exampleDay.snack.ar : exampleDay.snack.en)}</li>`
                 : ''
             }
           </ul>`,
         ),
         section(
-          isAr ? 'ØªÙ†Ø¨ÙŠÙ‡Ø§Øª' : 'Cautions',
+          isAr ? 'تنبيهات ومحاذير' : 'Cautions',
           `<ul>${cautions.map((item) => `<li>${text(item)}</li>`).join('')}</ul>`,
         ),
       ],
@@ -824,52 +947,74 @@ function exercisesRoute(lang: Lang, slug?: (typeof EXERCISE_FINDER_STATIC_SLUGS)
   const isAr = lang === 'ar';
   const pageTitle = slug
     ? isAr
-      ? `تمارين ${EXERCISE_FINDER_STATIC_ARABIC_LABELS[slug]}`
-      : `${EXERCISE_FINDER_STATIC_LABELS[slug]} exercises`
+      ? `تمارين ${EXERCISE_FINDER_STATIC_ARABIC_LABELS[slug] || slug}`
+      : `${EXERCISE_FINDER_STATIC_LABELS[slug] || slug} exercises`
     : isAr
-      ? 'دليل التمارين'
-      : 'Exercise Finder';
+      ? 'دليل ومكتبة التمارين'
+      : 'Exercise Finder & Library';
   const pageDescription = slug
     ? isAr
-      ? `صفحة قابلة للفهرسة تعرض تمارين ${EXERCISE_FINDER_STATIC_ARABIC_LABELS[slug]} مع تشريح مبسط وروابط داخلية للأنظمة والخطط الأسبوعية.`
-      : `Indexable page for ${EXERCISE_FINDER_STATIC_LABELS[slug].toLowerCase()} exercises with simple anatomy notes, internal links, and weekly-plan context.`
+      ? `دليل شامل لتمارين ${EXERCISE_FINDER_STATIC_ARABIC_LABELS[slug] || slug} يشمل التشريح، التمارين المركبة والعزل، وبرامج التأهيل والتقوية.`
+      : `Comprehensive guide for ${EXERCISE_FINDER_STATIC_LABELS[slug]?.toLowerCase() || slug} exercises covering anatomy, compound and isolation moves, and weekly training volume.`
     : isAr
-      ? 'الصفحة الأساسية للتمارين وتربط بين مكتبة التمارين وصفحات المناطق العضلية وصفحات الأنظمة التدريبية.'
-      : 'Main exercise hub that connects the exercise library, muscle-region pages, and training-system pages.';
+      ? 'دليل التمارين الشامل، يربط بين مكتبة التمارين ومختلف المجموعات العضلية والأنظمة التدريبية والتأهيل.'
+      : 'Comprehensive exercise hub connecting muscle regions, movement patterns, workout systems, and rehab pathways.';
 
-  const links = [
-    ...['chest', 'back', 'shoulders', 'arms', 'core', 'legs'].map((item) => ({
-      href: `/${lang}/exercises/${item}`,
-      label: isAr ? `تمارين ${EXERCISE_FINDER_STATIC_ARABIC_LABELS[item as keyof typeof EXERCISE_FINDER_STATIC_ARABIC_LABELS]}` : `${EXERCISE_FINDER_STATIC_LABELS[item as keyof typeof EXERCISE_FINDER_STATIC_LABELS]} exercises`,
-    })),
-    {href: `/${lang}/exercises/systems`, label: isAr ? 'صفحات الأنظمة' : 'Training systems'},
-  ];
+  const allMuscleLinks = EXERCISE_FINDER_STATIC_SLUGS.map((item) => ({
+    href: `/${lang}/exercises/${normalizeExerciseUrlSlug(item)}`,
+    label: isAr
+      ? `تمارين ${EXERCISE_FINDER_STATIC_ARABIC_LABELS[item] || item}`
+      : `${EXERCISE_FINDER_STATIC_LABELS[item] || item} exercises`,
+  }));
+
+  const sections = slug
+    ? [
+        section(
+          isAr ? 'إرشادات التدريب والتأهيل' : 'Training & Rehab Guidelines',
+          `<ul>
+            <li>${isAr ? 'يُنصح باختيار 2 إلى 4 تمارين متنوعة تشمل الزوايا المختلفة للحركة للحصول على أفضل تحفيز عضلي وتأهيلي.' : 'Select 2 to 4 exercises targeting different angles of the movement for balanced strength and joint stability.'}</li>
+            <li>${isAr ? 'الحجم التدريبي الأسبوعي: من 8 إلى 16 مجموعة أسبوعياً مقسمة على 2 إلى 3 جلسات لتحقيق التعافي الأمثل.' : 'Recommended weekly volume: 8 to 16 sets split across 2 to 3 sessions for optimal recovery and hypertrophy.'}</li>
+            <li>${isAr ? 'في حالات التأهيل بعد الإصابة، ابدأ دائمًا بالتمارين متساوية القياس (Isometric) قبل الانتقال للتحميل الديناميكي.' : 'For post-injury rehab, begin with isometric holds before progressing to isotonic dynamic loading.'}</li>
+          </ul>`,
+        ),
+        section(
+          isAr ? 'جميع المجموعات العضلية' : 'All Muscle Groups',
+          `<div class="grid two">${allMuscleLinks
+            .map((item) => `<article class="card"><h3><a href="${item.href}">${item.label}</a></h3></article>`)
+            .join('')}</div>`,
+        ),
+        section(
+          isAr ? 'روابط الأنظمة والخطط' : 'Related Systems & Plans',
+          `<ul class="link-list">
+            <li><a href="/${lang}/exercises/systems">${isAr ? 'أنظمة وتقسيمات التمارين' : 'Workout splits & systems'}</a></li>
+            <li><a href="/${lang}/injuries">${isAr ? 'بروتوكولات إصابات المفاصل والعضلات' : 'Injury recovery protocols'}</a></li>
+            <li><a href="/${lang}/exercises">${isAr ? 'العودة لدليل التمارين الرئيسي' : 'Back to main exercise finder'}</a></li>
+          </ul>`,
+        ),
+      ]
+    : [
+        section(
+          isAr ? 'تصفح حسب المجموعة العضلية' : 'Browse by Muscle Region',
+          `<div class="grid two">${allMuscleLinks
+            .map((item) => `<article class="card"><h3><a href="${item.href}">${item.label}</a></h3></article>`)
+            .join('')}</div>`,
+        ),
+        section(
+          isAr ? 'أنظمة التمرين والتقسيمات' : 'Workout Systems',
+          `<ul class="link-list">
+            <li><a href="/${lang}/exercises/systems">${isAr ? 'عرض جميع أنظمة التمرين (Push-Pull-Legs, Upper-Lower, Full Body)' : 'View all training systems (Push-Pull-Legs, Upper-Lower, Full Body)'}</a></li>
+            <li><a href="/${lang}/calculators">${isAr ? 'حاسبات التغذية والبروتين وحساب السعرات' : 'Nutrition, protein, and calorie calculators'}</a></li>
+            <li><a href="/${lang}/injuries">${isAr ? 'مكتبة بروتوكولات الإصابات الرياضية' : 'Sports injury recovery library'}</a></li>
+          </ul>`,
+        ),
+      ];
 
   return {
     path: slug ? `/${lang}/exercises/${normalizeExerciseUrlSlug(slug)}` : `/${lang}/exercises`,
     lang,
     title: pageTitle,
     description: pageDescription,
-    body: layout(
-      lang,
-      isAr ? 'دليل التمارين' : 'Exercise finder',
-      pageTitle,
-      pageDescription,
-      [
-        section(
-          isAr ? 'روابط التنقل الأساسية' : 'Primary navigation links',
-          `<ul class="link-list">${links.map((item) => `<li><a href="${item.href}">${item.label}</a></li>`).join('')}</ul>`,
-        ),
-        section(
-          isAr ? 'طريقة استخدام القسم' : 'How to use this section',
-          `<ul>
-            <li>${isAr ? 'ابدأ من الصفحة الأساسية ثم افتح المنطقة العضلية أو النظام الذي يناسب هدفك.' : 'Start from the hub, then open the region or system page that matches your goal.'}</li>
-            <li>${isAr ? 'كل صفحة منطقة تربط بين التشريح المبسط والتمارين الكاملة والأنظمة المناسبة.' : 'Each region page connects simple anatomy, the full exercise library, and related systems.'}</li>
-            <li>${isAr ? 'كل صفحة نظام تشرح الفرق بين النظام وغيره وتربطه بخطة أسبوعية وتمارين مرتبطة.' : 'Each system page explains the split, compares it to others, and links it to a weekly plan and related exercises.'}</li>
-          </ul>`,
-        ),
-      ],
-    ),
+    body: layout(lang, isAr ? 'دليل التمارين' : 'Exercise finder', pageTitle, pageDescription, sections),
   };
 }
 

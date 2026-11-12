@@ -1,4 +1,4 @@
-import {lazy, useEffect, useMemo, useState} from 'react';
+import {lazy, Suspense, useEffect, useMemo, useState} from 'react';
 import {buildQuickSections} from './features/tools/app/config';
 import type {CalculatorType} from './features/tools/app/types';
 import {useAIDietPlan} from './hooks/useAIDietPlan';
@@ -15,12 +15,10 @@ import InjuryProtocolsHighlight from './components/home/InjuryProtocolsHighlight
 import Footer from './components/layout/Footer';
 import Navigation from './components/layout/Navigation';
 import ConsentBanner from './components/monetization/ConsentBanner';
-import AdSlot from './components/monetization/AdSlot';
 
-const WhatsNew = lazy(() => import('./components/home/WhatsNew'));
+const MyRecoveryJourney = lazy(() => import('./components/dashboard/MyRecoveryJourney'));
 const AboutSection = lazy(() => import('./components/home/AboutSection'));
 const BlogSection = lazy(() => import('./components/home/BlogSection'));
-const TrustSection = lazy(() => import('./components/home/TrustSection'));
 const SupportToolsSection = lazy(() => import('./components/home/SupportToolsSection'));
 const HealthProfileSection = lazy(() => import('./components/architect/HealthProfileSection'));
 const CalculatorSection = lazy(() => import('./components/app/CalculatorSection'));
@@ -37,7 +35,7 @@ export default function App({
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [lang, setLang] = useState<Language>(() => {
     const saved = localStorage.getItem('physiohub_lang');
-    return (saved as Language) || 'en';
+    return (saved as Language) || 'ar';
   });
 
   const t = translations[lang];
@@ -101,13 +99,30 @@ export default function App({
       />
 
       <main id="main-content" className="flex-1">
+        {/* Compact, action-focused Hero */}
         <Hero lang={lang} />
 
+        {/* Methodology & quick jump */}
         <FeaturesShowcase lang={lang} quickSections={quickSections} />
 
+        {/* Interactive My Recovery Journey Card */}
+        <section id="my-recovery" className="bg-white py-10 dark:bg-slate-900 sm:py-14">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Suspense
+              fallback={
+                <div className="h-44 animate-pulse rounded-[2rem] bg-slate-100 dark:bg-slate-800" />
+              }
+            >
+              <MyRecoveryJourney lang={lang} />
+            </Suspense>
+          </div>
+        </section>
+
+        {/* Clinical Injury Protocols spotlight */}
         <InjuryProtocolsHighlight lang={lang} />
 
-        <DeferredHomeSection id="architect" className="bg-slate-50 py-20">
+        {/* Health Profile & Architect Section */}
+        <DeferredHomeSection id="architect" className="bg-slate-50 py-16 dark:bg-slate-950 sm:py-20">
           <HealthProfileSection
             aiDietPlan={aiDietPlan}
             architectDraft={architectDraft}
@@ -124,7 +139,8 @@ export default function App({
           />
         </DeferredHomeSection>
 
-        <DeferredHomeSection id="calculators" className="bg-white py-20">
+        {/* Calculators Suite */}
+        <DeferredHomeSection id="calculators" className="bg-white py-16 dark:bg-slate-900 sm:py-20">
           <CalculatorSection
             assessmentSnapshot={assessmentSnapshot}
             controller={calculator}
@@ -134,7 +150,8 @@ export default function App({
           />
         </DeferredHomeSection>
 
-        <DeferredHomeSection className="bg-white py-20">
+        {/* Practical Support Tools (Food DB & Drug Checker) */}
+        <DeferredHomeSection className="bg-slate-50 py-16 dark:bg-slate-950 sm:py-20">
           <SupportToolsSection
             lang={lang}
             t={t}
@@ -150,26 +167,8 @@ export default function App({
           />
         </DeferredHomeSection>
 
-        <DeferredHomeSection className="bg-white py-16">
-          <WhatsNew lang={lang} />
-        </DeferredHomeSection>
-
-        <section className="bg-slate-50 py-8">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <AdSlot
-              lang={lang}
-              label={lang === 'en' ? 'Sponsored area' : 'مساحة إعلانية'}
-              slot={import.meta.env.VITE_ADSENSE_SLOT_INLINE}
-              format="horizontal"
-            />
-          </div>
-        </section>
-
-        <DeferredHomeSection className="bg-white py-12">
-          <TrustSection lang={lang} />
-        </DeferredHomeSection>
-
-        <DeferredHomeSection id="blog" className="bg-slate-50 py-20">
+        {/* Insights & Articles */}
+        <DeferredHomeSection id="blog" className="bg-white py-16 dark:bg-slate-900 sm:py-20">
           <BlogSection
             t={t}
             lang={lang}
@@ -178,7 +177,8 @@ export default function App({
           />
         </DeferredHomeSection>
 
-        <DeferredHomeSection id="about" className="bg-white py-16">
+        {/* About Section */}
+        <DeferredHomeSection id="about" className="bg-slate-50 py-12 dark:bg-slate-950 sm:py-16">
           <AboutSection lang={lang} />
         </DeferredHomeSection>
       </main>

@@ -30,7 +30,8 @@ function mapArticleRecord(record: Database['public']['Tables']['articles']['Row'
 }
 
 export async function getBuildArticles(lang: Language): Promise<Article[]> {
-  if (!supabase) return getLocalArticles(lang);
+  const localArticles = getLocalArticles(lang);
+  if (!supabase) return localArticles;
 
   try {
     const {data, error} = await supabase
@@ -40,11 +41,20 @@ export async function getBuildArticles(lang: Language): Promise<Article[]> {
       .order('date', {ascending: false})
       .order('created_at', {ascending: false});
 
-    if (error) throw error;
-    if (!data?.length) return getLocalArticles(lang);
-    return data.map(mapArticleRecord);
+    if (error || !data?.length) return localArticles;
+    
+    // Remote articles take precedence, local articles fill in any missing slugs
+    const remoteArticles = data.map(mapArticleRecord);
+    const remoteSlugs = new Set(remoteArticles.map((a) => a.slug));
+    const merged = [...remoteArticles];
+    for (const local of localArticles) {
+      if (!remoteSlugs.has(local.slug)) {
+        merged.push(local);
+      }
+    }
+    return merged;
   } catch {
-    return getLocalArticles(lang);
+    return localArticles;
   }
 }
 

@@ -213,7 +213,7 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                     <p className="mt-2 text-sm leading-6 text-slate-600">{activeCalculatorMeta?.desc}</p>
                   </div>
                   <button
-                    onClick={resetForm}
+                    onClick={controller.clearAllFields}
                     className="rounded-xl border border-slate-200 px-4 py-2 text-sm font-bold text-slate-800 transition-all hover:border-health-green hover:text-health-green"
                   >
                     {lang === 'en' ? 'Clear inputs' : 'مسح الحقول'}

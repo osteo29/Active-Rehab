@@ -15,98 +15,89 @@ interface FeaturesShowcaseProps {
 }
 
 const FeaturesShowcase = memo(({lang, quickSections}: FeaturesShowcaseProps) => {
-  const isEn = lang === 'en';
+  const isAr = lang === 'ar';
 
   const principles = [
     {
       icon: HeartPulse,
-      title: isEn ? 'Start with the issue' : 'ابدأ بالمشكلة التي تواجهك',
-      desc: isEn
-        ? 'Find an injury guide first, then move to the exercises and advice that make sense for that stage.'
-        : 'ابدأ بدليل الإصابة، ثم انتقل للتمارين والنصائح التي تناسب مرحلتك الحالية.',
+      title: isAr ? 'ابدأ بالمشكلة التي تواجهك' : 'Start With Your Issue',
+      desc: isAr
+        ? 'اختر إصابتك لتتعرف على التمارين والتغذية المناسبة لمرحلتك الحالية.'
+        : 'Find an injury guide first to get stage-specific exercise and nutrition.',
     },
     {
       icon: Target,
-      title: isEn ? 'Use the tools you need' : 'استخدم الأداة التي تحتاجها',
-      desc: isEn
-        ? 'Use calculators for a quick check, then save the numbers you want to follow over time.'
-        : 'استخدم الحاسبات لتقييم سريع، ثم سجّل الأرقام التي تريد متابعتها مع الوقت.',
+      title: isAr ? 'تابع تطورك خطوة بخطوة' : 'Track Your Milestones',
+      desc: isAr
+        ? 'سجل الألم، التزم بأهداف المرحلة، وتقدم من مرحلة 1 إلى 2 إلى 3.'
+        : 'Log daily pain, complete phase goals, and advance smoothly.',
     },
     {
       icon: ShieldCheck,
-      title: isEn ? 'Keep it safe and realistic' : 'تدرّج بشكل آمن وواقعي',
-      desc: isEn
-        ? 'Use the cautions and progression notes to make decisions without pushing through warning signs.'
-        : 'راجع التنبيهات ومعايير التدرّج حتى لا تضغط على نفسك رغم إشارات الألم أو التهيّج.',
+      title: isAr ? 'تدرّج آمن بدون تهييج' : 'Safe Evidence-Based Loading',
+      desc: isAr
+        ? 'معايير أمان سريرية واضحة تمنع الانتكاس وتضمن عودة قوية.'
+        : 'Clear safety markers to prevent re-injury and ensure lasting recovery.',
     },
   ];
 
   return (
-    <section className="section-surface home-band relative overflow-hidden bg-transparent py-16 sm:py-20">
-      <div className="absolute right-0 top-0 h-80 w-80 translate-x-1/4 -translate-y-1/4 rounded-full bg-health-green/8 blur-[110px]" />
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 max-w-3xl">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-health-green">
-            {isEn ? 'Start here' : 'ابدأ من هنا'}
+    <section className="relative overflow-hidden bg-slate-50/70 py-10 dark:bg-slate-950 sm:py-14">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="text-xs font-bold uppercase tracking-wider text-health-green">
+              {isAr ? 'منهجية العمل' : 'Our Approach'}
+            </div>
+            <h2 className="mt-1 text-2xl font-black text-slate-900 dark:text-white sm:text-3xl">
+              {isAr ? 'خطوات عملية واضحة بدلاً من العشوائية' : 'Clear Practical Steps, Zero Confusion'}
+            </h2>
           </div>
-          <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            {isEn ? 'Choose the next useful step, not another long list' : 'اختر خطوتك التالية بدل ما تتوه بين خيارات كثيرة'}
-          </h2>
-          <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
-            {isEn
-              ? 'Whether you are returning after pain, rebuilding your routine, or checking a health number, each section has a clear purpose.'
-              : 'سواء كنت راجع بعد ألم، أو تبني روتينك من جديد، أو تراجع رقمًا صحيًا، كل قسم هنا له وظيفة واضحة.'}
+          <p className="max-w-xl text-xs leading-relaxed text-slate-500 dark:text-slate-400 sm:text-sm">
+            {isAr
+              ? 'صممنا المنصة لتكون دليلك العملي المباشر: تختار حالتك، تعرف ماذا تفعل اليوم، وتراقب تعافيك بهدوء.'
+              : 'Built to give you actionable guidance: choose your condition, know today’s focus, and track progress.'}
           </p>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
-          <div className="grid gap-4 md:grid-cols-3">
-            {quickSections.map((section, index) => (
+        {/* 3 Principles Cards */}
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {principles.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm transition hover:border-health-green/40 dark:border-slate-800 dark:bg-slate-900"
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-health-green/10 text-health-green">
+                  <item.icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-sm font-bold text-slate-900 dark:text-white">{item.title}</h3>
+              </div>
+              <p className="mt-2.5 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Quick jump pills */}
+        {quickSections && quickSections.length > 0 && (
+          <div className="mt-6 flex flex-wrap items-center gap-2 pt-2">
+            <span className="text-xs font-bold uppercase text-slate-400">
+              {isAr ? 'انتقال سريع:' : 'Quick Jump:'}
+            </span>
+            {quickSections.map((sec) => (
               <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="panel-soft group rounded-[2rem] p-6 transition-[transform,box-shadow,border-color] hover:-translate-y-1 hover:border-health-green/30 hover:shadow-lg"
+                key={sec.id}
+                href={`#${sec.id}`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-bold text-slate-700 shadow-xs transition hover:border-health-green/40 hover:text-health-green dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200"
               >
-                <div className="mb-5 flex items-center justify-between gap-3">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-health-green shadow-sm">
-                    <section.icon className="h-5 w-5" />
-                  </div>
-                  <div className="text-xs font-black tracking-[0.18em] text-slate-400">
-                    {String(index + 1).padStart(2, '0')}
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-slate-900">{section.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{section.desc}</p>
-                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-health-green">
-                  <span>{isEn ? 'Go to this section' : 'اذهب إلى القسم'}</span>
-                  <ArrowRight className={`h-4 w-4 ${lang === 'ar' ? 'rotate-180' : ''}`} />
-                </div>
+                <span>{sec.title}</span>
+                <ArrowRight className={`h-3 w-3 ${isAr ? 'rotate-180' : ''}`} />
               </a>
             ))}
           </div>
-
-          <div className="panel-strong rounded-[2rem] p-6 text-white">
-            <div className="text-xs font-bold uppercase tracking-[0.18em] text-amber-100/80">
-              {isEn ? 'What you can do here' : 'ماذا يمكنك أن تفعل هنا'}
-            </div>
-            <div className="mt-5 space-y-4">
-              {principles.map((item) => (
-                <div key={item.title} className="rounded-[1.5rem] border border-white/10 bg-white/6 p-4">
-                  <div className="flex items-start gap-3">
-                    <div className="mt-0.5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/8 text-health-green">
-                      <item.icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-white">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-slate-300">{item.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

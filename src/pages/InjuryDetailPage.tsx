@@ -32,6 +32,7 @@ import {
 import PageLayout from './PageLayout';
 import {navigationPaths} from '../utils/langUrlHelper';
 import usePreferredLang from './usePreferredLang';
+import {useMyRecovery} from '../hooks/useMyRecovery';
 
 const DrugNutrientChecker = lazy(() => import('../components/ai/DrugNutrientChecker'));
 
@@ -194,6 +195,7 @@ export default function InjuryDetailPage() {
   const [catalogInjuries, setCatalogInjuries] = useState<InjuryCatalogEntry[]>([]);
   const [protocolSource, setProtocolSource] = useState<InjuryCatalogSource>('local');
   const [activeTab, setActiveTab] = useState<number>(0);
+  const {isInjuryTracked, startJourney, getJourneyBySlug} = useMyRecovery();
 
   useEffect(() => {
     let active = true;
@@ -301,6 +303,9 @@ export default function InjuryDetailPage() {
   const isLockedNutritionTab = activeTab === phases.length && phases.length > 2 && !user;
   const showLockedOverlay = isLockedPhase || isLockedNutritionTab;
   const nutritionGoalMatches = currentPhase ? getNutritionGoalMatches(injury, currentPhase).slice(0, 4) : [];
+
+  const isTracked = isInjuryTracked(injury.id);
+  const activeJourneyRecord = getJourneyBySlug(injury.id);
 
   const relatedInjuries = catalogInjuries
     .filter((item) => item.id !== injury.id)
@@ -453,6 +458,41 @@ export default function InjuryDetailPage() {
                   <span className={injuryBadge}>
                     {phases.length} {isAr ? 'مراحل' : 'phases'}
                   </span>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3 pt-1">
+                  {isTracked ? (
+                    <Link
+                      to={navigationPaths.dashboard(lang)}
+                      className="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-emerald-700"
+                    >
+                      <CheckCircle2 className="h-4 w-4" />
+                      <span>
+                        {isAr
+                          ? `الإصابة قيد المتابعة (المرحلة ${activeJourneyRecord?.currentPhase || 1}) - افتح لوحة المتابعة`
+                          : `Currently Tracking (Phase ${activeJourneyRecord?.currentPhase || 1}) - Open Dashboard`}
+                      </span>
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        startJourney({
+                          injurySlug: injury.id,
+                          injuryName: injury.name,
+                          injuryNameAr: injuryDisplayName,
+                          bodyRegion: bodyRegionDisplay,
+                          totalPhases: phases.length || 3,
+                        });
+                      }}
+                      className="inline-flex items-center gap-2 rounded-2xl bg-health-green px-5 py-3 text-sm font-bold text-slate-950 shadow-md transition hover:bg-[#d3aa54]"
+                    >
+                      <Activity className="h-4 w-4" />
+                      <span>
+                        {isAr ? 'ابدأ خطة التعافي لهذه الإصابة في ملفي' : 'Track this Injury in My Recovery'}
+                      </span>
+                    </button>
+                  )}
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-3">

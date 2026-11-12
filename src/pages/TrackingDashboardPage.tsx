@@ -39,6 +39,7 @@ import {
 const TrendChart = lazy(() => import('../components/dashboard/TrendChart'));
 const TimelineLog = lazy(() => import('../components/dashboard/TimelineLog'));
 const LazyPdfReportSheet = lazy(() => import('../components/dashboard/LazyPdfReportSheet'));
+const MyRecoveryJourney = lazy(() => import('../components/dashboard/MyRecoveryJourney'));
 
 function waitForCondition(check: () => boolean, timeoutMs = 4000) {
   return new Promise<void>((resolve, reject) => {
@@ -391,6 +392,18 @@ export default function TrackingDashboardPage() {
           </div>
         ) : null}
 
+        <div className="mb-8">
+          <Suspense
+            fallback={
+              <div className="flex h-48 items-center justify-center rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+                <LoaderCircle className="h-6 w-6 animate-spin text-health-green" />
+              </div>
+            }
+          >
+            <MyRecoveryJourney lang={lang} />
+          </Suspense>
+        </div>
+
         <div className="mb-5 rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div>
@@ -657,7 +670,17 @@ export default function TrackingDashboardPage() {
         </div>
       </div>
 
-      <div className="pointer-events-none fixed -left-[200vw] top-0 opacity-0">
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          zIndex: -9999,
+          pointerEvents: 'none',
+          opacity: 0.01,
+          width: 794,
+        }}
+      >
         {shouldRenderPdfSheet && pdfReport ? (
           <div ref={pdfRef}>
             <Suspense fallback={null}>

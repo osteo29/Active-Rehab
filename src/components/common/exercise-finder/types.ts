@@ -13,14 +13,18 @@ export type StaticMuscleSlug = MainMuscle | 'arms' | 'core' | 'legs' | 'neck' | 
 
 export type Exercise = {
   name: string;
+  nameAr?: string;
   mainMuscle: MainMuscle;
   muscles: string[];
   level: Level;
   equipment: Equipment;
   exerciseType: ExerciseType;
   description: string;
+  descriptionAr?: string;
   tips: string;
+  tipsAr?: string;
   rehabTip?: string;
+  rehabTipAr?: string;
   imageUrl?: string;
   imageAlt?: string;
   videoUrl?: string;

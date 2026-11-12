@@ -12,7 +12,7 @@ import {getBuildArticles, getBuildInjuries} from './buildContentSource';
 const SITE_URL = getSiteUrl();
 const LANGUAGES = ['en', 'ar'] as const;
 type Language = (typeof LANGUAGES)[number];
-const GENERATED_LASTMOD = new Date().toISOString().slice(0, 10);
+const GENERATED_LASTMOD = '2026-11-12';
 
 type RouteEntry = {
   path: string;

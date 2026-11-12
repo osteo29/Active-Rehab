@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 import {checkEnvironment} from '../services/calculators';
 import {foodDatabase, type FoodItem} from '../services/foodData';
 import {translations, type Language} from '../services/translations';
@@ -44,6 +44,7 @@ const emptyFoodDraft = (): CustomFoodDraft => ({
 });
 
 function loadCustomFoods() {
+  if (typeof window === 'undefined') return [];
   const saved = localStorage.getItem(CUSTOM_FOODS_STORAGE_KEY);
   if (!saved) return [];
 
@@ -70,18 +71,39 @@ export function useCalculatorWorkspace({
   setArchitectProfile,
   t,
 }: Options) {
-  const [activeCalculator, setActiveCalculator] = useState<CalculatorType>(null);
+  const [activeCalculator, setActiveCalculator] = useState<CalculatorType>('BMI');
   const [activeToolGroup, setActiveToolGroup] = useState<ToolGroup>('all');
 
-  const [weight, setWeight] = useState(() => architectNumberToInput(initialArchitectProfile.weight));
-  const [height, setHeight] = useState(() => architectNumberToInput(initialArchitectProfile.height));
-  const [age, setAge] = useState(() => architectNumberToInput(initialArchitectProfile.age));
-  const [gender, setGender] = useState<'male' | 'female'>(initialArchitectProfile.gender);
-  const [activity, setActivity] = useState(() => String(initialArchitectProfile.activityLevel));
-  const [waist, setWaist] = useState(() => architectNumberToInput(initialArchitectProfile.waist));
-  const [neck, setNeck] = useState(() => architectNumberToInput(initialArchitectProfile.neck));
+  // Initialize from architectProfile or sensible defaults
+  const [weight, setWeight] = useState(() =>
+    architectProfile.weight > 0
+      ? String(architectProfile.weight)
+      : architectNumberToInput(initialArchitectProfile.weight),
+  );
+  const [height, setHeight] = useState(() =>
+    architectProfile.height > 0
+      ? String(architectProfile.height)
+      : architectNumberToInput(initialArchitectProfile.height),
+  );
+  const [age, setAge] = useState(() =>
+    architectProfile.age > 0
+      ? String(architectProfile.age)
+      : architectNumberToInput(initialArchitectProfile.age),
+  );
+  const [gender, setGender] = useState<'male' | 'female'>(architectProfile.gender || 'male');
+  const [activity, setActivity] = useState(() => String(architectProfile.activityLevel || 1.375));
+  const [waist, setWaist] = useState(() =>
+    architectProfile.waist && architectProfile.waist > 0 ? String(architectProfile.waist) : '',
+  );
+  const [neck, setNeck] = useState(() =>
+    architectProfile.neck && architectProfile.neck > 0 ? String(architectProfile.neck) : '',
+  );
   const [hip, setHip] = useState('');
-  const [goal, setGoal] = useState<GoalType>(initialArchitectProfile.goal as GoalType);
+  const [goal, setGoal] = useState<GoalType>(() => {
+    const g = String(architectProfile.goal);
+    if (g === 'lose' || g === 'gain') return g as GoalType;
+    return 'maintain';
+  });
   const [bodyType, setBodyType] = useState<BodyType>('mesomorph');
   const [pace, setPace] = useState(500);
   const [unitSystem, setUnitSystem] = useState<'metric' | 'imperial'>('metric');
@@ -110,9 +132,10 @@ export function useCalculatorWorkspace({
 
   const calculators = useMemo(() => buildCalculators(t), [t]);
   const toolGroups = useMemo(() => buildToolGroups(lang), [lang]);
-  const visibleCalculators = activeToolGroup === 'all'
-    ? calculators
-    : calculators.filter((calculator) => calculator.group === activeToolGroup);
+  const visibleCalculators =
+    activeToolGroup === 'all'
+      ? calculators
+      : calculators.filter((calculator) => calculator.group === activeToolGroup);
   const activeCalculatorMeta = calculators.find((calculator) => calculator.id === activeCalculator);
 
   const filteredFoods = useMemo(() => {
@@ -131,56 +154,100 @@ export function useCalculatorWorkspace({
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(CUSTOM_FOODS_STORAGE_KEY, JSON.stringify(customFoods));
+    try {
+      localStorage.setItem(CUSTOM_FOODS_STORAGE_KEY, JSON.stringify(customFoods));
+    } catch {
+      // ignore
+    }
   }, [customFoods]);
 
+  // One-way sync from architectProfile if calculator fields are currently empty
   useEffect(() => {
-    const updates: Partial<HealthProfile> = {};
+    if (architectProfile.weight > 0 && !weight) {
+      setWeight(String(architectProfile.weight));
+    }
+    if (architectProfile.height > 0 && !height) {
+      setHeight(String(architectProfile.height));
+    }
+    if (architectProfile.age > 0 && !age) {
+      setAge(String(architectProfile.age));
+    }
+    if (architectProfile.waist && architectProfile.waist > 0 && !waist) {
+      setWaist(String(architectProfile.waist));
+    }
+    if (architectProfile.neck && architectProfile.neck > 0 && !neck) {
+      setNeck(String(architectProfile.neck));
+    }
+  }, [architectProfile.weight, architectProfile.height, architectProfile.age, architectProfile.waist, architectProfile.neck]);
 
-    const nextWeight = toPositiveNumber(weight);
-    if (nextWeight > 0 && architectProfile.weight !== nextWeight) updates.weight = nextWeight;
+  // Real-time automatic calculation when inputs are valid!
+  useEffect(() => {
+    if (!activeCalculator) return;
+    if (activeCalculator === 'Meal') {
+      const total = mealItems.reduce((acc, item) => acc + (toPositiveNumber(item.calories) || 0), 0);
+      if (total > 0) {
+        setResult(total);
+        setError('');
+      }
+      return;
+    }
 
-    const nextHeight = toPositiveNumber(height);
-    if (nextHeight > 0 && architectProfile.height !== nextHeight) updates.height = nextHeight;
+    const values = {
+      activeCalculator,
+      weight,
+      height,
+      age,
+      gender,
+      activity,
+      waist,
+      neck,
+      hip,
+      goal,
+      bodyType,
+      pace,
+      unitSystem,
+      knowBodyFat,
+      bodyFatInput,
+      hotClimate,
+      pregnancy,
+      mealItems,
+    };
 
-    const nextAge = toPositiveNumber(age);
-    if (nextAge > 0 && architectProfile.age !== nextAge) updates.age = nextAge;
-
-    const nextWaist = toPositiveNumber(waist);
-    if (nextWaist > 0 && (architectProfile.waist || 0) !== nextWaist) updates.waist = nextWaist;
-
-    const nextNeck = toPositiveNumber(neck);
-    if (nextNeck > 0 && (architectProfile.neck || 0) !== nextNeck) updates.neck = nextNeck;
-
-    const nextActivity = toPositiveNumber(activity);
-    if (nextActivity > 0 && architectProfile.activityLevel !== nextActivity) updates.activityLevel = nextActivity;
-
-    if (architectProfile.gender !== gender) updates.gender = gender;
-    if (architectProfile.goal !== goal) updates.goal = goal;
-
-    if (Object.keys(updates).length > 0) {
-      setArchitectProfile((previous) => ({...previous, ...updates}));
+    const validationError = validateCalculatorInputs({values, lang, t});
+    if (!validationError) {
+      try {
+        const next = calculateCalculatorResult({values, lang, t});
+        setError('');
+        setResult(next.result);
+        setHealthInterpretation(next.healthInterpretation);
+      } catch {
+        // ignore incomplete intermediate state
+      }
     }
   }, [
-    activity,
-    age,
-    architectProfile.activityLevel,
-    architectProfile.age,
-    architectProfile.gender,
-    architectProfile.goal,
-    architectProfile.height,
-    architectProfile.neck,
-    architectProfile.waist,
-    architectProfile.weight,
-    gender,
-    goal,
-    height,
-    neck,
-    setArchitectProfile,
-    waist,
+    activeCalculator,
     weight,
+    height,
+    age,
+    gender,
+    activity,
+    waist,
+    neck,
+    hip,
+    goal,
+    bodyType,
+    pace,
+    unitSystem,
+    knowBodyFat,
+    bodyFatInput,
+    hotClimate,
+    pregnancy,
+    mealItems,
+    lang,
+    t,
   ]);
 
+  // Haptic & audio feedback on explicit calculation
   useEffect(() => {
     if (!justCalculated) return;
 
@@ -189,7 +256,9 @@ export function useCalculatorWorkspace({
         (navigator as Navigator & {vibrate?: (pattern: number) => void}).vibrate?.(15);
       }
 
-      const AudioCtx = window.AudioContext || (window as typeof window & {webkitAudioContext?: typeof AudioContext}).webkitAudioContext;
+      const AudioCtx =
+        window.AudioContext ||
+        (window as typeof window & {webkitAudioContext?: typeof AudioContext}).webkitAudioContext;
       if (AudioCtx) {
         const ctx = new AudioCtx();
         const osc = ctx.createOscillator();
@@ -200,31 +269,18 @@ export function useCalculatorWorkspace({
         osc.connect(gain);
         gain.connect(ctx.destination);
         osc.start();
-        gain.gain.exponentialRampToValueAtTime(0.06, ctx.currentTime + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.05, ctx.currentTime + 0.01);
         gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.12);
         osc.stop(ctx.currentTime + 0.13);
         setTimeout(() => ctx.close(), 250);
       }
     } catch {
-      // Ignore best-effort feedback failures.
+      // Ignore
     }
 
     const timer = setTimeout(() => setJustCalculated(false), 0);
     return () => clearTimeout(timer);
   }, [justCalculated]);
-
-  useEffect(() => {
-    if (!activeCalculator) return;
-
-    const timer = setTimeout(() => {
-      document.getElementById('calculator-workspace')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }, 180);
-
-    return () => clearTimeout(timer);
-  }, [activeCalculator]);
 
   useEffect(() => {
     if (!initialCalculatorId) return;
@@ -234,23 +290,28 @@ export function useCalculatorWorkspace({
 
     setActiveCalculator(nextCalculator.id);
     setActiveToolGroup(nextCalculator.group);
-    resetForm();
   }, [calculators, initialCalculatorId]);
 
+  // Does NOT wipe user's basic physical stats so switching tools feels seamless
   function resetForm() {
+    setHip('');
+    setPace(500);
+    setKnowBodyFat(false);
+    setBodyFatInput('');
+    setHotClimate(false);
+    setPregnancy(false);
+    setMealItems([{id: '1', name: '', calories: ''}]);
+    setError('');
+    setAnalysisPrompt(null);
+  }
+
+  function clearAllFields() {
     setWeight('');
     setHeight('');
     setAge('');
     setWaist('');
     setNeck('');
     setHip('');
-    setGoal('maintain');
-    setBodyType('mesomorph');
-    setPace(500);
-    setKnowBodyFat(false);
-    setBodyFatInput('');
-    setHotClimate(false);
-    setPregnancy(false);
     setMealItems([{id: '1', name: '', calories: ''}]);
     setResult(null);
     setHealthInterpretation(null);
@@ -291,6 +352,25 @@ export function useCalculatorWorkspace({
     setResult(next.result);
     setHealthInterpretation(next.healthInterpretation);
     setJustCalculated(true);
+
+    // Sync non-empty values back to architectProfile safely
+    const numWeight = toPositiveNumber(weight);
+    const numHeight = toPositiveNumber(height);
+    const numAge = toPositiveNumber(age);
+    const numWaist = toPositiveNumber(waist);
+    const numNeck = toPositiveNumber(neck);
+    const numActivity = toPositiveNumber(activity);
+
+    setArchitectProfile((prev) => ({
+      ...prev,
+      weight: numWeight > 0 ? numWeight : prev.weight,
+      height: numHeight > 0 ? numHeight : prev.height,
+      age: numAge > 0 ? numAge : prev.age,
+      waist: numWaist > 0 ? numWaist : prev.waist,
+      neck: numNeck > 0 ? numNeck : prev.neck,
+      activityLevel: numActivity > 0 ? numActivity : prev.activityLevel,
+      gender,
+    }));
   }
 
   function showTooltip(title: string, text: string) {
@@ -309,7 +389,7 @@ export function useCalculatorWorkspace({
   }
 
   function removeMealItem(id: string) {
-    setMealItems((previous) => previous.length > 1 ? previous.filter((item) => item.id !== id) : previous);
+    setMealItems((previous) => (previous.length > 1 ? previous.filter((item) => item.id !== id) : previous));
   }
 
   function updateMealItem(id: string, field: 'name' | 'calories', value: string) {
@@ -332,11 +412,11 @@ export function useCalculatorWorkspace({
       calories: food.calories.toString(),
     };
 
-    setMealItems((previous) => (
+    setMealItems((previous) =>
       previous.length === 1 && !previous[0].name && !previous[0].calories
         ? [newItem]
-        : [...previous, newItem]
-    ));
+        : [...previous, newItem],
+    );
 
     document.getElementById('calculators')?.scrollIntoView({behavior: 'smooth'});
     setActiveCalculator('Meal');
@@ -385,6 +465,7 @@ export function useCalculatorWorkspace({
     bodyFatInput,
     bodyType,
     calculators,
+    clearAllFields,
     clearAllMealItems,
     customFoods,
     error,

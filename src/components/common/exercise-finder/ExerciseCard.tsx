@@ -3,6 +3,8 @@ import {Dumbbell, Flame, Timer, type LucideProps} from 'lucide-react';
 
 import {Badge} from './FilterField';
 import {toTitle, translateBadge} from './filter-utils';
+import {EXERCISE_FINDER_STATIC_ARABIC_LABELS, SUB_MUSCLE_AR_LABELS} from './constants';
+import {EXERCISE_NAMES_AR} from './exerciseNamesAr';
 import type {Exercise, ExerciseType, MainMuscle} from './types';
 
 const MUSCLE_GRADIENT: Record<MainMuscle, string> = {
@@ -59,7 +61,9 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
       <div className="flex h-full flex-col gap-4">
         <div className={`-mx-5 -mt-5 sm:-mx-6 sm:-mt-6 flex items-center gap-3 rounded-t-[inherit] bg-gradient-to-r ${gradient} px-5 py-3 sm:px-6`}>
           <TypeIcon className="h-5 w-5 text-white/90" aria-hidden="true" />
-          <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/95">{toTitle(exercise.mainMuscle)}</span>
+          <span className="text-xs font-bold uppercase tracking-[0.16em] text-white/95">
+            {isAr ? (EXERCISE_FINDER_STATIC_ARABIC_LABELS[exercise.mainMuscle] || toTitle(exercise.mainMuscle)) : toTitle(exercise.mainMuscle)}
+          </span>
         </div>
 
         {isExpanded && exercise.videoUrl ? (
@@ -79,9 +83,16 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
 
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h3 className="text-xl font-bold text-slate-900">{highlightText(exercise.name, searchQuery)}</h3>
+            <h3 className="text-xl font-bold text-slate-900">
+              {highlightText(isAr ? (exercise.nameAr || EXERCISE_NAMES_AR[exercise.name] || exercise.name) : exercise.name, searchQuery)}
+            </h3>
+            {isAr && (exercise.nameAr || EXERCISE_NAMES_AR[exercise.name]) ? (
+              <div className="text-xs font-medium text-slate-400 mt-0.5">{exercise.name}</div>
+            ) : null}
             <div className="mt-3 flex flex-wrap gap-2">
-              <Badge tone="blue">{toTitle(exercise.mainMuscle)}</Badge>
+              <Badge tone="blue">
+                {isAr ? (EXERCISE_FINDER_STATIC_ARABIC_LABELS[exercise.mainMuscle] || toTitle(exercise.mainMuscle)) : toTitle(exercise.mainMuscle)}
+              </Badge>
               <Badge>{translateBadge(exercise.level, isAr)}</Badge>
               <Badge>{translateBadge(exercise.equipment, isAr)}</Badge>
               <Badge tone="green">{translateBadge(exercise.exerciseType, isAr)}</Badge>
@@ -118,7 +129,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
               <div className="mt-2 flex flex-wrap gap-2">
                 {exercise.muscles.map((muscle) => (
                   <span key={muscle} className="rounded-full bg-soft-blue px-3 py-1 text-xs font-semibold text-health-green-dark">
-                    {toTitle(muscle)}
+                    {isAr ? (SUB_MUSCLE_AR_LABELS[muscle] || toTitle(muscle)) : toTitle(muscle)}
                   </span>
                 ))}
               </div>
