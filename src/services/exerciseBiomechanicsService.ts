@@ -1,6 +1,7 @@
 import biomechanicsData from '../../json/exercise_biomechanics.json';
 import musclesData from '../../json/muscles_library.json';
 import muscleIndexData from '../../json/muscle_exercises_index.json';
+import bodyIqExercisesData from '../../json/body_iq_exercises_embed.json';
 
 export type MuscleRole = 'primary' | 'secondary' | 'stabilizer' | 'synergist';
 
@@ -16,6 +17,7 @@ export type DataAuditInfo = {
 export type ExerciseBiomechanics = {
   exercise_id: string;
   canonical_name: string;
+  name_ar?: string;
   provenance: BiomechanicsProvenance;
   confidence_score: number;
   evidence_level?: string;
@@ -28,10 +30,15 @@ export type ExerciseBiomechanics = {
   contraction_type?: 'isometric' | 'concentric' | 'eccentric' | 'dynamic';
   emg_notes?: string | null;
   dosing_recommendation?: string | null;
+  youtube_id?: string;
+  embed_video_url?: string;
+  coaching_cue_ar?: string;
+  target_joint?: string;
   data_audit?: DataAuditInfo;
 };
 
 export type MuscleDetail = {
+  id?: string;
   slug: string;
   name: string;
   name_ar: string;
@@ -42,17 +49,39 @@ export type MuscleDetail = {
   action?: string;
   innervation?: string;
   blood_supply?: string;
+  image_url?: string;
+  embed_code?: string;
 };
 
 export type MuscleExerciseReference = {
   id: string;
   name: string;
+  name_ar?: string;
   provenance: BiomechanicsProvenance;
+  embed_video_url?: string | null;
+  youtube_id?: string | null;
+  coaching_cue_ar?: string | null;
 };
 
 export type MuscleTargetedExercises = {
   primary: MuscleExerciseReference[];
   stabilizer: MuscleExerciseReference[];
+};
+
+export type BodyIqExerciseEmbed = {
+  id: string;
+  libraryId: string;
+  nameEn: string;
+  nameAr: string;
+  region: string;
+  targetJoint: string;
+  movementPattern: string;
+  primaryMuscle: string;
+  secondaryMuscles: string;
+  youtubeId: string;
+  embedVideoUrl: string;
+  coachingCue: string;
+  embedIframeCode: string;
 };
 
 export function getExerciseBiomechanics(exerciseId: string): ExerciseBiomechanics | null {
@@ -94,6 +123,15 @@ export function getExercisePrimaryMuscleDetails(exerciseId: string): MuscleDetai
   return bio.primary_muscles
     .map((slug) => getMuscleDetail(slug))
     .filter(Boolean) as MuscleDetail[];
+}
+
+export function getAllBodyIqExercises(): BodyIqExerciseEmbed[] {
+  return bodyIqExercisesData as BodyIqExerciseEmbed[];
+}
+
+export function getBodyIqExercise(id: string): BodyIqExerciseEmbed | null {
+  const ex = (bodyIqExercisesData as BodyIqExerciseEmbed[]).find(e => e.id === id || e.libraryId === id);
+  return ex || null;
 }
 
 export function getBiomechanicsAuditSummary() {

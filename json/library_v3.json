@@ -6973,5 +6973,753 @@
       "extensor-carpi-radialis-longus"
     ],
     "status": "validated"
+  },
+  {
+    "id": "ab_wheel_rollout",
+    "canonical_name": "Ab Wheel Rollout",
+    "name_ar": "تمرين العجلة للبطن",
+    "clinical_cue": "تجنب إنحناء أسفل الظهر عند الامتداد",
+    "default_tags": [
+      "spine_core",
+      "anti-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "farmer_s_carry",
+    "canonical_name": "Farmer's Carry",
+    "name_ar": "تمرين مشية المزارع",
+    "clinical_cue": "امشِ ببطء وثبات دون الانحناء للجانبين",
+    "default_tags": [
+      "spine_core",
+      "loaded-carry"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "mcgill_curl_up",
+    "canonical_name": "McGill Curl-Up",
+    "name_ar": "تمرين ماكجيل لثبات القطنية",
+    "clinical_cue": "ارفع الرأس والكتفين مليمتراً دون ثني الرقبة",
+    "default_tags": [
+      "spine_core",
+      "core-endurance"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "copenhagen_plank",
+    "canonical_name": "Copenhagen Plank",
+    "name_ar": "تمرين كوبنهاجن للمقربات",
+    "clinical_cue": "ارفع الجسم مستنداً على الساق العلوية",
+    "default_tags": [
+      "spine_core",
+      "adductor-isometric"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "thoracic_extension_on_foam_roller",
+    "canonical_name": "Thoracic Extension on Foam Roller",
+    "name_ar": "بسط الفقرات الصدرية على الرول",
+    "clinical_cue": "ركز على انحناء ظهرك العلوي فقط دون أسفل الظهر",
+    "default_tags": [
+      "spine_core",
+      "mobility"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "cat_cow_stretch",
+    "canonical_name": "Cat-Cow Stretch",
+    "name_ar": "تمرين القطة والبقرة للمرونة",
+    "clinical_cue": "تحرك ببطء بين التقعر والتحدب مع التنفس",
+    "default_tags": [
+      "spine_core",
+      "mobility"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "cable_woodchopper",
+    "canonical_name": "Cable Woodchopper",
+    "name_ar": "تمرين تقطيع الخشب بالكبس",
+    "clinical_cue": "دور بحوضك وجذعك بسلاسة",
+    "default_tags": [
+      "spine_core",
+      "rotation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "back_extension_on_roman_chair",
+    "canonical_name": "Back Extension on Roman Chair",
+    "name_ar": "بسط الظهر على الكرسي الروماني",
+    "clinical_cue": "ارفع جذعك حتى استقامة العمود الفقري فقط",
+    "default_tags": [
+      "spine_core",
+      "spinal-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "superman_hold",
+    "canonical_name": "Superman Hold",
+    "name_ar": "تمرين السوبرمان لثبات الظهر",
+    "clinical_cue": "ارفع الصدر والركبتين بثبات مع التنفس",
+    "default_tags": [
+      "spine_core",
+      "extension-isometric"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "stir_the_pot",
+    "canonical_name": "Stir The Pot",
+    "name_ar": "تمرين تحريك القدر بالكرة الطبية",
+    "clinical_cue": "حرك المرفقين على الكرة بدوائر صغيرة مع ثبات الحوض",
+    "default_tags": [
+      "spine_core",
+      "anti-extension-rotation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "cable_crunch",
+    "canonical_name": "Cable Crunch",
+    "name_ar": "تمرين البطن بالكابل",
+    "clinical_cue": "اقبض بطنك واسحب بكتفيك لا بيديك",
+    "default_tags": [
+      "spine_core",
+      "trunk-flexion"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "reverse_crunch",
+    "canonical_name": "Reverse Crunch",
+    "name_ar": "تمرين البطن العكسي",
+    "clinical_cue": "ارفع حوضك باتجاه الصدر بالكامل",
+    "default_tags": [
+      "spine_core",
+      "pelvic-tilt"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "monster_walk_with_band",
+    "canonical_name": "Monster Walk with Band",
+    "name_ar": "مشية الوحش بالشريط المطاطي",
+    "clinical_cue": "حافظ على الشد في الشريط والركبتين للخارج",
+    "default_tags": [
+      "hip_pelvis",
+      "abduction"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "single_leg_rdl",
+    "canonical_name": "Single-Leg RDL",
+    "name_ar": "الرفعة الميتة الرومانية بساق واحدة",
+    "clinical_cue": "حافظ على استقامة ظهرك وحوضك متوازياً مع الأرض",
+    "default_tags": [
+      "hip_pelvis",
+      "hip-hinge"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "kettlebell_swing",
+    "canonical_name": "Kettlebell Swing",
+    "name_ar": "أرجحة الأثقال الكروية",
+    "clinical_cue": "أنشئ الحركة من دفع الورك وليس بالرفع بالكتف",
+    "default_tags": [
+      "hip_pelvis",
+      "dynamic-hip-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "glute_ham_raise_ghr",
+    "canonical_name": "Glute Ham Raise (GHR)",
+    "name_ar": "تمرين رفع الألية والخلفيات",
+    "clinical_cue": "انزل ببطء مع استقامة الجذع والورك",
+    "default_tags": [
+      "hip_pelvis",
+      "knee-flexion-hip-ext"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "fire_hydrant_exercise",
+    "canonical_name": "Fire Hydrant Exercise",
+    "name_ar": "تمرين صنبور الحريق للورك",
+    "clinical_cue": "ارفع الساق للجانب مع ثبات الظهر",
+    "default_tags": [
+      "hip_pelvis",
+      "abduction-ext-rotation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "side_lying_leg_raise",
+    "canonical_name": "Side-Lying Leg Raise",
+    "name_ar": "رفع الساق جانباً من الاستلقاء",
+    "clinical_cue": "وجّه إبهام القدم للأسفل قليلاً لتفعيل المؤخرة الجانبية",
+    "default_tags": [
+      "hip_pelvis",
+      "abduction"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "cable_hip_abduction",
+    "canonical_name": "Cable Hip Abduction",
+    "name_ar": "إبعاد الورك بالكابل",
+    "clinical_cue": "اسحب الساق للخارج بثبات دون إمالة الجذع",
+    "default_tags": [
+      "hip_pelvis",
+      "abduction"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "sumo_deadlift",
+    "canonical_name": "Sumo Deadlift",
+    "name_ar": "الرفعة الميتة بوضعية السومو",
+    "clinical_cue": "افتح الركبتين باتجاه أطراف القدمين واقترب من البار",
+    "default_tags": [
+      "hip_pelvis",
+      "hip-hinge-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "frog_pump",
+    "canonical_name": "Frog Pump",
+    "name_ar": "تمرين الضفدع للألية",
+    "clinical_cue": "الزق باطني القدمين ببعضهما واضغط بالحوض لأعلى",
+    "default_tags": [
+      "hip_pelvis",
+      "hip-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "step_up_with_hip_drive",
+    "canonical_name": "Step-Up with Hip Drive",
+    "name_ar": "تمرين الصعود على الصندوق مع دفع الورك",
+    "clinical_cue": "ادفع بعقب القدم الموجودة على الصندوق فقط",
+    "default_tags": [
+      "hip_pelvis",
+      "unilateral-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "reverse_hyper_extension",
+    "canonical_name": "Reverse Hyper Extension",
+    "name_ar": "تمرين البسط العكسي للفخذ",
+    "clinical_cue": "اعصر الألية في القمة دون إجهاد أسفل الظهر",
+    "default_tags": [
+      "hip_pelvis",
+      "hip-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "standing_hip_thrust_machine",
+    "canonical_name": "Standing Hip Thrust Machine",
+    "name_ar": "جهاز دفع الورك واقفا",
+    "clinical_cue": "ادفع المقاومة لأمام بالكامل بعصر الألية",
+    "default_tags": [
+      "hip_pelvis",
+      "loaded-hip-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "seated_hip_abduction_machine",
+    "canonical_name": "Seated Hip Abduction Machine",
+    "name_ar": "جهاز فتح الأرجل جالساً",
+    "clinical_cue": "امسك المقابض وافتح الركبتين لأقصى مدى",
+    "default_tags": [
+      "hip_pelvis",
+      "abduction"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "lateral_band_walk_bodyiq",
+    "canonical_name": "Lateral Band Walk",
+    "name_ar": "المشي الجانبي بالشريط المطاطي",
+    "clinical_cue": "حافظ على انثناء خفيف في الركبة والورك",
+    "default_tags": [
+      "hip_pelvis",
+      "abduction"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "poliquin_step_up",
+    "canonical_name": "Poliquin Step-Up",
+    "name_ar": "تمرين صعود بوليكوين للركبة",
+    "clinical_cue": "انزل بعقب القدم للأرض مع دفع الركبة للأمام بسلاسة",
+    "default_tags": [
+      "knee_thigh",
+      "patellar-loading"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "peterson_step_up",
+    "canonical_name": "Peterson Step-Up",
+    "name_ar": "تمرين صعود بيترسون على المشط",
+    "clinical_cue": "ابدأ الحركة برفع العقب والصعود على مشط القدم",
+    "default_tags": [
+      "knee_thigh",
+      "vmo-isolation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "leg_extension_machine",
+    "canonical_name": "Leg Extension Machine",
+    "name_ar": "جهاز فرد الركبة",
+    "clinical_cue": "افرد الساق للقمة مع التحكم في مرحلة النزول",
+    "default_tags": [
+      "knee_thigh",
+      "isolated-knee-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "siff_squat",
+    "canonical_name": "Siff Squat",
+    "name_ar": "تمرين قرفصاء سيف برفع العقبين",
+    "clinical_cue": "ابقَ على أطراف أصابعك طوال حركة القرفصاء",
+    "default_tags": [
+      "knee_thigh",
+      "quad-dominant-push"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "walking_lunges",
+    "canonical_name": "Walking Lunges",
+    "name_ar": "تمرين الطعن المتحرك",
+    "clinical_cue": "انزل بركبتك الخلفية لقرب الأرض بثبات",
+    "default_tags": [
+      "hip_pelvis",
+      "unilateral-push"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "sissy_squat",
+    "canonical_name": "Sissy Squat",
+    "name_ar": "تمرين السيسي سوات المتخصص",
+    "clinical_cue": "ادفع ركبتيك للأمام واثنِ جسمك للخلف بثبات",
+    "default_tags": [
+      "knee_thigh",
+      "quad-isolation-stretch"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "cyclist_squat",
+    "canonical_name": "Cyclist Squat",
+    "name_ar": "تمرين القرفصاء لراكبي الدراجات",
+    "clinical_cue": "ارفع العقبين بكعب عالي وانزل بعمودية",
+    "default_tags": [
+      "knee_thigh",
+      "vmo-quad-focus"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "tibialis_raise_against_wall",
+    "canonical_name": "Tibialis Raise against Wall",
+    "name_ar": "تمرين رفع عضلات القصبة الأمامية",
+    "clinical_cue": "اسند ظهرك على الحائط وارفع مشط قدمك لأعلى مستويات",
+    "default_tags": [
+      "ankle_foot",
+      "dorsiflexion"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "weighted_tibialis_bar_raise",
+    "canonical_name": "Weighted Tibialis Bar Raise",
+    "name_ar": "رفع القصبة باستخدام بار أوزان القدم",
+    "clinical_cue": "ارفع المشط لأقصى مدى واثبت ثانية في الأعلى",
+    "default_tags": [
+      "ankle_foot",
+      "loaded-dorsiflexion"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "eccentric_heel_drop_on_step",
+    "canonical_name": "Eccentric Heel Drop on Step",
+    "name_ar": "تمرين إنزال العقب لتأهيل أكيلس",
+    "clinical_cue": "اصعد بالساقين وانزل ببطء شديد بالساق المصابة خلال 4 ثوانٍ",
+    "default_tags": [
+      "ankle_foot",
+      "eccentric-plantarflexion"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "soleus_push_up",
+    "canonical_name": "Soleus Push-Up",
+    "name_ar": "تمرين الضغط العضلي للسولايوس جالساً",
+    "clinical_cue": "ارفع العقبين واجلبهما لأسفل بإيقاع مستمر",
+    "default_tags": [
+      "ankle_foot",
+      "metabolic-plantarflexion"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "ankle_inversion_with_band",
+    "canonical_name": "Ankle Inversion with Band",
+    "name_ar": "تقريب الكاحل للداخل بالمطاط",
+    "clinical_cue": "حرك مشط القدم للداخل ببطء",
+    "default_tags": [
+      "ankle_foot",
+      "inversion"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "towel_curls_with_toes",
+    "canonical_name": "Towel Curls with Toes",
+    "name_ar": "تمرين تجعيد المنشفة بالأصابع",
+    "clinical_cue": "اسحب المنشفة بنشاط باستخدام أصابع قدمك",
+    "default_tags": [
+      "ankle_foot",
+      "toe-flexion"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "single_leg_balance_on_foam_pad",
+    "canonical_name": "Single-Leg Balance on Foam Pad",
+    "name_ar": "التوازن بساق واحدة على وسادة إسناد",
+    "clinical_cue": "حافظ على ثبات الكاحل وتصحيح الموقف تلقائياً",
+    "default_tags": [
+      "ankle_foot",
+      "proprioception"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "calf_stretch_against_wall",
+    "canonical_name": "Calf Stretch against Wall",
+    "name_ar": "إطالة السمانة بالركبة الممتدة",
+    "clinical_cue": "ابقَ الكعب الخلفي ملاصقاً للأرض والركبة ممتدة",
+    "default_tags": [
+      "ankle_foot",
+      "flexibility"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "soleus_stretch",
+    "canonical_name": "Soleus Stretch",
+    "name_ar": "إطالة السولايوس بالركبة المنثنية",
+    "clinical_cue": "اثنِ الركبة الخلفية للأمام مع إبقاء الكعب بالأرض",
+    "default_tags": [
+      "ankle_foot",
+      "flexibility"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "toe_spreads_and_splays",
+    "canonical_name": "Toe Spreads and Splays",
+    "name_ar": "تمرين تفريق وتوسيع أصابع القدم",
+    "clinical_cue": "باعد بين أصابع قدمك لأقصى قدر واثبت",
+    "default_tags": [
+      "ankle_foot",
+      "toe-abduction"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "ankle_alphabet_trace",
+    "canonical_name": "Ankle Alphabet Trace",
+    "name_ar": "رسم الحروف الإنجليزية بمفصل الكاحل",
+    "clinical_cue": "ارسم الحروف في الهواء بحركة الكاحل فقط",
+    "default_tags": [
+      "ankle_foot",
+      "full-range-mobility"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "scapular_wall_slide",
+    "canonical_name": "Scapular Wall Slide",
+    "name_ar": "الانزلاق الجداري للوح الكتف",
+    "clinical_cue": "احفظ اتصال الساعدين والظهر بالحائط طوال الحركة",
+    "default_tags": [
+      "shoulder",
+      "scapular-upward-rotation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "side_lying_shoulder_external_rotation",
+    "canonical_name": "Side-Lying Shoulder External Rotation",
+    "name_ar": "التدوير الخارجي للكتف من الاستلقاء الجانبي",
+    "clinical_cue": "ضع منشفة ملفوفة تحت المرفق واثنِ الزاوية 90 درجة",
+    "default_tags": [
+      "shoulder",
+      "external-rotation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "prone_y_t_w_l_raises",
+    "canonical_name": "Prone Y-T-W-L Raises",
+    "name_ar": "تمرين الرفع بوضعية Y-T-W-L",
+    "clinical_cue": "ارفع الإبهامين لأعلى وركز على ضم لوحي الكتف",
+    "default_tags": [
+      "shoulder",
+      "scapular-control"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "serratus_wall_punch",
+    "canonical_name": "Serratus Wall Punch",
+    "name_ar": "تمرين لكمة المنشارية على الحائط",
+    "clinical_cue": "ادفع الحائط بعيداً بفرك لوحي الكتف للأمام في النهاية",
+    "default_tags": [
+      "shoulder",
+      "scapular-protraction"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "lu_raises_for_side_delts",
+    "canonical_name": "Lu Raises for Side Delts",
+    "name_ar": "تمرين لو رايز للكتف الجانبي",
+    "clinical_cue": "ارفع الوزن بقوس واسع حتى أعلى الرأس بسلاسة",
+    "default_tags": [
+      "shoulder",
+      "abduction-with-rotation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "crossover_symmetry_band_rotations",
+    "canonical_name": "Crossover Symmetry Band Rotations",
+    "name_ar": "تدوير الكفة بالرباط المتقاطع",
+    "clinical_cue": "حافظ على استقامة القوام والتحكم بالرباط",
+    "default_tags": [
+      "shoulder",
+      "rotator-cuff-activation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "reverse_pec_deck_fly",
+    "canonical_name": "Reverse Pec Deck Fly",
+    "name_ar": "تمرين الفراشة العكسية للكتف الخلفي",
+    "clinical_cue": "اثبت في القمة واعتصر الجزء الخلفي من الكتف",
+    "default_tags": [
+      "shoulder",
+      "horizontal-abduction"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "internal_rotation_with_band",
+    "canonical_name": "Internal Rotation with Band",
+    "name_ar": "التدوير الداخلي للكتف بالمطاط",
+    "clinical_cue": "اسحب المطاط لداخل البطن مع تثبيت المرفق بجانبك",
+    "default_tags": [
+      "shoulder",
+      "internal-rotation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "shoulder_extension",
+    "canonical_name": "Shoulder Extension",
+    "name_ar": "بسط الكتف للخلف",
+    "clinical_cue": "اسحب المقاومة للخلف بجانب الورك",
+    "default_tags": [
+      "shoulder",
+      "extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "empty_can_exercise",
+    "canonical_name": "Empty Can Exercise",
+    "name_ar": "تمرين الصفيحة الفارغة للكتف",
+    "clinical_cue": "ادر إبهامك لأسفل وارفع الذراع في مستوى لوح الكتف",
+    "default_tags": [
+      "shoulder",
+      "abduction-in-scaption"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "full_can_shoulder_raise",
+    "canonical_name": "Full Can Shoulder Raise",
+    "name_ar": "تمرين الصفيحة الممتلئة بالإبهام لأعلى",
+    "clinical_cue": "وجه إبهامك لأعلى وارفع بصفاء بمستوى 30 درجة للامام",
+    "default_tags": [
+      "shoulder",
+      "safe-scaption-raise"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "cuban_press",
+    "canonical_name": "Cuban Press",
+    "name_ar": "تمرين الكوبان للكتف والكفة",
+    "clinical_cue": "ارفع المرفقين ثم در الذراعين لأعلى واضغط",
+    "default_tags": [
+      "shoulder",
+      "upright-row-to-ext-rot-press"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "subscapularis_belly_press",
+    "canonical_name": "Subscapularis Belly Press",
+    "name_ar": "تمرين الضغط على البطن للكفة الداخلية",
+    "clinical_cue": "اضغط بكفك على بطنك واثبت دون تحريك المرفق للخلف",
+    "default_tags": [
+      "shoulder",
+      "internal-rotation-isometric"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "landmine_press",
+    "canonical_name": "Landmine Press",
+    "name_ar": "تمرين الضغط المائل ببار اللاندماين",
+    "clinical_cue": "ادفع الأثقال بزاوية مائلة 45 درجة بثبات",
+    "default_tags": [
+      "shoulder",
+      "angled-push"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "prone_cobra_exercise",
+    "canonical_name": "Prone Cobra Exercise",
+    "name_ar": "تمرين الكوبرا لثبات الكتف والظهر",
+    "clinical_cue": "ارفع الصدر وادر الكفين للخارج بالإبهامين لأعلى",
+    "default_tags": [
+      "shoulder",
+      "extension-external-rotation"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "incline_dumbbell_press",
+    "canonical_name": "Incline Dumbbell Press",
+    "name_ar": "تمرين ضغط الدمبل على البنش المائل",
+    "clinical_cue": "انزل بالدمبلز بزاوية 45 درجة لعصر الجزء العلوي",
+    "default_tags": [
+      "chest",
+      "incline-push"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "chest_dips",
+    "canonical_name": "Chest Dips",
+    "name_ar": "تمرين المتوازي للصدر والذراعين",
+    "clinical_cue": "مل بجذعك للأمام قليلاً لزيادة الضغط على الصدر",
+    "default_tags": [
+      "chest",
+      "vertical-push"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "single_arm_dumbbell_row",
+    "canonical_name": "Single-Arm Dumbbell Row",
+    "name_ar": "تمرين التجديف بالدمبل بيد واحدة",
+    "clinical_cue": "اسحب المرفق نحو الورك وثبت الجذع",
+    "default_tags": [
+      "spine_core",
+      "horizontal-pull"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "skull_crusher_bodyiq",
+    "canonical_name": "Skull Crusher",
+    "name_ar": "تمرين الترايسبس بالبار المكسور مستلقياً",
+    "clinical_cue": "انزل بالبار نحو الجبهة وافرد الذراعين بثبات",
+    "default_tags": [
+      "arm",
+      "elbow-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "wrist_roller_exercise",
+    "canonical_name": "Wrist Roller Exercise",
+    "name_ar": "تمرين لف الساعد بالبكرة والأوزان",
+    "clinical_cue": "لف الخيط ببطء بتبادل معصميك",
+    "default_tags": [
+      "arm",
+      "wrist-flexion-extension"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "dead_hang",
+    "canonical_name": "Dead Hang",
+    "name_ar": "تمرين التعلق الحر لتقوية القبضة",
+    "clinical_cue": "استرخِ ودع الجاذبية تمدد فقرات ظهرك مع بقاء القبضة قوية",
+    "default_tags": [
+      "shoulder",
+      "grip-hold-decompression"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "plate_pinch_hold",
+    "canonical_name": "Plate Pinch Hold",
+    "name_ar": "تمرين مسك الأقراص بالأصابع",
+    "clinical_cue": "امسك قرصين بأطراف أصابعك واثبت لأطول فترة",
+    "default_tags": [
+      "spine_core",
+      "pinch-grip"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "reverse_biceps_curl",
+    "canonical_name": "Reverse Biceps Curl",
+    "name_ar": "تمرين البايسبس بالقبضة العكسية",
+    "clinical_cue": "ارفع البار بكفي يديك متجهاً لأسفل",
+    "default_tags": [
+      "arm",
+      "elbow-flexion-prone"
+    ],
+    "status": "validated"
+  },
+  {
+    "id": "overhead_triceps_extension",
+    "canonical_name": "Overhead Triceps Extension",
+    "name_ar": "تمرين الترايسبس فوق الرأس بالدمبل",
+    "clinical_cue": "اخفض الوزن خلف الرقبة وافرده لأعلى بثبات",
+    "default_tags": [
+      "arm",
+      "elbow-extension-in-stretch"
+    ],
+    "status": "validated"
   }
 ]
