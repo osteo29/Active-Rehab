@@ -35,10 +35,15 @@
       "purpose": "any"
     }
   ],
-  "categories": ["health", "medical", "lifestyle", "productivity"],
+  "categories": [
+    "health",
+    "medical",
+    "lifestyle",
+    "productivity"
+  ],
   "screenshots": [
     {
-      "src": "/og-image.png",
+      "src": "/og-image.jpg",
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide"
@@ -56,21 +61,36 @@
       "short_name": "Protocols",
       "description": "Browse injury recovery protocols",
       "url": "/en/injuries",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Clinical Assistant",
       "short_name": "Assistant",
       "description": "Ask the rehab assistant",
       "url": "/en/assistant",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Calculators",
       "short_name": "Calc",
       "description": "Open recovery and nutrition calculators",
       "url": "/en/calculators",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ],
   "lang": "en",
