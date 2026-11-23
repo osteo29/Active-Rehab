@@ -62,17 +62,17 @@ export default function ConsentBanner({lang}: {lang: 'en' | 'ar'}) {
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none'
       }`}
     >
-      <div className="mx-auto max-w-3xl rounded-[1.5rem] border border-slate-200 bg-white/94 p-3 shadow-xl backdrop-blur-xl sm:p-4">
+      <div className="mx-auto max-w-3xl rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-white/94 dark:bg-slate-900/95 p-3 shadow-xl backdrop-blur-xl sm:p-4">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div className="flex items-start gap-3">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-soft-blue text-health-green">
               <Cookie className="h-4 w-4" />
             </div>
             <div>
-              <div className="mb-1 text-sm font-bold text-slate-900">
+              <div className="mb-1 text-sm font-bold text-slate-900 dark:text-white">
                 {lang === 'en' ? 'Cookie preferences' : 'تفضيلات الكوكيز'}
               </div>
-              <p className="text-xs leading-5 text-slate-600 sm:text-sm">
+              <p className="text-xs leading-5 text-slate-600 dark:text-slate-300 sm:text-sm">
                 {lang === 'en'
                   ? 'We keep essential preferences on, and use ad or analytics cookies only if you approve.'
                   : 'نحفظ التفضيلات الأساسية فقط، ولا نفعّل ملفات الإعلانات أو التحليلات إلا بعد موافقتك.'}
@@ -81,7 +81,7 @@ export default function ConsentBanner({lang}: {lang: 'en' | 'ar'}) {
           </div>
 
           <div className="flex flex-wrap items-center gap-2 md:justify-end">
-            <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 px-3 py-2 text-[11px] font-semibold text-slate-600">
+            <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 dark:bg-slate-950 px-3 py-2 text-[11px] font-semibold text-slate-600 dark:text-slate-300">
               <ShieldCheck className="h-3.5 w-3.5 text-health-green" />
               <span>
                 {lang === 'en' ? 'Educational site, privacy-first' : 'موقع تعليمي يحترم الخصوصية'}
@@ -89,7 +89,7 @@ export default function ConsentBanner({lang}: {lang: 'en' | 'ar'}) {
             </div>
             <button
               onClick={reject}
-              className="rounded-xl border border-slate-200 px-3 py-2 text-xs font-bold text-slate-600 transition-all hover:border-slate-300 sm:px-4 sm:text-sm"
+              className="rounded-xl border border-slate-200 dark:border-slate-700 px-3 py-2 text-xs font-bold text-slate-600 dark:text-slate-300 transition-all hover:border-slate-300 sm:px-4 sm:text-sm"
             >
               {lang === 'en' ? 'Reject optional' : 'رفض الاختياري'}
             </button>

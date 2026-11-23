@@ -109,60 +109,60 @@ export default function ExerciseRegionPage() {
           <ChevronRight className="h-4 w-4" />
           <Link to={navigationPaths.exercises(lang)} className="hover:text-health-green">{isAr ? 'التمارين' : 'Exercises'}</Link>
           <ChevronRight className="h-4 w-4" />
-          <span className="font-semibold text-slate-900">{label}</span>
+          <span className="font-semibold text-slate-900 dark:text-white">{label}</span>
         </nav>
 
-        <section className="overflow-hidden rounded-[2rem] border border-slate-200 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.12),transparent_42%),linear-gradient(180deg,#ffffff,#f8fafc)] p-6 sm:p-8">
+        <section className="overflow-hidden rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.12),transparent_42%),linear-gradient(180deg,#ffffff,#f8fafc)] p-6 sm:p-8">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="max-w-3xl space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-health-green/20 bg-health-green/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-health-green-dark">
                 <Activity className="h-4 w-4" />
                 <span>{rehabConfig ? (isAr ? 'دليل تأهيل' : 'Rehab guide') : isAr ? 'منطقة عضلية' : 'Region page'}</span>
               </div>
-              <p className="mixed-text text-base leading-8 text-slate-700">{safeText(isAr ? content.introAr : content.introEn)}</p>
+              <p className="mixed-text text-base leading-8 text-slate-700 dark:text-slate-200">{safeText(isAr ? content.introAr : content.introEn)}</p>
               {rehabConfig ? (
-                <div className="mixed-text rounded-[1.5rem] border border-health-green/15 bg-white/75 p-4 text-sm leading-7 text-slate-700">
+                <div className="mixed-text rounded-[1.5rem] border border-health-green/15 bg-white/75 p-4 text-sm leading-7 text-slate-700 dark:text-slate-200">
                   {safeText(isAr ? rehabConfig.summaryAr : rehabConfig.summaryEn)}
                 </div>
               ) : null}
             </div>
             <div className="grid gap-3 sm:min-w-[220px]">
-              <div className="rounded-2xl border border-white/70 bg-white/80 p-4">
+              <div className="rounded-2xl border border-white/70 bg-white/80 dark:bg-slate-900/80 p-4">
                 <div className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">{isAr ? 'عدد التمارين' : 'Exercises'}</div>
-                <div className="mt-2 text-2xl font-black text-slate-900">{exercises.length}</div>
+                <div className="mt-2 text-2xl font-black text-slate-900 dark:text-white">{exercises.length}</div>
                 {catalogLoading ? <div className="mt-1 text-xs text-slate-400">{isAr ? 'تحديث الكتالوج...' : 'Catalog updating...'}</div> : null}
               </div>
-              <div className="rounded-2xl border border-white/70 bg-white/80 p-4">
+              <div className="rounded-2xl border border-white/70 bg-white/80 dark:bg-slate-900/80 p-4">
                 <div className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">{isAr ? 'أنظمة مرتبطة' : 'Related systems'}</div>
-                <div className="mt-2 text-2xl font-black text-slate-900">{systems.length}</div>
+                <div className="mt-2 text-2xl font-black text-slate-900 dark:text-white">{systems.length}</div>
               </div>
               {rehabConfig ? (
-                <div className="rounded-2xl border border-white/70 bg-white/80 p-4">
+                <div className="rounded-2xl border border-white/70 bg-white/80 dark:bg-slate-900/80 p-4">
                   <div className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">{isAr ? 'إصابات مرتبطة' : 'Related injuries'}</div>
-                  <div className="mt-2 text-2xl font-black text-slate-900">{visibleRelatedInjuries.length}</div>
+                  <div className="mt-2 text-2xl font-black text-slate-900 dark:text-white">{visibleRelatedInjuries.length}</div>
                 </div>
               ) : null}
             </div>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#region-anatomy" className="rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green">
+            <a href="#region-anatomy" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
               {isAr ? 'ملخص المنطقة' : 'Region overview'}
             </a>
             {rehabConfig ? (
-              <a href="#rehab-guidance" className="rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green">
+              <a href="#rehab-guidance" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
                 {isAr ? 'التوجيه العلاجي' : 'Rehab guidance'}
               </a>
             ) : null}
             {rehabConfig ? (
-              <a href="#related-injuries" className="rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green">
+              <a href="#related-injuries" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
                 {isAr ? 'الإصابات المرتبطة' : 'Related injuries'}
               </a>
             ) : null}
-            <a href="#region-exercises" className="rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green">
+            <a href="#region-exercises" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
               {isAr ? 'التمارين الكاملة' : 'Exercise library'}
             </a>
-            <Link to={navigationPaths.exerciseSystems(lang)} className="rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green">
+            <Link to={navigationPaths.exerciseSystems(lang)} className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
               {isAr ? 'صفحات الأنظمة' : 'Training systems'}
             </Link>
           </div>
@@ -170,14 +170,14 @@ export default function ExerciseRegionPage() {
 
         {rehabConfig ? (
           <section id="rehab-guidance" className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
-            <article className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <article className="rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm sm:p-8">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
                 <Activity className="h-4 w-4 text-health-green" />
                 <span>{isAr ? 'توجيه علاجي مختصر' : 'Rehab focus'}</span>
               </div>
               <div className="mt-4 space-y-3">
                 {(isAr ? rehabConfig.medicalNotesAr : rehabConfig.medicalNotesEn).map((item) => (
-                  <div key={item} className="mixed-text rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-7 text-slate-700">
+                  <div key={item} className="mixed-text rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-4 py-3 text-sm leading-7 text-slate-700 dark:text-slate-200">
                     {safeText(item)}
                   </div>
                 ))}
@@ -190,7 +190,7 @@ export default function ExerciseRegionPage() {
               </div>
               <div className="mt-4 space-y-3">
                 {(isAr ? rehabConfig.redFlagNotesAr : rehabConfig.redFlagNotesEn).map((item) => (
-                  <div key={item} className="mixed-text rounded-2xl border border-amber-200 bg-white/80 px-4 py-3 text-sm leading-7 text-slate-700">
+                  <div key={item} className="mixed-text rounded-2xl border border-amber-200 bg-white/80 dark:bg-slate-900/80 px-4 py-3 text-sm leading-7 text-slate-700 dark:text-slate-200">
                     {safeText(item)}
                   </div>
                 ))}
@@ -200,7 +200,7 @@ export default function ExerciseRegionPage() {
         ) : null}
 
         <section id="region-anatomy" className="grid gap-6 lg:grid-cols-[1.35fr_0.95fr]">
-          <article className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <article className="rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm sm:p-8">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
               <Network className="h-4 w-4 text-health-green" />
               <span>{isAr ? 'عرض محايد للمنطقة' : 'Neutral region visual'}</span>
@@ -208,21 +208,21 @@ export default function ExerciseRegionPage() {
 
             <div className="mt-4 space-y-3">
               {(isAr ? content.anatomyAr : content.anatomyEn).map((item) => (
-                <div key={item} className="mixed-text rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-7 text-slate-700">
+                <div key={item} className="mixed-text rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-4 py-3 text-sm leading-7 text-slate-700 dark:text-slate-200">
                   {safeText(item)}
                 </div>
               ))}
             </div>
           </article>
 
-          <article className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <article className="rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm sm:p-8">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
               <Dumbbell className="h-4 w-4 text-health-green" />
               <span>{isAr ? 'نقاط التركيز' : 'Coaching focus'}</span>
             </div>
             <div className="mt-4 space-y-3">
               {(isAr ? content.cuesAr : content.cuesEn).map((item) => (
-                <div key={item} className="mixed-text rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-7 text-slate-700">
+                <div key={item} className="mixed-text rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-4 py-3 text-sm leading-7 text-slate-700 dark:text-slate-200">
                   {safeText(item)}
                 </div>
               ))}
@@ -243,8 +243,8 @@ export default function ExerciseRegionPage() {
         {rehabConfig && visibleRelatedInjuries.length > 0 ? (
           <section id="related-injuries" className="space-y-5">
             <div>
-              <h2 className="text-2xl font-black text-slate-900">{isAr ? 'إصابات مرتبطة بهذا التأهيل' : 'Related injury pages'}</h2>
-              <p className="mixed-text mt-2 text-sm leading-7 text-slate-600">
+              <h2 className="text-2xl font-black text-slate-900 dark:text-white">{isAr ? 'إصابات مرتبطة بهذا التأهيل' : 'Related injury pages'}</h2>
+              <p className="mixed-text mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                 {isAr
                   ? 'هذه الروابط تجمع بين صفحة التأهيل العامة وصفحات الإصابات الأقرب لها، حتى يقرأ المستخدم التمرين داخل سياق إصابة أو مرحلة تعافٍ أكثر دقة.'
                   : 'These links connect the general rehab page with the injury guides most likely to need this exercise focus, giving users more condition-specific context.'}
@@ -256,15 +256,15 @@ export default function ExerciseRegionPage() {
                 <Link
                   key={injury.id}
                   to={`/${lang}/injuries/${injury.slug}`}
-                  className="group rounded-[1.6rem] border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-health-green/30"
+                  className="group rounded-[1.6rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-health-green/30"
                 >
                   <div className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
                     {isAr ? 'صفحة إصابة' : 'Injury guide'}
                   </div>
-                  <div className="mixed-text mt-3 text-lg font-black leading-8 text-slate-900">
+                  <div className="mixed-text mt-3 text-lg font-black leading-8 text-slate-900 dark:text-white">
                     {safeText(injury.name)}
                   </div>
-                  <div className="mixed-text mt-2 text-sm leading-7 text-slate-600">
+                  <div className="mixed-text mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                     {safeText(`${injury.category} • ${injury.bodyRegion}`)}
                   </div>
                   <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-health-green transition group-hover:text-health-green-dark">
@@ -280,12 +280,12 @@ export default function ExerciseRegionPage() {
         <section className="space-y-5">
           <div className="flex items-center justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-black text-slate-900">{isAr ? 'أنظمة مناسبة لهذه المنطقة' : 'Related training systems'}</h2>
-              <p className="mixed-text mt-2 text-sm leading-7 text-slate-600">
+              <h2 className="text-2xl font-black text-slate-900 dark:text-white">{isAr ? 'أنظمة مناسبة لهذه المنطقة' : 'Related training systems'}</h2>
+              <p className="mixed-text mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                 {isAr ? 'كل نظام من دول له صفحة مفصلة وخطة أسبوعية وروابط مباشرة للتمارين.' : 'Each system below has its own detail page, weekly template, and direct exercise links.'}
               </p>
             </div>
-            <Link to={navigationPaths.exerciseSystems(lang)} className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green">
+            <Link to={navigationPaths.exerciseSystems(lang)} className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
               <span>{isAr ? 'كل الأنظمة' : 'All systems'}</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -306,8 +306,8 @@ export default function ExerciseRegionPage() {
 
         <section id="region-exercises" className="space-y-5">
           <div>
-            <h2 className="text-2xl font-black text-slate-900">{isAr ? `كل تمارين ${label}` : `All ${EXERCISE_FINDER_STATIC_LABELS[region]} exercises`}</h2>
-            <p className="mixed-text mt-2 text-sm leading-7 text-slate-600">
+            <h2 className="text-2xl font-black text-slate-900 dark:text-white">{isAr ? `كل تمارين ${label}` : `All ${EXERCISE_FINDER_STATIC_LABELS[region]} exercises`}</h2>
+            <p className="mixed-text mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
               {isAr
                 ? 'القائمة هنا مخصصة بالكامل لهذه المنطقة، مع ملاحظات تقنية وتفاصيل إضافية عند الفتح.'
                 : 'This page collects the full exercise library for the region, with technique notes and expandable details.'}
@@ -323,8 +323,8 @@ export default function ExerciseRegionPage() {
         {systems.length > 0 ? (
           <section className="space-y-5">
             <div>
-              <h2 className="text-2xl font-black text-slate-900">{isAr ? 'مثال ربط مع الخطة الأسبوعية' : 'Linked weekly plan example'}</h2>
-              <p className="mixed-text mt-2 text-sm leading-7 text-slate-600">
+              <h2 className="text-2xl font-black text-slate-900 dark:text-white">{isAr ? 'مثال ربط مع الخطة الأسبوعية' : 'Linked weekly plan example'}</h2>
+              <p className="mixed-text mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                 {isAr
                   ? 'الجزء ده يوضح كيف ترتبط تمارين هذه المنطقة مباشرة بأسبوع تدريبي حقيقي.'
                   : 'This section shows how the region connects to a real weekly training structure.'}

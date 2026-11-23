@@ -137,25 +137,25 @@ export default function ChatPanel({
 
   return (
     <div className={className || ''}>
-      <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
-        <div className="flex flex-col gap-3 border-b border-slate-200 bg-soft-blue px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+      <div className="overflow-hidden rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm">
+        <div className="flex flex-col gap-3 border-b border-slate-200 dark:border-slate-700 bg-soft-blue px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
           <div>
-            <div className="font-black text-slate-900">{title}</div>
+            <div className="font-black text-slate-900 dark:text-white">{title}</div>
             <div className="mt-1 text-xs text-slate-500">
               {isAr
                 ? 'إجابات مخصصة حسب بياناتك الحالية وسياق حالتك'
                 : 'Answers are personalized using your current profile and context'}
             </div>
           </div>
-          <div className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-500">
+          <div className="rounded-full border border-white/70 bg-white/70 dark:bg-slate-900/70 px-3 py-1 text-xs font-bold text-slate-500">
             {isLoading ? (isAr ? 'جارٍ التفكير...' : 'Thinking...') : isAr ? 'جاهز' : 'Ready'}
           </div>
         </div>
 
         <div className="max-h-[430px] space-y-3 overflow-y-auto bg-[linear-gradient(180deg,rgba(244,239,231,0.7),rgba(255,255,255,0))] p-4 sm:p-5">
           {messages.length === 0 ? (
-            <div className="rounded-[1.75rem] border border-dashed border-slate-200 bg-white/90 p-5">
-              <div className="mb-2 flex items-center gap-2 font-bold text-slate-900">
+            <div className="rounded-[1.75rem] border border-dashed border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 p-5">
+              <div className="mb-2 flex items-center gap-2 font-bold text-slate-900 dark:text-white">
                 <Sparkles className="h-4 w-4 text-health-green" />
                 {isAr
                   ? 'ابدأ بسؤال واضح لتحصل على توصية عملية'
@@ -196,7 +196,7 @@ export default function ChatPanel({
 
           {isLoading ? (
             <div className="flex w-full justify-start">
-              <div className="max-w-[90%] rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
+              <div className="max-w-[90%] rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-4 py-3 text-sm text-slate-700 dark:text-slate-200">
                 <LoadingDots />
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function ChatPanel({
         </div>
 
         {quickActions && quickActions.length > 0 ? (
-          <div className="border-t border-slate-100 px-4 py-3 sm:px-5">
+          <div className="border-t border-slate-100 dark:border-slate-800 px-4 py-3 sm:px-5">
             <div className="mb-2 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">
               {isAr ? 'اقتراحات سريعة' : 'Quick prompts'}
             </div>
@@ -215,7 +215,7 @@ export default function ChatPanel({
                 <button
                   key={`${action.label}-${index}`}
                   onClick={() => setInput(action.prompt)}
-                  className="min-w-[150px] snap-start rounded-2xl border border-slate-200 bg-white px-3 py-3 text-left text-xs font-black text-slate-700 transition-all hover:bg-soft-blue sm:min-w-0"
+                  className="min-w-[150px] snap-start rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-left text-xs font-black text-slate-700 dark:text-slate-200 transition-all hover:bg-soft-blue sm:min-w-0"
                 >
                   {action.label}
                 </button>
@@ -226,7 +226,7 @@ export default function ChatPanel({
 
         {error ? <div className="px-4 pb-0 text-sm font-semibold text-rose-600 sm:px-5">{error}</div> : null}
 
-        <div className="border-t border-slate-200 bg-white p-4 sm:p-5">
+        <div className="border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 sm:p-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end">
             <textarea
               value={input}
@@ -234,7 +234,7 @@ export default function ChatPanel({
               onKeyDown={handleKeyDown}
               rows={2}
               placeholder={isAr ? 'اكتب سؤالك هنا...' : 'Type your question here...'}
-              className="min-h-[96px] flex-1 resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-health-green/30 sm:min-h-[88px]"
+              className="min-h-[96px] flex-1 resize-none rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-health-green/30 sm:min-h-[88px]"
             />
             <button
               onClick={onSend}
