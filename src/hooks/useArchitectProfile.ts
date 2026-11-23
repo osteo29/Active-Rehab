@@ -2,7 +2,7 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {HealthProfile, type HealthMetrics, PhysioNutritionLogic} from '../services/physioNutritionLogic';
 import {normalizeNumericInput, parseLocalizedNumber} from '../utils/numericInput';
 
-const ARCHITECT_STORAGE_KEY = 'physiohub_architect_profile';
+const ARCHITECT_STORAGE_KEY = 'activerehab_architect_profile';
 
 const DEFAULT_ACTIVE_PROFILE: HealthProfile = {
   age: 28,
@@ -29,19 +29,38 @@ const parseArchitectNumber = (value: string) => {
 export const architectNumberToInput = (value: number | undefined | null) =>
   value && value > 0 ? String(value) : '';
 
-const loadStoredArchitectProfile = (): HealthProfile => {
-  if (typeof window === 'undefined') return DEFAULT_ACTIVE_PROFILE;
+function isPlaceholderProfile(profile: HealthProfile) {
+  return (Object.keys(DEFAULT_ACTIVE_PROFILE) as Array<keyof HealthProfile>).every(
+    (key) => profile[key] === DEFAULT_ACTIVE_PROFILE[key],
+  );
+}
+
+/**
+ * The placeholder profile is only there to pre-fill the form. Older versions
+ * auto-saved it to localStorage on first visit, which made the AI assistant
+ * treat invented values (28yo male with an ACL tear) as the user's real
+ * profile. A stored profile that still exactly matches the placeholder is
+ * treated as absent and cleared.
+ */
+const loadStoredArchitectProfile = (): {profile: HealthProfile; isUserProvided: boolean} => {
+  const fallback = {profile: DEFAULT_ACTIVE_PROFILE, isUserProvided: false};
+  if (typeof window === 'undefined') return fallback;
   const saved = localStorage.getItem(ARCHITECT_STORAGE_KEY);
-  if (!saved) return DEFAULT_ACTIVE_PROFILE;
+  if (!saved) return fallback;
 
   try {
     const parsed = JSON.parse(saved) as HealthProfile;
     if (parsed.weight > 0 && parsed.height > 0) {
-      return {...DEFAULT_ACTIVE_PROFILE, ...parsed};
+      const merged = {...DEFAULT_ACTIVE_PROFILE, ...parsed};
+      if (isPlaceholderProfile(merged)) {
+        localStorage.removeItem(ARCHITECT_STORAGE_KEY);
+        return fallback;
+      }
+      return {profile: merged, isUserProvided: true};
     }
-    return DEFAULT_ACTIVE_PROFILE;
+    return fallback;
   } catch {
-    return DEFAULT_ACTIVE_PROFILE;
+    return fallback;
   }
 };
 
@@ -66,8 +85,20 @@ const createArchitectDraft = (profile: HealthProfile): ArchitectDraft => ({
 });
 
 export function useArchitectProfile() {
-  const initialArchitectProfile = useMemo<HealthProfile>(() => loadStoredArchitectProfile(), []);
-  const [architectProfile, setArchitectProfile] = useState<HealthProfile>(initialArchitectProfile);
+  const initialLoad = useMemo(() => loadStoredArchitectProfile(), []);
+  const initialArchitectProfile = initialLoad.profile;
+  const [architectProfile, setArchitectProfileState] = useState<HealthProfile>(initialArchitectProfile);
+  const [isProfileUserProvided, setIsProfileUserProvided] = useState(initialLoad.isUserProvided);
+
+  // Persisting happens only after the visitor actually provides data, so the
+  // placeholder profile never leaks into storage (and into the AI context).
+  const setArchitectProfile = useCallback(
+    (value: HealthProfile | ((previous: HealthProfile) => HealthProfile)) => {
+      setIsProfileUserProvided(true);
+      setArchitectProfileState(value);
+    },
+    [],
+  );
   const [architectDraft, setArchitectDraft] = useState<ArchitectDraft>(() =>
     createArchitectDraft(initialArchitectProfile),
   );
@@ -93,16 +124,16 @@ export function useArchitectProfile() {
     }
   }, [architectProfile]);
 
-  // Persist valid profile
+  // Persist valid profile once the visitor has provided real data
   useEffect(() => {
-    if (architectProfile.weight > 0 && architectProfile.height > 0) {
+    if (isProfileUserProvided && architectProfile.weight > 0 && architectProfile.height > 0) {
       try {
         localStorage.setItem(ARCHITECT_STORAGE_KEY, JSON.stringify(architectProfile));
       } catch {
         // ignore
       }
     }
-  }, [architectProfile]);
+  }, [architectProfile, isProfileUserProvided]);
 
   const updateArchitectDraft = useCallback(
     (
@@ -116,6 +147,7 @@ export function useArchitectProfile() {
       const allowDecimal = field === 'weight';
       const normalizedValue = normalizeNumericInput(value, {allowDecimal});
       setArchitectDraft((prev) => ({...prev, [field]: normalizedValue}));
+      setIsProfileUserProvided(true);
 
       if (!sync) return;
 

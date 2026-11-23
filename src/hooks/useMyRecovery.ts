@@ -43,7 +43,7 @@ export interface RecoveryJourney {
   status: 'active' | 'completed' | 'paused';
 }
 
-const STORAGE_KEY = 'physionut_my_recovery_v1';
+const STORAGE_KEY = 'activerehab_my_recovery_v1';
 
 const DEFAULT_PHASE_GOALS_BY_PHASE: Record<number, Array<{en: string; ar: string}>> = {
   1: [

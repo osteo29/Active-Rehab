@@ -142,10 +142,10 @@ export const PhysioNutritionLogic = {
 };
 
 export function saveProfile(profile: HealthProfile) {
-  localStorage.setItem('physio_health_profile', JSON.stringify(profile));
+  localStorage.setItem('activerehab_health_profile', JSON.stringify(profile));
 }
 
 export function loadProfile(): HealthProfile | null {
-  const data = localStorage.getItem('physio_health_profile');
+  const data = localStorage.getItem('activerehab_health_profile');
   return data ? JSON.parse(data) : null;
 }

@@ -44,9 +44,9 @@ export type ProgressEventName =
   | 'injury_protocol_adopted'
   | 'assistant_entry_after_result';
 
-const PROGRESSION_STORAGE_KEY = 'physiohub_progression_state_v1';
-const PENDING_ASSESSMENT_KEY = 'physiohub_pending_assessment_v1';
-const PROGRESS_EVENTS_KEY = 'physiohub_progress_events_v1';
+const PROGRESSION_STORAGE_KEY = 'activerehab_progression_state_v1';
+const PENDING_ASSESSMENT_KEY = 'activerehab_pending_assessment_v1';
+const PROGRESS_EVENTS_KEY = 'activerehab_progress_events_v1';
 
 const defaultState: ProgressionState = {
   onboardingCompleted: false,

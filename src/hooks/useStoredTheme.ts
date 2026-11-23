@@ -1,6 +1,6 @@
 import {useEffect, useLayoutEffect, useState} from 'react';
 
-const STORAGE_KEY = 'physiohub_theme';
+const STORAGE_KEY = 'activerehab_theme';
 
 export type ThemePreference = 'light' | 'dark';
 

@@ -10,7 +10,7 @@ import type {HealthProfile} from '../logic/physioNutritionEngine';
 import {architectNumberToInput} from './useArchitectProfile';
 import {normalizeNumericInput, parseLocalizedNumber} from '../utils/numericInput';
 
-const CUSTOM_FOODS_STORAGE_KEY = 'physiohub_custom_foods';
+const CUSTOM_FOODS_STORAGE_KEY = 'activerehab_custom_foods';
 
 type AppTranslations = (typeof translations)[Language];
 

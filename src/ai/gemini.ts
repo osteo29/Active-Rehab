@@ -10,7 +10,7 @@ type GeminiResponse = {
   error?: string;
 };
 
-const AI_CACHE_PREFIX = 'physiohub_ai_cache_v1';
+const AI_CACHE_PREFIX = 'activerehab_ai_cache_v1';
 
 function normalizeForCache(value: string) {
   return value.trim().replace(/\s+/g, ' ').toLowerCase();
@@ -30,8 +30,8 @@ export function getStoredAiIdentity() {
   if (typeof window === 'undefined') return 'guest';
 
   try {
-    const trackingRaw = localStorage.getItem('physiohub_tracking_profile');
-    const architectRaw = localStorage.getItem('physiohub_architect_profile');
+    const trackingRaw = localStorage.getItem('activerehab_tracking_profile');
+    const architectRaw = localStorage.getItem('activerehab_architect_profile');
     const tracking = trackingRaw ? JSON.parse(trackingRaw) : {};
     const architect = architectRaw ? JSON.parse(architectRaw) : {};
 
@@ -67,8 +67,8 @@ export function getStoredAiContext(lang: 'en' | 'ar' = 'en') {
   if (typeof window === 'undefined') return '';
 
   try {
-    const trackingRaw = localStorage.getItem('physiohub_tracking_profile');
-    const architectRaw = localStorage.getItem('physiohub_architect_profile');
+    const trackingRaw = localStorage.getItem('activerehab_tracking_profile');
+    const architectRaw = localStorage.getItem('activerehab_architect_profile');
     const tracking = trackingRaw ? JSON.parse(trackingRaw) : {};
     const architect = architectRaw ? JSON.parse(architectRaw) : {};
 
