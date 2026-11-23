@@ -1,3 +1,5 @@
+import {useSavedExercises, exerciseBookmarkKey} from '../../../hooks/useSavedExercises';
+import {EXERCISE_NAMES_AR} from './exerciseNamesAr';
 import {useEffect, useId, useMemo, useState} from 'react';
 
 import {CalendarRange, Dumbbell, Flame, Search, Share2, SlidersHorizontal, Sparkles, Target, X} from 'lucide-react';
@@ -71,6 +73,8 @@ export function ExerciseFinder({
 
 
   const isAr = lang === 'ar';
+  const {saved, toggle: toggleSaved, storageUnavailable} = useSavedExercises();
+  const [savedOnly, setSavedOnly] = useState(false);
   const searchId = useId();
   const muscleId = useId();
   const subMuscleId = useId();
@@ -141,6 +145,7 @@ export function ExerciseFinder({
       const matchesSearch =
         search.length === 0 ||
         normalizeValue(exercise.name).includes(search) ||
+        normalizeValue(exercise.nameAr || EXERCISE_NAMES_AR[exercise.name] || '').includes(search) ||
         normalizeValue(exercise.description).includes(search) ||
         normalizeValue(exercise.mainMuscle).includes(search) ||
         normalizeValue(exercise.equipment).includes(search) ||
@@ -152,9 +157,9 @@ export function ExerciseFinder({
       const matchesEquipment = filters.equipment === 'all' || exercise.equipment === filters.equipment;
       const matchesType = filters.exerciseType === 'all' || exercise.exerciseType === filters.exerciseType;
 
-      return matchesSearch && matchesMainMuscle && matchesSubMuscle && matchesLevel && matchesEquipment && matchesType;
+      return (!savedOnly || saved.includes(exerciseBookmarkKey(exercise))) && matchesSearch && matchesMainMuscle && matchesSubMuscle && matchesLevel && matchesEquipment && matchesType;
     });
-  }, [exerciseRecords, filters, staticContext]);
+  }, [exerciseRecords, filters, staticContext, saved, savedOnly]);
 
   const selectedMainMuscle = filters.muscle !== 'all' ? filters.muscle : staticContext?.staticMuscles?.[0] || null;
   const anatomyList = selectedMainMuscle ? MUSCLE_TREE[selectedMainMuscle] : [];
@@ -423,6 +428,12 @@ export function ExerciseFinder({
                   </div>
                 </div>
 
+              <div className="my-4 flex flex-wrap items-center gap-3">
+                <button type="button" aria-pressed={savedOnly} onClick={() => setSavedOnly(value => !value)} className={`rounded-xl border px-4 py-2 text-sm font-bold ${savedOnly ? 'border-health-green bg-health-green/10 text-health-green' : 'border-slate-200 text-slate-700'}`}>
+                  {savedOnly ? (isAr ? 'عرض كل التمارين' : 'Show all exercises') : (isAr ? 'المحفوظة فقط' : 'Saved exercises only')} ({saved.length})
+                </button>
+                <span className="text-xs text-slate-500">{storageUnavailable ? (isAr ? 'الحفظ الدائم غير متاح في هذا المتصفح. اختياراتك لهذه الزيارة فقط.' : 'Browser storage unavailable. Saves last for this visit only.') : (isAr ? 'محفوظة على هذا الجهاز فقط، وليست خطة علاج.' : 'Saved on this device only, not a treatment plan.')}</span>
+              </div>
               {filtersOpen ? (
                 <button
                   type="button"
@@ -866,6 +877,8 @@ export function ExerciseFinder({
                             exercise={exercise}
                             isAr={isAr}
                             searchQuery={filters.search}
+                            saved={saved.includes(exerciseBookmarkKey(exercise))}
+                            onToggleSaved={() => toggleSaved(exerciseBookmarkKey(exercise))}
                           />
                         ))}
                       </div>

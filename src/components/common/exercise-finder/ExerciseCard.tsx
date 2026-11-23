@@ -1,5 +1,5 @@
 import {useState, type ReactNode} from 'react';
-import {Dumbbell, Flame, Timer, type LucideProps} from 'lucide-react';
+import {Bookmark, Dumbbell, Flame, Timer, type LucideProps} from 'lucide-react';
 
 import {Badge} from './FilterField';
 import {toTitle, translateBadge} from './filter-utils';
@@ -45,7 +45,7 @@ function highlightText(text: string, query: string): ReactNode {
   );
 }
 
-function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; isAr: boolean; searchQuery?: string}) {
+function ExerciseCard({exercise, isAr, searchQuery = '', saved = false, onToggleSaved}: {exercise: Exercise; isAr: boolean; searchQuery?: string; saved?: boolean; onToggleSaved?: () => void}) {
   const difficultyBorderMap: Record<Exercise['level'], string> = {
     beginner: 'border-l-emerald-400',
     intermediate: 'border-l-amber-400',
@@ -82,6 +82,10 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
         ) : null}
 
         <div className="flex flex-wrap items-start justify-between gap-3">
+          {onToggleSaved && <button type="button" onClick={onToggleSaved} aria-pressed={saved} aria-label={`${saved ? (isAr ? 'إلغاء حفظ' : 'Unsave') : (isAr ? 'حفظ' : 'Save')} ${isAr ? (exercise.nameAr || exercise.name) : exercise.name}`} className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-3 py-2 text-xs font-bold text-health-green">
+            <Bookmark className="h-4 w-4" fill={saved ? 'currentColor' : 'none'}/>{saved ? (isAr ? 'محفوظ' : 'Saved') : (isAr ? 'حفظ' : 'Save')}
+          </button>}
+
           <div>
             <h3 className="text-xl font-bold text-slate-900">
               {highlightText(isAr ? (exercise.nameAr || EXERCISE_NAMES_AR[exercise.name] || exercise.name) : exercise.name, searchQuery)}
