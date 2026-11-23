@@ -1,3 +1,5 @@
+import Seo from '../components/seo/Seo';
+import {buildHreflangs} from '../utils/langUrlHelper';
 import {useState, useMemo, useRef, useEffect} from 'react';
 import {
   Activity,
@@ -131,6 +133,7 @@ export default function AnatomyPage() {
 
   return (
     <PageLayout title={pageTitle}>
+      <Seo title={isAr ? 'مكتبة التشريح والتمارين' : 'Anatomy and exercise library'} description={isAr ? 'مكتبة تعليمية للعضلات والتشريح الوظيفي والتمارين. ليست بديلًا عن التقييم الطبي.' : 'Educational muscle anatomy and exercise library, not a replacement for medical assessment.'} canonicalPath="/anatomy" hreflangs={buildHreflangs('/anatomy')}/>
       <div className="not-prose space-y-8">
         {/* Header Hero Section */}
         <section className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.15),transparent_55%),linear-gradient(180deg,#ffffff,#f8fafc)] p-6 sm:p-10 shadow-sm dark:border-slate-800 dark:bg-slate-900/90">

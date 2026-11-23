@@ -40,6 +40,7 @@ const staticRoutes: RouteEntry[] = [
     priority: '0.85',
     lastmod: GENERATED_LASTMOD,
   })),
+  {path: '/anatomy', changefreq: 'monthly', priority: '0.8', lastmod: '2026-11-23'},
   {path: '/exercises', changefreq: 'weekly', priority: '0.9', lastmod: GENERATED_LASTMOD},
   {path: '/exercises/systems', changefreq: 'weekly', priority: '0.85', lastmod: GENERATED_LASTMOD},
   ...TRAINING_SYSTEMS.map((system) => ({
