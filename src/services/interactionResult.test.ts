@@ -1,0 +1,3 @@
+import {expect,it} from 'vitest';import {parseInteractionResult} from './interactionResult';
+it('accepts a complete typed response in a JSON code block',()=>{expect(parseInteractionResult('```json\n'+JSON.stringify({status:'Caution',summary:'Check with a pharmacist',interactions:['Fixture'],practicalAdvice:['Fixture']})+'\n```')?.status).toBe('Caution')});
+it('rejects malformed model values instead of rendering objects or unknown statuses',()=>{for(const value of [null,[],{status:'Unknown',summary:'Test',interactions:[],practicalAdvice:[]},{status:'Safe',summary:{text:'Test'},interactions:[],practicalAdvice:[]},{status:'Safe',summary:'Test',interactions:[{}],practicalAdvice:[]}])expect(parseInteractionResult(JSON.stringify(value))).toBeNull()});
