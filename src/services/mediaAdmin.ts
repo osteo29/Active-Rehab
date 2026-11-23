@@ -195,7 +195,8 @@ export async function uploadMediaAsset(file: File, options: UploadMediaOptions) 
     .upload(mainPath, prepared.mainBlob, {contentType: 'image/webp', upsert: false});
   if (mainError) throw mainError;
 
-  const {error: thumbError} = await client.storage
+  try {
+    const {error: thumbError} = await client.storage
     .from(MEDIA_BUCKET)
     .upload(thumbnailPath, prepared.thumbnailBlob, {contentType: 'image/webp', upsert: false});
   if (thumbError) throw thumbError;
@@ -228,6 +229,16 @@ export async function uploadMediaAsset(file: File, options: UploadMediaOptions) 
   const {data, error} = await client.from('media_assets').insert(insertPayload).select('*').single();
   if (error) throw error;
   return data;
+  } catch (error) {
+    // Remove only objects created by this attempt, never preexisting assets.
+    try {
+      const {error: cleanupError} = await client.storage.from(MEDIA_BUCKET).remove([mainPath, thumbnailPath]);
+      if (cleanupError) console.warn('Could not clean up incomplete media upload.', cleanupError);
+    } catch (cleanupError) {
+      console.warn('Could not clean up incomplete media upload.', cleanupError);
+    }
+    throw error;
+  }
 }
 
 async function replaceAllUsageRows(rows: MediaAssetUsageInsert[]) {
