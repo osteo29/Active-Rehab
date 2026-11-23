@@ -1,3 +1,4 @@
+import muscleArabic from '../../json/muscles_ar.json';
 import biomechanicsData from '../../json/exercise_biomechanics.json';
 import musclesData from '../../json/muscles_library.json';
 import muscleIndexData from '../../json/muscle_exercises_index.json';
@@ -99,9 +100,11 @@ export function getMuscleDetail(muscleSlug: string): MuscleDetail | null {
   return muscles[muscleSlug] || null;
 }
 
-export function getAllMuscles(): MuscleDetail[] {
+export function getAllMuscles(language: 'en' | 'ar' = 'en'): MuscleDetail[] {
   const muscles = (musclesData as any).muscles;
-  return Object.values(muscles) as MuscleDetail[];
+  return (Object.values(muscles) as MuscleDetail[]).map((muscle) => language === 'ar'
+    ? {...muscle, ...(muscleArabic as Record<string, {action: string; innervation: string}>)[muscle.slug]}
+    : muscle);
 }
 
 export function getMusclesByRegion(region: string): MuscleDetail[] {
