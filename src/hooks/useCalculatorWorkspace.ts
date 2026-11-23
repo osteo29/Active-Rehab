@@ -45,12 +45,18 @@ const emptyFoodDraft = (): CustomFoodDraft => ({
 
 function loadCustomFoods() {
   if (typeof window === 'undefined') return [];
-  const saved = localStorage.getItem(CUSTOM_FOODS_STORAGE_KEY);
-  if (!saved) return [];
-
   try {
+    const saved = localStorage.getItem(CUSTOM_FOODS_STORAGE_KEY);
+    if (!saved) return [];
     const parsed = JSON.parse(saved);
-    return Array.isArray(parsed) ? (parsed as FoodItem[]) : [];
+    return Array.isArray(parsed) ? parsed.filter((food): food is FoodItem =>
+      food !== null && typeof food === 'object' &&
+      typeof food.id === 'string' && typeof food.name?.en === 'string' &&
+      typeof food.name?.ar === 'string' &&
+      ['protein', 'fruit', 'grain', 'cooked', 'dairy', 'vegetable', 'fat'].includes(food.category) &&
+      ['calories', 'protein', 'carbs', 'fats'].every(key =>
+        typeof food[key] === 'number' && Number.isFinite(food[key]) && food[key] >= 0)
+    ) : [];
   } catch {
     return [];
   }
@@ -185,10 +191,10 @@ export function useCalculatorWorkspace({
     if (!activeCalculator) return;
     if (activeCalculator === 'Meal') {
       const total = mealItems.reduce((acc, item) => acc + (toPositiveNumber(item.calories) || 0), 0);
-      if (total > 0) {
-        setResult(total);
-        setError('');
-      }
+      setResult(total > 0 ? total : null);
+      setHealthInterpretation(null);
+      setAnalysisPrompt(null);
+      setError('');
       return;
     }
 
@@ -214,6 +220,12 @@ export function useCalculatorWorkspace({
     };
 
     const validationError = validateCalculatorInputs({values, lang, t});
+    setAnalysisPrompt(null);
+    if (validationError) {
+      setResult(null);
+      setHealthInterpretation(null);
+      return;
+    }
     if (!validationError) {
       try {
         const next = calculateCalculatorResult({values, lang, t});
@@ -221,7 +233,8 @@ export function useCalculatorWorkspace({
         setResult(next.result);
         setHealthInterpretation(next.healthInterpretation);
       } catch {
-        // ignore incomplete intermediate state
+        setResult(null);
+        setHealthInterpretation(null);
       }
     }
   }, [

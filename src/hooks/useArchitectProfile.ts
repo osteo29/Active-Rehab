@@ -31,10 +31,9 @@ export const architectNumberToInput = (value: number | undefined | null) =>
 
 const loadStoredArchitectProfile = (): HealthProfile => {
   if (typeof window === 'undefined') return DEFAULT_ACTIVE_PROFILE;
-  const saved = localStorage.getItem(ARCHITECT_STORAGE_KEY);
-  if (!saved) return DEFAULT_ACTIVE_PROFILE;
-
   try {
+    const saved = localStorage.getItem(ARCHITECT_STORAGE_KEY);
+    if (!saved) return DEFAULT_ACTIVE_PROFILE;
     const parsed = JSON.parse(saved) as HealthProfile;
     if (parsed.weight > 0 && parsed.height > 0) {
       return {...DEFAULT_ACTIVE_PROFILE, ...parsed};
