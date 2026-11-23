@@ -822,7 +822,9 @@ export default function InjuryDetailPage() {
                       </div>
                     ) : (
                       <div className="rounded-[1.6rem] border border-dashed border-slate-200 bg-slate-50 p-6 text-center text-sm text-slate-500">
-                        {isAr ? 'لا توجد تمارين مفصلة مسجلة لهذه المرحلة بعد.' : 'No detailed exercises are recorded for this phase yet.'}
+                        {isAr
+                          ? 'لا توجد تمارين خاصة بهذه المرحلة — تابع تمارين المرحلة السابقة كصيانة حسب توجيهات الأخصائي.'
+                          : 'No separate exercises are prescribed for this phase — continue the previous phase\u2019s exercises as maintenance, as guided by your clinician.'}
                       </div>
                     )}
                     </div>
