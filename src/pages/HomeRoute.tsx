@@ -1,3 +1,4 @@
+import {scrollToAnchorWhenReady} from '../utils/scrollToAnchor';
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import App from '../App';
@@ -28,23 +29,12 @@ export default function HomeRoute({
   const pageKey = calculatorPage ? 'calculator_detail' : scrollToId === 'calculators' ? 'calculators' : 'home';
 
   useEffect(() => {
-    if (!scrollToId) return;
-    const t = setTimeout(() => {
-      document.getElementById(scrollToId)?.scrollIntoView({behavior: 'smooth'});
-    }, 0);
-    return () => clearTimeout(t);
-  }, [scrollToId]);
-
-  useEffect(() => {
-    const id = location.hash.slice(1);
-    if (!id) return;
-
-    const timer = window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({behavior: 'smooth', block: 'start'});
-    }, 0);
-
-    return () => window.clearTimeout(timer);
-  }, [location.hash]);
+    let hashId = '';
+    try { hashId = decodeURIComponent(location.hash.slice(1)); } catch { hashId = location.hash.slice(1); }
+    const target = hashId || scrollToId;
+    if (!target) return;
+    return scrollToAnchorWhenReady(target);
+  }, [scrollToId, location.hash, calculatorSlug]);
 
   return (
     <>
