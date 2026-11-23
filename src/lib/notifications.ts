@@ -40,7 +40,7 @@ export async function requestBrowserNotifications(lang: AppLanguage) {
   }
 
   try {
-    const registration = await navigator.serviceWorker?.ready;
+    const registration = await navigator.serviceWorker?.getRegistration();
     if (registration) {
       await registration.showNotification(getNotificationTitle(lang), {
         body: getNotificationBody(lang),
@@ -65,10 +65,9 @@ export async function autoRequestBrowserNotifications(_lang: AppLanguage) {
     return currentPermission;
   }
 
-  if (window.localStorage.getItem(AUTO_NOTIFICATION_PROMPT_KEY) === 'true') {
-    return currentPermission;
-  }
-
-  window.localStorage.setItem(AUTO_NOTIFICATION_PROMPT_KEY, 'true');
+  try {
+    if (window.localStorage.getItem(AUTO_NOTIFICATION_PROMPT_KEY) === 'true') return currentPermission;
+    window.localStorage.setItem(AUTO_NOTIFICATION_PROMPT_KEY, 'true');
+  } catch { /* Notification availability does not require local storage. */ }
   return currentPermission;
 }
