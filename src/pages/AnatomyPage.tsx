@@ -116,14 +116,14 @@ export default function AnatomyPage() {
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-health-green/30 bg-health-green/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.18em] text-health-green-dark dark:text-health-green">
               <ShieldCheck className="h-4 w-4" />
-              <span>{isAr ? 'مرجع تشريحي وتأهيلي معتمد' : 'Verified Clinical Biomechanics Engine'}</span>
+              <span>{isAr ? 'مكتبة تشريح وتمارين تعليمية' : 'Anatomy and exercise education library'}</span>
             </div>
             <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl">
               {isAr ? 'مكتبة التشريح الوظيفي وتمارين التأهيل' : 'Functional Anatomy & Video Rehabilitation Library'}
             </h1>
             <p className="text-base leading-8 text-slate-600 dark:text-slate-300">
               {isAr
-                ? 'مرجع تشريحي تفاعلي لـ 107 عضلات بالصور الطبية المباشرة وتفاصيل المنشأ والاندغام والتعصيب، مع 117 تمرين تأهيلي موثق بمشغل فيديو مباشر وتوجيهات الأداء السريري.'
+                ? 'مكتبة تشريح تفاعلية وتمارين تعليمية. الفيديوهات من ناشريها الأصليين على يوتيوب، وقد تتغير إتاحتها. ليست بديلا عن التقييم الطبي أو خطة علاج فردية.'
                 : 'Interactive clinical anatomy index of 107 human muscles with verified illustrations, full O/I/A/N/B specs, plus 117 rehabilitation exercises with clinical coaching cues and inline video demos where available.'}
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function AnatomyPage() {
               <div className="text-xs font-medium text-slate-500 dark:text-slate-400">{isAr ? 'عضلة موثقة بالصور O/I/A/N/B' : 'Muscles with Diagrams'}</div>
             </div>
             <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-4 shadow-sm dark:border-slate-800 dark:bg-slate-800/80">
-              <div className="text-2xl font-black text-health-green">{allVideoExercises.length}</div>
+              <div className="text-2xl font-black text-health-green">{allVideoExercises.filter((exercise) => exercise.youtubeId).length}</div>
               <div className="text-xs font-medium text-slate-500 dark:text-slate-400">{isAr ? 'تمرين بالفيديو المباشر' : 'Video Rehab Exercises'}</div>
             </div>
             <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-4 shadow-sm dark:border-slate-800 dark:bg-slate-800/80">
@@ -143,8 +143,8 @@ export default function AnatomyPage() {
               <div className="text-xs font-medium text-slate-500 dark:text-slate-400">{isAr ? 'إجمالي تمارين المنصة' : 'Total Exercise Catalog'}</div>
             </div>
             <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-4 shadow-sm dark:border-slate-800 dark:bg-slate-800/80">
-              <div className="text-2xl font-black text-amber-500">100%</div>
-              <div className="text-xs font-medium text-slate-500 dark:text-slate-400">{isAr ? 'تضمين مباشر بلا إعلانات' : 'Direct Zero-Latency Embeds'}</div>
+              <div className="text-2xl font-black text-amber-500">YouTube</div>
+              <div className="text-xs font-medium text-slate-500 dark:text-slate-400">{isAr ? 'قد تظهر إعلانات من يوتيوب' : 'YouTube may show ads'}</div>
             </div>
           </div>
         </section>
@@ -370,6 +370,7 @@ export default function AnatomyPage() {
                           title={ex.nameEn}
                           className="h-full w-full border-0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          referrerPolicy="strict-origin-when-cross-origin"
                           allowFullScreen
                         />
                       ) : (
@@ -530,6 +531,7 @@ export default function AnatomyPage() {
                       title="Rehab Exercise"
                       className="h-full w-full border-0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
                     />
                   </div>
