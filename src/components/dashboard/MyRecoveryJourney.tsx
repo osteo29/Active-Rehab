@@ -1,4 +1,4 @@
-import {memo, useState} from 'react';
+import {memo, useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {
   Activity,
@@ -68,6 +68,12 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
   const [newNoteText, setNewNoteText] = useState('');
   const [sliderPain, setSliderPain] = useState<number>(activeJourney?.painLevel ?? 4);
   const [isLoggingPain, setIsLoggingPain] = useState(false);
+
+  useEffect(() => {
+    setSliderPain(activeJourney?.painLevel ?? 4);
+    setIsLoggingPain(false);
+    setNewNoteText('');
+  }, [activeJourney?.id, activeJourney?.painLevel]);
 
   // If no active journey is tracked yet, show an engaging selector
   if (!activeJourney || journeys.length === 0) {
@@ -433,6 +439,7 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
                 min="0"
                 max="10"
                 step="1"
+                aria-label={isAr ? 'درجة الألم من 0 إلى 10' : 'Pain level from 0 to 10'}
                 value={sliderPain}
                 onChange={(e) => {
                   setSliderPain(Number(e.target.value));
