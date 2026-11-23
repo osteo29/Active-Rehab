@@ -47,8 +47,24 @@ Clinical draft only. All citations are per protocol in the JSON references and i
 - Phase 2, criteria_to_progress: https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf
 
 ## Unresolved
-- 88 phase-4 exercise lists still need source-to-phase alignment and clinical review.
+- 74 phase-4 exercise lists still need source-to-phase alignment and clinical review.
 - 20 timing fields remain empty. A disease can be milestone-based rather than week-based; fixed numbers are not automatically appropriate.
 - 28 phase-1/2 progression criteria in protocols 71-85 remain unresolved. Several sources have different phase structures or refer to discharge/return-to-sport, not permission to progress an early phase.
 - No analogy was used for high-risk femoral neck stress injury, hand tendon repair zones, Perthes disease, or peripheral nerve recovery.
 - The prior source-mapping research is available for continued review, but broad citations do not validate a new clinical threshold.
+
+## Additional directly mapped sources
+- Protocol 8, phase 4: https://www.sanfordhealth.org/-/media/org/files/medical-professionals/resources-and-education/3-pcl-nonoperative-rehabilitation-guideline.pdf
+- Protocol 11, phase 4: https://www.ruh.nhs.uk/patients/patient_information/PHY025_Frozen_shoulder_Adhesive_capsulitis.pdf
+- Protocol 27, phase 4: https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-iliotibial-band-syndrome.pdf
+- Protocol 36, phase 4: https://roh.nhs.uk/services-information/therapy/golfers-elbow
+- Protocol 39, phase 4: https://leaflets.ekhuft.nhs.uk/de-quervain-s-tenosynovitis-level-1-exercises/html/
+- Protocol 43, phase 4: https://www.inspirahealthnetwork.org/services-treatments/rehabilitation-services/sports-injury-rehabilitation/hip-flexor-strain
+- Protocol 54, phase 4: https://www.kentcht.nhs.uk/leaflet/peroneal-tendinopathy/
+- Protocol 55, phase 4: https://www.hacw.nhs.uk/leaflets-podiatry-pttd/
+- Protocol 56, phase 4: https://pmc.ncbi.nlm.nih.gov/articles/PMC2953318/
+- Protocol 61, phase 4: https://www.mskdorset.nhs.uk/back-pain_1/back-pain-leg-pain-spinal-stenosis/
+- Protocol 63, phase 4: https://www.tims.nhs.uk/wp-content/uploads/2024/08/tims-sacroiliac-pain-aug2024.pdf
+- Protocol 67, phase 4: https://pmc.ncbi.nlm.nih.gov/articles/PMC5112023/
+- Protocol 69, phase 4: https://ncbi.nlm.nih.gov/books/NBK470388/
+- Protocol 89, phase 4: https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-distal-biceps-repair.pdf

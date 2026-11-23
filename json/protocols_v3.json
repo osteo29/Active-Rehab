@@ -2933,9 +2933,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.293079",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "knee",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -2953,6 +2954,11 @@
         "journal": "Am J Sports Med",
         "year": 1999,
         "doi": ""
+      },
+      {
+        "raw": "Sanford non-operative PCL rehabilitation: later-stage plyometrics | https://www.sanfordhealth.org/-/media/org/files/medical-professionals/resources-and-education/3-pcl-nonoperative-rehabilitation-guideline.pdf | Clinician review required",
+        "title": "Sanford non-operative PCL rehabilitation: later-stage plyometrics",
+        "url": "https://www.sanfordhealth.org/-/media/org/files/medical-professionals/resources-and-education/3-pcl-nonoperative-rehabilitation-guideline.pdf"
       }
     ],
     "phases": [
@@ -3233,15 +3239,22 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Only for the source non-operative PCL population, typically grades I-II, after full motion, greater than 90% quadriceps strength, no giving way, completed return-to-play testing and physician clearance.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.sanfordhealth.org/-/media/org/files/medical-professionals/resources-and-education/3-pcl-nonoperative-rehabilitation-guideline.pdf"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_8_double_leg_plyometrics_progressing_to_single_leg_plyometrics",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -4027,9 +4040,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.294178",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "shoulder",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -4055,6 +4069,11 @@
         "journal": "Lancet",
         "year": 2015,
         "doi": ""
+      },
+      {
+        "raw": "Royal United Hospitals Bath frozen shoulder: thawing stage | https://www.ruh.nhs.uk/patients/patient_information/PHY025_Frozen_shoulder_Adhesive_capsulitis.pdf | Clinician review required",
+        "title": "Royal United Hospitals Bath frozen shoulder: thawing stage",
+        "url": "https://www.ruh.nhs.uk/patients/patient_information/PHY025_Frozen_shoulder_Adhesive_capsulitis.pdf"
       }
     ],
     "phases": [
@@ -4313,15 +4332,22 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Introduce strengthening slowly in the thawing stage alongside stretching; the disease stage, not the calendar alone, determines readiness.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.ruh.nhs.uk/patients/patient_information/PHY025_Frozen_shoulder_Adhesive_capsulitis.pdf"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_11_comfortable_range_overhead_press_with_light_hand_weights",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -9497,9 +9523,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.296528",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "knee",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -9517,6 +9544,11 @@
         "journal": "Clin J Sport Med",
         "year": 2000,
         "doi": ""
+      },
+      {
+        "raw": "MGB iliotibial band syndrome: late/remodeling phase | https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-iliotibial-band-syndrome.pdf | Clinician review required",
+        "title": "MGB iliotibial band syndrome: late/remodeling phase",
+        "url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-iliotibial-band-syndrome.pdf"
       }
     ],
     "phases": [
@@ -9711,15 +9743,54 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "These are source late/remodeling exercise options, not an independently validated fourth phase. Select and progress according to symptoms and clinical assessment.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-iliotibial-band-syndrome.pdf"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_27_functional_squat",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_27_lunge_or_reverse_lunge",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_27_single_leg_squat",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_27_double_leg_squat_jump",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_27_single_leg_forward_hop",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -12186,9 +12257,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.297339",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "elbow & wrist",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -12206,6 +12278,11 @@
         "journal": "Hand Clin",
         "year": 2014,
         "doi": ""
+      },
+      {
+        "raw": "Royal Orthopaedic Hospital NHS medial epicondylitis: progressive loading | https://roh.nhs.uk/services-information/therapy/golfers-elbow | Clinician review required",
+        "title": "Royal Orthopaedic Hospital NHS medial epicondylitis: progressive loading",
+        "url": "https://roh.nhs.uk/services-information/therapy/golfers-elbow"
       }
     ],
     "phases": [
@@ -12372,15 +12449,22 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "The source uses assisted lifting followed by lowering over six seconds, progressing to a small weight or bottle. Dose and suitability require clinician review; this is not a borrowed lateral-elbow protocol.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://roh.nhs.uk/services-information/therapy/golfers-elbow"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_36_assisted_wrist_flexion_with_slow_resisted_lowering",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -12869,9 +12953,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.297801",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "elbow & wrist",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -12881,6 +12966,11 @@
         "journal": "Occup Environ Med",
         "year": 2010,
         "doi": ""
+      },
+      {
+        "raw": "East Kent NHS De Quervain exercises: level 3 | https://leaflets.ekhuft.nhs.uk/de-quervain-s-tenosynovitis-level-1-exercises/html/ | Clinician review required",
+        "title": "East Kent NHS De Quervain exercises: level 3",
+        "url": "https://leaflets.ekhuft.nhs.uk/de-quervain-s-tenosynovitis-level-1-exercises/html/"
       }
     ],
     "phases": [
@@ -13095,15 +13185,22 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Only after levels 1 and 2 can be completed comfortably without pain. The source leaves hold/repetition fields for the therapist, so none are invented here.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://leaflets.ekhuft.nhs.uk/de-quervain-s-tenosynovitis-level-1-exercises/html/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_39_resistance_band_wrist_radial_deviation",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -14055,9 +14152,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.298434",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "hip",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -14067,6 +14165,11 @@
         "journal": "Clin Sports Med",
         "year": 2009,
         "doi": ""
+      },
+      {
+        "raw": "Inspira Health hip flexor strain: later rehabilitation | https://www.inspirahealthnetwork.org/services-treatments/rehabilitation-services/sports-injury-rehabilitation/hip-flexor-strain | Clinician review required",
+        "title": "Inspira Health hip flexor strain: later rehabilitation",
+        "url": "https://www.inspirahealthnetwork.org/services-treatments/rehabilitation-services/sports-injury-rehabilitation/hip-flexor-strain"
       }
     ],
     "phases": [
@@ -14308,15 +14411,38 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Introduce as healing progresses under the care team; these are later-rehabilitation examples, not a numeric sport-clearance test.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.inspirahealthnetwork.org/services-treatments/rehabilitation-services/sports-injury-rehabilitation/hip-flexor-strain"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_43_lunge",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_43_plank",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_43_core_strengthening",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -17537,9 +17663,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.299626",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "ankle & foot",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -17549,6 +17676,11 @@
         "journal": "J Foot Ankle Surg",
         "year": 2003,
         "doi": ""
+      },
+      {
+        "raw": "Kent Community Health NHS peroneal tendinopathy: strengthening | https://www.kentcht.nhs.uk/leaflet/peroneal-tendinopathy/ | Clinician review required",
+        "title": "Kent Community Health NHS peroneal tendinopathy: strengthening",
+        "url": "https://www.kentcht.nhs.uk/leaflet/peroneal-tendinopathy/"
       }
     ],
     "phases": [
@@ -17811,15 +17943,22 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Keep the knee/lower leg stationary while the foot rotates outward. Stop if painful. The source specifically says not to perform these exercises on a step.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.kentcht.nhs.uk/leaflet/peroneal-tendinopathy/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_54_flat_surface_resisted_ankle_eversion",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -17832,9 +17971,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.299741",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "ankle & foot",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -17844,6 +17984,11 @@
         "journal": "J Bone Joint Surg",
         "year": 1997,
         "doi": ""
+      },
+      {
+        "raw": "Herefordshire and Worcestershire NHS PTTD strengthening | https://www.hacw.nhs.uk/leaflets-podiatry-pttd/ | Clinician review required",
+        "title": "Herefordshire and Worcestershire NHS PTTD strengthening",
+        "url": "https://www.hacw.nhs.uk/leaflets-podiatry-pttd/"
       }
     ],
     "phases": [
@@ -18099,15 +18244,30 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Rise over three seconds and lower over three seconds. Single-leg work only if prescribed after clinician assessment; disease stage and progressive deformity matter.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.hacw.nhs.uk/leaflets-podiatry-pttd/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_55_double_leg_heel_raise",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_55_clinician_selected_single_leg_heel_raise",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -18120,9 +18280,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.299871",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "ankle & foot",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -18132,6 +18293,11 @@
         "journal": "Chir Organi Mov",
         "year": 1994,
         "doi": ""
+      },
+      {
+        "raw": "Sinus tarsi syndrome clinical commentary: Sustain stage | https://pmc.ncbi.nlm.nih.gov/articles/PMC2953318/ | Clinician review required",
+        "title": "Sinus tarsi syndrome clinical commentary: Sustain stage",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2953318/"
       }
     ],
     "phases": [
@@ -18405,15 +18571,54 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Advanced activities require tolerance of loading and push-off on the involved limb, with progression assessed in the actual practice environment. This is a clinical commentary, not a validated universal clearance rule.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://pmc.ncbi.nlm.nih.gov/articles/PMC2953318/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_56_lunge",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_56_step_down",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_56_bilateral_and_single_leg_hop",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_56_forward_and_backward_acceleration_and_deceleration",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_56_pivoting_and_cutting",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -19746,9 +19951,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.300517",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "spine",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -19758,6 +19964,11 @@
         "journal": "NEJM",
         "year": 2008,
         "doi": ""
+      },
+      {
+        "raw": "NHS Dorset lumbar spinal stenosis: ongoing progressive resistance exercise | https://www.mskdorset.nhs.uk/back-pain_1/back-pain-leg-pain-spinal-stenosis/ | Clinician review required",
+        "title": "NHS Dorset lumbar spinal stenosis: ongoing progressive resistance exercise",
+        "url": "https://www.mskdorset.nhs.uk/back-pain_1/back-pain-leg-pain-spinal-stenosis/"
       }
     ],
     "phases": [
@@ -20148,15 +20359,46 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Select symptom-tolerant activity and increase gradually; these exercises address function, not reversal of spinal narrowing.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.mskdorset.nhs.uk/back-pain_1/back-pain-leg-pain-spinal-stenosis/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_61_sit_to_stand_without_hand_support",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_61_mini_squat",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_61_mini_lunge",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_61_stair_climbing",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -20510,9 +20752,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.300796",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "spine",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -20530,6 +20773,11 @@
         "journal": "Clin J Sport Med",
         "year": 2003,
         "doi": ""
+      },
+      {
+        "raw": "TIMS NHS sacroiliac pain exercise advice | https://www.tims.nhs.uk/wp-content/uploads/2024/08/tims-sacroiliac-pain-aug2024.pdf | Clinician review required",
+        "title": "TIMS NHS sacroiliac pain exercise advice",
+        "url": "https://www.tims.nhs.uk/wp-content/uploads/2024/08/tims-sacroiliac-pain-aug2024.pdf"
       }
     ],
     "phases": [
@@ -20876,15 +21124,46 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "These are ongoing activity options, not sport-clearance tests. Assess inflammatory and other causes of sacroiliac-region pain.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.tims.nhs.uk/wp-content/uploads/2024/08/tims-sacroiliac-pain-aug2024.pdf"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_63_walking",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_63_cycling",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_63_swimming",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_63_pelvic_tilting",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -21825,9 +22104,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.301384",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "spine",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -21845,6 +22125,11 @@
         "journal": "Bone",
         "year": 2002,
         "doi": ""
+      },
+      {
+        "raw": "Too Fit To Fracture consensus: osteoporotic vertebral fracture exercise | https://pmc.ncbi.nlm.nih.gov/articles/PMC5112023/ | Clinician review required",
+        "title": "Too Fit To Fracture consensus: osteoporotic vertebral fracture exercise",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5112023/"
       }
     ],
     "phases": [
@@ -22142,15 +22427,30 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Older-adult consensus: consult an osteoporosis-trained physical therapist for safe choices, use slow controlled movements, and individualize to fracture risk and symptoms. This is not acute-fracture clearance.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://pmc.ncbi.nlm.nih.gov/articles/PMC5112023/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_67_individualized_resistance_training",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_67_balance_training",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -22502,9 +22802,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.301778",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "spine",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -22522,6 +22823,11 @@
         "journal": "J Bone Joint Surg",
         "year": 1997,
         "doi": ""
+      },
+      {
+        "raw": "StatPearls thoracic discogenic syndrome: stabilization and maintenance | https://ncbi.nlm.nih.gov/books/NBK470388/ | Clinician review required",
+        "title": "StatPearls thoracic discogenic syndrome: stabilization and maintenance",
+        "url": "https://ncbi.nlm.nih.gov/books/NBK470388/"
       }
     ],
     "phases": [
@@ -22832,15 +23138,30 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Begin stabilization/maintenance as pain decreases. Myelopathy or failed conservative care requires specialist assessment; the source gives no universal sport threshold.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://ncbi.nlm.nih.gov/books/NBK470388/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_69_abdominal_strengthening",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_69_gluteal_strengthening",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -29230,9 +29551,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.304864",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "sports & trauma",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -29242,6 +29564,11 @@
         "journal": "Am J Sports Med",
         "year": 2008,
         "doi": ""
+      },
+      {
+        "raw": "MGB distal biceps repair: later sport rehabilitation | https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-distal-biceps-repair.pdf | Clinician review required",
+        "title": "MGB distal biceps repair: later sport rehabilitation",
+        "url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-distal-biceps-repair.pdf"
       }
     ],
     "phases": [
@@ -29607,15 +29934,30 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Only after repair-specific healing and close discussion with the referring surgeon. Progress from graded practice to full pain-free practice before competition; do not use a tendinopathy timeline.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-distal-biceps-repair.pdf"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_89_rhythmic_stabilization",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_89_high_plank_stability_progression",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
