@@ -1,37 +1,9 @@
+import {parseInteractionResult, type InteractionResult} from '../../services/interactionResult';
 import {useEffect, useMemo, useState} from 'react';
 import {motion} from 'motion/react';
 import {AlertOctagon, AlertTriangle, CheckCircle2, Pill, Search} from 'lucide-react';
 import {askGeminiText, trackAiQuestion} from '../../ai/gemini';
 import {findCommonDrugInteraction} from '../../services/commonDrugInteractions';
-
-type ResultCard = {
-  status: 'Danger' | 'Caution' | 'Safe' | 'Unclear';
-  summary: string;
-  interactions: string[];
-  practicalAdvice: string[];
-  source?: 'database' | 'ai';
-  title?: string;
-};
-
-function safeParseJson(text: string): ResultCard | null {
-  const trimmed = text.trim();
-  const start = trimmed.indexOf('{');
-  const end = trimmed.lastIndexOf('}');
-  if (start === -1 || end === -1 || end <= start) return null;
-
-  try {
-    const parsed = JSON.parse(trimmed.slice(start, end + 1));
-    return {
-      status: parsed.status || 'Unclear',
-      summary: parsed.summary || '',
-      interactions: Array.isArray(parsed.interactions) ? parsed.interactions : [],
-      practicalAdvice: Array.isArray(parsed.practicalAdvice) ? parsed.practicalAdvice : [],
-      source: 'ai',
-    };
-  } catch {
-    return null;
-  }
-}
 
 const EXAMPLES = {
   en: ['Warfarin and vitamin K', 'Metformin and vitamin B12', 'Grapefruit with statins'],
@@ -49,7 +21,7 @@ export default function DrugNutrientChecker({
 }) {
   const [query, setQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [result, setResult] = useState<ResultCard | null>(null);
+  const [result, setResult] = useState<InteractionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const isAr = lang === 'ar';
 
@@ -64,7 +36,7 @@ export default function DrugNutrientChecker({
 
   const run = async () => {
     const q = query.trim();
-    if (!q || isLoading) return;
+    if (q.length < 3 || isLoading) return;
 
     setIsLoading(true);
     setError(null);
@@ -93,7 +65,7 @@ export default function DrugNutrientChecker({
         hiddenContext: `Language: ${lang}`,
       });
 
-      const parsed = safeParseJson(text);
+      const parsed = parseInteractionResult(text);
       if (!parsed) {
         setResult({
           status: 'Unclear',
@@ -163,7 +135,7 @@ export default function DrugNutrientChecker({
               <button
                 key={example}
                 type="button"
-                onClick={() => setQuery(example)}
+                onClick={() => {setQuery(example);setResult(null);setError(null);}}
                 className="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-600 hover:border-medical-blue hover:text-medical-blue"
               >
                 {example}
@@ -175,8 +147,10 @@ export default function DrugNutrientChecker({
             <div className="relative flex-1">
               <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 rtl:left-auto rtl:right-4" />
               <input
+                aria-label={isAr ? 'الدواء أو المكمل والطعام المراد فحصهما' : 'Medication or supplement and food to check'}
+                disabled={isLoading}
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {setQuery(e.target.value);setResult(null);setError(null);}}
                 placeholder={
                   isAr
                     ? 'مثال: وارفارين وفيتامين K أو الميتفورمين وفيتامين B12'
@@ -202,7 +176,7 @@ export default function DrugNutrientChecker({
               : 'This tool is for quick educational screening only and does not replace a pharmacist or physician review.'}
           </div>
 
-          {error ? <div className="mt-6 text-sm font-semibold text-rose-600">{error}</div> : null}
+          {error ? <div role="alert" className="mt-6 text-sm font-semibold text-rose-600">{error}</div> : null}
 
           {isLoading ? (
             <div className="mt-8 animate-pulse">
