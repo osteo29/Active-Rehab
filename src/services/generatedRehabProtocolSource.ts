@@ -330,7 +330,7 @@ function buildGeneratedCommonIn(name: string, bodyRegion: string, category: stri
   return [...new Set(contexts)].slice(0, 4);
 }
 
-function buildGeneratedRedFlags(name: string, bodyRegion: string, category: string) {
+export function buildGeneratedRedFlags(name: string, bodyRegion: string, category: string) {
   const redFlags = ['Rapidly worsening pain or swelling', 'Loss of function that does not match the expected rehab phase'];
 
   if (category === 'Post-surgery') {
