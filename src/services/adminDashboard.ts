@@ -2,11 +2,11 @@ import {supabase} from '../lib/supabase';
 import type {Database} from '../lib/supabaseDatabase';
 
 export type AdminDashboardMetrics = {
-  injuries: number;
-  phases: number;
-  articles: number;
-  assessments: number;
-  leads: number;
+  injuries: number | null;
+  phases: number | null;
+  articles: number | null;
+  assessments: number | null;
+  leads: number | null;
 };
 
 function ensureSupabase() {
@@ -34,7 +34,7 @@ async function fetchCountSafe(table: DashboardTable) {
     return await fetchCount(table);
   } catch (error) {
     console.warn(`Failed to load admin dashboard metric for ${table}`, error);
-    return 0;
+    return null;
   }
 }
 
