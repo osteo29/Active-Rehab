@@ -796,8 +796,13 @@
    "action": "Ipsilateral trunk rotation, lateral flexion, trunk flexion; highest activity during IAP generation tasks",
    "innervation": "Thoracolumbar nerves (T6-L1), with 10th intercostal nerve providing a median of 9 branches",
    "blood_supply": "Lower posterior intercostal arteries, deep circumflex iliac artery, deep inferior epigastric artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Gray395.png",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Gray395.png",
+   "image_license": "Public domain",
+   "image_author": "Henry Vandyke Carter",
+   "image_license_url": "",
+   "image_changes": "None"
   },
   "transverse-abdominis": {
    "id": "AN-048",
@@ -811,8 +816,13 @@
    "action": "Deep core stabilization, intra-abdominal pressure generation",
    "innervation": "Thoracoabdominal nerves (T7-T11), subcostal nerve (T12), iliohypogastric/ilioinguinal (L1)",
    "blood_supply": "Deep circumflex iliac artery, inferior epigastric artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Transversus_abdominis.png",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Transversus_abdominis.png",
+   "image_license": "Public domain",
+   "image_author": "modified by Uwe Gille",
+   "image_license_url": "",
+   "image_changes": "None"
   },
   "quadratus-lumborum": {
    "id": "AN-049",
@@ -826,8 +836,13 @@
    "action": "Lateral flexion, 12th rib stabilization during inspiration; modest direct action on lumbar spine (<10% of extensor/lateral bending moments)",
    "innervation": "Ventral rami of T12-L4, with motor neurons in both ventromedial and lateromedial nuclei",
    "blood_supply": "Lumbar arteries, subcostal artery, iliolumbar artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Quadratuslumborum.png",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Quadratuslumborum.png",
+   "image_license": "Public domain",
+   "image_author": "modified by Uwe Gille",
+   "image_license_url": "",
+   "image_changes": "None"
   },
   "multifidus": {
    "id": "AN-050",
@@ -841,8 +856,13 @@
    "action": "Segmental stabilization of the lumbar spine, extension, rotation control",
    "innervation": "Medial branches of lumbar dorsal rami (L1-L5); each medial branch innervates only fascicles arising from the spinous process with the same segmental number",
    "blood_supply": "Lumbar arteries (segmental branches from abdominal aorta)",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Multifidi.png",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Multifidi.png",
+   "image_license": "Public domain",
+   "image_author": "Uwe Gille",
+   "image_license_url": "",
+   "image_changes": "None"
   },
   "iliocostalis": {
    "id": "AN-051",
@@ -992,8 +1012,15 @@
    "action": "Supports pelvic floor, flexes coccyx",
    "innervation": "Anterior rami of S4-S5 spinal nerves",
    "blood_supply": "Inferior gluteal artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Gray404.png",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Gray404.png",
+   "image_license": "Public domain",
+   "image_author": "Henry Vandyke Carter",
+   "image_license_url": "",
+   "image_changes": "None",
+   "image_caption": "Pelvic-floor overview with coccygeus labeled; not an isolated muscle image.",
+   "image_caption_ar": "منظر عام لقاع الحوض تظهر فيه تسمية العضلة العصعصية، وليس صورة منفردة لها."
   },
   "trapezius-upper": {
    "id": "AN-060",
@@ -1160,8 +1187,13 @@
    "action": "Hip external rotation in extension, hip abduction in flexion",
    "innervation": "Nerve to quadratus femoris (L4-S1)",
    "blood_supply": "Inferior gluteal artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Inferior_gemellus_muscle.PNG",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Inferior_gemellus_muscle.PNG",
+   "image_license": "Public domain",
+   "image_author": "Mikael Häggström",
+   "image_license_url": "",
+   "image_changes": "None"
   },
   "quadratus-femoris": {
    "id": "AN-070",
@@ -1226,8 +1258,13 @@
    "action": "Hip flexion and anterior pelvic tilt",
    "innervation": "Femoral nerve (L2-L4)",
    "blood_supply": "Iliolumbar artery, medial circumflex femoral artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Iliacus_muscle_-_animation01.gif",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Iliacus_muscle_-_animation01.gif",
+   "image_license": "CC BY-SA 2.1 jp",
+   "image_author": "Anatomography",
+   "image_license_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+   "image_changes": "None"
   },
   "pectineus": {
    "id": "AN-074",
@@ -1258,8 +1295,13 @@
    "action": "Adduction, flexion, internal rotation",
    "innervation": "Anterior branch of obturator nerve (L2-L4)",
    "blood_supply": "Medial circumflex femoral artery, obturator artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Adductor_longus.gif",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Adductor_longus.gif",
+   "image_license": "CC BY-SA 2.1 jp",
+   "image_author": "BodyParts3D/Anatomography",
+   "image_license_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+   "image_changes": "None"
   },
   "adductor-brevis": {
    "id": "AN-076",
@@ -1273,8 +1315,13 @@
    "action": "Adduction, flexion",
    "innervation": "Anterior branch of obturator nerve (L2-L4)",
    "blood_supply": "Medial circumflex femoral artery, obturator artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Adductor_brevis.gif",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Adductor_brevis.gif",
+   "image_license": "CC BY-SA 2.1 jp",
+   "image_author": "BodyParts3D/Anatomography",
+   "image_license_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+   "image_changes": "None"
   },
   "adductor-magnus": {
    "id": "AN-077",
@@ -1288,8 +1335,13 @@
    "action": "Adduction; adductor portion also flexes and internally rotates; hamstring portion extends and externally rotates",
    "innervation": "Dual innervation: adductor portion receives both posterior branch of obturator nerve (L2-L4) and tibial portion of sciatic nerve (L4-S1) in >90% of cases; hamstring portion receives tibial nerve",
    "blood_supply": "Medial circumflex femoral artery, perforating branches of profunda femoris",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Adductor_magnus.gif",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Adductor_magnus.gif",
+   "image_license": "CC BY-SA 2.1 jp",
+   "image_author": "BodyParts3D/Anatomography",
+   "image_license_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+   "image_changes": "None"
   },
   "gracilis": {
    "id": "AN-078",
@@ -1303,8 +1355,13 @@
    "action": "Hip adduction, knee flexion, knee internal rotation",
    "innervation": "Obturator nerve (L2-L3)",
    "blood_supply": "Main pedicle from medial femoral circumflex or profunda femoris (~10 cm from origin); 1-3 distal branches from superficial femoral artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Gracilis.gif",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Gracilis.gif",
+   "image_license": "CC BY-SA 2.1 jp",
+   "image_author": "BodyParts3D/Anatomography",
+   "image_license_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+   "image_changes": "None"
   },
   "sartorius": {
    "id": "AN-079",
@@ -1386,8 +1443,13 @@
    "action": "Knee extension",
    "innervation": "Femoral nerve (L2-L4), with medial portions sharing innervation with VM",
    "blood_supply": "Lateral femoral circumflex artery",
-   "image_url": null,
-   "embed_code": null
+   "image_url": "/anatomy/Vastus_intermedialis.gif",
+   "embed_code": "",
+   "image_source": "https://commons.wikimedia.org/wiki/File:Vastus_intermedialis.gif",
+   "image_license": "CC BY-SA 2.1 jp",
+   "image_author": "BodyParts3D/Anatomography",
+   "image_license_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+   "image_changes": "None"
   },
   "biceps-femoris-long-head": {
    "id": "AN-084",
