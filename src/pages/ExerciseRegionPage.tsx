@@ -1,3 +1,4 @@
+import NotFound from './NotFound';
 import {useEffect, useMemo, useState} from 'react';
 import {Activity, ArrowRight, ChevronRight, Dumbbell, Network} from 'lucide-react';
 import {Link, Navigate, useParams} from 'react-router-dom';
@@ -75,7 +76,7 @@ export default function ExerciseRegionPage() {
   }
 
   if (!region) {
-    return <Navigate to={navigationPaths.exercises(lang)} replace />;
+    return <NotFound />;
   }
 
   const label = isAr ? EXERCISE_FINDER_STATIC_ARABIC_LABELS[region] : EXERCISE_FINDER_STATIC_LABELS[region];

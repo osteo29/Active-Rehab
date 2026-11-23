@@ -1,4 +1,5 @@
-import {Link, Navigate, useParams} from 'react-router-dom';
+import NotFound from './NotFound';
+import {Link, useParams} from 'react-router-dom';
 import ManagedSeo from '../components/seo/ManagedSeo';
 import {dietRegimensCatalog} from '../services/dietRegimensCatalog';
 import {buildHreflangs, navigationPaths} from '../utils/langUrlHelper';
@@ -12,7 +13,7 @@ export default function DietDetailPage() {
   const diet = dietRegimensCatalog.find((entry) => entry.id === slug);
 
   if (!diet) {
-    return <Navigate to={navigationPaths.diets(lang)} replace />;
+    return <NotFound />;
   }
 
   const title = isAr ? diet.title.ar : diet.title.en;

@@ -1,5 +1,6 @@
-﻿import {ArrowRight, CalendarRange, ChevronRight, GitCompareArrows, Link2} from 'lucide-react';
-import {Link, Navigate, useParams} from 'react-router-dom';
+import NotFound from './NotFound';
+import {ArrowRight, CalendarRange, ChevronRight, GitCompareArrows, Link2} from 'lucide-react';
+import {Link, useParams} from 'react-router-dom';
 
 import {WeeklyPlanCard} from '../components/common/exercise-finder/WeeklyPlanCard';
 import {
@@ -20,12 +21,12 @@ export default function ExerciseSystemDetailPage() {
   const {systemId} = useParams<{systemId: string}>();
 
   if (!systemId) {
-    return <Navigate to={navigationPaths.exerciseSystems(lang)} replace />;
+    return <NotFound />;
   }
 
   const system = getSystemById(systemId);
   if (!system) {
-    return <Navigate to={navigationPaths.exerciseSystems(lang)} replace />;
+    return <NotFound />;
   }
 
   const content = SYSTEM_DETAIL_CONTENT[system.id];
