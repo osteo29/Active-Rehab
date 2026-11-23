@@ -3,9 +3,11 @@ import {createRoot} from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom';
 import RouterApp from './RouterApp';
 import {applyThemePreference, getStoredThemePreference} from './hooks/useStoredTheme';
+import {initConsentGatedScripts} from './services/consentLoader';
 import './index.css';
 
 applyThemePreference(getStoredThemePreference());
+initConsentGatedScripts();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
