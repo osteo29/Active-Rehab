@@ -1,3 +1,4 @@
+import {validateAiRequest, readAiJsonBody} from './src/services/aiRequestValidation';
 import {GoogleGenAI} from '@google/genai';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
@@ -27,27 +28,22 @@ export default defineConfig(({mode}) => {
         }
 
         try {
-          const body = await new Promise<string>((resolve, reject) => {
-            let raw = '';
-            req.on('data', (chunk) => {
-              raw += chunk;
-            });
-            req.on('end', () => resolve(raw));
-            req.on('error', reject);
-          });
-
-          const payload = JSON.parse(body || '{}') as {
-            system?: string;
-            user?: string;
-            hiddenContext?: string;
-          };
-
-          if (!payload.user?.trim()) {
+          let raw: unknown;
+          try { raw = await readAiJsonBody(req); }
+          catch {
             res.statusCode = 400;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify({error: 'Missing user prompt'}));
+            res.end(JSON.stringify({error: 'Invalid JSON body'}));
             return;
           }
+          const checked = validateAiRequest(raw);
+          if (!checked.data) {
+            res.statusCode = 400;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({error: checked.error}));
+            return;
+          }
+          const payload = checked.data;
 
           const ai = new GoogleGenAI({apiKey: geminiApiKey});
           const contents = [
@@ -79,7 +75,7 @@ export default defineConfig(({mode}) => {
         } catch (error) {
           res.statusCode = 500;
           res.setHeader('Content-Type', 'application/json');
-          res.end(JSON.stringify({error: error instanceof Error ? error.message : 'Gemini request failed'}));
+          res.end(JSON.stringify({error: 'The assistant is unavailable. Try again later.'}));
         }
       });
     },
