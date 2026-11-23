@@ -1,4 +1,22 @@
 import {useEffect} from 'react';
+
+// Sections on the home page render lazily (DeferredHomeSection), so an anchor
+// target like #food-db or #calculators may not exist yet when navigation
+// happens. Poll briefly until the element mounts, then scroll to it.
+function scrollToIdWhenReady(id: string, timeoutMs = 6000) {
+  const startedAt = Date.now();
+  const tryScroll = () => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({behavior: 'smooth', block: 'start'});
+      return;
+    }
+    if (Date.now() - startedAt < timeoutMs) {
+      window.setTimeout(tryScroll, 150);
+    }
+  };
+  tryScroll();
+}
 import {useLocation} from 'react-router-dom';
 import App from '../App';
 import ManagedSeo from '../components/seo/ManagedSeo';
@@ -29,21 +47,13 @@ export default function HomeRoute({
 
   useEffect(() => {
     if (!scrollToId) return;
-    const t = setTimeout(() => {
-      document.getElementById(scrollToId)?.scrollIntoView({behavior: 'smooth'});
-    }, 0);
-    return () => clearTimeout(t);
+    scrollToIdWhenReady(scrollToId);
   }, [scrollToId]);
 
   useEffect(() => {
     const id = location.hash.slice(1);
     if (!id) return;
-
-    const timer = window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({behavior: 'smooth', block: 'start'});
-    }, 0);
-
-    return () => window.clearTimeout(timer);
+    scrollToIdWhenReady(id);
   }, [location.hash]);
 
   return (
@@ -67,6 +77,7 @@ export default function HomeRoute({
         theme={theme}
         onToggleTheme={onToggleTheme}
         initialCalculatorId={calculatorPage?.calculatorId || null}
+        lang={lang}
       />
     </>
   );

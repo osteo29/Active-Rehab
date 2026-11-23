@@ -8,7 +8,10 @@ import type {Language} from '../services/translations';
  * Falls back to stored preference or 'en'
  */
 export function extractLanguageFromPath(pathname: string): Language {
-  const match = pathname.match(/^\/(en|ar)\//);
+  // The URL is the source of truth when it carries a language prefix (including
+  // the bare `/en` and `/ar` home paths). The stored preference is only a
+  // fallback for paths without any prefix (e.g. `/` before redirect).
+  const match = pathname.match(/^\/(en|ar)(?:\/|$)/);
   return (match?.[1] as Language) || getPreferredLanguage();
 }
 
