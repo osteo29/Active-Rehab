@@ -32,12 +32,12 @@ export function useAppDerivedContent({
         items:
           lang === 'en'
             ? [
-                `Aim for about ${Math.ceil(macros.protein / 4)} protein feedings across the day.`,
+                `Aim for about 4 protein feedings across the day.`,
                 `A simple split could be ${Math.round(macros.protein / 4)}g protein, ${Math.round(macros.carbs / 4)}g carbs, and ${Math.round(macros.fats / 4)}g fats per meal.`,
                 'Use the food database below to build an example meal that matches your targets.',
               ]
             : [
-                `استهدف تقريبًا ${Math.ceil(macros.protein / 4)} جرعات بروتين خلال اليوم.`,
+                `استهدف تقريبًا 4 جرعات بروتين خلال اليوم.`,
                 `يمكنك تقسيمها مثلًا إلى ${Math.round(macros.protein / 4)} جم بروتين و${Math.round(macros.carbs / 4)} جم كارب و${Math.round(macros.fats / 4)} جم دهون في الوجبة.`,
                 'استخدم قاعدة الطعام بالأسفل لبناء وجبة تناسب هدفك.',
               ],
