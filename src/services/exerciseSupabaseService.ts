@@ -22,14 +22,12 @@ export async function fetchExerciseLibraryEntriesFromSupabase(): Promise<Exercis
       .abortSignal(controller.signal);
 
     if (error) {
-      console.error('Error fetching exercise library entries:', error);
-      return [];
+      throw error;
     }
 
     return MedicalTextCore.parseDeep(data || []);
   } catch (error) {
-    console.error('Exercise library fetch timed out or failed:', error);
-    return [];
+    throw error instanceof Error ? error : new Error('Could not load the exercise catalog.');
   } finally {
     clearTimeout(timeout);
   }
