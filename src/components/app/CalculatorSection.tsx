@@ -223,11 +223,12 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                 <div className="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div className="space-y-2 sm:col-span-2">
                     <div className="flex items-center justify-between">
-                      <label className="text-sm font-semibold text-slate-700">{t.forms.weight}</label>
-                      <div className="text-[10px] font-bold uppercase tracking-widest text-slate-600">Required</div>
+                      <label htmlFor="calculator-weight" className="text-sm font-semibold text-slate-700">{t.forms.weight}</label>
+                      <div className="text-[10px] font-bold uppercase tracking-widest text-slate-600">{lang === 'ar' ? 'مطلوب' : 'Required'}</div>
                     </div>
                     <input
                       {...decimalInputProps}
+                      id="calculator-weight"
                       value={weight}
                       onChange={(event) => setWeight(normalizeNumericInput(event.target.value))}
                       placeholder={t.forms.placeholderWeight}
@@ -237,7 +238,7 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
 
                   {['BMI', 'WHtR', 'BMR', 'TDEE', 'Macros', 'IdealWeight', 'BodyFat', 'Deficit'].includes(activeCalculator) && (
                     <div className="space-y-2">
-                      <label className="flex items-center gap-1 text-sm font-semibold text-slate-700">
+                      <label htmlFor="calculator-height" className="flex items-center gap-1 text-sm font-semibold text-slate-700">
                         {t.forms.height}
                         {activeCalculator === 'IdealWeight' && (
                           <button type="button" onClick={() => showTooltip(t.forms.height, t.tooltips.ideal)}>
@@ -247,7 +248,8 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                       </label>
                       <input
                         {...integerInputProps}
-                        value={height}
+                        id="calculator-height"
+                      value={height}
                         onChange={(event) => setHeight(normalizeNumericInput(event.target.value, {allowDecimal: false}))}
                         placeholder={t.forms.placeholderHeight}
                         className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green"
@@ -257,7 +259,7 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
 
                   {['BMR', 'TDEE', 'Macros', 'Deficit'].includes(activeCalculator) && (
                     <div className="space-y-2">
-                      <label className="flex items-center gap-1 text-sm font-semibold text-slate-700">
+                      <label htmlFor="calculator-age" className="flex items-center gap-1 text-sm font-semibold text-slate-700">
                         {t.forms.age}
                         {activeCalculator === 'BMR' && (
                           <button type="button" onClick={() => showTooltip(t.forms.age, t.tooltips.bmr)}>
@@ -267,7 +269,8 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                       </label>
                       <input
                         {...integerInputProps}
-                        value={age}
+                        id="calculator-age"
+                      value={age}
                         onChange={(event) => setAge(normalizeNumericInput(event.target.value, {allowDecimal: false}))}
                         placeholder={t.forms.placeholderAge}
                         className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green"
@@ -324,20 +327,22 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-semibold text-slate-700">{t.forms.waist} ({unitSystem === 'metric' ? 'cm' : 'in'})</label>
+                        <label htmlFor="calculator-waist" className="text-sm font-semibold text-slate-700">{t.forms.waist} ({unitSystem === 'metric' ? 'cm' : 'in'})</label>
                         <input
                           {...decimalInputProps}
-                          value={waist}
+                          id="calculator-waist"
+                      value={waist}
                           onChange={(event) => setWaist(normalizeNumericInput(event.target.value))}
                           placeholder={t.forms.placeholderWaist}
                           className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green"
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-semibold text-slate-700">{t.forms.neck} ({unitSystem === 'metric' ? 'cm' : 'in'})</label>
+                        <label htmlFor="calculator-neck" className="text-sm font-semibold text-slate-700">{t.forms.neck} ({unitSystem === 'metric' ? 'cm' : 'in'})</label>
                         <input
                           {...decimalInputProps}
-                          value={neck}
+                          id="calculator-neck"
+                      value={neck}
                           onChange={(event) => setNeck(normalizeNumericInput(event.target.value))}
                           placeholder={t.forms.placeholderNeck}
                           className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green"
@@ -345,10 +350,11 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                       </div>
                       {gender === 'female' && (
                         <div className="space-y-2">
-                          <label className="text-sm font-semibold text-slate-700">{t.forms.hip} ({unitSystem === 'metric' ? 'cm' : 'in'})</label>
+                          <label htmlFor="calculator-hip" className="text-sm font-semibold text-slate-700">{t.forms.hip} ({unitSystem === 'metric' ? 'cm' : 'in'})</label>
                           <input
                             {...decimalInputProps}
-                            value={hip}
+                            id="calculator-hip"
+                      value={hip}
                             onChange={(event) => setHip(normalizeNumericInput(event.target.value))}
                             placeholder={t.forms.placeholderHip}
                             className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green"
@@ -412,10 +418,11 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                       </div>
                       {knowBodyFat && (
                         <div className="space-y-2">
-                          <label className="text-sm font-semibold text-slate-700">{t.forms.bodyFat}</label>
+                          <label htmlFor="calculator-bodyFat" className="text-sm font-semibold text-slate-700">{t.forms.bodyFat}</label>
                           <input
                             {...decimalInputProps}
-                            value={bodyFatInput}
+                            id="calculator-bodyFat"
+                      value={bodyFatInput}
                             onChange={(event) => setBodyFatInput(normalizeNumericInput(event.target.value))}
                             placeholder="e.g. 15"
                             className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green"
@@ -548,6 +555,7 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                         <div key={item.id} className="flex items-center gap-2">
                           <input
                             type="text"
+                            aria-label={t.forms.ingredientName}
                             placeholder={t.forms.ingredientName}
                             value={item.name}
                             onChange={(event) => updateMealItem(item.id, 'name', event.target.value)}
@@ -555,12 +563,13 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                           />
                           <input
                             {...decimalInputProps}
+                            aria-label={t.forms.calories}
                             placeholder={t.forms.calories}
                             value={item.calories}
                             onChange={(event) => updateMealItem(item.id, 'calories', event.target.value)}
                             className="w-24 rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green"
                           />
-                          <button type="button" onClick={() => removeMealItem(item.id)} className="rounded-xl p-3 text-red-500 transition-colors hover:bg-red-50">
+                          <button type="button" aria-label={lang === 'ar' ? 'حذف المكون' : 'Remove ingredient'} onClick={() => removeMealItem(item.id)} className="rounded-xl p-3 text-red-500 transition-colors hover:bg-red-50">
                             <Trash2 className="h-5 w-5" />
                           </button>
                         </div>
@@ -718,7 +727,7 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
             <div className="mb-8 space-y-4">
               <div>
                 <label className="mb-1 block text-sm font-semibold text-slate-700">{t.customFood.nameLabel}</label>
-                <input type="text" value={newFood.nameEn} onChange={(event) => setNewFood({...newFood, nameEn: event.target.value})} placeholder={t.customFood.namePlaceholder} className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green" />
+                <input aria-label={t.customFood.namePlaceholder} type="text" value={newFood.nameEn} onChange={(event) => setNewFood({...newFood, nameEn: event.target.value})} placeholder={t.customFood.namePlaceholder} className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green" />
               </div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {[
@@ -729,7 +738,7 @@ export default function CalculatorSection({assessmentSnapshot, controller, lang,
                 ].map((field) => (
                   <div key={field.key}>
                     <label className="mb-1 block text-sm font-semibold text-slate-700">{field.label}</label>
-                    <input {...decimalInputProps} value={newFood[field.key as keyof typeof newFood]} onChange={(event) => setNewFood({...newFood, [field.key]: normalizeNumericInput(event.target.value)})} className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green" />
+                    <input aria-label={field.label} {...decimalInputProps} value={newFood[field.key as keyof typeof newFood]} onChange={(event) => setNewFood({...newFood, [field.key]: normalizeNumericInput(event.target.value)})} className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green" />
                   </div>
                 ))}
               </div>
