@@ -66,11 +66,11 @@ export default function AdminUsersPage() {
         requiredPermission="users"
       >
         <AdminShell
-          title={isAr ? 'RBAC على admin_users' : 'RBAC on admin_users'}
+          title={isAr ? 'إدارة الأدوار والصلاحيات' : 'Manage roles and permissions'}
           description={
             isAr
-              ? 'بداية تحويل الأدمن إلى أدوار واضحة: Admin و Editor و Writer، مع حقول صلاحيات تشغيلية إضافية.'
-              : 'A first step toward clear Admin, Editor, and Writer roles with extra operational permission flags.'
+              ? 'حدّد دور كل مستخدم وصلاحياته في إدارة المحتوى.'
+              : 'Choose content roles and permissions for each user.'
           }
           currentTab="users"
           user={access.user}
@@ -102,9 +102,9 @@ export default function AdminUsersPage() {
                           disabled={savingId === user.id}
                           className="w-full rounded-2xl border border-slate-200 px-3 py-2"
                         >
-                          <option value="admin">Admin</option>
-                          <option value="editor">Editor</option>
-                          <option value="writer">Writer</option>
+                          <option value="admin">{isAr ? 'مدير النظام' : 'Admin'}</option>
+                          <option value="editor">{isAr ? 'محرر' : 'Editor'}</option>
+                          <option value="writer">{isAr ? 'كاتب' : 'Writer'}</option>
                         </select>
                       </label>
                       {[

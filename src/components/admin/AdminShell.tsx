@@ -45,7 +45,7 @@ function shellCopy(lang: 'en' | 'ar') {
     homepageAdmin: lang === 'ar' ? 'إدارة الصفحة الرئيسية' : 'Homepage management',
     exercisesAdmin: lang === 'ar' ? 'إدارة التمارين' : 'Exercise management',
     usersAdmin: lang === 'ar' ? 'إدارة المستخدمين' : 'User management',
-    connected: lang === 'ar' ? 'متصل بسوبابيز' : 'Connected to Supabase',
+    connected: lang === 'ar' ? 'الصلاحيات المعروضة تخص الجلسة الحالية.' : 'Permissions shown apply to the current session.',
     quickLinks: lang === 'ar' ? 'روابط سريعة' : 'Quick links',
     publicSite: lang === 'ar' ? 'الموقع العام' : 'Public site',
     protocols: lang === 'ar' ? 'بروتوكولات الإصابات' : 'Injury protocols',

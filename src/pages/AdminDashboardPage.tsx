@@ -172,11 +172,10 @@ export default function AdminDashboardPage() {
           <div className="rounded-3xl border border-slate-200 bg-white p-6">
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
-                <div className="text-xs font-black uppercase tracking-[0.18em] text-health-green">Content report</div>
-                <h3 className="mt-2 text-xl font-black text-slate-900">Injury library gaps</h3>
+                <div className="text-xs font-black uppercase tracking-[0.18em] text-health-green">{isAr ? 'تقرير المحتوى' : 'Content report'}</div>
+                <h3 className="mt-2 text-xl font-black text-slate-900">{isAr ? 'نواقص مكتبة الإصابات' : 'Injury library gaps'}</h3>
                 <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-600">
-                  A local auto-report for missing nutrition plans, imported exercise protocol coverage, likely duplicates,
-                  short protocols, and exercise refs that are not linked to the rehab exercise library.
+                  {isAr ? 'تقرير محلي يساعد على مراجعة نواقص المحتوى والتكرار المحتمل وروابط التمارين. هذه مؤشرات للمراجعة، وليست تقييمًا سريريًا لجودة العلاج.' : 'A local report of missing content, possible duplicates and exercise links. These are review prompts, not a clinical assessment of treatment quality.'}
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
@@ -186,10 +185,10 @@ export default function AdminDashboardPage() {
 
             <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               {[
-                ['Missing nutrition', contentReport.totals.missingNutritionPlans],
-                ['Missing exercise protocols', contentReport.totals.missingImportedExerciseProtocols],
-                ['Duplicate groups', contentReport.totals.possibleDuplicateGroups],
-                ['Unlinked exercise refs', contentReport.totals.unlinkedExercises],
+                [isAr ? 'خطط تغذية مفقودة' : 'Missing nutrition', contentReport.totals.missingNutritionPlans],
+                [isAr ? 'بروتوكولات تمارين مفقودة' : 'Missing exercise protocols', contentReport.totals.missingImportedExerciseProtocols],
+                [isAr ? 'مجموعات تكرار محتملة' : 'Duplicate groups', contentReport.totals.possibleDuplicateGroups],
+                [isAr ? 'مراجع تمارين غير مرتبطة' : 'Unlinked exercise refs', contentReport.totals.unlinkedExercises],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">{label}</div>
@@ -200,7 +199,7 @@ export default function AdminDashboardPage() {
 
             <div className="mt-5 grid gap-4 xl:grid-cols-2">
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                <div className="mb-3 text-sm font-black text-slate-900">Top missing content</div>
+                <div className="mb-3 text-sm font-black text-slate-900">{isAr ? 'أبرز نواقص المحتوى' : 'Top missing content'}</div>
                 <div className="max-h-80 space-y-2 overflow-auto">
                   {contentReport.topMissingContent.slice(0, 10).map((item) => (
                     <div key={item.id} className="rounded-xl bg-white px-3 py-3 text-sm">
@@ -213,7 +212,7 @@ export default function AdminDashboardPage() {
               </div>
 
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                <div className="mb-3 text-sm font-black text-slate-900">Short protocols</div>
+                <div className="mb-3 text-sm font-black text-slate-900">{isAr ? 'بروتوكولات مختصرة' : 'Short protocols'}</div>
                 <div className="max-h-80 space-y-2 overflow-auto">
                   {contentReport.shortProtocols.slice(0, 10).map((item) => (
                     <div key={item.id} className="rounded-xl bg-white px-3 py-3 text-sm">
