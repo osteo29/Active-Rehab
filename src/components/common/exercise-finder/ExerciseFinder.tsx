@@ -1,3 +1,4 @@
+import {sortExercises, type ExerciseSort} from '../../../services/exerciseSort';
 import {useEffect, useId, useMemo, useState} from 'react';
 
 import {CalendarRange, Dumbbell, Flame, Search, Share2, SlidersHorizontal, Sparkles, Target, X} from 'lucide-react';
@@ -78,6 +79,7 @@ export function ExerciseFinder({
   const equipmentId = useId();
   const typeId = useId();
   const workspaceHeadingId = useId();
+  const [sortOrder, setSortOrder] = useState<ExerciseSort>('catalog');
   const [filters, setFilters] = useState<FilterState>(() => readFiltersFromUrl(pathMuscle));
   const [searchInput, setSearchInput] = useState(filters.search);
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -137,7 +139,7 @@ export function ExerciseFinder({
 
     const search = normalizeValue(filters.search);
 
-    return scopedExercises.filter((exercise) => {
+    return sortExercises(scopedExercises.filter((exercise) => {
       const matchesSearch =
         search.length === 0 ||
         normalizeValue(exercise.name).includes(search) ||
@@ -153,8 +155,8 @@ export function ExerciseFinder({
       const matchesType = filters.exerciseType === 'all' || exercise.exerciseType === filters.exerciseType;
 
       return matchesSearch && matchesMainMuscle && matchesSubMuscle && matchesLevel && matchesEquipment && matchesType;
-    });
-  }, [exerciseRecords, filters, staticContext]);
+    }), sortOrder, lang);
+  }, [exerciseRecords, filters, staticContext, sortOrder, lang]);
 
   const selectedMainMuscle = filters.muscle !== 'all' ? filters.muscle : staticContext?.staticMuscles?.[0] || null;
   const anatomyList = selectedMainMuscle ? MUSCLE_TREE[selectedMainMuscle] : [];
@@ -423,6 +425,15 @@ export function ExerciseFinder({
                   </div>
                 </div>
 
+              <div className="my-4 flex flex-wrap items-center gap-3">
+                <label htmlFor={`${searchId}-sort`} className="text-sm font-bold text-slate-700">{isAr ? 'ترتيب العرض' : 'Sort results'}</label>
+                <select id={`${searchId}-sort`} value={sortOrder} onChange={event => setSortOrder(event.target.value as ExerciseSort)} className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700">
+                  <option value="catalog">{isAr ? 'ترتيب المكتبة' : 'Catalog order'}</option>
+                  <option value="name">{isAr ? 'الاسم' : 'Name'}</option>
+                  <option value="level">{isAr ? 'المستوى: مبتدئ أولًا' : 'Level: beginner first'}</option>
+                </select>
+                <span className="text-xs text-slate-500">{isAr ? 'ترتيب للعرض فقط، وليس توصية علاجية.' : 'Display order only, not a treatment recommendation.'}</span>
+              </div>
               {filtersOpen ? (
                 <button
                   type="button"
