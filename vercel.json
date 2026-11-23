@@ -61,8 +61,17 @@
       "status": 404
     },
     {
-      "src": "/(.*)",
+      "src": "/(en|ar)(/)?",
       "dest": "/index.html"
+    },
+    {
+      "src": "/((en|ar)/)?(calculators|privacy|terms|cookies|disclaimer|about|contact|insights|injury-protocols|injuries|admin|studio|assistant|auth|dashboard|diets|exercises|anatomy|muscles)(/.*)?",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/404.html",
+      "status": 404
     }
   ],
   "headers": [

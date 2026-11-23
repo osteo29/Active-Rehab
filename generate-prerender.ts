@@ -1217,3 +1217,10 @@ const staticRoutes: RouteDefinition[] = [
 staticRoutes.forEach(writeRoute);
 writeRootShell();
 console.log(`Generated prerendered HTML for ${staticRoutes.length} routes.`);
+
+// A real 404 document for URLs outside the known SPA route namespaces.
+// Content detail URLs remain client-resolved to preserve CMS-only content.
+writeFileSync(join(DIST_DIR, '404.html'), injectRoot(
+  replaceMeta(template, 'Page not found | Active Rehab', 'This page does not exist.', absoluteUrl('/404'), 'en', true),
+  `<main class="seo-shell"><h1>Page not found / الصفحة غير موجودة</h1><p>The address may be incorrect or the page may have moved.</p><p>قد يكون العنوان غير صحيح أو تم نقل الصفحة.</p><ul><li><a href="/en/">English home</a></li><li><a href="/ar/">الرئيسية بالعربية</a></li></ul></main>`,
+), 'utf8');
