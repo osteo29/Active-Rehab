@@ -40,7 +40,7 @@ export async function requestBrowserNotifications(lang: AppLanguage) {
   }
 
   try {
-    const registration = await navigator.serviceWorker?.ready;
+    const registration = await navigator.serviceWorker?.getRegistration();
     if (registration) {
       await registration.showNotification(getNotificationTitle(lang), {
         body: getNotificationBody(lang),
