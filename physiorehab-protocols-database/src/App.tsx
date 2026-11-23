@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import ProtocolDetail from './components/ProtocolDetail';
-import { db, auth, handleFirestoreError, OperationType } from './lib/firebase';
+import { db, auth } from './lib/firebase';
 import { collection, onSnapshot, query, addDoc, getDoc, doc } from 'firebase/firestore';
 import { onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
 import { Activity, LogIn, LogOut, Plus, Search, Loader2 } from 'lucide-react';
@@ -17,6 +17,7 @@ export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
   const [user, setUser] = useState<any>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
@@ -39,9 +40,12 @@ export default function App() {
     const unsubProtocols = onSnapshot(q, (snapshot) => {
       const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setProtocols(data);
+      setLoadError(null);
       setLoading(false);
     }, (error) => {
-      handleFirestoreError(error, OperationType.LIST, 'protocols');
+      console.error('Protocols listener failed', error);
+      setLoadError('تعذر تحميل البروتوكولات. يرجى التحقق من الاتصال والمحاولة مرة أخرى. / Could not load protocols. Please check your connection and try again.');
+      setLoading(false);
     });
 
     return () => {
@@ -110,6 +114,15 @@ export default function App() {
       setLoading(false);
     }
   };
+
+  if (loadError) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 px-4 text-center">
+        <Activity className="w-8 h-8 text-rose-500 mb-4" />
+        <p className="text-slate-600 font-medium max-w-md">{loadError}</p>
+      </div>
+    );
+  }
 
   if (loading) {
     return (
