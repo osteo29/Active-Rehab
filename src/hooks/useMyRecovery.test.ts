@@ -85,3 +85,26 @@ describe('useMyRecovery hook', () => {
     expect(result.current.activeJourney?.notes[0].text).toContain('green resistance band');
   });
 });
+
+
+describe('saved recovery data validation', () => {
+ beforeEach(() => localStorage.clear());
+ it.each(['null','{}','[null, {}, 4]','[1,2,3]'])('ignores invalid stored shape %s', value => {
+   localStorage.setItem('physionut_my_recovery_v1', value);
+   const {result} = renderHook(() => useMyRecovery());
+   expect(result.current.journeys).toEqual([]);
+ });
+ it('ignores nonfinite pain and phase values', () => {
+   const {result} = renderHook(() => useMyRecovery());let id='';
+   act(()=>{id=result.current.startJourney({injurySlug:'test',injuryName:'Test',initialPain:4}).id});
+   act(()=>{result.current.logPain(id,Number.NaN);result.current.setPhase(id,Number.NaN)});
+   expect(result.current.activeJourney?.painLevel).toBe(4);
+   expect(result.current.activeJourney?.currentPhase).toBe(1);
+ });
+ it('retains a valid journey across remount', () => {
+   const first=renderHook(()=>useMyRecovery());
+   act(()=>{first.result.current.startJourney({injurySlug:'test',injuryName:'Test'})});
+   first.unmount();const second=renderHook(()=>useMyRecovery());
+   expect(second.result.current.journeys).toHaveLength(1);
+ });
+});

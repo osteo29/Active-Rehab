@@ -89,12 +89,28 @@ function generateDefaultPhases(totalPhases = 3): PhaseProgress[] {
   return phases;
 }
 
+function isStoredJourney(value: unknown): value is RecoveryJourney {
+  if (!value || typeof value !== 'object') return false;
+  const j = value as RecoveryJourney;
+  return typeof j.id === 'string' && typeof j.injurySlug === 'string' && typeof j.injuryName === 'string' &&
+    Number.isInteger(j.totalPhases) && j.totalPhases >= 1 && j.totalPhases <= 100 &&
+    Number.isInteger(j.currentPhase) && j.currentPhase >= 1 && j.currentPhase <= j.totalPhases &&
+    Number.isFinite(j.painLevel) && j.painLevel >= 0 && j.painLevel <= 10 &&
+    typeof j.startedAt === 'string' && Number.isFinite(Date.parse(j.startedAt)) &&
+    typeof j.updatedAt === 'string' && Number.isFinite(Date.parse(j.updatedAt)) &&
+    ['active','completed','paused'].includes(j.status) &&
+    Array.isArray(j.painHistory) && j.painHistory.every(e => e && typeof e.date === 'string' && Number.isFinite(Date.parse(e.date)) && Number.isFinite(e.level) && e.level >= 0 && e.level <= 10) &&
+    Array.isArray(j.notes) && j.notes.every(n => n && typeof n.id === 'string' && typeof n.text === 'string' && typeof n.date === 'string') &&
+    Array.isArray(j.phases) && j.phases.every(p => p && Number.isInteger(p.phaseNumber) && typeof p.title === 'string' && typeof p.completed === 'boolean' && Array.isArray(p.goals) && p.goals.every(g => g && typeof g.id === 'string' && typeof g.text === 'string' && typeof g.completed === 'boolean'));
+}
+
 export function useMyRecovery() {
   const [journeys, setJourneys] = useState<RecoveryJourney[]>(() => {
     if (typeof window === 'undefined') return [];
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : [];
+      const parsed: unknown = saved ? JSON.parse(saved) : [];
+      return Array.isArray(parsed) ? parsed.filter(isStoredJourney) : [];
     } catch {
       return [];
     }
@@ -184,6 +200,7 @@ export function useMyRecovery() {
   );
 
   const setPhase = useCallback((journeyId: string, phaseNumber: number) => {
+    if (!Number.isInteger(phaseNumber)) return;
     const now = new Date().toISOString();
     setJourneys((prev) =>
       prev.map((j) => {
@@ -262,6 +279,7 @@ export function useMyRecovery() {
   }, []);
 
   const logPain = useCallback((journeyId: string, level: number) => {
+    if (!Number.isFinite(level)) return;
     const now = new Date().toISOString();
     const clampedLevel = Math.max(0, Math.min(10, Math.round(level)));
 
