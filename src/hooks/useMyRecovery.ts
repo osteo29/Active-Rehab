@@ -317,6 +317,15 @@ export function useMyRecovery() {
     );
   }, []);
 
+  const editNote = useCallback((journeyId: string, noteId: string, text: string) => {
+    const trimmed = text.trim();
+    if (!trimmed) return;
+    setJourneys(previous => previous.map(j => j.id !== journeyId ? j : {...j, updatedAt: new Date().toISOString(), notes: j.notes.map(n => n.id === noteId ? {...n, text: trimmed} : n)}));
+  }, []);
+  const deleteNote = useCallback((journeyId: string, noteId: string) => {
+    setJourneys(previous => previous.map(j => j.id !== journeyId ? j : {...j, updatedAt: new Date().toISOString(), notes: j.notes.filter(n => n.id !== noteId)}));
+  }, []);
+
   const deleteJourney = useCallback((journeyId: string) => {
     setJourneys((prev) => prev.filter((j) => j.id !== journeyId));
     setActiveJourneyId((prev) => (prev === journeyId ? null : prev));
@@ -344,6 +353,8 @@ export function useMyRecovery() {
     logPain,
     addNote,
     deleteJourney,
+    editNote,
+    deleteNote,
     isInjuryTracked,
     getJourneyBySlug,
   };

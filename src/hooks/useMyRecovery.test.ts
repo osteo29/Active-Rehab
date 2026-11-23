@@ -107,4 +107,7 @@ describe('saved recovery data validation', () => {
    first.unmount();const second=renderHook(()=>useMyRecovery());
    expect(second.result.current.journeys).toHaveLength(1);
  });
+describe('personal note management',()=>{
+ beforeEach(()=>localStorage.clear());
+ it('edits and deletes only the selected note without deleting the journey',()=>{const {result}=renderHook(()=>useMyRecovery());let id='';act(()=>{id=result.current.startJourney({injurySlug:'test',injuryName:'Test'}).id});act(()=>result.current.addNote(id,'Original'));const noteId=result.current.activeJourney!.notes[0].id;act(()=>result.current.editNote(id,noteId,'Updated'));expect(result.current.activeJourney?.notes[0].text).toBe('Updated');act(()=>result.current.editNote(id,noteId,'  '));expect(result.current.activeJourney?.notes[0].text).toBe('Updated');act(()=>result.current.deleteNote(id,noteId));expect(result.current.activeJourney?.notes).toEqual([]);expect(result.current.journeys).toHaveLength(1)});
 });
