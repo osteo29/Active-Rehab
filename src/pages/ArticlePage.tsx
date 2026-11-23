@@ -1,3 +1,4 @@
+import {resolveArticleLink} from '../services/articleLinks';
 import {ArrowRight, Compass, Sparkles, Stethoscope} from 'lucide-react';
 import {Fragment, type ReactNode} from 'react';
 import {Link, useParams} from 'react-router-dom';
@@ -38,28 +39,6 @@ function slugifyHeading(text: string, fallbackIndex: number) {
   return normalized || `section-${fallbackIndex + 1}`;
 }
 
-const ROUTE_MAP: Record<string, string> = {
-  '/calculators': '/#calculators',
-  '/assistant': '/assistant',
-  '/dashboard': '/dashboard',
-  '/injuries': '/injuries',
-  '/diets': '/diets',
-  '/insights': '/insights',
-  '/exercises': '/exercises',
-};
-
-function localizeInternalHref(href: string, lang: Language) {
-  if (!href.startsWith('/')) return href;
-  if (/^\/(en|ar)(\/|$)/.test(href)) return href;
-
-  const hashIndex = href.indexOf('#');
-  const basePath = hashIndex >= 0 ? href.slice(0, hashIndex) : href;
-  const hash = hashIndex >= 0 ? href.slice(hashIndex) : '';
-  const mapped = ROUTE_MAP[basePath] || href;
-
-  return `/${lang}${mapped}${hash}`;
-}
-
 function renderInline(text: string, lang: Language): ReactNode[] {
   const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g).filter(Boolean);
 
@@ -68,8 +47,9 @@ function renderInline(text: string, lang: Language): ReactNode[] {
     if (!match) return <Fragment key={`${part}-${index}`}>{part}</Fragment>;
 
     const [, label, href] = match;
-    const isInternal = href.startsWith('/');
-    const resolvedHref = isInternal ? localizeInternalHref(href, lang) : href;
+    const resolved = resolveArticleLink(href, lang);
+    if (!resolved) return <Fragment key={`${part}-${index}`}>{label}</Fragment>;
+    const {internal: isInternal, href: resolvedHref} = resolved;
 
     return isInternal ? (
       <Link key={`${resolvedHref}-${index}`} to={resolvedHref} className="font-semibold text-health-green hover:underline">
