@@ -1,3 +1,4 @@
+import {downloadContentReport} from '../services/contentReportExport';
 import {useEffect, useState} from 'react';
 import {BarChart3, ClipboardList, FileText, HeartPulse, Users} from 'lucide-react';
 import Seo from '../components/seo/Seo';
@@ -24,6 +25,7 @@ export default function AdminDashboardPage() {
   const [contentReport] = useState(() => buildInjuryContentReport());
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
+  const [exportError, setExportError] = useState('');
 
   useEffect(() => {
     if (!access.canAccessAdminArea) {
@@ -180,10 +182,12 @@ export default function AdminDashboardPage() {
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
-                npm run report:injury-content
+                <button type="button" onClick={() => {try {downloadContentReport(contentReport);setExportError('');} catch {setExportError(isAr ? 'تعذر تنزيل التقرير. حاول مرة أخرى.' : 'Could not download the report. Try again.');}}} className="font-bold text-slate-700">{isAr ? 'تنزيل تقرير المحتوى JSON' : 'Download content report JSON'}</button>
               </div>
             </div>
 
+            {exportError && <p role="alert" className="mt-3 text-sm text-rose-600">{exportError}</p>}
+            <p className="mt-3 text-xs text-slate-500">{isAr ? 'تقرير بنية المحتوى المحلي فقط، لا يتضمن بيانات المستخدمين أو المرضى.' : 'Local content structure only. No user or patient records are included.'}</p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               {[
                 ['Missing nutrition', contentReport.totals.missingNutritionPlans],
