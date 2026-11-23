@@ -302,7 +302,7 @@ export function useMyRecovery() {
     if (!text.trim()) return;
     const now = new Date().toISOString();
     const newNote: RecoveryNote = {
-      id: `note_${Date.now()}`,
+      id: `note_${globalThis.crypto?.randomUUID?.() || `${Date.now()}_${Math.random().toString(36).slice(2)}`}`,
       date: now,
       text: text.trim(),
     };
