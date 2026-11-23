@@ -69,7 +69,7 @@ export default function ChatPanel({
   const canSend = useMemo(() => input.trim().length > 0 && !isLoading, [input, isLoading]);
 
   const scrollToBottom = () => {
-    bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+    bottomRef.current?.scrollIntoView?.({behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
   };
 
   const sendPrompt = async (rawPrompt?: string) => {
@@ -82,8 +82,8 @@ export default function ChatPanel({
       hiddenContext: mergedContext,
       identity: personalizedIdentity,
     });
-    const hadCachedResponse =
-      typeof window !== 'undefined' ? Boolean(localStorage.getItem(cacheKey)) : false;
+    let hadCachedResponse = false;
+    try { hadCachedResponse = typeof window !== 'undefined' && Boolean(localStorage.getItem(cacheKey)); } catch { /* Chat still works without storage. */ }
 
     setError(null);
     setInput('');
@@ -125,7 +125,7 @@ export default function ChatPanel({
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
       e.preventDefault();
       void onSend();
     }
@@ -220,7 +220,7 @@ export default function ChatPanel({
                 <button
                   key={`${action.label}-${index}`}
                   onClick={() => setInput(action.prompt)}
-                  className="min-w-[150px] snap-start rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-left text-xs font-black text-slate-700 dark:text-slate-200 transition-all hover:bg-soft-blue sm:min-w-0"
+                  className="min-w-[150px] snap-start rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-start text-xs font-black text-slate-700 dark:text-slate-200 transition-all hover:bg-soft-blue sm:min-w-0"
                 >
                   {action.label}
                 </button>
@@ -229,11 +229,12 @@ export default function ChatPanel({
           </div>
         ) : null}
 
-        {error ? <div className="px-4 pb-0 text-sm font-semibold text-rose-600 sm:px-5">{error}</div> : null}
+        {error ? <div role="alert" className="px-4 pb-0 text-sm font-semibold text-rose-600 sm:px-5">{error}</div> : null}
 
         <div className="border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 sm:p-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end">
             <textarea
+              aria-label={isAr ? 'سؤالك للمساعد' : 'Your question for the assistant'}
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
