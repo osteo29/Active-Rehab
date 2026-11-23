@@ -3,6 +3,7 @@ import type {TableInsert, TableUpdate} from '../lib/supabaseDatabase';
 import type {InjuryPhase, InjuryProtocol} from './injuryDatabase';
 import {getAllInjuries} from './injuryDatabase';
 import {
+  buildGeneratedRedFlags,
   getGeneratedInjuryProtocolBySlug,
   getGeneratedRehabExerciseRows,
   getGeneratedRehabPhaseRows,
@@ -54,6 +55,25 @@ function tokenize(value: string) {
   return normalizeForMatch(value)
     .split(' ')
     .filter((token) => token.length > 2);
+}
+
+// Red-flag symptoms that must stay visible even though the protocols table
+// has no red-flags column: they already live inside the phase precautions.
+const RED_FLAG_PATTERN =
+  /fever|infection|wound|chest pain|shortness of breath|breathlessness|calf (swelling|pain|tenderness)|\bDVT\b|embol|numbness|tingling|loss of (bladder|bowel)|bladder or bowel|saddle|progressive weakness|night pain|pain at rest|deformity|locked joint|locking|giving way|unable to (bear )?weight|non-?union|uncontrolled (pain|swelling)/i;
+
+function deriveRedFlags(
+  protocolRow: RehabProtocolRow,
+  phaseRows: RehabPhaseRow[],
+  bodyRegion: string,
+  category: string,
+) {
+  const fromPrecautions = phaseRows
+    .flatMap((phase) => cleanList(phase.precautions))
+    .filter((item) => RED_FLAG_PATTERN.test(item));
+
+  const baseline = buildGeneratedRedFlags(protocolRow.name, bodyRegion, category);
+  return [...new Set([...fromPrecautions, ...baseline])].slice(0, 6);
 }
 
 function buildOverview(name: string, category: string, phaseCount: number) {
@@ -205,7 +225,7 @@ function buildProtocolFromRows(
     rehabSummary: mappedPhases.length
       ? `Structured ${mappedPhases.length}-phase rehab progression with goals, precautions, and exercise cues.`
       : 'Structured rehab progression.',
-    redFlags: [],
+    redFlags: deriveRedFlags(protocolRow, phaseRows, bodyRegion, category),
     relatedCalculators: ['Protein intake', 'Water intake'],
     safetyNotes: localNutritionMatch?.safetyNotes || {medications: [], supplements: []},
     contraindications: localNutritionMatch?.contraindications || {medications: [], supplements: []},

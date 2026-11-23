@@ -864,9 +864,7 @@
         "criteria_to_progress": [
           "Hop test LSI \u226590%",
           "No episodes of instability",
-          "Sport clearance",
-          "Nonsurgical or surgical treatment of ACL injuries: knee function, sports participation, and knee reinjury",
-          "Performance-based functional evaluation of non-operative and operative treatment after anterior cruciate ligament injury"
+          "Sport clearance"
         ],
         "exercises": [
           {
@@ -1244,8 +1242,7 @@
         "criteria_to_progress": [
           "LSI >90% strength & hop tests",
           "No pain with sport activity",
-          "Surgeon clearance at 6 months",
-          "Treatment of meniscal tears: An evidence based approach"
+          "Surgeon clearance at 6 months"
         ],
         "exercises": [
           {
@@ -1651,9 +1648,7 @@
         "criteria_to_progress": [
           "Pain-free with all sport demands",
           "Confident return to training",
-          "Self-managed home program",
-          "Hip muscle strengthening for patellofemoral pain",
-          "The influence of abnormal hip mechanics on knee injury: a biomechanical perspective"
+          "Self-managed home program"
         ],
         "exercises": [
           {
@@ -1863,7 +1858,9 @@
           "Monitor 24h pain response after loading"
         ],
         "criteria_to_progress": [
-          "VISA-P \u226560 Tolerating heavy loading without spike Ready for plyometric introduction"
+          "VISA-P >= 60",
+          "Tolerating heavy loading without symptom spike",
+          "Ready for plyometric introduction"
         ],
         "exercises": [
           {
@@ -2317,9 +2314,7 @@
         "criteria_to_progress": [
           "Hop test LSI >90%",
           "Confidence with valgus-loaded tasks",
-          "Clearance from physio and MD",
-          "Non-operative treatment of complete tears of the MCL of the knee",
-          "Medial knee injury"
+          "Clearance from physio and MD"
         ],
         "exercises": [
           {
@@ -2696,9 +2691,7 @@
         "criteria_to_progress": [
           "Full ROM",
           "Community walking 30+ min",
-          "Functional independence",
-          "Effectiveness of physiotherapy exercise following total knee replacement",
-          "Effectiveness of prolonged use of continuous passive motion after TKA"
+          "Functional independence"
         ],
         "exercises": [
           {
@@ -3536,9 +3529,7 @@
         "criteria_to_progress": [
           "Isokinetic strength \u226590% symmetry",
           "No pain with full demand",
-          "Surgeon clearance",
-          "The American Society of Shoulder and Elbow Therapists' consensus statement on rehabilitation following arthroscopic rotator cuff repair",
-          "Rehabilitation following arthroscopic rotator cuff repair"
+          "Surgeon clearance"
         ],
         "exercises": [
           {
@@ -3833,10 +3824,7 @@
         "criteria_to_progress": [
           "Symmetrical shoulder function",
           "Return to sport/occupation pain-free",
-          "Rotator cuff related shoulder pain: Assessment, management and uncertainties",
-          "The effectiveness of physiotherapy exercises in subacromial impingement syndrome",
-          "Semin Arthritis Rheum",
-          "Effect of specific exercise strategy on need for surgery in patients with subacromial impingement syndrome"
+          "Semin Arthritis Rheum"
         ],
         "exercises": [
           {
@@ -4132,10 +4120,7 @@
           "Full or near-full ROM",
           "Symmetrical strength",
           "Full functional return",
-          "Shoulder pain and mobility deficits: Adhesive capsulitis",
-          "Clinical Practice Guidelines",
-          "Conservative management following closed manipulation under anaesthesia for frozen shoulder",
-          "Management of adults with primary frozen shoulder in secondary care (UK FROST)"
+          "Clinical Practice Guidelines"
         ],
         "exercises": [
           {
@@ -4474,9 +4459,7 @@
         "criteria_to_progress": [
           "Confidence restored",
           "No apprehension in functional positions",
-          "Strength symmetry",
-          "Nonoperative treatment of primary anterior shoulder dislocation in patients forty years of age and younger",
-          "Interventions for treating proximal humeral fractures in adults"
+          "Strength symmetry"
         ],
         "exercises": [
           {
@@ -4780,8 +4763,7 @@
         "criteria_to_progress": [
           "Single-leg hop symmetry \u226590%",
           "Balance \u226410% side difference",
-          "Confident with sport demands",
-          "Diagnosis, treatment and prevention of ankle sprains: update of an evidence-based clinical guideline"
+          "Confident with sport demands"
         ],
         "exercises": [
           {
@@ -5469,9 +5451,7 @@
           "Running 30 min pain-free",
           "Morning pain <2/10",
           "Return to sport",
-          "Plantar fasciopathy: revisiting the risk factors",
-          "Foot Ankle Surg",
-          "Heel Pain\u2014Plantar Fasciitis: Revision 2014"
+          "Foot Ankle Surg"
         ],
         "exercises": [
           {
@@ -5816,8 +5796,7 @@
         "criteria_to_progress": [
           "Hop test LSI \u226590%",
           "No pain with full activity",
-          "Surgeon clearance",
-          "Rehabilitation for ankle fractures in adults"
+          "Surgeon clearance"
         ],
         "exercises": [
           {
@@ -6217,7 +6196,6 @@
           "Pain-free with full work and recreational demands",
           "Independent home exercise program",
           "Psychological readiness and confidence",
-          "Diagnosis and treatment of low back pain",
           "Non-specific low back pain",
           "Prevention and treatment of low back pain: evidence, challenges, and promising directions",
           "European guidelines for the management of chronic non-specific low back pain",
@@ -6596,8 +6574,6 @@
           "Pain-free with all functional demands",
           "Neurological symptoms fully resolved",
           "Self-managed home program in place",
-          "Diagnosis and treatment of sciatica",
-          "Evidence-based clinical guidelines for the diagnosis and treatment of lumbar disc herniation with radiculopathy",
           "Spine J.",
           "Comparative clinical effectiveness of management strategies for sciatica",
           "Health Technol Assess.",
@@ -6984,11 +6960,8 @@
           "Arm pain fully resolved",
           "Neurological signs cleared",
           "Full return to sport/work without restriction",
-          "Cervical radiculopathy: nonoperative management of neck pain and radicular symptoms",
           "Am Fam Physician.",
-          "Nonoperative management of cervical myelopathy and radiculopathy",
           "Instr Course Lect.",
-          "An evidence-based clinical guideline for the diagnosis and treatment of cervical radiculopathy",
           "Spine J.",
           "Manipulation and mobilisation for neck pain contrasted against an inactive control",
           "Active neck muscle training in the treatment of chronic neck pain among women"
@@ -7404,14 +7377,10 @@
           "Pain-free with all sport demands",
           "No neurological symptoms with loading",
           "Clinician and surgeon clearance for full return",
-          "Surgical vs non-operative treatment for lumbar spinal stenosis",
           "Diagnosis and conservative management of degenerative lumbar spondylolisthesis",
           "Eur Spine J.",
-          "An evidence-based clinical guideline for the diagnosis and treatment of adult isthmic spondylolisthesis",
           "Spine J.",
           "Specific stabilising exercise for spinal and pelvic pain",
-          "A randomised controlled trial",
-          "Spine.",
           "The natural history of spondylolysis and spondylolisthesis"
         ],
         "exercises": [
@@ -8090,7 +8059,6 @@
         "criteria_to_progress": [
           "Walking 30 min without pain or assistive device",
           "Lower limb strength \u226580% symmetry",
-          "Physiotherapy exercise after fast-track total hip and knee arthroplasty",
           "Effectiveness of physiotherapy exercise following hip arthroplasty",
           "Physiother Can."
         ],
@@ -8370,7 +8338,6 @@
           "Full sport or work duration without pain",
           "Wrist extensor strength LSI \u226590%",
           "Patient Pain-free Patient-Rated Tennis Elbow Evaluation (PRTEE) score \u226410",
-          "Addition of isolated wrist extensor eccentric exercise to standard treatment for chronic lateral epicondylosis",
           "J Shoulder Elbow Surg."
         ],
         "exercises": [
@@ -8595,7 +8562,6 @@
           "Wrist ROM \u226590% of contralateral side",
           "Grip strength \u226590% symmetry",
           "Pain-free with all sport and occupational demands",
-          "Effect of early versus delayed mobilisation after distal radius fractures",
           "J Hand Ther.",
           "Physiotherapy for distal radius fractures",
           "Physiotherapy.",
@@ -8905,10 +8871,7 @@
         "criteria_to_progress": [
           "Sprint at 100% of maximal velocity without pain or apprehension",
           "Hop test LSI \u226590%",
-          "Hamstring strength LSI \u226590% at 60\u00b0/sec and 300\u00b0/sec isokinetic speeds",
-          "Proximal hamstring strains of stretching type in different sports",
-          "Preventive effect of eccentric training on acute hamstring injuries in men's soccer",
-          "Hamstring muscle injuries in professional football: the correlation of MRI findings with return to play"
+          "Hamstring strength LSI \u226590% at 60\u00b0/sec and 300\u00b0/sec isokinetic speeds"
         ],
         "exercises": [
           {
@@ -9194,10 +9157,8 @@
           "Running 30 min pain-free on flat surface",
           "Hop test LSI \u226590%",
           "Full sport return without lateral hip pain",
-          "Education plus exercise versus corticosteroid injection for greater trochanteric pain syndrome",
           "Hip abductor muscle volumes in women with greater trochanteric pain syndrome",
-          "J Sci Med Sport.",
-          "Gluteal tendinopathy: integrating pathomechanics and clinical features in its management"
+          "J Sci Med Sport."
         ],
         "exercises": [
           {
@@ -9991,10 +9952,8 @@
           "Full overhead sport/work demands met without provocation",
           "No arm paraesthesia or vascular symptoms",
           "Self-management program independent",
-          "Thoracic outlet syndrome: a controversial clinical condition",
           "J Man Manip Ther.",
           "Treatment for thoracic outlet syndrome",
-          "Thoracic outlet syndrome",
           "Conservative treatment of thoracic outlet syndrome",
           "Eur Med Phys."
         ],
@@ -12106,8 +12065,6 @@
           "Full sport or work duration without medial elbow pain",
           "Wrist flexor strength LSI \u226590%",
           "PRTEE medial equivalent (PRIME) score \u226410",
-          "Extracorporeal shockwave therapy for medial epicondylalgia in recreational athletes",
-          "Nonoperative treatment of medial epicondyle tendinopathy",
           "Hand Clin.",
           "Lateral epicondylitis of the elbow",
           "EFORT Open Rev."
@@ -12379,9 +12336,7 @@
         "criteria_to_progress": [
           "Full-intensity throwing without medial elbow pain",
           "ITP completed without symptoms at each stage",
-          "Valgus stress test pain-free at full velocity",
-          "Rehabilitation after ulnar collateral ligament reconstruction of the elbow in overhead throwing athletes",
-          "Treatment of grade III elbow medial UCL injuries in throwers with and without ulnar nerve rerouting"
+          "Valgus stress test pain-free at full velocity"
         ],
         "exercises": [
           {
@@ -12577,7 +12532,6 @@
           "Grip strength \u226585% of contralateral side",
           "Symptom-free at 3\u20136 months with splint weaning",
           "Full return to occupational and recreational hand demands",
-          "Splinting for carpal tunnel syndrome",
           "Carpal tunnel syndrome: effectiveness of physical therapy",
           "Arch Phys Med Rehabil.",
           "Nerve-conduction studies in carpal tunnel syndrome",
@@ -12833,8 +12787,6 @@
         ],
         "criteria_to_progress": [
           "Full functional demands without pain",
-          "Incidence and prevalence of upper-extremity musculoskeletal disorders",
-          "Mobilization with movement as an adjunct intervention in a patient with complicated De Quervain's tenosynovitis",
           "Nonsurgical treatment for De Quervain's disease",
           "J Hand Surg Am."
         ],
@@ -13058,7 +13010,6 @@
           "Wrist ROM \u226590% of contralateral side",
           "Grip strength \u226590% symmetry",
           "Pain-free sport and occupational demands",
-          "Scaphoid fractures",
           "Plast Reconstr Surg.",
           "J Bone Joint Surg.",
           "Acute central band scaphoid fractures",
@@ -13334,12 +13285,9 @@
           "Pain-free with all sport and occupational demands",
           "Forearm rotation LSI \u226590%",
           "Grip strength \u226590% symmetry",
-          "Foveal TFCC tear as a cause of distal radioulnar joint instability",
           "Tech Hand Up Extrem Surg.",
-          "A meta-analysis of suggestions for the treatment of triangular fibrocartilage complex injury",
           "The ulnocarpal and distal radioulnar joint",
           "J Bone Joint Surg.",
-          "Arthroscopic evaluation of associated bone and soft tissue injuries in distal radius fractures",
           "Hand Clin."
         ],
         "exercises": [
@@ -13584,8 +13532,7 @@
         ],
         "criteria_to_progress": [
           "Hip abductor strength \u226580% symmetry",
-          "Pain \u22642/10 during all phase 2 exercises",
-          "Movement quality: no excessive IR or anterior pelvic tilt in squatting and stair tasks"
+          "Pain \u22642/10 during all phase 2 exercises"
         ],
         "exercises": [
           {
@@ -13717,7 +13664,6 @@
           "Hop test LSI \u226590%",
           "Running and cutting pain-free",
           "Full sport return without groin or anterior hip pain",
-          "Femoroacetabular impingement: a cause for osteoarthritis of the hip",
           "Physical impairments in symptomatic femoroacetabular impingement",
           "Physiotherapy for people with hip-related pain"
         ],
@@ -14012,7 +13958,6 @@
           "Full sprint at 100% effort without pain or apprehension",
           "Full kicking power without anterior hip pain",
           "Hop test LSI \u226590%",
-          "Rehabilitation after arthroscopic repair of intra-articular disorders",
           "Groin injuries in athletes",
           "Am Fam Physician.",
           "The association of hip strength and flexibility with the incidence of adductor muscle strains in professional ice hockey players"
@@ -14344,10 +14289,7 @@
           "Full sprint at 100% without groin pain",
           "Full kicking power and cutting tolerance",
           "Hop test LSI \u226590%",
-          "Effectiveness of active physical training as treatment for long-standing adductor-related groin pain",
-          "Groin injuries in football",
-          "Management of acute adductor longus injuries in male football players",
-          "The effectiveness of a preseason exercise program to prevent adductor muscle strains in professional ice hockey players"
+          "Management of acute adductor longus injuries in male football players"
         ],
         "exercises": [
           {
@@ -15222,7 +15164,6 @@
         "criteria_to_progress": [
           "Running 30 min pain-free (snap may persist \u2014 this is acceptable if pain-free)",
           "Full sport and dance tolerance without pain",
-          "Surgical treatment of iliopsoas-related snapping hip",
           "Hip Int.",
           "Etiology, diagnosis, and treatment of runners' snapping hip syndrome",
           "Arthroscopic treatment of the snapping iliopsoas tendon"
@@ -17777,7 +17718,6 @@
           "Single-leg heel raise \u226525 reps without pain",
           "Running 30 min pain-free",
           "Full sport participation without arch pain",
-          "Adult acquired flatfoot deformity",
           "J Bone Joint Surg.",
           "Effect of orthotics and midsole hardness on pain and function in PTTD",
           "Foot Ankle Int.",
@@ -18097,7 +18037,6 @@
           "Running 30 min on flat, pain-free",
           "Hop test LSI \u226590%",
           "Return to full sport without lateral hindfoot pain",
-          "Peritalar instability",
           "Chir Organi Mov.",
           "J Foot Ankle Surg.",
           "MR imaging of the tarsal sinus and canal",
@@ -18401,7 +18340,6 @@
           "Hop test LSI \u226590%",
           "Running 30 min pain-free",
           "Radiographic union confirmed",
-          "Fracture of the base of the fifth metatarsal bone by indirect violence",
           "Ann Surg.",
           "Fifth metatarsal Jones fractures in the athlete",
           "Foot Ankle Int.",
@@ -18704,7 +18642,6 @@
         "criteria_to_progress": [
           "Hop test LSI \u226590%",
           "Running 30 min pain-free",
-          "Rehabilitation for ankle fractures in adults",
           "Physiotherapy.",
           "Early weightbearing and range of motion vs. delayed in unstable ankle fractures",
           "Injury."
@@ -19010,7 +18947,6 @@
           "Hallux MTP DF \u226560\u00b0 full active ROM",
           "20 single-leg calf raises pain-free",
           "Running and sport pain-free",
-          "Interventions for treating hallux valgus",
           "Surgery vs orthosis vs watchful waiting for hallux valgus",
           "Foot Ankle Int.",
           "First ray hypermobility and hallux valgus deformity"
@@ -19380,7 +19316,6 @@
           "Running 30 min pain-free",
           "Dorsiflexion strength LSI \u226590%",
           "Full sport participation without anterior ankle pain",
-          "Tibialis anterior tendon abnormalities: MR imaging findings",
           "Radiology.",
           "Tibialis anterior tendon rupture",
           "J Am Podiatr Med Assoc.",
@@ -19801,7 +19736,6 @@
           "Community ambulation \u226530 min with manageable symptoms",
           "Quality of life scores improving (ODI, ZCQ)",
           "Self-managed home program established",
-          "Surgical vs nonsurgical therapy for lumbar spinal stenosis",
           "Nonoperative treatment for lumbar spinal stenosis with neurogenic claudication",
           "Low back disorders",
           "Arch Phys Med Rehabil."
@@ -20158,10 +20092,8 @@
           "Pain-free with all sport and work demands",
           "Independent maintenance program",
           "No recurrence for 4 weeks",
-          "Prevalence of facet joint pain in chronic spinal pain of cervical, thoracic, and lumbar regions",
           "Pathogenesis, diagnosis, and treatment of lumbar zygapophysial (facet) joint pain",
           "Anesthesiology.",
-          "Radiofrequency treatment of facet-related pain",
           "Pain Pract.",
           "Reliability of spinal palpation for diagnosis of back and neck pain",
           "Spine."
@@ -20550,13 +20482,10 @@
           "SIJ belt-free for all activities",
           "Running 20 min pain-free",
           "Full sport/work demands tolerated",
-          "European guidelines for the diagnosis and treatment of pelvic girdle pain",
           "Eur Spine J.",
           "Evidence-based diagnosis and treatment of the painful sacroiliac joint",
           "J Man Manip Ther.",
-          "A systematic evaluation of prevalence and diagnostic accuracy of sacroiliac joint interventions",
-          "Pain Physician.",
-          "Sacroiliac joint pain: practical management"
+          "Pain Physician."
         ],
         "exercises": [
           {
@@ -20904,7 +20833,6 @@
           "Running 30 min pain-free",
           "No sciatic referral with any activity",
           "Full sport participation",
-          "Diagnosis and management of piriformis syndrome",
           "J Am Osteopath Assoc.",
           "The piriformis muscle syndrome: an exploration of anatomical context, pathophysiological hypotheses and diagnostic criteria",
           "Eur Spine J.",
@@ -21198,7 +21126,6 @@
           "Pain-free with all sport demands",
           "Full cervical ROM and strength",
           "Self-managed exercise program in place",
-          "Prevalence of cervical facet joint pain in chronic neck pain",
           "Pain Physician.",
           "The cervical zygapophysial joints as a source of neck pain",
           "Spine.",
@@ -21514,11 +21441,9 @@
           "Pain-free with all activity demands",
           "Psychological readiness and confidence",
           "Self-managed without ongoing therapy",
-          "Scientific monograph of the Quebec Task Force on Whiplash-Associated Disorders",
           "Spine.",
           "Comprehensive physiotherapy exercise programme or advice for chronic whiplash",
           "Managing Injuries of the Neck Trial (MINT)",
-          "Cervical musculoskeletal impairment is common in chronic whiplash associated disorder",
           "Retraining cervical joint position sense: the effect of two exercise regimes"
         ],
         "exercises": [
@@ -21865,10 +21790,7 @@
           "Full independence with all activities of daily living",
           "No further fractures",
           "DEXA scan monitoring established",
-          "European guidance for the diagnosis and management of osteoporosis in postmenopausal women",
           "Osteoporos Int.",
-          "Stronger back muscles reduce the incidence of vertebral fractures",
-          "Too fit to fracture: exercise recommendations for individuals with osteoporosis or osteoporotic vertebral fracture",
           "Exercise for preventing falls in older people living in the community"
         ],
         "exercises": [
@@ -22177,7 +22099,6 @@
         "criteria_to_progress": [
           "No pain with daily or sporting activities",
           "Maintenance program independently performed",
-          "Scheuermann disease",
           "J Bone Joint Surg Am.",
           "Eur Spine J.",
           "The natural history and long-term follow-up of Scheuermann kyphosis",
@@ -22532,7 +22453,6 @@
           "No myelopathic signs",
           "Surgeon clearance for full activity",
           "Neurosurgery.",
-          "Magnetic resonance imaging of the thoracic spine",
           "J Bone Joint Surg.",
           "Herniated thoracic disks",
           "Neurol Clin.",
@@ -22860,13 +22780,11 @@
           "Pain-free with all work and recreational demands",
           "Neurological function fully restored",
           "Core endurance \u2014 plank \u226560 sec, dead bug full 3 \u00d7 10",
-          "Rehabilitation after lumbar disc surgery",
           "Early active rehabilitation after surgery for lumbar disc herniation",
           "Spine.",
           "Early aggressive exercise for postoperative rehabilitation after discectomy",
           "Active therapy for chronic low back pain",
           "Eur Spine J.",
-          "A prospective analysis of magnetic resonance imaging findings in patients with sciatica and lumbar disc herniation",
           "Elbow & Wrist Evidence-Based"
         ],
         "exercises": [
@@ -23269,7 +23187,6 @@
           "Continue ergonomic modifications lifelong"
         ],
         "criteria_to_progress": [
-          "Surgical treatment of ulnar nerve compression at the elbow",
           "Conservative interventions for treating ulnar neuropathy at the elbow",
           "Conservative treatment of the cubital tunnel syndrome",
           "J Hand Surg Eur.",
@@ -23558,7 +23475,6 @@
           "Gradual return to repetitive upper limb sports (tennis, golf)"
         ],
         "criteria_to_progress": [
-          "The radial tunnel syndrome",
           "J Hand Surg Am.",
           "Radial tunnel syndrome",
           "Incidence and prevalence of upper extremity musculoskeletal disorders",
@@ -23855,9 +23771,7 @@
           "Surgical referral if triggering recurs despite injection \u00d7 2"
         ],
         "criteria_to_progress": [
-          "Steroid injections in the management of trigger fingers",
           "Am J Phys Med Rehabil.",
-          "Treatment of trigger finger: randomised clinical trial comparing corticosteroid injection and NSAID",
           "J Hand Surg Eur.",
           "Percutaneous trigger finger release",
           "Treatment of trigger fingers"
@@ -24091,7 +24005,6 @@
           "Monitor for swan-neck deformity \u2014 PIP hyperextension compensating for DIP lag"
         ],
         "criteria_to_progress": [
-          "Mallet finger: conservative versus operative treatment",
           "J Hand Surg Eur.",
           "Interventions for treating mallet finger injuries",
           "A modified splint for mallet finger",
@@ -24384,7 +24297,6 @@
           "Surgical referral for fixed deformity not responding to splinting"
         ],
         "criteria_to_progress": [
-          "Mallet and boutonniere deformities",
           "Conservative management of boutonniere deformity",
           "J Hand Ther.",
           "Rupture of the central slip of the extensor hood of the finger",
@@ -24681,11 +24593,9 @@
           "Contact sport: buddy tape for 6 months post-repair"
         ],
         "criteria_to_progress": [
-          "Development of flexor tendon surgery",
           "J Hand Surg Am.",
           "Plast Reconstr Surg.",
-          "J Hand Surg Eur.",
-          "Flexor tendon repair rehabilitation protocols"
+          "J Hand Surg Eur."
         ],
         "exercises": [
           {
@@ -25003,7 +24913,6 @@
           "Monitor for late extensor lag in first 6 months"
         ],
         "criteria_to_progress": [
-          "Management of extensor tendon injuries in the hand",
           "Extensor tendon: anatomy, injury, and reconstruction",
           "Plast Reconstr Surg.",
           "Biomechanical characteristics of extensor tendons",
@@ -25606,7 +25515,6 @@
           "Surgical referral if instability persists or strength not recovering"
         ],
         "criteria_to_progress": [
-          "Displacement of the ruptured ulnar collateral ligament of the MCP joint of the thumb",
           "J Bone Joint Surg Br.",
           "Injuries to the ulnar collateral ligament of the thumb",
           "Ligamentous injuries to the thumb MCP joint",
@@ -25875,10 +25783,8 @@
           "No ballistic or overhead sport until 16\u201320 weeks minimum"
         ],
         "criteria_to_progress": [
-          "Displaced proximal humeral fractures",
           "J Bone Joint Surg Am.",
           "Interventions for treating proximal humeral fractures in adults",
-          "Surgical fixation vs non-operative management of displaced proximal humerus fractures",
           "The natural history of the proximal humerus fracture",
           "J Bone Joint Surg Br."
         ],
@@ -26254,7 +26160,6 @@
           "High recurrence rate (20\u201330%) \u2014 prophylactic strengthening required"
         ],
         "criteria_to_progress": [
-          "Risk factors for acute muscle injuries in football",
           "Knee Surg Sports Traumatol Arthrosc.",
           "Hamstring and quadriceps injuries in athletes \u2014 a special challenge",
           "Quadriceps contusions: west point update",
@@ -26582,8 +26487,6 @@
           "Hill running and plyometrics \u2014 introduce last"
         ],
         "criteria_to_progress": [
-          "The management of muscle strain injuries",
-          "Heavy-load eccentric calf muscle training for the treatment of chronic Achilles tendinosis",
           "Calf muscle strain injuries in sport",
           "Gastrocnemius strain grading and return to sport"
         ],
@@ -26925,8 +26828,6 @@
           "Graduated sprint return before contact return"
         ],
         "criteria_to_progress": [
-          "Hamstring strain injuries: recommendations for diagnosis, rehabilitation, and injury prevention",
-          "Rectus femoris muscle injuries in football",
           "Muscle injuries in sports \u2014 new insights on diagnosis and management",
           "Muscles Ligaments Tendons J.",
           "Injury patterns in professional soccer players",
@@ -27312,8 +27213,6 @@
           "Monitor for proximal hamstring tendinopathy as secondary sequela"
         ],
         "criteria_to_progress": [
-          "Proximal hamstring tendinopathy: results of surgical management and histopathological findings",
-          "Gluteal muscle injuries in athletes",
           "Hip pathology in the athletic population",
           "J Bone Joint Surg Am.",
           "Low load exercises targeting the gluteal muscle group",
@@ -27715,10 +27614,8 @@
           "Gradual surface progression: track \u2192 road \u2192 trail"
         ],
         "criteria_to_progress": [
-          "Management and prevention of bone stress injuries in long-distance runners",
           "Tibial stress fractures in runners",
           "Med Sci Sports Exerc.",
-          "Resistance training is associated with lower extremity musculoskeletal injury in female collegiate distance runners",
           "J Strength Cond Res.",
           "The relationship between lower extremity stress fractures and running mechanics",
           "Clin Biomech."
@@ -28061,7 +27958,6 @@
           "Running 45 min at race pace without pain",
           "Hop test LSI \u226590%",
           "Full sport-specific demands met without tibial symptoms",
-          "Medial tibial stress syndrome: conservative treatment options",
           "The diagnosis and treatment of medial tibial stress syndrome",
           "Exercise-related leg pain in female collegiate athletes",
           "J Athl Train.",
@@ -28498,10 +28394,8 @@
           "Running 30 min pain-free",
           "Hop test LSI \u226590%",
           "Full sport-specific demands without groin or hip pain",
-          "Stress fractures of the pelvis and legs in athletes",
           "Sports Health.",
           "Med Sci Sports Exerc.",
-          "The IOC consensus statement: beyond the Female Athlete Triad \u2014 Relative Energy Deficiency in Sport (RED-S)",
           "Femoral stress fractures"
         ],
         "exercises": [
@@ -28878,10 +28772,7 @@
           "Pec major strength \u226590% symmetry",
           "Full bench press with sport-specific load pain-free",
           "Sport-specific demands met without pain or weakness",
-          "Results of surgical treatment of acute and chronic ruptures of the pectoralis major muscle",
-          "J Shoulder Elbow Surg.",
-          "Rupture of the pectoralis major muscle",
-          "Pectoralis major injuries: evaluation and treatment"
+          "J Shoulder Elbow Surg."
         ],
         "exercises": [
           {
@@ -29271,7 +29162,6 @@
           "Biceps strength LSI \u226590% (dynamometer)",
           "Supination strength \u226590% symmetry",
           "Heavy lifting and sport-specific demands pain-free",
-          "Reattachment of the distal biceps tendon",
           "Endobutton repair of distal biceps tendon ruptures",
           "J Shoulder Elbow Surg.",
           "Distal biceps tendon rupture",
@@ -29634,10 +29524,8 @@
           "Triceps strength LSI \u226590%",
           "Throwing or pressing to full sport demand without pain",
           "Running and sport-specific test pain-free",
-          "Management of chronic tendon injuries",
           "Am Fam Physician.",
           "Triceps tendon ruptures",
-          "Isometric exercise induces analgesia and reduces inhibition in patellar tendinopathy",
           "A treatment algorithm for managing Achilles tendinopathy: new treatment options"
         ],
         "exercises": [
@@ -30360,7 +30248,6 @@
           "Full pitching at game speed and distance without pain",
           "Rotator cuff strength symmetry maintained",
           "Pitch count limits being respected",
-          "Little Leaguer's shoulder",
           "Guthrie Clin Bull.",
           "Physeal injuries of the proximal humerus",
           "Med Sci Sports Exerc.",
@@ -30698,7 +30585,6 @@
           "Full sport training and match participation without pain",
           "Plyometric and agility demands met",
           "Family understands recurrence risk and self-management strategies",
-          "Osgood-Schlatter syndrome",
           "Curr Opin Pediatr.",
           "Magnetic resonance imaging of Osgood-Schlatter disease",
           "Skeletal Radiol.",
@@ -31015,7 +30901,6 @@
           "Full unrestricted sport training and competition",
           "Patellar pole non-tender",
           "Athlete and family confident in self-management",
-          "A hitherto unknown affection of the patella in children",
           "Acta Radiol.",
           "En f\u00f6rut icke beskriven sjukdom i patella",
           "Hygiea.",
@@ -31395,9 +31280,7 @@
         "criteria_to_progress": [
           "Hip strength and ROM optimised for residual deformity",
           "Child and family understand long-term monitoring requirements",
-          "Legg-Calv\u00e9-Perthes disease: a comprehensive classification",
           "J Bone Joint Surg Am.",
-          "Legg-Calv\u00e9-Perthes disease",
           "Perthes disease: conservative treatment",
           "Management of Perthes disease"
         ],
@@ -31687,7 +31570,6 @@
           "Tibialis anterior \u22654/5 MRC (ideally 5/5)",
           "Safe walking and running without AFO",
           "Return to functional work and sport demands",
-          "Peroneal mononeuropathy: predisposing factors, and clinical and neurophysiological relationships",
           "Neurol Sci.",
           "The foot drop",
           "Semin Musculoskelet Radiol.",
@@ -32082,7 +31964,6 @@
           "Pain \u22643/10 with all daily demands",
           "Independent self-management program in place",
           "Psychological wellbeing maintained",
-          "Validation of proposed diagnostic criteria (the Budapest Criteria) for complex regional pain syndrome",
           "Graded motor imagery is effective for long-standing complex regional pain syndrome",
           "J Pain Res.",
           "Mechanisms-based classifications of musculoskeletal pain",
@@ -32402,7 +32283,6 @@
           "Cervical and shoulder strength maintained",
           "Recurrence prevention program in place",
           "Physician clearance for return to competition",
-          "Cervical and brachial plexus injuries in athletes",
           "Phys Med Rehabil Clin N Am.",
           "Neuropraxia of the cervical spinal cord with transient quadriplegia",
           "J Bone Joint Surg Am.",
@@ -32771,9 +32651,7 @@
           "Thoracic kyphosis angle improved or stabilised",
           "Pain-free with all daily and sport demands",
           "Independent maintenance program adhered to",
-          "Significant reduction in risk of falls and back pain in osteoporotic-kyphotic women through a spinal proprioceptive extension exercise dynamic program",
           "Mayo Clin Proc.",
-          "Sagittal alignment of the spine: what do you need to know? Clin Neurol Neurosurg.",
           "Exercise to reduce hyperkyphosis in older women",
           "Am J Public Health.",
           "Postural correction for thoracic kyphosis in older adults",
@@ -33115,7 +32993,6 @@
           "Eating all food textures without restriction",
           "Independent self-management program in place",
           "Stress and bruxism management strategies implemented",
-          "Research diagnostic criteria for temporomandibular disorders",
           "J Craniomandib Disord.",
           "Diagnosis and treatment of temporomandibular disorders",
           "Am Fam Physician.",
