@@ -29,6 +29,7 @@ export default function AdminMediaPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
+  const [mutating, setMutating] = useState(false);
   const [syncing, setSyncing] = useState(false);
   const [message, setMessage] = useState('');
   const [showUnusedOnly, setShowUnusedOnly] = useState(false);
@@ -111,6 +112,7 @@ export default function AdminMediaPage() {
   };
 
   const handleSyncUsages = async () => {
+    if (syncing || !access.canManageMedia) return;
     try {
       setSyncing(true);
       const nextUsages = await refreshMediaAssetUsages();
@@ -124,9 +126,10 @@ export default function AdminMediaPage() {
   };
 
   const handleSaveMetadata = async () => {
-    if (!selectedAsset) return;
+    if (!selectedAsset || mutating || !access.canManageMedia) return;
 
     try {
+      setMutating(true);
       const updated = await updateMediaAsset(selectedAsset.id, {
         alt_text: selectedAsset.alt_text,
         folder: selectedAsset.folder,
@@ -135,11 +138,11 @@ export default function AdminMediaPage() {
       setMessage(isAr ? 'تم حفظ بيانات الصورة.' : 'Asset metadata saved.');
     } catch (error) {
       setMessage(error instanceof Error ? error.message : isAr ? 'تعذر حفظ البيانات.' : 'Could not save asset metadata.');
-    }
+    } finally {setMutating(false);}
   };
 
   const handleDelete = async () => {
-    if (!selectedAsset) return;
+    if (!selectedAsset || mutating || !access.canManageMedia) return;
 
     const confirmed = window.confirm(
       isAr ? `حذف الملف ${selectedAsset.file_name}؟` : `Delete asset ${selectedAsset.file_name}?`,
@@ -147,6 +150,7 @@ export default function AdminMediaPage() {
     if (!confirmed) return;
 
     try {
+      setMutating(true);
       await deleteMediaAsset(selectedAsset.id);
       const nextAssets = assets.filter((asset) => asset.id !== selectedAsset.id);
       setAssets(nextAssets);
@@ -154,7 +158,7 @@ export default function AdminMediaPage() {
       setMessage(isAr ? 'تم حذف الملف.' : 'Asset deleted.');
     } catch (error) {
       setMessage(error instanceof Error ? error.message : isAr ? 'تعذر حذف الملف.' : 'Could not delete the asset.');
-    }
+    } finally {setMutating(false);}
   };
 
   return (
@@ -245,7 +249,7 @@ export default function AdminMediaPage() {
                       filteredAssets.map((asset) => {
                         const usageCount = usageMap.get(asset.id)?.length || 0;
                         return (
-                          <button key={asset.id} type="button" onClick={() => setSelectedId(asset.id)} className={`grid w-full gap-4 rounded-3xl border p-4 text-start md:grid-cols-[120px,minmax(0,1fr)] ${selectedAsset?.id === asset.id ? 'border-health-green bg-emerald-50/40' : 'border-slate-200 bg-slate-50/60'}`}>
+                          <button key={asset.id} type="button" disabled={mutating} onClick={() => setSelectedId(asset.id)} className={`grid w-full gap-4 rounded-3xl border p-4 text-start md:grid-cols-[120px,minmax(0,1fr)] ${selectedAsset?.id === asset.id ? 'border-health-green bg-emerald-50/40' : 'border-slate-200 bg-slate-50/60'}`}>
                             <img src={asset.public_url} alt={asset.alt_text || asset.file_name} className="h-28 w-full rounded-2xl object-cover" />
                             <div className="space-y-2">
                               <div className="flex flex-wrap items-center justify-between gap-2">
@@ -283,10 +287,10 @@ export default function AdminMediaPage() {
                           <div>{selectedAsset.storage_path}</div>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          <button type="button" onClick={() => void handleSaveMetadata()} className="rounded-2xl bg-slate-900 px-4 py-3 text-sm font-bold text-white">
+                          <button type="button" disabled={mutating} onClick={() => void handleSaveMetadata()} className="rounded-2xl bg-slate-900 px-4 py-3 text-sm font-bold text-white">
                             {isAr ? 'حفظ البيانات' : 'Save metadata'}
                           </button>
-                          <button type="button" onClick={() => void handleDelete()} className="rounded-2xl border border-rose-200 px-4 py-3 text-sm font-bold text-rose-600">
+                          <button type="button" disabled={mutating} onClick={() => void handleDelete()} className="rounded-2xl border border-rose-200 px-4 py-3 text-sm font-bold text-rose-600">
                             <Trash2 className="mr-2 inline h-4 w-4" />
                             {isAr ? 'حذف' : 'Delete'}
                           </button>
