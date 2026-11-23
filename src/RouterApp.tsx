@@ -22,7 +22,7 @@ export default function RouterApp() {
   const isAr = lang === 'ar';
 
   return (
-    <ErrorBoundary isAr={isAr} homeHref={navigationPaths.home(lang)}>
+    <ErrorBoundary resetKey={pathname} isAr={isAr} homeHref={navigationPaths.home(lang)}>
       <Suspense fallback={<RouteFallback isAr={isAr} />}>
         <AppRoutes theme={theme} onToggleTheme={toggleTheme} />
       </Suspense>
