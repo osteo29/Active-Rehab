@@ -1,4 +1,5 @@
-import {describe, expect, it} from 'vitest';
+// @vitest-environment jsdom
+import {describe, expect, it, vi} from 'vitest';
 import {migrateLegacyStorageKeys} from './storageMigration';
 
 function createMemoryStorage(initial: Record<string, string>) {
@@ -44,4 +45,9 @@ describe('migrateLegacyStorageKeys', () => {
     expect(storage.getItem('activerehab_theme')).toBe('dark');
     expect(storage.getItem('physiohub_theme')).toBeNull();
   });
+});
+
+it('treats a denied localStorage getter as a best-effort migration',()=>{
+ const getter=vi.spyOn(window,'localStorage','get').mockImplementation(()=>{throw new Error('denied')});
+ try {expect(()=>migrateLegacyStorageKeys()).not.toThrow()} finally {getter.mockRestore()}
 });
