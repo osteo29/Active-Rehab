@@ -4,6 +4,7 @@ interface ErrorBoundaryProps {
   children: ReactNode;
   isAr?: boolean;
   homeHref?: string;
+  resetKey?: string;
 }
 
 interface ErrorBoundaryState {
@@ -23,6 +24,12 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     console.error('[ErrorBoundary]', error, errorInfo);
+  }
+
+  componentDidUpdate(previous: ErrorBoundaryProps): void {
+    if (this.state.hasError && previous.resetKey !== this.props.resetKey) {
+      this.setState({hasError: false, error: null});
+    }
   }
 
   render(): ReactNode {
@@ -72,6 +79,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             </div>
           ) : null}
 
+          <button type="button" onClick={() => this.setState({hasError:false,error:null})} className="mt-6 rounded-xl border border-slate-200 px-5 py-2 text-sm font-bold text-slate-700">{isAr ? 'حاول مرة أخرى' : 'Try again'}</button>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <button
               type="button"
