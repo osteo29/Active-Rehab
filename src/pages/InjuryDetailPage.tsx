@@ -1,5 +1,5 @@
 import {lazy, Suspense, useEffect, useState} from 'react';
-import {Activity, AlertTriangle, ArrowRight, CheckCircle2, Clock3, LockKeyhole, Pill, ShieldAlert, Sparkles, Stethoscope} from 'lucide-react';
+import {Activity, AlertTriangle, ArrowRight, CheckCircle2, ChevronDown, Clock3, LockKeyhole, Pill, ShieldAlert, Sparkles, Stethoscope, Tags} from 'lucide-react';
 import {Link, Navigate, useParams} from 'react-router-dom';
 import Seo from '../components/seo/Seo';
 import {getCurrentUser, isSupabaseConfigured, onSupabaseAuthChange, type User} from '../lib/supabase';
@@ -79,6 +79,97 @@ function getSourceMeta(source: InjuryCatalogSource, isAr: boolean) {
     className:
       'border-amber-200 bg-amber-50 text-amber-900 dark:border-amber-500/40 dark:bg-amber-950/50 dark:text-amber-200',
   };
+}
+
+type ExercisePlanCardProps = {
+  plan: import('../services/injuryDatabase').ExercisePlan;
+  isAr: boolean;
+  panelClass: string;
+};
+
+function ExercisePlanCard({plan, isAr, panelClass}: ExercisePlanCardProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const tags = (plan.alternatives || []).map(normalizeCopy).filter(Boolean);
+  const hasDetails = tags.length > 0 || (plan.cues?.length ?? 0) > 0;
+
+  return (
+    <div
+      className={`${panelClass} ${hasDetails ? 'cursor-pointer transition hover:border-health-green/40 hover:shadow-md' : ''}`}
+      onClick={hasDetails ? () => setIsOpen((v) => !v) : undefined}
+      role={hasDetails ? 'button' : undefined}
+      tabIndex={hasDetails ? 0 : undefined}
+      onKeyDown={
+        hasDetails
+          ? (e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setIsOpen((v) => !v);
+              }
+            }
+          : undefined
+      }
+      aria-expanded={hasDetails ? isOpen : undefined}
+    >
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <div className="text-lg font-black text-slate-900 dark:text-white">{normalizeCopy(plan.label)}</div>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {plan.sets ? (
+              <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700">
+                {isAr ? 'الجرعة' : 'Dose'}: {normalizeCopy(plan.sets)}
+              </span>
+            ) : null}
+            {plan.reps ? (
+              <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700">
+                {isAr ? 'العدّات' : 'Reps'}: {normalizeCopy(plan.reps)}
+              </span>
+            ) : null}
+            {plan.rest ? (
+              <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700">
+                {isAr ? 'الراحة' : 'Rest'}: {normalizeCopy(plan.rest)}
+              </span>
+            ) : null}
+            {plan.equipment ? (
+              <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700">
+                {isAr ? 'الأداة' : 'Equipment'}: {normalizeCopy(plan.equipment)}
+              </span>
+            ) : null}
+          </div>
+        </div>
+        {hasDetails ? (
+          <span className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-health-green">
+            {isOpen ? (isAr ? 'إخفاء' : 'Hide') : (isAr ? 'التفاصيل' : 'Details')}
+            <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+          </span>
+        ) : null}
+      </div>
+
+      {isOpen && plan.cues?.length ? (
+        <div className="mt-4">
+          <div className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
+            {isAr ? 'ملاحظات التنفيذ' : 'Execution cues'}
+          </div>
+          {renderBulletList(plan.cues.map(normalizeCopy), 'accent')}
+        </div>
+      ) : null}
+
+      {isOpen && tags.length ? (
+        <div className="mt-4">
+          <div className="mb-2 flex items-center gap-1 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
+            <Tags className="h-3 w-3" />
+            {isAr ? 'الوسوم' : 'Tags'}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span key={tag} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 function renderBulletList(items: string[], tone: 'neutral' | 'success' | 'warning' | 'accent') {
@@ -726,44 +817,7 @@ export default function InjuryDetailPage() {
                     {currentPhase.exercisePlans?.length ? (
                       <div className="grid gap-4">
                         {currentPhase.exercisePlans.map((plan, idx) => (
-                          <div key={`${plan.label}-${idx}`} className={injuryPanelInset}>
-                            <div className="flex flex-wrap items-start justify-between gap-3">
-                              <div>
-                                <div className="text-lg font-black text-slate-900 dark:text-white">{normalizeCopy(plan.label)}</div>
-                                <div className="mt-2 flex flex-wrap gap-2">
-                                  {plan.sets ? (
-                                    <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700">
-                                      {isAr ? 'الجرعة' : 'Dose'}: {normalizeCopy(plan.sets)}
-                                    </span>
-                                  ) : null}
-                                  {plan.reps ? (
-                                    <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700">
-                                      {isAr ? 'العدّات' : 'Reps'}: {normalizeCopy(plan.reps)}
-                                    </span>
-                                  ) : null}
-                                  {plan.rest ? (
-                                    <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700">
-                                      {isAr ? 'الراحة' : 'Rest'}: {normalizeCopy(plan.rest)}
-                                    </span>
-                                  ) : null}
-                                  {plan.equipment ? (
-                                    <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700">
-                                      {isAr ? 'الأداة' : 'Equipment'}: {normalizeCopy(plan.equipment)}
-                                    </span>
-                                  ) : null}
-                                </div>
-                              </div>
-                            </div>
-
-                            {plan.cues?.length ? (
-                              <div className="mt-4">
-                                <div className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
-                                  {isAr ? 'ملاحظات التنفيذ' : 'Execution cues'}
-                                </div>
-                                {renderBulletList(plan.cues.map(normalizeCopy), 'accent')}
-                              </div>
-                            ) : null}
-                          </div>
+                          <ExercisePlanCard key={`${plan.label}-${idx}`} plan={plan} isAr={isAr} panelClass={injuryPanelInset} />
                         ))}
                       </div>
                     ) : (
