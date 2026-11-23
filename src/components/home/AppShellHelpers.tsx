@@ -89,6 +89,8 @@ export function DeferredHomeSection({
       return;
     }
 
+    const loadForAnchor = () => setShouldRender(true);
+    window.addEventListener('activerehab:load-anchor-sections', loadForAnchor);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) return;
@@ -99,7 +101,7 @@ export function DeferredHomeSection({
     );
 
     observer.observe(element);
-    return () => observer.disconnect();
+    return () => {observer.disconnect();window.removeEventListener('activerehab:load-anchor-sections', loadForAnchor)};
   }, [shouldRender]);
 
   return (
