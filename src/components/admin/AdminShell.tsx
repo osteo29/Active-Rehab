@@ -170,7 +170,7 @@ export default function AdminShell({
             </div>
             <div className="rounded-2xl border border-emerald-200 bg-white px-4 py-3 text-sm text-slate-700">
               <div className="font-bold text-slate-900">{copy.account}</div>
-              <div>{user?.email || 'unknown'}</div>
+              <div className="break-all" dir="ltr">{user?.email || 'unknown'}</div>
               <div className="mt-1 text-xs uppercase tracking-[0.18em] text-slate-400">
                 {copy.role}: {adminRole}
               </div>
@@ -182,7 +182,7 @@ export default function AdminShell({
           <aside className="space-y-4 rounded-3xl border border-slate-200 bg-white p-5">
             <div>
               <div className="text-xs font-black uppercase tracking-[0.18em] text-slate-400">{copy.workspace}</div>
-              <nav className="mt-4 space-y-2">
+              <nav aria-label={lang === 'ar' ? 'أقسام الإدارة' : 'Admin sections'} className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-1">
                 {items.map((item) => {
                   const Icon = item.icon;
                   const active = currentTab === item.key || location.pathname === item.to;
@@ -196,7 +196,7 @@ export default function AdminShell({
                         key={item.key}
                         className="rounded-2xl border border-dashed border-slate-200 px-4 py-3 text-sm text-slate-400"
                       >
-                        <Icon className="mr-2 inline h-4 w-4" />
+                        <Icon className="me-2 inline h-4 w-4" />
                         {item.label}
                       </div>
                     );
@@ -206,9 +206,10 @@ export default function AdminShell({
                     <Link
                       key={item.key}
                       to={item.to}
+                      aria-current={active ? 'page' : undefined}
                       className={`block rounded-2xl border px-4 py-3 text-sm font-bold transition ${classes}`}
                     >
-                      <Icon className="mr-2 inline h-4 w-4" />
+                      <Icon className="me-2 inline h-4 w-4" />
                       {item.label}
                     </Link>
                   );
@@ -223,22 +224,22 @@ export default function AdminShell({
               </div>
               <div>{copy.connected}</div>
               <div>
-                {copy.articleAdmin}: {canManageArticles ? 'Yes' : 'No'}
+                {copy.articleAdmin}: {canManageArticles ? (lang === 'ar' ? 'نعم' : 'Yes') : (lang === 'ar' ? 'لا' : 'No')}
               </div>
               <div>
-                {copy.injuryAdmin}: {canManageInjuries ? 'Yes' : 'No'}
+                {copy.injuryAdmin}: {canManageInjuries ? (lang === 'ar' ? 'نعم' : 'Yes') : (lang === 'ar' ? 'لا' : 'No')}
               </div>
               <div>
-                {copy.homepageAdmin}: {canManageHomepage ? 'Yes' : 'No'}
+                {copy.homepageAdmin}: {canManageHomepage ? (lang === 'ar' ? 'نعم' : 'Yes') : (lang === 'ar' ? 'لا' : 'No')}
               </div>
               <div>
-                {copy.exercisesAdmin}: {canManageExercises ? 'Yes' : 'No'}
+                {copy.exercisesAdmin}: {canManageExercises ? (lang === 'ar' ? 'نعم' : 'Yes') : (lang === 'ar' ? 'لا' : 'No')}
               </div>
               <div>
-                {copy.media}: {resolvedCanManageMedia ? 'Yes' : 'No'}
+                {copy.media}: {resolvedCanManageMedia ? (lang === 'ar' ? 'نعم' : 'Yes') : (lang === 'ar' ? 'لا' : 'No')}
               </div>
               <div>
-                {copy.usersAdmin}: {canManageUsers ? 'Yes' : 'No'}
+                {copy.usersAdmin}: {canManageUsers ? (lang === 'ar' ? 'نعم' : 'Yes') : (lang === 'ar' ? 'لا' : 'No')}
               </div>
             </div>
 
