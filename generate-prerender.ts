@@ -1195,9 +1195,20 @@ function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'term
     body: layout(lang, config.eyebrow, config.heading, config.intro, config.sections),
   };
 }
+function anatomyRoute(lang: Lang): RouteDefinition {
+  const ar = lang === 'ar';
+  return {path:`/${lang}/anatomy`,lang,
+    title:ar?'مكتبة التشريح والتمارين | Active Rehab':'Anatomy and exercise library | Active Rehab',
+    description:ar?'مكتبة تعليمية للعضلات والتشريح الوظيفي والبحث عن التمارين. ليست بديلًا عن التقييم الطبي.':'Educational muscle anatomy and exercise library. Browse muscle details and exercise demonstrations, not a replacement for medical assessment.',
+    body:layout(lang,ar?'مكتبة تعليمية':'Educational library',ar?'التشريح والتمارين':'Anatomy and exercises',ar?'ابحث في أسماء العضلات ومعلومات التشريح الوظيفي والتمارين. المحتوى للتعليم وليس خطة علاج فردية.':'Search muscle names, functional anatomy details and exercises. Content is educational, not an individual treatment plan.',[
+      `<section class="card"><h2>${ar?'تصفح المكتبة':'Browse the library'}</h2><ul class="link-list"><li><a href="/${lang}/exercises">${ar?'دليل التمارين':'Exercise finder'}</a></li><li><a href="/${lang}/injuries">${ar?'بروتوكولات الإصابات':'Injury protocols'}</a></li><li><a href="/${lang}/disclaimer">${ar?'إخلاء المسؤولية الطبية':'Medical disclaimer'}</a></li></ul></section>`
+    ])};
+}
+
 const staticRoutes: RouteDefinition[] = [
   ...(['en', 'ar'] as Lang[]).flatMap((lang) => [
     homeRoute(lang),
+    anatomyRoute(lang),
     calculatorsRoute(lang),
     ...CALCULATOR_PAGE_CONFIGS.map((calculator) => calculatorDetailRoute(lang, calculator)),
     insightsRoute(lang),
