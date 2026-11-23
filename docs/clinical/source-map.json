@@ -1,0 +1,299 @@
+[
+  {
+    "protocol_id": 3,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscus-repair.pdf",
+    "scope": "MGB arthroscopic meniscal repair: phase VI, 6+ months",
+    "review_required": true
+  },
+  {
+    "protocol_id": 4,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.jospt.org/doi/10.2519/jospt.2019.0302",
+    "scope": "JOSPT 2019 patellofemoral pain CPG: combined hip and knee exercise",
+    "review_required": true
+  },
+  {
+    "protocol_id": 5,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/",
+    "scope": "Rehabilitation of patellar tendinopathy: stage 3",
+    "review_required": true
+  },
+  {
+    "protocol_id": 7,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-total-knee-arthroplasty.pdf",
+    "scope": "MGB total knee arthroplasty: late post-operative rehabilitation",
+    "review_required": true
+  },
+  {
+    "protocol_id": 14,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.jospt.org/doi/10.2519/jospt.2024.0302",
+    "scope": "JOSPT 2024 midportion Achilles tendinopathy CPG",
+    "review_required": true
+  },
+  {
+    "protocol_id": 15,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.jospt.org/doi/10.2519/jospt.2023.0303",
+    "scope": "JOSPT 2023 heel pain / plantar fasciitis CPG",
+    "review_required": true
+  },
+  {
+    "protocol_id": 23,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.jospt.org/doi/10.2519/jospt.2022.0302",
+    "scope": "JOSPT 2022 lateral elbow pain CPG",
+    "review_required": true
+  },
+  {
+    "protocol_id": 25,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://journal.aspetar.com/en/journals/volume-8-targeted-topic-hamstring-injuries-aspetar-experience/rehabilitation-and-return-to-sport-after-hamstring-injury",
+    "scope": "Aspetar 2019 hamstring injury rehabilitation: stage 3",
+    "review_required": true
+  },
+  {
+    "protocol_id": 26,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/",
+    "scope": "IJSPT hip/pelvis rehabilitation commentary: gluteal tendinopathy phase III",
+    "review_required": true
+  },
+  {
+    "protocol_id": 44,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/",
+    "scope": "IJSPT hip/pelvis rehabilitation commentary: adductor rehabilitation",
+    "review_required": true
+  },
+  {
+    "protocol_id": 31,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 31,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 31,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 33,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 33,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 33,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 35,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 35,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 35,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 50,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 50,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 50,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 53,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 53,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 53,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 8,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.sanfordhealth.org/-/media/org/files/medical-professionals/resources-and-education/3-pcl-nonoperative-rehabilitation-guideline.pdf",
+    "scope": "Sanford non-operative PCL rehabilitation: later-stage plyometrics",
+    "review_required": true
+  },
+  {
+    "protocol_id": 11,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.ruh.nhs.uk/patients/patient_information/PHY025_Frozen_shoulder_Adhesive_capsulitis.pdf",
+    "scope": "Royal United Hospitals Bath frozen shoulder: thawing stage",
+    "review_required": true
+  },
+  {
+    "protocol_id": 27,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-iliotibial-band-syndrome.pdf",
+    "scope": "MGB iliotibial band syndrome: late/remodeling phase",
+    "review_required": true
+  },
+  {
+    "protocol_id": 36,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://roh.nhs.uk/services-information/therapy/golfers-elbow",
+    "scope": "Royal Orthopaedic Hospital NHS medial epicondylitis: progressive loading",
+    "review_required": true
+  },
+  {
+    "protocol_id": 39,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://leaflets.ekhuft.nhs.uk/de-quervain-s-tenosynovitis-level-1-exercises/html/",
+    "scope": "East Kent NHS De Quervain exercises: level 3",
+    "review_required": true
+  },
+  {
+    "protocol_id": 43,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.inspirahealthnetwork.org/services-treatments/rehabilitation-services/sports-injury-rehabilitation/hip-flexor-strain",
+    "scope": "Inspira Health hip flexor strain: later rehabilitation",
+    "review_required": true
+  },
+  {
+    "protocol_id": 54,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.kentcht.nhs.uk/leaflet/peroneal-tendinopathy/",
+    "scope": "Kent Community Health NHS peroneal tendinopathy: strengthening",
+    "review_required": true
+  },
+  {
+    "protocol_id": 55,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.hacw.nhs.uk/leaflets-podiatry-pttd/",
+    "scope": "Herefordshire and Worcestershire NHS PTTD strengthening",
+    "review_required": true
+  },
+  {
+    "protocol_id": 56,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2953318/",
+    "scope": "Sinus tarsi syndrome clinical commentary: Sustain stage",
+    "review_required": true
+  },
+  {
+    "protocol_id": 61,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.mskdorset.nhs.uk/back-pain_1/back-pain-leg-pain-spinal-stenosis/",
+    "scope": "NHS Dorset lumbar spinal stenosis: ongoing progressive resistance exercise",
+    "review_required": true
+  },
+  {
+    "protocol_id": 63,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.tims.nhs.uk/wp-content/uploads/2024/08/tims-sacroiliac-pain-aug2024.pdf",
+    "scope": "TIMS NHS sacroiliac pain exercise advice",
+    "review_required": true
+  },
+  {
+    "protocol_id": 67,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5112023/",
+    "scope": "Too Fit To Fracture consensus: osteoporotic vertebral fracture exercise",
+    "review_required": true
+  },
+  {
+    "protocol_id": 69,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://ncbi.nlm.nih.gov/books/NBK470388/",
+    "scope": "StatPearls thoracic discogenic syndrome: stabilization and maintenance",
+    "review_required": true
+  },
+  {
+    "protocol_id": 89,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-distal-biceps-repair.pdf",
+    "scope": "MGB distal biceps repair: later sport rehabilitation",
+    "review_required": true
+  }
+]
