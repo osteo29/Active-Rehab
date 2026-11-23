@@ -205,7 +205,7 @@ export default function AdminMediaPage() {
           canManageMedia={access.canManageMedia}
         >
           <div className="space-y-6">
-            <div className="grid gap-6 xl:grid-cols-[360px,minmax(0,1fr)]">
+            <div className="grid min-w-0 gap-6 xl:grid-cols-[360px,minmax(0,1fr)]">
               <section className="rounded-3xl border border-slate-200 bg-white p-5">
                 <div className="mb-4 flex items-center gap-2 text-lg font-black text-slate-900">
                   <UploadCloud className="h-5 w-5 text-health-green" />
@@ -214,7 +214,7 @@ export default function AdminMediaPage() {
                 <div className="space-y-4">
                   <label className="block space-y-2 text-sm font-bold text-slate-700">
                     <span>{isAr ? 'الصورة' : 'Image file'}</span>
-                    <input type="file" accept="image/jpeg,image/png,image/webp,image/gif" onChange={(event) => setSelectedFile(event.target.files?.[0] || null)} className="w-full rounded-2xl border border-slate-300 px-4 py-3" />
+                    <input type="file" accept="image/jpeg,image/png,image/webp,image/gif" onChange={(event) => setSelectedFile(event.target.files?.[0] || null)} className="min-w-0 w-full rounded-2xl border border-slate-300 px-2 py-3 text-xs" />
                   </label>
                   <label className="block space-y-2 text-sm font-bold text-slate-700">
                     <span>{isAr ? 'المجلد' : 'Folder'}</span>
@@ -236,9 +236,9 @@ export default function AdminMediaPage() {
                 </div>
               </section>
 
-              <section className="space-y-4 rounded-3xl border border-slate-200 bg-white p-5">
+              <section className="min-w-0 space-y-4 rounded-3xl border border-slate-200 bg-white p-5">
                 <div className="flex flex-wrap items-center gap-3">
-                  <input aria-label={isAr ? 'البحث في الوسائط' : 'Search media'} value={search} onChange={(event) => setSearch(event.target.value)} placeholder={isAr ? 'ابحث بالاسم أو المجلد...' : 'Search by file or folder...'} className="min-w-[220px] flex-1 rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-health-green" />
+                  <input aria-label={isAr ? 'البحث في الوسائط' : 'Search media'} value={search} onChange={(event) => setSearch(event.target.value)} placeholder={isAr ? 'ابحث بالاسم أو المجلد...' : 'Search by file or folder...'} className="min-w-0 w-full basis-full sm:basis-0 flex-1 rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-health-green" />
                   <label className="inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-3 text-sm font-bold text-slate-700">
                     <input type="checkbox" checked={showUnusedOnly} onChange={(event) => setShowUnusedOnly(event.target.checked)} />
                     <span>{isAr ? 'غير المستخدم فقط' : 'Unused only'}</span>
@@ -253,8 +253,8 @@ export default function AdminMediaPage() {
 
                 {message ? <div role="status" aria-live="polite" className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">{message}</div> : null}
 
-                <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr),320px]">
-                  <div className="space-y-3">
+                <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px]">
+                  <div className="min-w-0 space-y-3">
                     {loading ? (
                       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-500">{isAr ? 'جار تحميل المكتبة...' : 'Loading media library...'}</div>
                     ) : filteredAssets.length ? (
@@ -265,10 +265,10 @@ export default function AdminMediaPage() {
                             <img loading="lazy" decoding="async" src={asset.public_url} alt={asset.alt_text || asset.file_name} className="h-28 w-full rounded-2xl object-cover" />
                             <div className="space-y-2">
                               <div className="flex flex-wrap items-center justify-between gap-2">
-                                <div className="font-bold text-slate-900">{asset.file_name}</div>
+                                <div className="break-all font-bold text-slate-900">{asset.file_name}</div>
                                 <div className="rounded-full bg-slate-100 px-2 py-1 text-[11px] font-bold uppercase tracking-wide text-slate-600">{asset.processing_status}</div>
                               </div>
-                              <div className="text-xs text-slate-500">{asset.folder || 'uploads'}</div>
+                              <div className="break-all text-xs text-slate-500">{asset.folder || 'uploads'}</div>
                               <div className="text-sm text-slate-600">{asset.alt_text || (isAr ? 'بدون Alt Text' : 'No alt text yet')}</div>
                               <div className="text-xs text-slate-400">
                                 {asset.width || '-'} x {asset.height || '-'} • {Math.round(asset.file_size / 1024)} KB • {usageCount} {isAr ? 'استخدام' : 'usages'}
