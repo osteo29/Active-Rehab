@@ -43,7 +43,7 @@ function upsertLink(rel: string, href: string, hreflangs?: Array<{lang: string; 
     const xDefault = document.createElement('link');
     xDefault.setAttribute('rel', 'alternate');
     xDefault.setAttribute('hreflang', 'x-default');
-    xDefault.setAttribute('href', href); // href param should be the default English URL
+    xDefault.setAttribute('href', hreflangs.find(item => item.lang === 'en')?.href || href);
     document.head.appendChild(xDefault);
     return;
   }
@@ -167,6 +167,7 @@ export function applySeo(config: SeoConfig) {
 
   if (currentLang) {
     document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
   }
 
   document.title = config.title.includes(DEFAULT_SITE_NAME)
@@ -184,7 +185,10 @@ export function applySeo(config: SeoConfig) {
   if (getOgType(normalizedPath) === 'article') {
     upsertMeta({property: 'article:author'}, 'Active Rehab');
     upsertMeta({property: 'article:publisher'}, 'https://www.facebook.com/Physionutrition.official/');
+  } else {
+    document.head.querySelectorAll('meta[property="article:author"], meta[property="article:publisher"]').forEach(node => node.remove());
   }
+  upsertMeta({property: 'og:locale'}, currentLang === 'ar' ? 'ar_EG' : 'en_US');
   upsertMeta({property: 'og:site_name'}, DEFAULT_SITE_NAME);
   upsertMeta({property: 'og:url'}, canonicalUrl);
   upsertMeta({property: 'og:title'}, config.title);
