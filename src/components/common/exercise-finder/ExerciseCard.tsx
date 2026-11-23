@@ -73,6 +73,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
                 src={exercise.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
                 title={`${exercise.name} exercise tutorial`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 className="h-full w-full"
                 loading="lazy"
@@ -102,7 +103,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
         </div>
 
         <p className={`text-sm leading-7 text-slate-600 ${isExpanded ? '' : 'line-clamp-3'}`}>
-          {highlightText(exercise.description, searchQuery)}
+          {highlightText(isAr ? (exercise.descriptionAr || exercise.description) : exercise.description, searchQuery)}
         </p>
 
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
@@ -139,7 +140,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
               <div className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
                 {isAr ? 'تلميح تقني' : 'Coaching cue'}
               </div>
-              <p className="mt-1 text-sm text-slate-700">{exercise.tips}</p>
+              <p className="mt-1 text-sm text-slate-700">{isAr ? (exercise.tipsAr || exercise.tips) : exercise.tips}</p>
             </div>
 
             {exercise.rehabTip ? (
@@ -147,7 +148,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
                 <div className="text-xs font-bold uppercase tracking-[0.14em] text-health-green-dark">
                   {isAr ? 'ملاحظة تأهيل مناسبة للجيم' : 'Gym-friendly rehab note'}
                 </div>
-                <p className="mt-1 text-sm text-slate-700">{exercise.rehabTip}</p>
+                <p className="mt-1 text-sm text-slate-700">{isAr ? (exercise.rehabTipAr || exercise.rehabTip) : exercise.rehabTip}</p>
               </div>
             ) : null}
           </div>
