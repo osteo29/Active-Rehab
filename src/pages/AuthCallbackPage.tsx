@@ -1,16 +1,18 @@
 import {useEffect, useState} from 'react';
 import {LoaderCircle} from 'lucide-react';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+import usePreferredLang from './usePreferredLang';
 import {getCurrentSession, getSupabaseActionErrorMessage, onSupabaseAuthChange} from '../lib/supabase';
-import {getPreferredLanguage} from '../services/languagePreference';
 
 export default function AuthCallbackPage() {
   const navigate = useNavigate();
+  const uiLang = usePreferredLang();
+  const isAr = uiLang === 'ar';
   const [error, setError] = useState('');
 
   useEffect(() => {
     let mounted = true;
-    const lang = getPreferredLanguage();
+    const lang = uiLang;
     const target = `/${lang}/`;
 
     const finishLogin = async () => {
@@ -49,24 +51,25 @@ export default function AuthCallbackPage() {
       window.clearTimeout(timeoutId);
       data.subscription.unsubscribe();
     };
-  }, [navigate]);
+  }, [navigate, uiLang]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-soft-blue px-4">
+    <div dir={isAr ? 'rtl' : 'ltr'} className="flex min-h-screen items-center justify-center bg-soft-blue px-4">
       <div className="w-full max-w-md rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 text-center shadow-sm">
         {error ? (
           <>
-            <h1 className="text-lg font-semibold text-slate-900 dark:text-white">Authentication error</h1>
-            <p className="mt-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+            <h1 className="text-lg font-semibold text-slate-900 dark:text-white">{isAr ? 'تعذر تسجيل الدخول' : 'Could not sign in'}</h1>
+            <p role="alert" className="mt-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
               {error}
             </p>
+            <Link className="mt-4 inline-block rounded-xl border border-slate-300 px-4 py-2 font-bold text-slate-700" to={`/${uiLang}/auth`}>{isAr ? 'العودة لتسجيل الدخول' : 'Back to sign in'}</Link>
           </>
         ) : (
           <>
             <LoaderCircle className="mx-auto h-6 w-6 animate-spin text-health-green" />
-            <h1 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">Completing sign in</h1>
+            <h1 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{isAr ? 'جار إكمال تسجيل الدخول' : 'Completing sign in'}</h1>
             <p className="mt-2 text-sm text-slate-500">
-              Please wait while we finish your secure session.
+              {isAr ? 'يرجى الانتظار أثناء إكمال جلسة الدخول.' : 'Please wait while we finish signing you in.'}
             </p>
           </>
         )}
