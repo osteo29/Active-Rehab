@@ -117,7 +117,8 @@ export default function useAdminAccess(lang: Language) {
       const version = ++requestVersion;
       // Revoke old capabilities immediately while a new identity is checked.
       setState({...buildAccessState(lang, null, null), authChecked: false});
-      const adminRecord = await loadAdminRecord(user);
+      let adminRecord: AdminRecord | null = null;
+      try { adminRecord = await loadAdminRecord(user); } catch { /* Fail closed on network errors. */ }
       if (!mounted || version !== requestVersion) return;
       setState(buildAccessState(lang, user, adminRecord));
     };

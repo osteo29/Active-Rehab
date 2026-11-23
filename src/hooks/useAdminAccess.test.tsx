@@ -36,4 +36,12 @@ describe('admin session permissions',()=>{
     await waitFor(()=>expect(result.current.authChecked).toBe(true));
     expect(result.current.canAccessAdminArea).toBe(false);
   });
+  it('finishes access checking without privileges after a network rejection',async()=>{
+    mocks.record.mockRejectedValue(new Error('offline'));
+    const {result}=renderHook(()=>useAdminAccess('en'));
+    await waitFor(()=>expect(result.current.authChecked).toBe(true));
+    expect(result.current.canManageUsers).toBe(false);
+    expect(result.current.canAccessAdminArea).toBe(false);
+  });
+
 });
