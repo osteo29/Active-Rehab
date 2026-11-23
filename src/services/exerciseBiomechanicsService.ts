@@ -50,6 +50,12 @@ export type MuscleDetail = {
   innervation?: string;
   blood_supply?: string;
   image_url?: string;
+  image_source?: string;
+  image_license?: string;
+  image_author?: string;
+  image_license_url?: string;
+  image_caption?: string;
+  image_caption_ar?: string;
   embed_code?: string;
 };
 

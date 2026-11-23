@@ -509,7 +509,17 @@ export default function AnatomyPage() {
                     className="mx-auto max-h-72 w-full object-contain"
                   />
                   <div className="mt-2 text-[11px] text-slate-400">
-                    {isAr ? 'رسم توضيحي تشريحي معتمد طبياً (Wikimedia Commons)' : 'Clinical anatomical diagram (Wikimedia Commons)'}
+                    {isAr ? activeMuscle.image_caption_ar || 'رسم تشريحي من ويكيميديا كومنز' : activeMuscle.image_caption || 'Anatomical illustration from Wikimedia Commons'}
+                    {activeMuscle.image_source && (
+                      <div className="mt-1 space-x-2">
+                        <a href={activeMuscle.image_source} target="_blank" rel="noreferrer" className="underline">
+                          {activeMuscle.image_author || 'Wikimedia Commons'}
+                        </a>
+                        {activeMuscle.image_license_url ? (
+                          <a href={activeMuscle.image_license_url} target="_blank" rel="noreferrer" className="underline">{activeMuscle.image_license}</a>
+                        ) : <span>{activeMuscle.image_license}</span>}
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
