@@ -75,7 +75,7 @@ export default function AdminSeoPage() {
       }
     };
 
-    if (access.canAccessAdminArea) {
+    if (access.canManageSeo) {
       void load();
     } else {
       setLoading(false);
@@ -84,7 +84,7 @@ export default function AdminSeoPage() {
     return () => {
       active = false;
     };
-  }, [access.canAccessAdminArea, definitions, uiLang]);
+  }, [access.canManageSeo, definitions, uiLang]);
 
   const filteredDefinitions = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -118,6 +118,7 @@ export default function AdminSeoPage() {
   };
 
   const handleSave = async (pageKey: SeoPageKey) => {
+    if (!access.canManageSeo || savingKey || loading) return;
     const draft = drafts[pageKey];
 
     try {
@@ -196,6 +197,7 @@ export default function AdminSeoPage() {
                 <div className="relative w-full max-w-md">
                   <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                   <input
+                    aria-label={isAr ? 'البحث في صفحات الموقع' : 'Search site pages'}
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
                     placeholder={isAr ? 'ابحث عن صفحة...' : 'Search a page...'}
@@ -206,13 +208,13 @@ export default function AdminSeoPage() {
             </div>
 
             {errorMessage ? (
-              <div className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">
+              <div role="alert" className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">
                 {errorMessage}
               </div>
             ) : null}
 
             {successMessage ? (
-              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700">
+              <div role="status" aria-live="polite" className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700">
                 {successMessage}
               </div>
             ) : null}
@@ -242,7 +244,7 @@ export default function AdminSeoPage() {
                         <button
                           type="button"
                           onClick={() => void handleSave(definition.key)}
-                          disabled={isSaving}
+                          disabled={Boolean(savingKey) || loading}
                           className="inline-flex items-center gap-2 rounded-2xl bg-health-green px-4 py-3 text-sm font-bold text-white transition hover:bg-health-green-dark disabled:cursor-not-allowed disabled:opacity-60"
                         >
                           {isSaving ? <LoaderCircle className="h-4 w-4 animate-spin" /> : null}
