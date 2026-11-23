@@ -1,4 +1,4 @@
-import {memo, useState} from 'react';
+import {memo, useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {
   Activity,
@@ -63,11 +63,18 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
     logPain,
     addNote,
     deleteJourney,
+    editNote,
+    deleteNote,
   } = useMyRecovery();
 
+  const [editingNoteId, setEditingNoteId] = useState<string | null>(null);
+  const [editedNote, setEditedNote] = useState('');
+  const [showAllNotes, setShowAllNotes] = useState(false);
   const [newNoteText, setNewNoteText] = useState('');
   const [sliderPain, setSliderPain] = useState<number>(activeJourney?.painLevel ?? 4);
   const [isLoggingPain, setIsLoggingPain] = useState(false);
+
+  useEffect(() => {setEditingNoteId(null);setEditedNote('');setShowAllNotes(false)}, [activeJourney?.id]);
 
   // If no active journey is tracked yet, show an engaging selector
   if (!activeJourney || journeys.length === 0) {
@@ -372,6 +379,7 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
           <form onSubmit={handleAddNote} className="mt-4 flex gap-2">
             <input
               type="text"
+              aria-label={isAr ? 'ملاحظة جديدة' : 'New recovery note'}
               value={newNoteText}
               onChange={(e) => setNewNoteText(e.target.value)}
               placeholder={isAr ? 'أضف ملاحظة (مثال: ألم أقل عند النزول على السلالم)...' : 'Add recovery note (e.g., less pain during squats)...'}
@@ -393,14 +401,23 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
               <div className="text-[11px] font-bold uppercase text-slate-400">
                 {isAr ? 'آخر الملاحظات المسجلة:' : 'Recent Notes:'}
               </div>
-              <div className="max-h-36 space-y-1.5 overflow-y-auto pr-1">
-                {activeJourney.notes.slice(0, 3).map((note) => (
+              {activeJourney.notes.length > 3 && <button type="button" onClick={() => setShowAllNotes(value => !value)} aria-expanded={showAllNotes} className="text-xs font-bold text-health-green">{showAllNotes ? (isAr ? 'آخر 3 فقط' : 'Recent 3 only') : (isAr ? `كل الملاحظات (${activeJourney.notes.length})` : `All notes (${activeJourney.notes.length})`)}</button>}
+              <div className="max-h-60 space-y-1.5 overflow-y-auto pr-1">
+                {(showAllNotes ? activeJourney.notes : activeJourney.notes.slice(0, 3)).map((note) => (
                   <div
                     key={note.id}
                     className="flex items-start gap-2 rounded-lg border border-slate-100 bg-slate-50/70 p-2 text-xs text-slate-600 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300"
                   >
                     <MessageSquare className="mt-0.5 h-3 w-3 shrink-0 text-health-green" />
-                    <span className="flex-1">{note.text}</span>
+                    {editingNoteId === note.id ? <form className="min-w-0 flex-1 space-y-2" onSubmit={event => {event.preventDefault();editNote(activeJourney.id,note.id,editedNote);setEditingNoteId(null)}}>
+                      <textarea aria-label={isAr ? 'تعديل الملاحظة' : 'Edit note'} value={editedNote} onChange={event => setEditedNote(event.target.value)} className="w-full rounded border border-slate-300 bg-white p-2 text-slate-900"/>
+                      <button type="submit" disabled={!editedNote.trim()} className="rounded border px-2 py-1 disabled:opacity-50">{isAr ? 'حفظ' : 'Save'}</button>
+                      <button type="button" onClick={() => setEditingNoteId(null)} className="mx-2 rounded border px-2 py-1">{isAr ? 'إلغاء' : 'Cancel'}</button>
+                    </form> : <span className="min-w-0 flex-1 break-words">{note.text}</span>}
+                    <div className="flex shrink-0 flex-col gap-1">
+                      <button type="button" aria-label={isAr ? 'تعديل الملاحظة' : 'Edit note'} onClick={() => {setEditingNoteId(note.id);setEditedNote(note.text)}} className="rounded border px-2 py-1">{isAr ? 'تعديل' : 'Edit'}</button>
+                      <button type="button" aria-label={isAr ? 'حذف الملاحظة' : 'Delete note'} onClick={() => {if(window.confirm(isAr ? 'حذف هذه الملاحظة؟' : 'Delete this note?'))deleteNote(activeJourney.id,note.id)}} className="rounded border px-2 py-1 text-rose-600">{isAr ? 'حذف' : 'Delete'}</button>
+                    </div>
                     <span className="text-[10px] text-slate-400">
                       {new Date(note.date).toLocaleDateString(isAr ? 'ar-EG' : 'en-US')}
                     </span>
