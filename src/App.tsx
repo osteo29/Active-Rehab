@@ -34,7 +34,7 @@ export default function App({
 }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [lang, setLang] = useState<Language>(() => {
-    const saved = localStorage.getItem('physiohub_lang');
+    const saved = localStorage.getItem('activerehab_lang');
     return (saved as Language) || 'ar';
   });
 
