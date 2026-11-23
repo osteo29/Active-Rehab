@@ -9,11 +9,11 @@ import {fetchAdminDashboardMetrics, type AdminDashboardMetrics} from '../service
 import {buildInjuryContentReport} from '../services/injuryContentReport';
 
 const initialMetrics: AdminDashboardMetrics = {
-  injuries: 0,
-  phases: 0,
-  articles: 0,
-  assessments: 0,
-  leads: 0,
+  injuries: null,
+  phases: null,
+  articles: null,
+  assessments: null,
+  leads: null,
 };
 
 export default function AdminDashboardPage() {
@@ -24,6 +24,7 @@ export default function AdminDashboardPage() {
   const [contentReport] = useState(() => buildInjuryContentReport());
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
+  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
     if (!access.canAccessAdminArea) {
@@ -39,7 +40,9 @@ export default function AdminDashboardPage() {
         const nextMetrics = await fetchAdminDashboardMetrics();
         if (!active) return;
         setMetrics(nextMetrics);
-        setErrorMessage('');
+        setErrorMessage(Object.values(nextMetrics).some((value) => value === null)
+          ? (isAr ? 'بعض المؤشرات غير متاحة. تحقق من الصلاحيات والاتصال ثم أعد المحاولة.' : 'Some metrics are unavailable. Check permissions and connection, then retry.')
+          : '');
       } catch (error) {
         if (!active) return;
         setErrorMessage(
@@ -59,7 +62,7 @@ export default function AdminDashboardPage() {
     return () => {
       active = false;
     };
-  }, [access.canAccessAdminArea, isAr]);
+  }, [access.canAccessAdminArea, isAr, reloadKey]);
 
   const cards = [
     {
@@ -138,7 +141,7 @@ export default function AdminDashboardPage() {
                     <div>
                       <div className="text-sm font-bold text-slate-500">{card.label}</div>
                       <div className="mt-2 text-3xl font-black text-slate-900">
-                        {loading ? '...' : card.value}
+                        {loading ? '...' : card.value === null ? (isAr ? 'غير متاح' : 'Unavailable') : card.value}
                       </div>
                     </div>
                     <div className="rounded-2xl bg-emerald-50 p-3 text-health-green">
@@ -162,10 +165,11 @@ export default function AdminDashboardPage() {
               </p>
               <p>
                 {isAr
-                  ? 'إذا ظهرت الأرقام هنا فهذا يعني أن الاتصال وقابلية القراءة من الجداول الأساسية تعمل داخل الواجهة.'
-                  : 'If the counts are visible here, the app can read the main Supabase tables from the admin interface.'}
+                  ? 'المؤشر غير المتاح لا يعني أن عدد السجلات صفر. قد لا يملك دورك صلاحية قراءة كل الجداول.'
+                  : 'An unavailable metric does not mean zero records. Your role may not have read access to every table.'}
               </p>
-              {errorMessage ? <p className="font-bold text-rose-600">{errorMessage}</p> : null}
+              {errorMessage ? <p role="alert" className="font-bold text-rose-600">{errorMessage}</p> : null}
+              <button type="button" disabled={loading} onClick={() => setReloadKey((value) => value + 1)} className="rounded-xl border border-slate-300 px-4 py-2 font-bold disabled:opacity-50">{isAr ? 'تحديث المؤشرات' : 'Refresh metrics'}</button>
             </div>
           </div>
 
