@@ -10,6 +10,7 @@ const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('../pages/TermsOfService'));
 const CookiePolicy = lazy(() => import('../pages/CookiePolicy'));
 const MedicalDisclaimer = lazy(() => import('../pages/MedicalDisclaimer'));
+const AttributionPage = lazy(() => import('../pages/AttributionPage'));
 const AboutPage = lazy(() => import('../pages/AboutPage'));
 const ContactPage = lazy(() => import('../pages/ContactPage'));
 const ArticlePage = lazy(() => import('../pages/ArticlePage'));
@@ -86,6 +87,7 @@ export default function AppRoutes({theme, onToggleTheme}: {theme: 'light' | 'dar
       <Route path="/:lang/terms" element={<TermsOfService />} />
       <Route path="/:lang/cookies" element={<CookiePolicy />} />
       <Route path="/:lang/disclaimer" element={<MedicalDisclaimer />} />
+      <Route path="/:lang/attribution" element={<AttributionPage />} />
       <Route path="/:lang/about" element={<AboutPage />} />
       <Route path="/:lang/contact" element={<ContactPage />} />
       <Route path="/:lang/insights" element={<InsightsPage />} />
@@ -125,6 +127,7 @@ export default function AppRoutes({theme, onToggleTheme}: {theme: 'light' | 'dar
         '/terms',
         '/cookies',
         '/disclaimer',
+        '/attribution',
         '/about',
         '/contact',
         '/insights',

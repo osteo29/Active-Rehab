@@ -1069,7 +1069,7 @@ function exerciseSystemDetailRoute(lang: Lang, system: (typeof TRAINING_SYSTEMS)
     ),
   };
 }
-function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'terms' | 'cookies' | 'disclaimer'): RouteDefinition {
+function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'terms' | 'cookies' | 'disclaimer' | 'attribution'): RouteDefinition {
   const isAr = lang === 'ar';
 
   const config = {
@@ -1166,6 +1166,25 @@ function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'term
         ),
       ],
     },
+    attribution: {
+      title: isAr ? 'الحقوق والنسب' : 'Attribution & Media Credits',
+      description: isAr
+        ? 'مصادر وتراخيص الصور التشريحية والوسائط المستخدمة في Active Rehab.'
+        : 'Sources and licenses for the anatomical images and media used in Active Rehab.',
+      eyebrow: isAr ? 'الحقوق' : 'Credits',
+      heading: isAr ? 'الحقوق والنسب' : 'Attribution & Media Credits',
+      intro: isAr
+        ? 'الرسوم التشريحية من ويكيميديا كومنز برخص حرة مع ذكر المؤلف والرخصة والمصدر.'
+        : 'Anatomical illustrations come from Wikimedia Commons under free licenses with author, license, and source listed.',
+      sections: [
+        section(
+          isAr ? 'ما الذي تجده هنا؟' : 'What you will find',
+          isAr
+            ? '<p>قائمة كاملة بالصور التشريحية مع المؤلف والرخصة ورابط المصدر، إضافة إلى ملاحظات عن مصغرات التمارين وفيديوهات يوتيوب المضمنة.</p>'
+            : '<p>A full list of anatomical images with author, license, and source link, plus notes on exercise thumbnails and embedded YouTube videos.</p>',
+        ),
+      ],
+    },
     disclaimer: {
       title: isAr ? 'إخلاء المسؤولية الطبي' : 'Medical Disclaimer',
       description: isAr
@@ -1215,7 +1234,7 @@ const staticRoutes: RouteDefinition[] = [
     injuriesRoute(lang),
     dietsRoute(lang),
     ...dietRegimensCatalog.map((diet) => dietDetailRoute(lang, diet)),
-    ...(['about', 'contact', 'privacy', 'terms', 'cookies', 'disclaimer'] as const).map((page) => infoPageRoute(lang, page)),
+    ...(['about', 'contact', 'privacy', 'terms', 'cookies', 'disclaimer', 'attribution'] as const).map((page) => infoPageRoute(lang, page)),
     exercisesRoute(lang),
     ...EXERCISE_FINDER_STATIC_SLUGS.map((slug) => exercisesRoute(lang, slug)),
     exerciseSystemsRoute(lang),

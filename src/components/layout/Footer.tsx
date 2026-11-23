@@ -82,6 +82,10 @@ const Footer = memo(({t, lang}: {t: any; lang: Language}) => {
                   label: t.footer.links.disclaimer,
                   href: navigationPaths.disclaimer(lang),
                 },
+                {
+                  label: lang === 'ar' ? 'الحقوق والنسب' : 'Attribution & Credits',
+                  href: navigationPaths.attribution(lang),
+                },
               ].map((link) => (
                 <li key={link.href}>
                   <Link to={link.href} className="text-slate-300 transition-colors hover:text-health-green">
