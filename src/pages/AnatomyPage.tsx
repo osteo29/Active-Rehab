@@ -1,6 +1,7 @@
 import Seo from '../components/seo/Seo';
 import {buildHreflangs} from '../utils/langUrlHelper';
 import {useState, useMemo, useRef, useEffect} from 'react';
+import {useSearchParams} from 'react-router-dom';
 import {
   Activity,
   ArrowRight,
@@ -53,6 +54,13 @@ export default function AnatomyPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('all');
   const [activeMuscle, setActiveMuscle] = useState<MuscleDetail | null>(null);
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const slug = searchParams.get('muscle');
+    if (!slug) return;
+    const target = getAllMuscles().find((muscle) => muscle.slug === slug);
+    if (target) setActiveMuscle(target);
+  }, [searchParams]);
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
   const [modalPlayingVideo, setModalPlayingVideo] = useState<string | null>(null);
 
