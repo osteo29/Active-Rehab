@@ -1,4 +1,4 @@
-import {useState, useMemo} from 'react';
+import {useState, useMemo, useRef, useEffect} from 'react';
 import {
   Activity,
   ArrowRight,
@@ -46,12 +46,33 @@ export default function AnatomyPage() {
   const lang = usePreferredLang();
   const isAr = lang === 'ar';
 
+  const dialogRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<'muscles' | 'videos'>('muscles');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('all');
   const [activeMuscle, setActiveMuscle] = useState<MuscleDetail | null>(null);
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
   const [modalPlayingVideo, setModalPlayingVideo] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!activeMuscle) return;
+    const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousOverflow = document.body.style.overflow;
+    const dialog = dialogRef.current;
+    const items = () => Array.from(dialog?.querySelectorAll<HTMLElement>('button:not([disabled]), a[href], [tabindex="0"]') || []).filter(el => el.getClientRects().length > 0);
+    document.body.style.overflow = 'hidden';
+    items()[0]?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {event.preventDefault();setActiveMuscle(null);setModalPlayingVideo(null);return;}
+      if (event.key !== 'Tab') return;
+      const focusable = items();const first = focusable[0];const last = focusable[focusable.length-1];
+      if (!first) {event.preventDefault();return;}
+      if (event.shiftKey && (document.activeElement === first || !dialog?.contains(document.activeElement))) {event.preventDefault();last.focus();}
+      else if (!event.shiftKey && (document.activeElement === last || !dialog?.contains(document.activeElement))) {event.preventDefault();first.focus();}
+    };
+    window.addEventListener('keydown',onKey);
+    return () => {window.removeEventListener('keydown',onKey);document.body.style.overflow=previousOverflow;if(opener?.isConnected)opener.focus();};
+  }, [activeMuscle?.slug]);
 
   const allMuscles = useMemo(() => getAllMuscles(lang), [lang]);
   const allVideoExercises = useMemo(() => getAllBodyIqExercises(), []);
@@ -484,9 +505,10 @@ export default function AnatomyPage() {
         {/* ----------------- MODAL DETAIL FOR SELECTED MUSCLE ----------------- */}
         {activeMuscle && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm">
-            <div className="relative max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl dark:border-slate-800 dark:bg-slate-900 sm:p-8">
+            <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="anatomy-dialog-title" className="relative max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl dark:border-slate-800 dark:bg-slate-900 sm:p-8">
               {/* Close Button */}
               <button
+                aria-label={isAr ? 'إغلاق تفاصيل العضلة' : 'Close muscle details'}
                 onClick={() => {
                   setActiveMuscle(null);
                   setModalPlayingVideo(null);
@@ -501,7 +523,7 @@ export default function AnatomyPage() {
                 <div className="inline-block rounded-md bg-health-green/10 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-health-green">
                   {activeMuscle.region.replace('_', ' ')}
                 </div>
-                <h2 className="mt-2 text-2xl font-black text-slate-900 dark:text-white">{activeMuscle.name}</h2>
+                <h2 id="anatomy-dialog-title" className="mt-2 text-2xl font-black text-slate-900 dark:text-white">{activeMuscle.name}</h2>
                 {activeMuscle.name_ar && (
                   <div className="text-base font-bold text-slate-500 dark:text-slate-400">{activeMuscle.name_ar}</div>
                 )}
