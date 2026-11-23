@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import {describe, it, expect, beforeEach} from 'vitest';
+import {describe, it, expect, beforeEach, vi} from 'vitest';
 import {renderHook, act} from '@testing-library/react';
 import {useMyRecovery} from './useMyRecovery';
 
@@ -84,4 +84,10 @@ describe('useMyRecovery hook', () => {
     expect(result.current.activeJourney?.notes.length).toBe(1);
     expect(result.current.activeJourney?.notes[0].text).toContain('green resistance band');
   });
+});
+
+it('keeps rapid notes independently addressable',()=>{
+ const now=vi.spyOn(Date,'now').mockReturnValue(123456);
+ try {const {result}=renderHook(()=>useMyRecovery());let id='';act(()=>{id=result.current.startJourney({injurySlug:'test',injuryName:'Test'}).id});act(()=>{result.current.addNote(id,'First');result.current.addNote(id,'Second')});const notes=result.current.activeJourney!.notes;expect(notes).toHaveLength(2);expect(new Set(notes.map(note=>note.id)).size).toBe(2);}
+ finally {now.mockRestore()}
 });
