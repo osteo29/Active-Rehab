@@ -1,5 +1,6 @@
 import {useSavedExercises, exerciseBookmarkKey} from '../../../hooks/useSavedExercises';
 import {EXERCISE_NAMES_AR} from './exerciseNamesAr';
+import {sortExercises, type ExerciseSort} from '../../../services/exerciseSort';
 import {useEffect, useId, useMemo, useState} from 'react';
 
 import {CalendarRange, Dumbbell, Flame, Search, Share2, SlidersHorizontal, Sparkles, Target, X} from 'lucide-react';
@@ -82,6 +83,7 @@ export function ExerciseFinder({
   const equipmentId = useId();
   const typeId = useId();
   const workspaceHeadingId = useId();
+  const [sortOrder, setSortOrder] = useState<ExerciseSort>('catalog');
   const [filters, setFilters] = useState<FilterState>(() => readFiltersFromUrl(pathMuscle));
   const [searchInput, setSearchInput] = useState(filters.search);
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -142,7 +144,7 @@ export function ExerciseFinder({
 
     const search = normalizeValue(filters.search);
 
-    return scopedExercises.filter((exercise) => {
+    return sortExercises(scopedExercises.filter((exercise) => {
       const matchesSearch =
         search.length === 0 ||
         normalizeValue(exercise.name).includes(search) ||
@@ -159,8 +161,8 @@ export function ExerciseFinder({
       const matchesType = filters.exerciseType === 'all' || exercise.exerciseType === filters.exerciseType;
 
       return (!savedOnly || saved.includes(exerciseBookmarkKey(exercise))) && matchesSearch && matchesMainMuscle && matchesSubMuscle && matchesLevel && matchesEquipment && matchesType;
-    });
-  }, [exerciseRecords, filters, staticContext, saved, savedOnly]);
+    }), sortOrder, lang);
+  }, [exerciseRecords, filters, staticContext, saved, savedOnly, sortOrder, lang]);
 
   useEffect(() => setVisibleCount(12), [filters, pathMuscle]);
   const visibleExercises = filteredExercises.slice(0, visibleCount);
@@ -436,6 +438,13 @@ export function ExerciseFinder({
                   {savedOnly ? (isAr ? 'عرض كل التمارين' : 'Show all exercises') : (isAr ? 'المحفوظة فقط' : 'Saved exercises only')} ({saved.length})
                 </button>
                 <span className="text-xs text-slate-500">{storageUnavailable ? (isAr ? 'الحفظ الدائم غير متاح في هذا المتصفح. اختياراتك لهذه الزيارة فقط.' : 'Browser storage unavailable. Saves last for this visit only.') : (isAr ? 'محفوظة على هذا الجهاز فقط، وليست خطة علاج.' : 'Saved on this device only, not a treatment plan.')}</span>
+                <label htmlFor={`${searchId}-sort`} className="text-sm font-bold text-slate-700">{isAr ? 'ترتيب العرض' : 'Sort results'}</label>
+                <select id={`${searchId}-sort`} value={sortOrder} onChange={event => setSortOrder(event.target.value as ExerciseSort)} className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700">
+                  <option value="catalog">{isAr ? 'ترتيب المكتبة' : 'Catalog order'}</option>
+                  <option value="name">{isAr ? 'الاسم' : 'Name'}</option>
+                  <option value="level">{isAr ? 'المستوى: مبتدئ أولًا' : 'Level: beginner first'}</option>
+                </select>
+                <span className="text-xs text-slate-500">{isAr ? 'ترتيب للعرض فقط، وليس توصية علاجية.' : 'Display order only, not a treatment recommendation.'}</span>
               </div>
               {catalogError && <div role="status" className="my-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
                 {isAr ? 'تعذر تحديث مكتبة التمارين الآن. نعرض النسخة المحفوظة مع التطبيق؛ حاول تحديث الصفحة لاحقًا.' : 'The exercise update could not be loaded. Showing the catalog included with the app; try refreshing later.'}
