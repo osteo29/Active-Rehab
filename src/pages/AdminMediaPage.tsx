@@ -1,3 +1,4 @@
+import {validateMediaFile} from '../services/mediaValidation';
 import {useEffect, useMemo, useState} from 'react';
 import {ImagePlus, RefreshCw, Trash2, UploadCloud} from 'lucide-react';
 import AdminAccessBoundary from '../components/admin/AdminAccessBoundary';
@@ -90,11 +91,17 @@ export default function AdminMediaPage() {
   const selectedUsages = selectedAsset ? usageMap.get(selectedAsset.id) || [] : [];
 
   const handleUpload = async () => {
+    if (!access.canManageMedia || uploading) return;
     if (!selectedFile) {
       setMessage(isAr ? 'اختر صورة أولًا.' : 'Choose an image first.');
       return;
     }
 
+    const fileError = validateMediaFile(selectedFile);
+    if (fileError) {
+      setMessage(isAr ? 'اختر صورة JPEG أو PNG أو WebP أو GIF غير فارغة بحجم لا يزيد عن 10 ميجابايت.' : fileError);
+      return;
+    }
     try {
       setUploading(true);
       const uploaded = await uploadMediaAsset(selectedFile, {folder, altText});
@@ -200,7 +207,7 @@ export default function AdminMediaPage() {
                 <div className="space-y-4">
                   <label className="block space-y-2 text-sm font-bold text-slate-700">
                     <span>{isAr ? 'الصورة' : 'Image file'}</span>
-                    <input type="file" accept="image/*" onChange={(event) => setSelectedFile(event.target.files?.[0] || null)} className="w-full rounded-2xl border border-slate-300 px-4 py-3" />
+                    <input type="file" accept="image/jpeg,image/png,image/webp,image/gif" onChange={(event) => setSelectedFile(event.target.files?.[0] || null)} className="w-full rounded-2xl border border-slate-300 px-4 py-3" />
                   </label>
                   <label className="block space-y-2 text-sm font-bold text-slate-700">
                     <span>{isAr ? 'المجلد' : 'Folder'}</span>
@@ -216,15 +223,15 @@ export default function AdminMediaPage() {
                   </button>
                   <p className="text-xs leading-6 text-slate-500">
                     {isAr
-                      ? 'الرفع يطبّق ضغطًا خفيفًا، ينشئ thumbnail، ويحفظ blur placeholder من المتصفح قبل التخزين.'
-                      : 'Uploads apply light compression, generate a thumbnail, and save a blur placeholder in-browser before storage.'}
+                      ? 'JPEG أو PNG أو WebP أو GIF، حتى 10 ميجابايت و40 ميجابكسل. تُحوّل الصور إلى WebP ثابت مع صورة مصغرة قبل التخزين.'
+                      : 'JPEG, PNG, WebP or GIF, up to 10 MB and 40 megapixels. Images are compressed into static WebP with a thumbnail before storage.'}
                   </p>
                 </div>
               </section>
 
               <section className="space-y-4 rounded-3xl border border-slate-200 bg-white p-5">
                 <div className="flex flex-wrap items-center gap-3">
-                  <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={isAr ? 'ابحث بالاسم أو المجلد...' : 'Search by file or folder...'} className="min-w-[220px] flex-1 rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-health-green" />
+                  <input aria-label={isAr ? 'البحث في الوسائط' : 'Search media'} value={search} onChange={(event) => setSearch(event.target.value)} placeholder={isAr ? 'ابحث بالاسم أو المجلد...' : 'Search by file or folder...'} className="min-w-[220px] flex-1 rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-health-green" />
                   <label className="inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-3 text-sm font-bold text-slate-700">
                     <input type="checkbox" checked={showUnusedOnly} onChange={(event) => setShowUnusedOnly(event.target.checked)} />
                     <span>{isAr ? 'غير المستخدم فقط' : 'Unused only'}</span>
@@ -235,7 +242,7 @@ export default function AdminMediaPage() {
                   </button>
                 </div>
 
-                {message ? <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">{message}</div> : null}
+                {message ? <div role="status" aria-live="polite" className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">{message}</div> : null}
 
                 <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr),320px]">
                   <div className="space-y-3">
@@ -246,7 +253,7 @@ export default function AdminMediaPage() {
                         const usageCount = usageMap.get(asset.id)?.length || 0;
                         return (
                           <button key={asset.id} type="button" onClick={() => setSelectedId(asset.id)} className={`grid w-full gap-4 rounded-3xl border p-4 text-start md:grid-cols-[120px,minmax(0,1fr)] ${selectedAsset?.id === asset.id ? 'border-health-green bg-emerald-50/40' : 'border-slate-200 bg-slate-50/60'}`}>
-                            <img src={asset.public_url} alt={asset.alt_text || asset.file_name} className="h-28 w-full rounded-2xl object-cover" />
+                            <img loading="lazy" decoding="async" src={asset.public_url} alt={asset.alt_text || asset.file_name} className="h-28 w-full rounded-2xl object-cover" />
                             <div className="space-y-2">
                               <div className="flex flex-wrap items-center justify-between gap-2">
                                 <div className="font-bold text-slate-900">{asset.file_name}</div>
