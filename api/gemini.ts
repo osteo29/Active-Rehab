@@ -1,3 +1,4 @@
+import {validateAiRequest} from '../src/services/aiRequestValidation';
 import {GoogleGenAI} from '@google/genai';
 
 type GeminiRequestBody = {
@@ -44,11 +45,11 @@ export default async function handler(
   }
 
   try {
-    const payload = await readJsonBody(req);
-
-    if (!payload.user?.trim()) {
-      return res.status(400).json({error: 'Missing user prompt'});
-    }
+    let raw: unknown;
+    try { raw = await readJsonBody(req); } catch { return res.status(400).json({error:'Invalid JSON body'}); }
+    const checked = validateAiRequest(raw);
+    if (!checked.data) return res.status(400).json({error:checked.error});
+    const payload = checked.data;
 
     const ai = new GoogleGenAI({apiKey});
     const contents = [
@@ -78,7 +79,7 @@ export default async function handler(
     return res.status(200).json({text: response.text || ''});
   } catch (error) {
     return res.status(500).json({
-      error: error instanceof Error ? error.message : 'Gemini request failed',
+      error: 'The assistant is unavailable. Try again later.',
     });
   }
 }
