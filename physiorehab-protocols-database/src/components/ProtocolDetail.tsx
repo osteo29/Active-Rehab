@@ -35,7 +35,31 @@ interface Protocol {
 
 const ProtocolDetail: React.FC<{ protocol: Protocol, onBack: () => void }> = ({ protocol, onBack }) => {
   const [activePhase, setActivePhase] = useState(0);
-  const phase = protocol.phases[activePhase];
+  const phases = Array.isArray(protocol.phases) ? protocol.phases : [];
+  const phase = phases[Math.min(activePhase, Math.max(phases.length - 1, 0))];
+
+  if (!phase) {
+    return (
+      <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+        <nav className="bg-white border-b border-slate-200 sticky top-0 z-20 print:hidden">
+          <div className="max-w-5xl mx-auto px-4 h-16 flex items-center">
+            <button
+              onClick={onBack}
+              className="flex items-center text-slate-600 hover:text-blue-600 transition-colors group"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+              <span className="font-semibold text-sm uppercase tracking-wider">Medical Dashboard</span>
+            </button>
+          </div>
+        </nav>
+        <main className="max-w-5xl mx-auto px-4 py-24 text-center">
+          <AlertTriangle className="w-10 h-10 text-amber-500 mx-auto mb-4" />
+          <h1 className="text-2xl font-bold text-slate-900 mb-2">{protocol.name}</h1>
+          <p className="text-slate-500">لا توجد مراحل علاجية مسجلة لهذا البروتوكول بعد. / No clinical phases are recorded for this protocol yet.</p>
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-blue-100">
@@ -80,7 +104,7 @@ const ProtocolDetail: React.FC<{ protocol: Protocol, onBack: () => void }> = ({ 
         {/* Phase Navigation - Professional Tabs */}
         <div className="sticky top-[64px] z-10 bg-slate-50/95 backdrop-blur-sm py-4 mb-10 border-b border-slate-200 print:hidden">
           <div className="flex overflow-x-auto pb-2 scrollbar-hide space-x-2 flex-row-reverse">
-            {protocol.phases.map((p, idx) => (
+            {phases.map((p, idx) => (
               <button
                 key={idx}
                 onClick={() => setActivePhase(idx)}
