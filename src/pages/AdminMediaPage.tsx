@@ -25,6 +25,7 @@ export default function AdminMediaPage() {
   const [usages, setUsages] = useState<MediaAssetUsageRow[]>([]);
   const [selectedId, setSelectedId] = useState<string>('');
   const [search, setSearch] = useState('');
+  const [visibleCount, setVisibleCount] = useState(12);
   const [folder, setFolder] = useState('articles');
   const [altText, setAltText] = useState('');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -86,6 +87,8 @@ export default function AdminMediaPage() {
       return matchesSearch && matchesUsage;
     });
   }, [assets, search, showUnusedOnly, usageMap]);
+
+  useEffect(() => setVisibleCount(12), [search, showUnusedOnly]);
 
   const selectedAsset = filteredAssets.find((asset) => asset.id === selectedId) ?? filteredAssets[0] ?? null;
   const selectedUsages = selectedAsset ? usageMap.get(selectedAsset.id) || [] : [];
@@ -242,6 +245,8 @@ export default function AdminMediaPage() {
                   </button>
                 </div>
 
+                {filteredAssets.length > visibleCount && <button type="button" onClick={() => setVisibleCount(count => count + 12)} className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-bold">{isAr ? `عرض 12 ملفًا آخر (${Math.min(visibleCount, filteredAssets.length)} / ${filteredAssets.length})` : `Show 12 more assets (${Math.min(visibleCount, filteredAssets.length)} / ${filteredAssets.length})`}</button>}
+
                 {message ? <div role="status" aria-live="polite" className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">{message}</div> : null}
 
                 <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr),320px]">
@@ -249,7 +254,7 @@ export default function AdminMediaPage() {
                     {loading ? (
                       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-500">{isAr ? 'جار تحميل المكتبة...' : 'Loading media library...'}</div>
                     ) : filteredAssets.length ? (
-                      filteredAssets.map((asset) => {
+                      filteredAssets.slice(0, visibleCount).map((asset) => {
                         const usageCount = usageMap.get(asset.id)?.length || 0;
                         return (
                           <button key={asset.id} type="button" onClick={() => setSelectedId(asset.id)} className={`grid w-full gap-4 rounded-3xl border p-4 text-start md:grid-cols-[120px,minmax(0,1fr)] ${selectedAsset?.id === asset.id ? 'border-health-green bg-emerald-50/40' : 'border-slate-200 bg-slate-50/60'}`}>
