@@ -45,10 +45,10 @@ function isPlaceholderProfile(profile: HealthProfile) {
 const loadStoredArchitectProfile = (): {profile: HealthProfile; isUserProvided: boolean} => {
   const fallback = {profile: DEFAULT_ACTIVE_PROFILE, isUserProvided: false};
   if (typeof window === 'undefined') return fallback;
-  const saved = localStorage.getItem(ARCHITECT_STORAGE_KEY);
-  if (!saved) return fallback;
 
   try {
+    const saved = localStorage.getItem(ARCHITECT_STORAGE_KEY);
+    if (!saved) return fallback;
     const parsed = JSON.parse(saved) as HealthProfile;
     if (parsed.weight > 0 && parsed.height > 0) {
       const merged = {...DEFAULT_ACTIVE_PROFILE, ...parsed};
