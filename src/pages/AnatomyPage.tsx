@@ -53,7 +53,7 @@ export default function AnatomyPage() {
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
   const [modalPlayingVideo, setModalPlayingVideo] = useState<string | null>(null);
 
-  const allMuscles = useMemo(() => getAllMuscles(), []);
+  const allMuscles = useMemo(() => getAllMuscles(lang), [lang]);
   const allVideoExercises = useMemo(() => getAllBodyIqExercises(), []);
 
   // Filtered Muscles
@@ -293,7 +293,7 @@ export default function AnatomyPage() {
 
                       <div className="flex items-start justify-between gap-2">
                         <span className="inline-block rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-                          {muscle.region.replace('_', ' ').toUpperCase()}
+                          {isAr ? REGION_CATEGORIES.find((region) => region.id === muscle.region)?.ar || muscle.region : muscle.region.replace('_', ' ').toUpperCase()}
                         </span>
                         {totalExercises > 0 && (
                           <div className="inline-flex items-center gap-1 rounded-full bg-health-green/10 px-2.5 py-0.5 text-[11px] font-semibold text-health-green-dark dark:text-health-green">
