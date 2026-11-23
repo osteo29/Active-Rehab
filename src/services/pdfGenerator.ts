@@ -34,8 +34,11 @@ export async function generatePdfFromElement({
   element: HTMLElement;
   fileName: string;
 }) {
+  // html2canvas-pro is a drop-in fork that also understands the oklch() colors
+  // Tailwind v4 emits; the stock html2canvas throws on them and the export
+  // failed for every report.
   const [{default: html2canvas}, {jsPDF}] = await Promise.all([
-    import('html2canvas'),
+    import('html2canvas-pro'),
     import('jspdf'),
   ]);
 
