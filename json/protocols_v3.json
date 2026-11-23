@@ -23941,12 +23941,10 @@
           "No forceful gripping with wrist in flexion and forearm in",
           "Monitor for PIN palsy (posterior interosseous nerve) \u2014",
           "NSAIDs may assist in acute nerve irritation phase",
-          "Source (clinician review required): https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf"
+          "Source (clinician review required): https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf",
+          "AAOS pain safety rule: exercises should not cause significant pain. Consult the doctor or physical therapist if pain worsens, exercise increases pain, or symptoms do not improve after 6-12 weeks. This is not clearance to progress."
         ],
-        "criteria_to_progress": [
-          "Exercises should not cause significant pain. If pain steadily worsens, exercises increase pain, or pain fails to improve after 6-12 weeks, consult the doctor or physical therapist.",
-          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician."
-        ],
+        "criteria_to_progress": [],
         "exercises": [
           {
             "exercise_ref": "radial_nerve_slider",
@@ -24022,12 +24020,10 @@
           "Avoid heavy resistive supination until pain <3/10",
           "Monitor for symptom radiation into posterior forearm with loading",
           "Progress gradually \u2014 24h pain rule applies",
-          "Source (clinician review required): https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf"
+          "Source (clinician review required): https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf",
+          "AAOS pain safety rule: exercises should not cause significant pain. Consult the doctor or physical therapist if pain worsens, exercise increases pain, or symptoms do not improve after 6-12 weeks. This is not clearance to progress."
         ],
-        "criteria_to_progress": [
-          "Exercises should not cause significant pain. If pain steadily worsens, exercises increase pain, or pain fails to improve after 6-12 weeks, consult the doctor or physical therapist.",
-          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician."
-        ],
+        "criteria_to_progress": [],
         "exercises": [
           {
             "exercise_ref": "wrist_extension",

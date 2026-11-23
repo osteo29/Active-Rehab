@@ -49,7 +49,7 @@ Clinical draft only. All citations are per protocol in the JSON references and i
 ## Unresolved
 - 74 phase-4 exercise lists still need source-to-phase alignment and clinical review.
 - 20 timing fields remain empty. A disease can be milestone-based rather than week-based; fixed numbers are not automatically appropriate.
-- 28 phase-1/2 progression criteria in protocols 71-85 remain unresolved. Several sources have different phase structures or refer to discharge/return-to-sport, not permission to progress an early phase.
+- 30 phase-1/2 progression criteria in protocols 71-85 remain unresolved. Several sources have different phase structures or refer to discharge/return-to-sport, not permission to progress an early phase.
 - No analogy was used for high-risk femoral neck stress injury, hand tendon repair zones, Perthes disease, or peripheral nerve recovery.
 - The prior source-mapping research is available for continued review, but broad citations do not validate a new clinical threshold.
 
@@ -68,3 +68,5 @@ Clinical draft only. All citations are per protocol in the JSON references and i
 - Protocol 67, phase 4: https://pmc.ncbi.nlm.nih.gov/articles/PMC5112023/
 - Protocol 69, phase 4: https://ncbi.nlm.nih.gov/books/NBK470388/
 - Protocol 89, phase 4: https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-distal-biceps-repair.pdf
+
+Radial-tunnel pain advice is displayed as a safety precaution, not a progression criterion. All 30 originally empty early criteria remain unresolved.

@@ -185,20 +185,6 @@
     "review_required": true
   },
   {
-    "protocol_id": 72,
-    "phase": 1,
-    "field": "criteria_to_progress",
-    "source": "https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf",
-    "review_required": true
-  },
-  {
-    "protocol_id": 72,
-    "phase": 2,
-    "field": "criteria_to_progress",
-    "source": "https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf",
-    "review_required": true
-  },
-  {
     "protocol_id": 8,
     "phase": 4,
     "field": "exercises",
