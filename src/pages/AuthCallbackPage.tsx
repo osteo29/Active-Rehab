@@ -3,7 +3,6 @@ import {LoaderCircle} from 'lucide-react';
 import {Link, useNavigate} from 'react-router-dom';
 import usePreferredLang from './usePreferredLang';
 import {getCurrentSession, getSupabaseActionErrorMessage, onSupabaseAuthChange} from '../lib/supabase';
-import {getPreferredLanguage} from '../services/languagePreference';
 
 export default function AuthCallbackPage() {
   const navigate = useNavigate();
@@ -13,7 +12,7 @@ export default function AuthCallbackPage() {
 
   useEffect(() => {
     let mounted = true;
-    const lang = getPreferredLanguage();
+    const lang = uiLang;
     const target = `/${lang}/`;
 
     const finishLogin = async () => {
@@ -52,7 +51,7 @@ export default function AuthCallbackPage() {
       window.clearTimeout(timeoutId);
       data.subscription.unsubscribe();
     };
-  }, [navigate]);
+  }, [navigate, uiLang]);
 
   return (
     <div dir={isAr ? 'rtl' : 'ltr'} className="flex min-h-screen items-center justify-center bg-soft-blue px-4">
