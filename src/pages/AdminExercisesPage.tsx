@@ -1,3 +1,4 @@
+import {isSafeContentLink, isSafeMediaPath, isValidContentSlug} from '../services/adminValidation';
 import {useEffect, useMemo, useState} from 'react';
 import Seo from '../components/seo/Seo';
 import AdminAccessBoundary from '../components/admin/AdminAccessBoundary';
@@ -118,6 +119,15 @@ export default function AdminExercisesPage() {
     if (!access.canManageExercises || saving) return;
     if (!draft.slug.trim() || !draft.name.trim() || !draft.region.trim()) {
       setNotice(isAr ? 'الاسم والـ slug والمنطقة مطلوبة.' : 'Name, slug, and region are required.');
+      return;
+    }
+
+    if (!isValidContentSlug(draft.slug)) {
+      setNotice(isAr ? 'استخدم حروفًا إنجليزية صغيرة وأرقامًا وشرطات فقط في المعرّف.' : 'Use lowercase letters, numbers, hyphens or underscores in the slug.');
+      return;
+    }
+    if ((!isSafeContentLink(draft.video_url || '') || !isSafeMediaPath(draft.thumbnail_path || ''))) {
+      setNotice(isAr ? 'استخدم روابط HTTP أو HTTPS أو مسارات محلية صالحة.' : 'Use valid HTTP or HTTPS links or local paths.');
       return;
     }
 
@@ -269,7 +279,7 @@ export default function AdminExercisesPage() {
                 ) : null}
               </div>
 
-              {notice ? <p className="mt-4 text-sm text-slate-600">{notice}</p> : null}
+              {notice ? <p role="status" aria-live="polite" className="mt-4 text-sm text-slate-600">{notice}</p> : null}
             </div>
           </div>
         </AdminShell>
