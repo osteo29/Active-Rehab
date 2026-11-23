@@ -15,7 +15,9 @@ import {getSiteUrl} from '../services/site';
  * /injuries/acl -> /injuries/acl (already without prefix)
  */
 export function removeLangPrefix(pathname: string): string {
-  return pathname.replace(/^\/(en|ar)\//, '/');
+  // Matches both `/en/...` and the bare `/en` / `/ar` home paths (no trailing slash).
+  const stripped = pathname.replace(/^\/(en|ar)(?=\/|$)/, '');
+  return stripped === '' ? '/' : stripped;
 }
 
 /**
@@ -36,7 +38,7 @@ export function generateLangUrl(path: string, lang: Language): string {
  */
 export function convertToLangUrl(oldUrl: string, lang: Language): string {
   // If already has language prefix, replace it
-  if (/^\/(en|ar)\//.test(oldUrl)) {
+  if (/^\/(en|ar)(?:\/|$)/.test(oldUrl)) {
     return generateLangUrl(oldUrl, lang);
   }
   
@@ -49,7 +51,7 @@ export function convertToLangUrl(oldUrl: string, lang: Language): string {
  * Returns 'en' | 'ar' or null if not found
  */
 export function extractLangFromPath(pathname: string): Language | null {
-  const match = pathname.match(/^\/(en|ar)\//);
+  const match = pathname.match(/^\/(en|ar)(?:\/|$)/);
   return (match?.[1] as Language) || null;
 }
 
