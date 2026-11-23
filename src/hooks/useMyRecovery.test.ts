@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import {describe, it, expect, beforeEach} from 'vitest';
+import {describe, it, expect, beforeEach, vi} from 'vitest';
 import {renderHook, act} from '@testing-library/react';
 import {useMyRecovery} from './useMyRecovery';
 
@@ -84,4 +84,10 @@ describe('useMyRecovery hook', () => {
     expect(result.current.activeJourney?.notes.length).toBe(1);
     expect(result.current.activeJourney?.notes[0].text).toContain('green resistance band');
   });
+});
+
+it('warns when device storage rejects recovery changes',()=>{
+ const spy=vi.spyOn(Storage.prototype,'setItem').mockImplementation(()=>{throw new Error('quota')});
+ try {const {result}=renderHook(()=>useMyRecovery());expect(result.current.storageError).toBe(true);}
+ finally {spy.mockRestore();}
 });
