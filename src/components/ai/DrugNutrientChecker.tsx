@@ -134,6 +134,7 @@ export default function DrugNutrientChecker({
             {EXAMPLES[isAr ? 'ar' : 'en'].map((example) => (
               <button
                 key={example}
+                disabled={isLoading}
                 type="button"
                 onClick={() => {setQuery(example);setResult(null);setError(null);}}
                 className="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-600 hover:border-medical-blue hover:text-medical-blue"
