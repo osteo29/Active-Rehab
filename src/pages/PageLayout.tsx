@@ -1,4 +1,4 @@
-import {type ReactNode, useState} from 'react';
+import {type ReactNode, useEffect, useRef, useState} from 'react';
 import {Menu, Moon, Sun, X} from 'lucide-react';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 import BrandLogo from '../components/common/BrandLogo';
@@ -39,7 +39,18 @@ export default function PageLayout({
   const isAr = lang === 'ar';
   const {theme, toggleTheme} = useStoredTheme();
   const ui = injuryUiStrings[lang];
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {setMobileOpen(false);menuButtonRef.current?.focus();}
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [mobileOpen]);
+  useEffect(() => setMobileOpen(false), [location.pathname]);
 
   const maxWidth = wide ? 'max-w-7xl' : 'max-w-5xl';
 
@@ -82,6 +93,7 @@ export default function PageLayout({
 
   return (
     <div className="min-h-screen bg-soft-blue dark:bg-slate-950" dir={isAr ? 'rtl' : 'ltr'}>
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-slate-900 focus:shadow-xl" onClick={(event) => {event.preventDefault();document.getElementById('main-content')?.focus();}}>{isAr ? 'انتقل إلى المحتوى' : 'Skip to content'}</a>
       <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 shadow-sm backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90">
         <div className={`mx-auto ${maxWidth} px-4 sm:px-6 lg:px-8`}>
           <div className="flex h-16 items-center justify-between gap-4">
@@ -91,7 +103,7 @@ export default function PageLayout({
 
             <nav className="hidden items-center gap-0.5 lg:flex" aria-label={isAr ? 'التنقل الرئيسي' : 'Main navigation'}>
               {navItems.map((item) => (
-                <Link key={item.key} to={item.href} className={navLinkClass(isActive(item.href))}>
+                <Link key={item.key} to={item.href} aria-current={isActive(item.href) ? 'page' : undefined} className={navLinkClass(isActive(item.href))}>
                   {item.label}
                 </Link>
               ))}
@@ -142,6 +154,9 @@ export default function PageLayout({
               <button
                 type="button"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 lg:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+                ref={menuButtonRef}
+                aria-expanded={mobileOpen}
+                aria-controls="page-mobile-navigation"
                 aria-label={mobileOpen ? (isAr ? 'إغلاق القائمة' : 'Close menu') : isAr ? 'فتح القائمة' : 'Open menu'}
                 onClick={() => setMobileOpen((open) => !open)}
               >
@@ -152,6 +167,7 @@ export default function PageLayout({
 
           {mobileOpen ? (
             <nav
+              id="page-mobile-navigation"
               className="border-t border-slate-200 py-4 lg:hidden dark:border-slate-800"
               aria-label={isAr ? 'قائمة الجوال' : 'Mobile menu'}
             >
@@ -188,7 +204,7 @@ export default function PageLayout({
         </div>
       </header>
 
-      <main className={`mx-auto ${maxWidth} px-4 py-8 sm:px-6 lg:px-10`}>
+      <main id="main-content" tabIndex={-1} className={`mx-auto ${maxWidth} px-4 py-8 sm:px-6 lg:px-10`}>
         {!hideTitle ? (
           <h1 className="mb-6 text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl">{title}</h1>
         ) : null}
