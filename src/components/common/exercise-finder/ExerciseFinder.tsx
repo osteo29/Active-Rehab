@@ -81,6 +81,7 @@ export function ExerciseFinder({
   const [filters, setFilters] = useState<FilterState>(() => readFiltersFromUrl(pathMuscle));
   const [searchInput, setSearchInput] = useState(filters.search);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(12);
   const [workspaceView, setWorkspaceView] = useState<'browse' | 'systems' | 'schedule'>('browse');
   const debouncedSearch = useDebounce(searchInput, 300);
 
@@ -156,6 +157,8 @@ export function ExerciseFinder({
     });
   }, [exerciseRecords, filters, staticContext]);
 
+  useEffect(() => setVisibleCount(12), [filters, pathMuscle]);
+  const visibleExercises = filteredExercises.slice(0, visibleCount);
   const selectedMainMuscle = filters.muscle !== 'all' ? filters.muscle : staticContext?.staticMuscles?.[0] || null;
   const anatomyList = selectedMainMuscle ? MUSCLE_TREE[selectedMainMuscle] : [];
   const popularExercises = selectedMainMuscle
@@ -860,7 +863,7 @@ export function ExerciseFinder({
                       </div>
                     ) : (
                       <div className="grid gap-5 md:grid-cols-2">
-                        {filteredExercises.map((exercise) => (
+                        {visibleExercises.map((exercise) => (
                           <ExerciseCard
                             key={`${exercise.mainMuscle}-${exercise.name}`}
                             exercise={exercise}
@@ -870,6 +873,10 @@ export function ExerciseFinder({
                         ))}
                       </div>
                     )}
+                    {filteredExercises.length > visibleCount && <div className="mt-6 text-center">
+                      <button type="button" onClick={() => setVisibleCount(count => count + 12)} className="rounded-2xl border border-slate-200 bg-white px-6 py-3 text-sm font-bold text-slate-700">{isAr ? 'عرض 12 تمرينًا آخر' : 'Show 12 more exercises'}</button>
+                      <p role="status" className="mt-2 text-xs text-slate-500">{isAr ? `المعروض ${visibleExercises.length} من ${filteredExercises.length}` : `Showing ${visibleExercises.length} of ${filteredExercises.length}`}</p>
+                    </div>}
                   </>
                 )}
 
