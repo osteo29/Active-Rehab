@@ -235,6 +235,24 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://activerehab.vercel.app/en/anatomy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/anatomy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/anatomy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/anatomy" />
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://activerehab.vercel.app/ar/anatomy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/anatomy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/anatomy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/anatomy" />
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://activerehab.vercel.app/en/exercises</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/exercises" />
     <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/exercises" />
