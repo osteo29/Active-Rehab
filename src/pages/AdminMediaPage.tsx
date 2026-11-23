@@ -224,7 +224,7 @@ export default function AdminMediaPage() {
 
               <section className="min-w-0 space-y-4 rounded-3xl border border-slate-200 bg-white p-5">
                 <div className="flex flex-wrap items-center gap-3">
-                  <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={isAr ? 'ابحث بالاسم أو المجلد...' : 'Search by file or folder...'} className="min-w-0 w-full flex-1 rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-health-green" />
+                  <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={isAr ? 'ابحث بالاسم أو المجلد...' : 'Search by file or folder...'} className="min-w-0 w-full basis-full sm:basis-0 flex-1 rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-health-green" />
                   <label className="inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-3 text-sm font-bold text-slate-700">
                     <input type="checkbox" checked={showUnusedOnly} onChange={(event) => setShowUnusedOnly(event.target.checked)} />
                     <span>{isAr ? 'غير المستخدم فقط' : 'Unused only'}</span>
