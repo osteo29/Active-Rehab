@@ -105,6 +105,7 @@ function isStoredJourney(value: unknown): value is RecoveryJourney {
 }
 
 export function useMyRecovery() {
+  const [storageError, setStorageError] = useState(false);
   const [journeys, setJourneys] = useState<RecoveryJourney[]>(() => {
     if (typeof window === 'undefined') return [];
     try {
@@ -130,8 +131,9 @@ export function useMyRecovery() {
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(journeys));
+      setStorageError(false);
     } catch (e) {
-      console.warn('Failed to save recovery journeys to localStorage', e);
+      setStorageError(true);
     }
   }, [journeys]);
 
@@ -342,6 +344,7 @@ export function useMyRecovery() {
   );
 
   return {
+    storageError,
     journeys,
     activeJourney,
     activeJourneyId,

@@ -55,6 +55,7 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
   const isAr = lang === 'ar';
   const {
     journeys,
+    storageError,
     activeJourney,
     setActiveJourneyId,
     startJourney,
@@ -82,11 +83,13 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
     setNewNoteText('');
   }, [activeJourney?.id, activeJourney?.painLevel]);
   useEffect(() => {setEditingNoteId(null);setEditedNote('');setShowAllNotes(false)}, [activeJourney?.id]);
+  const storageNotice = storageError ? <p role="status" className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{isAr ? 'تعذر حفظ التغييرات على هذا الجهاز. قد تفقدها عند إغلاق الصفحة أو تحديثها. اسمح بتخزين الموقع أو دوّن السجل قبل المغادرة.' : 'Changes could not be saved on this device. They may be lost when you close or refresh the page. Allow site storage or record your log before leaving.'}</p> : null;
 
   // If no active journey is tracked yet, show an engaging selector
   if (!activeJourney || journeys.length === 0) {
     return (
       <div className="rounded-[2rem] border border-amber-200/40 bg-gradient-to-br from-amber-50/60 via-white to-amber-50/30 p-6 shadow-sm dark:border-amber-900/30 dark:from-slate-900 dark:via-slate-900/90 dark:to-slate-950 sm:p-8">
+        {storageNotice}
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-health-green/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-health-green">
@@ -179,6 +182,7 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
 
   return (
     <div className="rounded-[2.25rem] border border-slate-200/90 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-7">
+      {storageNotice}
       {/* Multi-journey tab selector if user has more than 1 */}
       {journeys.length > 1 && (
         <div className="mb-5 flex items-center gap-2 overflow-x-auto pb-2">
