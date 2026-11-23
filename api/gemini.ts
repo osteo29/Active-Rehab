@@ -1,32 +1,5 @@
-import {validateAiRequest} from '../src/services/aiRequestValidation';
+import {validateAiRequest, readAiJsonBody} from '../src/services/aiRequestValidation';
 import {GoogleGenAI} from '@google/genai';
-
-type GeminiRequestBody = {
-  system?: string;
-  user?: string;
-  hiddenContext?: string;
-};
-
-async function readJsonBody(req: {body?: unknown; on?: (event: string, cb: (chunk?: Buffer) => void) => void}) {
-  if (typeof req.body === 'string') {
-    return JSON.parse(req.body || '{}') as GeminiRequestBody;
-  }
-
-  if (req.body && typeof req.body === 'object') {
-    return req.body as GeminiRequestBody;
-  }
-
-  const raw = await new Promise<string>((resolve, reject) => {
-    let data = '';
-    req.on?.('data', (chunk) => {
-      data += chunk?.toString?.() || '';
-    });
-    req.on?.('end', () => resolve(data));
-    req.on?.('error', reject);
-  });
-
-  return JSON.parse(raw || '{}') as GeminiRequestBody;
-}
 
 export default async function handler(
   req: {method?: string; body?: unknown; on?: (event: string, cb: (chunk?: Buffer) => void) => void},
@@ -46,7 +19,7 @@ export default async function handler(
 
   try {
     let raw: unknown;
-    try { raw = await readJsonBody(req); } catch { return res.status(400).json({error:'Invalid JSON body'}); }
+    try { raw = await readAiJsonBody(req); } catch { return res.status(400).json({error:'Invalid JSON body'}); }
     const checked = validateAiRequest(raw);
     if (!checked.data) return res.status(400).json({error:checked.error});
     const payload = checked.data;
