@@ -1,4 +1,5 @@
 // @vitest-environment jsdom
+import {readFileSync} from 'node:fs';
 import {describe, expect, it, vi} from 'vitest';
 import {migrateLegacyStorageKeys} from './storageMigration';
 
@@ -50,4 +51,10 @@ describe('migrateLegacyStorageKeys', () => {
 it('treats a denied localStorage getter as a best-effort migration',()=>{
  const getter=vi.spyOn(window,'localStorage','get').mockImplementation(()=>{throw new Error('denied')});
  try {expect(()=>migrateLegacyStorageKeys()).not.toThrow()} finally {getter.mockRestore()}
+});
+
+it('runs migration before theme or UI preference reads at startup',()=>{
+ const source=readFileSync('src/main.tsx','utf8');
+ expect(source.indexOf('migrateLegacyStorageKeys();')).toBeGreaterThan(0);
+ expect(source.indexOf('migrateLegacyStorageKeys();')).toBeLessThan(source.indexOf('applyThemePreference(getStoredThemePreference())'));
 });

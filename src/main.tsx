@@ -1,3 +1,4 @@
+import {migrateLegacyStorageKeys} from './services/storageMigration';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom';
@@ -5,6 +6,7 @@ import RouterApp from './RouterApp';
 import {applyThemePreference, getStoredThemePreference} from './hooks/useStoredTheme';
 import './index.css';
 
+migrateLegacyStorageKeys();
 applyThemePreference(getStoredThemePreference());
 
 createRoot(document.getElementById('root')!).render(
