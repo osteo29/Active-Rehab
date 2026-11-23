@@ -1,3 +1,4 @@
+import {isSafeContentLink} from '../services/adminValidation';
 import {useEffect, useState} from 'react';
 import Seo from '../components/seo/Seo';
 import AdminAccessBoundary from '../components/admin/AdminAccessBoundary';
@@ -117,6 +118,14 @@ export default function AdminHomepagePage() {
 
   const handleSave = async () => {
     if (!access.canManageHomepage || saving) return;
+    if (!draft.hero_title.trim()) {
+      setNotice(isAr ? 'عنوان الصفحة مطلوب.' : 'A hero title is required.');
+      return;
+    }
+    if (![draft.hero_cta_href || '', draft.banner_cta_href || ''].every(isSafeContentLink)) {
+      setNotice(isAr ? 'استخدم رابطًا محليًا يبدأ بـ / أو رابط HTTP أو HTTPS صالحًا.' : 'Use a local / path or a valid HTTP or HTTPS link.');
+      return;
+    }
     try {
       setSaving(true);
       await upsertHomepageSettings(draft);
@@ -235,7 +244,7 @@ export default function AdminHomepagePage() {
               </button>
             </div>
 
-            {notice ? <p className="mt-4 text-sm text-slate-600">{notice}</p> : null}
+            {notice ? <p role="status" aria-live="polite" className="mt-4 text-sm text-slate-600">{notice}</p> : null}
           </div>
         </AdminShell>
       </AdminAccessBoundary>
