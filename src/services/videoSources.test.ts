@@ -13,7 +13,7 @@ describe('verified YouTube demo mappings', () => {
       expect(source.playableInEmbed).toBe(true);
       expect(source.centralCheck).toBe(true);
       expect(video.youtubeId).toBe(source.youtubeId);
-      expect(video.embedVideoUrl).toBe(`https://www.youtube.com/embed/${source.youtubeId}`);
+      expect(video.embedVideoUrl).toContain(`https://www.youtube.com/embed/${source.youtubeId}`);
       for (const groups of Object.values(muscles)) {
         for (const exercise of [...groups.primary, ...groups.stabilizer]) {
           if (exercise.id === source.libraryId) expect(exercise.youtube_id).toBe(source.youtubeId);

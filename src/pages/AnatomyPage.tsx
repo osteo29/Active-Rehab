@@ -366,7 +366,7 @@ export default function AnatomyPage() {
                         </div>
                       ) : isPlaying ? (
                         <iframe
-                          src={`${ex.embedVideoUrl}?autoplay=1&rel=0&modestbranding=1`}
+                          src={`${ex.embedVideoUrl}${ex.embedVideoUrl?.includes('?') ? '&' : '?'}autoplay=1&rel=0`}
                           title={ex.nameEn}
                           className="h-full w-full border-0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
