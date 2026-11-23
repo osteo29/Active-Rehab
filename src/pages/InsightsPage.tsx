@@ -66,7 +66,7 @@ export default function InsightsPage() {
             <p className="mt-4 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
               {lang === 'en'
                 ? 'Search, filter, and move from reading into practical tools like calculators, rehab pathways, and recovery tracking.'
-                : 'ابحث وصف المحتوى ثم انتقل من القراءة إلى أدوات عملية مثل الحاسبات ومسارات التأهيل ومتابعة التعافي.'}
+                : 'ابحث وصفِّ المحتوى ثم انتقل من القراءة إلى أدوات عملية مثل الحاسبات ومسارات التأهيل ومتابعة التعافي.'}
             </p>
           </div>
 
@@ -74,6 +74,8 @@ export default function InsightsPage() {
             <label className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
               <Search className="h-4 w-4 text-slate-400" />
               <input
+                aria-label={lang === 'en' ? 'Search articles' : 'البحث في المقالات'}
+                type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={lang === 'en' ? 'Search articles, topics, or categories...' : 'ابحث في المقالات أو التصنيفات...'}
@@ -81,7 +83,7 @@ export default function InsightsPage() {
               />
             </label>
 
-            <div className="text-sm text-slate-500">
+            <div role="status" aria-live="polite" className="text-sm text-slate-500">
               {lang === 'en'
                 ? `${filteredArticles.length} articles ready to explore`
                 : `${filteredArticles.length} مقالًا جاهزًا للاستكشاف`}
@@ -97,6 +99,7 @@ export default function InsightsPage() {
                 <button
                   key={entry}
                   type="button"
+                  aria-pressed={isActive}
                   onClick={() => setCategory(entry)}
                   className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
                     isActive
