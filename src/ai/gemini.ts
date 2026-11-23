@@ -157,7 +157,11 @@ export async function askGeminiText(params: GeminiAskParams): Promise<string> {
   const cached = getCachedAiResponse(params.cacheKey);
   if (cached) return cached;
 
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 45_000);
+  try {
   const response = await fetch('/api/gemini', {
+    signal: controller.signal,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -169,14 +173,21 @@ export async function askGeminiText(params: GeminiAskParams): Promise<string> {
     }),
   });
 
-  const payload = (await response.json().catch(() => ({}))) as GeminiResponse;
+  const raw: unknown = await response.json().catch(() => null);
+  const payload: GeminiResponse = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};
+  const errorMessage = typeof payload.error === 'string' ? payload.error : '';
   if (!response.ok) {
-    throw new Error(payload.error || 'AI request failed');
+    throw new Error(errorMessage || 'The assistant is unavailable. Try again.');
   }
 
-  const answer = String(payload.text || '').trim();
+  const answer = typeof payload.text === 'string' ? payload.text.trim() : '';
+  if (!answer) throw new Error('The assistant returned an empty answer. Try again.');
   setCachedAiResponse(params.cacheKey, answer);
   return answer;
+  } catch (error) {
+    if (controller.signal.aborted) throw new Error('The assistant took too long to respond. Try again.');
+    throw error;
+  } finally { clearTimeout(timer); }
 }
 
 export function trackAiQuestion(_question: string, meta?: Record<string, unknown>) {
