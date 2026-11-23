@@ -49,8 +49,6 @@ const loadStoredArchitectProfile = (): {profile: HealthProfile; isUserProvided: 
   if (!saved) return fallback;
 
   try {
-    const saved = localStorage.getItem(ARCHITECT_STORAGE_KEY);
-    if (!saved) return DEFAULT_ACTIVE_PROFILE;
     const parsed = JSON.parse(saved) as HealthProfile;
     if (parsed.weight > 0 && parsed.height > 0) {
       const merged = {...DEFAULT_ACTIVE_PROFILE, ...parsed};
