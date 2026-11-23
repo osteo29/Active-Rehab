@@ -48,6 +48,8 @@ export default function PageLayout({
     {key: 'exercises', href: `/${lang}/exercises`, label: ui.nav.exercises},
     {key: 'diets', href: `/${lang}/diets`, label: ui.nav.diets},
     {key: 'insights', href: `/${lang}/insights`, label: ui.nav.insights},
+    {key: 'assistant', href: `/${lang}/assistant`, label: ui.nav.assistant},
+    {key: 'dashboard', href: `/${lang}/dashboard`, label: ui.nav.dashboard},
     {key: 'about', href: `/${lang}/about`, label: ui.nav.about},
     {key: 'contact', href: `/${lang}/contact`, label: isAr ? 'اتصل بنا' : 'Contact'},
   ];
@@ -120,6 +122,13 @@ export default function PageLayout({
                   AR
                 </button>
               </div>
+
+              <Link
+                to={`/${lang}/auth`}
+                className="hidden items-center rounded-xl bg-health-green px-3 py-2 text-xs font-bold text-white transition hover:bg-health-green-dark sm:inline-flex"
+              >
+                {ui.nav.account}
+              </Link>
 
               <button
                 type="button"

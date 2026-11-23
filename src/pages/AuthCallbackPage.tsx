@@ -53,10 +53,10 @@ export default function AuthCallbackPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-soft-blue px-4">
-      <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+      <div className="w-full max-w-md rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 text-center shadow-sm">
         {error ? (
           <>
-            <h1 className="text-lg font-semibold text-slate-900">Authentication error</h1>
+            <h1 className="text-lg font-semibold text-slate-900 dark:text-white">Authentication error</h1>
             <p className="mt-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
               {error}
             </p>
@@ -64,7 +64,7 @@ export default function AuthCallbackPage() {
         ) : (
           <>
             <LoaderCircle className="mx-auto h-6 w-6 animate-spin text-health-green" />
-            <h1 className="mt-4 text-lg font-semibold text-slate-900">Completing sign in</h1>
+            <h1 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">Completing sign in</h1>
             <p className="mt-2 text-sm text-slate-500">
               Please wait while we finish your secure session.
             </p>

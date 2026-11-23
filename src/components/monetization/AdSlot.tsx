@@ -49,7 +49,7 @@ export default function AdSlot({
 
   return (
     <div className={`rounded-[2rem] border border-dashed border-slate-300 bg-slate-50 p-5 ${formatClass}`}>
-      <div className="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-600">
+      <div className="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-600 dark:text-slate-300">
         <Megaphone className="w-3.5 h-3.5" />
         <span>{label}</span>
       </div>
@@ -64,8 +64,8 @@ export default function AdSlot({
           data-full-width-responsive={format === 'auto' ? 'true' : undefined}
         />
       ) : (
-        <div className="h-full flex items-center justify-center rounded-[1.5rem] border border-slate-200 bg-white text-center px-6">
-          <p className="max-w-xl text-sm leading-6 text-slate-700">
+        <div className="h-full flex items-center justify-center rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-center px-6">
+          <p className="max-w-xl text-sm leading-6 text-slate-700 dark:text-slate-200">
             {consent === 'rejected'
               ? lang === 'en'
                 ? 'Ads are hidden because non-essential consent was rejected.'

@@ -180,7 +180,7 @@ export default function AuthPage({
   if (checkingSession) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-soft-blue px-4">
-        <div className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-600 shadow-sm">
+        <div className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-5 py-4 text-slate-600 dark:text-slate-300 shadow-sm">
           <LoaderCircle className="h-4 w-4 animate-spin" />
           <span>{isAr ? 'جارٍ التحقق من الجلسة' : 'Checking session'}</span>
         </div>
@@ -203,7 +203,7 @@ export default function AuthPage({
         noIndex
       />
 
-      <nav className="sticky top-0 z-50 border-b border-slate-100 bg-white/85 px-3 backdrop-blur-md sm:px-6 lg:px-8">
+      <nav className="sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 bg-white/85 dark:bg-slate-900/85 px-3 backdrop-blur-md sm:px-6 lg:px-8">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3">
           <Link to="/" className="group">
             <BrandLogo imageClassName="transition-transform group-hover:scale-105" />
@@ -211,7 +211,7 @@ export default function AuthPage({
 
           <button
             onClick={onToggleTheme}
-            className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-slate-700 transition-all hover:border-health-green/30"
+            className="flex items-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-3 py-2 text-slate-700 dark:text-slate-200 transition-all hover:border-health-green/30"
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
@@ -221,15 +221,15 @@ export default function AuthPage({
 
       <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl items-center px-4 py-10 sm:px-6 lg:px-8">
         <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-[1fr_0.95fr]">
-          <div className="rounded-[2rem] border border-slate-200 bg-white/80 p-6 shadow-sm sm:p-8">
+          <div className="rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 p-6 shadow-sm sm:p-8">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-health-green/20 bg-health-green/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-health-green">
               <LockKeyhole className="h-4 w-4" />
               <span>{isAr ? 'مساحة آمنة' : 'Secure access'}</span>
             </div>
-            <h1 className="text-3xl font-black text-slate-900 sm:text-4xl">
+            <h1 className="text-3xl font-black text-slate-900 dark:text-white sm:text-4xl">
               {isAr ? 'احفظ نتائجك داخل حسابك' : 'Save your results inside your account'}
             </h1>
-            <p className="mt-3 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
+            <p className="mt-3 max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300 sm:text-base">
               {isAr
                 ? 'أنشئ حسابًا أو سجّل الدخول لحفظ القياسات، مراجعة السجل الزمني، والحفاظ على متابعتك مستمرة على نفس الجهاز وبعد كل تحديث للصفحة.'
                 : 'Create an account or sign in to save assessments, review history, and keep your session active after refreshes on the same device.'}
@@ -250,22 +250,22 @@ export default function AuthPage({
                   desc: isAr ? 'يبقى دخولك محفوظًا على نفس الجهاز.' : 'Your login stays active on the same device.',
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4">
-                  <div className="font-bold text-slate-900">{item.title}</div>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.desc}</p>
+                <div key={item.title} className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-4">
+                  <div className="font-bold text-slate-900 dark:text-white">{item.title}</div>
+                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/50 sm:p-8">
+          <div className="rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-xl shadow-slate-200/50 sm:p-8">
             {!isSupabaseConfigured ? (
               <div className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-600">
                 {getSupabaseConfigurationMessage(lang)}
               </div>
             ) : (
               <>
-                <div className="mb-6 flex gap-2 rounded-full border border-slate-200 bg-slate-100 p-1">
+                <div className="mb-6 flex gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 p-1">
                   <button
                     onClick={() => setMode('signin')}
                     className={`flex-1 rounded-full px-4 py-2 text-sm font-bold transition-all ${
@@ -302,7 +302,7 @@ export default function AuthPage({
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder={isAr ? 'الاسم الكامل' : 'Full name'}
-                      className="w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green/30"
+                      className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green/30"
                     />
                   ) : null}
 
@@ -311,7 +311,7 @@ export default function AuthPage({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={isAr ? 'البريد الإلكتروني' : 'Email address'}
-                    className="w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green/30"
+                    className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green/30"
                     required
                   />
 
@@ -320,7 +320,7 @@ export default function AuthPage({
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder={isAr ? 'كلمة المرور' : 'Password'}
-                    className="w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green/30"
+                    className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 px-4 py-3 outline-none focus:ring-2 focus:ring-health-green/30"
                     required
                     minLength={6}
                   />

@@ -307,7 +307,7 @@ export default function TrackingDashboardPage() {
 
   if (!isSupabaseConfigured) {
     return (
-      <div className="min-h-screen bg-slate-50 px-4 py-20 text-center text-slate-600">
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 px-4 py-20 text-center text-slate-600 dark:text-slate-300">
         {message || getSupabaseConfigurationMessage(lang)}
       </div>
     );
@@ -315,8 +315,8 @@ export default function TrackingDashboardPage() {
 
   if (status === 'checking') {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-50">
-        <div className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-slate-600 shadow-sm">
+      <div className="flex min-h-screen items-center justify-center bg-slate-50 dark:bg-slate-950">
+        <div className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-5 py-4 text-slate-600 dark:text-slate-300 shadow-sm">
           <LoaderCircle className="h-4 w-4 animate-spin" />
           <span>{isAr ? 'جارٍ التحقق من الجلسة' : 'Checking session'}</span>
         </div>
@@ -329,7 +329,7 @@ export default function TrackingDashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <Seo
         title={isAr ? 'لوحة المتابعة' : 'Tracking Dashboard'}
         description={
@@ -347,7 +347,7 @@ export default function TrackingDashboardPage() {
             <div className="mb-2 text-[11px] font-bold uppercase tracking-[0.18em] text-health-green">
               {isAr ? 'لوحة المتابعة الآمنة' : 'Secure tracking dashboard'}
             </div>
-            <h1 className="text-2xl font-bold text-slate-900 sm:text-[1.9rem]">
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-white sm:text-[1.9rem]">
               {isAr ? 'سجل القياسات المرتبط بحسابك' : 'Assessment history linked to your account'}
             </h1>
             <p className="mt-1.5 text-sm text-slate-500">{user.email}</p>
@@ -369,7 +369,7 @@ export default function TrackingDashboardPage() {
             </button>
             <Link
               to={navigationPaths.home(lang)}
-              className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700"
+              className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2.5 text-sm font-bold text-slate-700 dark:text-slate-200"
             >
               <ArrowLeft className={`h-4 w-4 ${isAr ? 'rotate-180' : ''}`} />
               <span>{isAr ? 'العودة للرئيسية' : 'Back home'}</span>
@@ -387,7 +387,7 @@ export default function TrackingDashboardPage() {
         </div>
 
         {message ? (
-          <div className="mb-6 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-600 shadow-sm">
+          <div className="mb-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm text-slate-600 dark:text-slate-300 shadow-sm">
             {message}
           </div>
         ) : null}
@@ -395,7 +395,7 @@ export default function TrackingDashboardPage() {
         <div className="mb-8">
           <Suspense
             fallback={
-              <div className="flex h-48 items-center justify-center rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="flex h-48 items-center justify-center rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm">
                 <LoaderCircle className="h-6 w-6 animate-spin text-health-green" />
               </div>
             }
@@ -404,13 +404,13 @@ export default function TrackingDashboardPage() {
           </Suspense>
         </div>
 
-        <div className="mb-5 rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+        <div className="mb-5 rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 shadow-sm sm:p-5">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-health-green">
                 {isAr ? 'عدسة المتابعة' : 'Recovery lens'}
               </div>
-              <p className="mt-1.5 max-w-2xl text-sm leading-6 text-slate-600">
+              <p className="mt-1.5 max-w-2xl text-sm leading-6 text-slate-600 dark:text-slate-300">
                 {isAr
                   ? 'اعرض بياناتك حسب الفترة الزمنية التي تريد مراجعتها، ثم راقب المؤشر نفسه بصورة متسقة حتى تكون المقارنة مفيدة سريريًا.'
                   : 'Review one time window at a time, then keep tracking the same metric consistently so the comparisons stay clinically useful.'}
@@ -439,13 +439,13 @@ export default function TrackingDashboardPage() {
           </div>
 
           <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-3.5">
               <div className="mb-2 text-xs text-slate-500">{isAr ? 'السجلات في آخر 14 يومًا' : 'Records in the last 14 days'}</div>
-              <div className="text-2xl font-bold text-slate-900">{dashboardSnapshot.recentRecordCount}</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-white">{dashboardSnapshot.recentRecordCount}</div>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-3.5">
               <div className="mb-2 text-xs text-slate-500">{isAr ? 'أكثر مؤشر تمت متابعته' : 'Most tracked metric'}</div>
-              <div className="text-lg font-bold text-slate-900">
+              <div className="text-lg font-bold text-slate-900 dark:text-white">
                 {dashboardSnapshot.mostTrackedLabel || (isAr ? 'لا يوجد بعد' : 'Not available yet')}
               </div>
               {dashboardSnapshot.mostTrackedCount > 0 ? (
@@ -456,9 +456,9 @@ export default function TrackingDashboardPage() {
                 </div>
               ) : null}
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-3.5">
               <div className="mb-2 text-xs text-slate-500">{isAr ? 'أحدث نتيجة في هذه الفترة' : 'Latest result in this window'}</div>
-              <div className="text-lg font-bold text-slate-900">
+              <div className="text-lg font-bold text-slate-900 dark:text-white">
                 {dashboardSnapshot.latestRecordLabel || (isAr ? 'لا توجد نتائج' : 'No results')}
               </div>
             </div>
@@ -466,7 +466,7 @@ export default function TrackingDashboardPage() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.24fr_0.76fr]">
-          <div className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <div className="rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-sm sm:p-6">
             <div className="mb-4 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-health-green">
               <LineChart className="h-3.5 w-3.5" />
               <span>{isAr ? 'الرسم البياني' : 'Trend chart'}</span>
@@ -480,7 +480,7 @@ export default function TrackingDashboardPage() {
                 <select
                   value={selectedMetricKey}
                   onChange={(event) => setSelectedMetricKey(event.target.value)}
-                  className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-health-green focus:ring-2 focus:ring-health-green/20"
+                  className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm outline-none focus:border-health-green focus:ring-2 focus:ring-health-green/20"
                 >
                   {metricGroups.map((item) => (
                     <option key={item.key} value={item.key}>
@@ -493,23 +493,23 @@ export default function TrackingDashboardPage() {
 
             {selectedMetricSummary ? (
               <div className="mb-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-4">
                   <div className="text-xs text-slate-500">{isAr ? 'أحدث قيمة' : 'Latest value'}</div>
-                  <div className="mt-2 text-2xl font-black text-slate-900">
+                  <div className="mt-2 text-2xl font-black text-slate-900 dark:text-white">
                     {formatNumericValue(selectedMetricSummary.latest)}
                   </div>
                 </div>
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-4">
                   <div className="text-xs text-slate-500">{isAr ? 'التغيّر الأخير' : 'Latest change'}</div>
-                  <div className="mt-2 text-2xl font-black text-slate-900">
+                  <div className="mt-2 text-2xl font-black text-slate-900 dark:text-white">
                     {selectedMetricSummary.delta === null
                       ? '...'
                       : `${selectedMetricSummary.delta > 0 ? '+' : ''}${formatNumericValue(selectedMetricSummary.delta)}`}
                   </div>
                 </div>
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-4">
                   <div className="text-xs text-slate-500">{isAr ? 'المدى المسجل' : 'Recorded range'}</div>
-                  <div className="mt-2 text-lg font-black text-slate-900">
+                  <div className="mt-2 text-lg font-black text-slate-900 dark:text-white">
                     {formatNumericValue(selectedMetricSummary.min)} - {formatNumericValue(selectedMetricSummary.max)}
                   </div>
                 </div>
@@ -523,7 +523,7 @@ export default function TrackingDashboardPage() {
             ) : selectedMetric ? (
               <Suspense
                 fallback={
-                  <div className="flex h-[320px] items-center justify-center rounded-[1.5rem] border border-slate-200 bg-slate-50">
+                  <div className="flex h-[320px] items-center justify-center rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950">
                     <LoaderCircle className="h-5 w-5 animate-spin text-health-green" />
                   </div>
                 }
@@ -536,7 +536,7 @@ export default function TrackingDashboardPage() {
                 />
               </Suspense>
             ) : (
-              <div className="flex h-[320px] items-center justify-center rounded-[1.5rem] border border-dashed border-slate-200 bg-slate-50 px-8 text-center text-slate-500">
+              <div className="flex h-[320px] items-center justify-center rounded-[1.5rem] border border-dashed border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-8 text-center text-slate-500">
                 {records.length === 0
                   ? isAr
                     ? 'احفظ قياسات تحتوي على قيمة رقمية لتظهر هنا في الرسم البياني.'
@@ -548,33 +548,33 @@ export default function TrackingDashboardPage() {
             )}
           </div>
 
-          <div className="rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+          <div className="rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 shadow-sm sm:p-5">
             <div className="mb-4 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-health-green">
               <BarChart3 className="h-3.5 w-3.5" />
               <span>{isAr ? 'ملخص سريع' : 'Quick summary'}</span>
             </div>
 
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5">
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-3.5">
                 <div className="mb-2 text-xs text-slate-500">{isAr ? 'السجلات في العرض الحالي' : 'Records in current view'}</div>
-                <div className="text-2xl font-bold text-slate-900">
+                <div className="text-2xl font-bold text-slate-900 dark:text-white">
                   {filteredRecords.length}
                   <span className="ml-2 text-sm font-medium text-slate-500">/ {records.length}</span>
                 </div>
               </div>
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3.5">
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-3.5">
                 <div className="mb-2 text-xs text-slate-500">{isAr ? 'المؤشرات الرقمية المتاحة' : 'Tracked numeric metrics'}</div>
-                <div className="text-2xl font-bold text-slate-900">{dashboardSnapshot.trackedMetricCount}</div>
+                <div className="text-2xl font-bold text-slate-900 dark:text-white">{dashboardSnapshot.trackedMetricCount}</div>
               </div>
             </div>
 
             {selectedMetric ? (
-              <div className="mt-3 rounded-[1.35rem] border border-slate-200 bg-slate-50 p-3.5">
+              <div className="mt-3 rounded-[1.35rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-3.5">
                 <div className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
                   {isAr ? 'المؤشر النشط' : 'Active metric'}
                 </div>
-                <div className="mt-2 text-lg font-black text-slate-900">{selectedMetric.label}</div>
-                <p className="mt-1.5 text-sm leading-6 text-slate-600">
+                <div className="mt-2 text-lg font-black text-slate-900 dark:text-white">{selectedMetric.label}</div>
+                <p className="mt-1.5 text-sm leading-6 text-slate-600 dark:text-slate-300">
                   {isAr
                     ? `يظهر الرسم لهذا المؤشر فقط عبر ${selectedMetric.records.length} قراءة في الفترة الحالية، حتى لا تختلط المقاييس المختلفة في منحنى واحد.`
                     : `The chart focuses on this metric only across ${selectedMetric.records.length} readings in the current window, so different measurements do not get mixed together.`}
@@ -604,7 +604,7 @@ export default function TrackingDashboardPage() {
                   <ClipboardList className="h-4 w-4" />
                   <span>{isAr ? 'بروتوكولات الإصابات' : 'Injury protocols'}</span>
                 </div>
-                <p className="mt-1.5 text-sm leading-6 text-slate-600">
+                <p className="mt-1.5 text-sm leading-6 text-slate-600 dark:text-slate-300">
                   {isAr
                     ? 'افتح مكتبة التعافي وخطط التغذية العلاجية مباشرة من لوحة المتابعة.'
                     : 'Open the rehab library and recovery nutrition plans directly from your dashboard.'}
@@ -615,14 +615,14 @@ export default function TrackingDashboardPage() {
 
             <Link
               to={navigationPaths.exercises(lang)}
-              className="mt-3 flex items-center justify-between gap-3 rounded-[1.35rem] border border-slate-200 bg-slate-50 px-4 py-3.5 transition-all hover:border-health-green/30 hover:bg-soft-blue"
+              className="mt-3 flex items-center justify-between gap-3 rounded-[1.35rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-4 py-3.5 transition-all hover:border-health-green/30 hover:bg-soft-blue"
             >
               <div>
-                <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
+                <div className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
                   <Dumbbell className="h-4 w-4 text-health-green" />
                   <span>{isAr ? 'دليل التمارين' : 'Exercise finder'}</span>
                 </div>
-                <p className="mt-1.5 text-sm leading-6 text-slate-600">
+                <p className="mt-1.5 text-sm leading-6 text-slate-600 dark:text-slate-300">
                   {isAr
                     ? 'ارجع إلى صفحة التمارين لاختيار تمارين مناسبة ثم تابع تأثيرها هنا في السجل.'
                     : 'Go back to the exercise page to choose movements, then track how they affect your log here.'}
@@ -633,7 +633,7 @@ export default function TrackingDashboardPage() {
           </div>
         </div>
 
-        <div className="mt-6 rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+        <div className="mt-6 rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-sm sm:p-6">
           <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-health-green">
               <Calendar className="h-3.5 w-3.5" />
@@ -649,7 +649,7 @@ export default function TrackingDashboardPage() {
 
           <Suspense
             fallback={
-              <div className="flex min-h-[180px] items-center justify-center rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="flex min-h-[180px] items-center justify-center rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950">
                 <LoaderCircle className="h-5 w-5 animate-spin text-health-green" />
               </div>
             }

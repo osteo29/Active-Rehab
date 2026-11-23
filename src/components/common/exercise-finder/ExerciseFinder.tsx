@@ -290,8 +290,8 @@ export function ExerciseFinder({
 
       <section aria-labelledby="exercise-finder-title" className="py-2 sm:py-4">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
-            <div className="border-b border-slate-200 bg-[linear-gradient(135deg,rgba(244,239,231,0.9),rgba(255,255,255,0.96))] px-5 py-8 sm:px-8">
+          <div className="overflow-hidden rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm">
+            <div className="border-b border-slate-200 dark:border-slate-700 bg-[linear-gradient(135deg,rgba(244,239,231,0.9),rgba(255,255,255,0.96))] px-5 py-8 sm:px-8">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div className="max-w-4xl">
                   <nav aria-label={isAr ? 'مسار التنقل' : 'Breadcrumb'} className="mb-4">
@@ -300,7 +300,7 @@ export function ExerciseFinder({
                         <li key={`${item.href}-${index}`} className="inline-flex items-center gap-2">
                           {index > 0 ? <span>/</span> : null}
                           {index === breadcrumbItems.length - 1 ? (
-                            <span className="font-semibold text-slate-700">{item.label}</span>
+                            <span className="font-semibold text-slate-700 dark:text-slate-200">{item.label}</span>
                           ) : (
                             <Link to={item.href} className="transition hover:text-health-green">
                               {item.label}
@@ -315,18 +315,18 @@ export function ExerciseFinder({
                     <SlidersHorizontal className="h-3.5 w-3.5" />
                     <span>{isAr ? 'دليل تمارين الجيم' : 'Gym Exercise Finder'}</span>
                   </div>
-                  <h1 id="exercise-finder-title" className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
+                  <h1 id="exercise-finder-title" className="mt-4 text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">
                     {headingLabel}
                   </h1>
-                  <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
+                  <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300 sm:text-base">
                     {isAr
                       ? 'استعرض التمارين حسب العضلة الرئيسية أو الفرعية، ثم فلتر النتائج حسب المستوى والمعدات وهدف التمرين. الصفحة منظمة لتخدم الجيم بشكل واضح مع ملاحظات عملية تساعدك على الاختيار.'
                       : 'Explore gym exercises by muscle and sub-muscle, then narrow the list by level, equipment, and training goal. This finder stays fitness-focused while still using coaching cues that are sensible for physically active users.'}
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-white/60 bg-white/70 px-4 py-3 text-sm text-slate-600" aria-live="polite">
-                  <div className="font-semibold text-slate-900">
+                <div className="rounded-2xl border border-white/60 bg-white/70 dark:bg-slate-900/70 px-4 py-3 text-sm text-slate-600 dark:text-slate-300" aria-live="polite">
+                  <div className="font-semibold text-slate-900 dark:text-white">
                     {isAr ? (
                       <>
                         <AnimatedCount value={filteredExercises.length} /> تمرين ظاهر الآن
@@ -364,15 +364,15 @@ export function ExerciseFinder({
               </div>
 
               <div className="mt-6 grid gap-4 lg:grid-cols-[1.6fr_1fr]">
-                <div className="rounded-[1.5rem] border border-white/70 bg-white/80 p-5">
-                  <h2 className="text-lg font-bold text-slate-900">{seoIntroTitle}</h2>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">{seoIntroBody}</p>
+                <div className="rounded-[1.5rem] border border-white/70 bg-white/80 dark:bg-slate-900/80 p-5">
+                  <h2 className="text-lg font-bold text-slate-900 dark:text-white">{seoIntroTitle}</h2>
+                  <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{seoIntroBody}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {quickGroups.map((item) => (
                       <Link
                         key={`seo-${item.slug}`}
                         to={navigationPaths.exercisesMuscle(lang, item.slug)}
-                        className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green"
+                        className="rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green"
                       >
                         {isAr ? `تمارين ${EXERCISE_FINDER_STATIC_ARABIC_LABELS[item.slug]}` : `${EXERCISE_FINDER_STATIC_LABELS[item.slug]} exercises`}
                       </Link>
@@ -380,11 +380,11 @@ export function ExerciseFinder({
                   </div>
                 </div>
 
-                <div className="rounded-[1.5rem] border border-white/70 bg-white/80 p-5">
+                <div className="rounded-[1.5rem] border border-white/70 bg-white/80 dark:bg-slate-900/80 p-5">
                   <div className="text-xs font-bold uppercase tracking-[0.16em] text-health-green">
                     {isAr ? 'كلمات بحث مستهدفة' : 'Search intent'}
                   </div>
-                  <div className="mt-3 space-y-2 text-sm text-slate-600">
+                  <div className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
                     <p>{isAr ? 'تمارين حسب العضلة' : 'Exercises by muscle group'}</p>
                     <p>{isAr ? 'خطط تدريب أسبوعية' : 'Weekly workout plans'}</p>
                     <p>{isAr ? 'تمارين حسب المعدات والمستوى' : 'Workouts by equipment and level'}</p>
@@ -394,12 +394,12 @@ export function ExerciseFinder({
             </div>
 
             <div className="grid gap-8 p-5 sm:p-8 xl:grid-cols-[0.95fr_2.05fr]">
-              <div className="sticky top-0 z-10 -mx-5 -mt-5 mb-4 flex items-center justify-between border-b border-slate-200 bg-white/95 px-5 py-3 backdrop-blur-sm xl:hidden">
+              <div className="sticky top-0 z-10 -mx-5 -mt-5 mb-4 flex items-center justify-between border-b border-slate-200 dark:border-slate-700 bg-white/95 px-5 py-3 backdrop-blur-sm xl:hidden">
                 <div className="flex items-center gap-2">
                   <button
                     type="button"
                     onClick={() => setFiltersOpen((open) => !open)}
-                    className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30"
                   >
                     <SlidersHorizontal className="h-4 w-4" />
                     {isAr ? 'الفلاتر' : 'Filters'}
@@ -411,13 +411,13 @@ export function ExerciseFinder({
                   </button>
                   <a
                     href={`#${sectionIds.results}`}
-                    className="inline-flex items-center rounded-2xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green"
+                    className="inline-flex items-center rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green"
                   >
                     {isAr ? 'النتائج' : 'Results'}
                   </a>
                 </div>
-                  <div className="text-sm text-slate-600" aria-live="polite">
-                    <span className="font-semibold text-slate-900">{filteredExercises.length}</span>
+                  <div className="text-sm text-slate-600 dark:text-slate-300" aria-live="polite">
+                    <span className="font-semibold text-slate-900 dark:text-white">{filteredExercises.length}</span>
                     {isAr ? ' تمرين' : ' exercises'}
                     {catalogLoading ? <span className="ml-2 text-slate-400">{isAr ? 'يتم التحديث...' : 'updating...'}</span> : null}
                   </div>
@@ -440,9 +440,9 @@ export function ExerciseFinder({
                     : 'hidden'
                 } xl:block`}
               >
-                <div className="sticky top-0 z-10 -mx-4 -mt-4 mb-4 flex items-center justify-between border-b border-slate-200 bg-white px-4 py-3 xl:hidden">
+                <div className="sticky top-0 z-10 -mx-4 -mt-4 mb-4 flex items-center justify-between border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 xl:hidden">
                   <div>
-                    <div className="text-sm font-bold text-slate-900">{isAr ? 'فلترة التمارين' : 'Filter exercises'}</div>
+                    <div className="text-sm font-bold text-slate-900 dark:text-white">{isAr ? 'فلترة التمارين' : 'Filter exercises'}</div>
                     <div className="text-xs text-slate-500">
                       {isAr ? 'اختر العضلة والمستوى والمعدات بسرعة' : 'Choose muscle, level, and equipment quickly'}
                     </div>
@@ -450,14 +450,14 @@ export function ExerciseFinder({
                   <button
                     type="button"
                     onClick={() => setFiltersOpen(false)}
-                    className="rounded-full border border-slate-200 p-2 text-slate-600"
+                    className="rounded-full border border-slate-200 dark:border-slate-700 p-2 text-slate-600 dark:text-slate-300"
                   >
                     <X className="h-4 w-4" />
                   </button>
                 </div>
 
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
-                  <div className="text-sm font-bold text-slate-900">
+                <div className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5">
+                  <div className="text-sm font-bold text-slate-900 dark:text-white">
                     {isAr ? 'ابدأ من أقسام سريعة' : 'Start from quick groups'}
                   </div>
                   <div className="mt-3 grid grid-cols-2 gap-2">
@@ -482,7 +482,7 @@ export function ExerciseFinder({
                       <button
                         type="button"
                         onClick={resetFilters}
-                        className="rounded-xl border border-health-green/30 bg-white px-3 py-1 text-xs font-semibold text-health-green transition hover:bg-health-green/10"
+                        className="rounded-xl border border-health-green/30 bg-white dark:bg-slate-900 px-3 py-1 text-xs font-semibold text-health-green transition hover:bg-health-green/10"
                       >
                         {isAr ? 'مسح الكل' : 'Clear all'}
                       </button>
@@ -490,7 +490,7 @@ export function ExerciseFinder({
 
                     <div className="flex flex-wrap gap-1.5">
                       {filters.muscle !== 'all' && (
-                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-semibold text-slate-700">
+                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200">
                           {isAr ? EXERCISE_FINDER_STATIC_ARABIC_LABELS[filters.muscle as StaticMuscleSlug] || filters.muscle : filters.muscle}
                           <button
                             type="button"
@@ -503,7 +503,7 @@ export function ExerciseFinder({
                         </span>
                       )}
                       {filters.level !== 'all' && (
-                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-semibold text-slate-700">
+                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200">
                           {filters.level}
                           <button
                             type="button"
@@ -515,7 +515,7 @@ export function ExerciseFinder({
                         </span>
                       )}
                       {filters.equipment !== 'all' && (
-                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-semibold text-slate-700">
+                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200">
                           {filters.equipment}
                           <button
                             type="button"
@@ -527,7 +527,7 @@ export function ExerciseFinder({
                         </span>
                       )}
                       {filters.exerciseType !== 'all' && (
-                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-semibold text-slate-700">
+                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200">
                           {filters.exerciseType}
                           <button
                             type="button"
@@ -539,7 +539,7 @@ export function ExerciseFinder({
                         </span>
                       )}
                       {filters.search.trim() && (
-                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-semibold text-slate-700">
+                        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200">
                           "{filters.search}"
                           <button
                             type="button"
@@ -559,7 +559,7 @@ export function ExerciseFinder({
 
                 <form className="grid gap-4" onSubmit={(event) => event.preventDefault()}>
                   <div className="space-y-2">
-                    <label htmlFor={searchId} className="block text-sm font-semibold text-slate-700">
+                    <label htmlFor={searchId} className="block text-sm font-semibold text-slate-700 dark:text-slate-200">
                       {isAr ? 'ابحث عن تمرين' : 'Search exercise'}
                     </label>
                     <div className="relative">
@@ -570,7 +570,7 @@ export function ExerciseFinder({
                         value={searchInput}
                         onChange={(event) => setSearchInput(event.target.value)}
                         placeholder={isAr ? 'ابحث باسم التمرين' : 'Search by exercise name'}
-                        className="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm text-slate-900 outline-none transition focus:border-health-green focus:ring-2 focus:ring-health-green/20"
+                        className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 py-3 pl-11 pr-4 text-sm text-slate-900 dark:text-white outline-none transition focus:border-health-green focus:ring-2 focus:ring-health-green/20"
                       />
                     </div>
                   </div>
@@ -624,8 +624,8 @@ export function ExerciseFinder({
                   />
                 </form>
 
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
-                  <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
+                <div className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5">
+                  <div className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
                     <Target className="h-4 w-4 text-health-green" />
                     <span>{isAr ? 'التركيز العضلي' : 'Target anatomy'}</span>
                   </div>
@@ -633,30 +633,30 @@ export function ExerciseFinder({
                     {anatomyList.length > 0 ? (
                       anatomyList.map((muscle) => <Badge key={muscle}>{toTitle(muscle)}</Badge>)
                     ) : (
-                      <span className="text-sm text-slate-600">
+                      <span className="text-sm text-slate-600 dark:text-slate-300">
                         {isAr ? 'اختر مجموعة عضلية لتظهر لك العضلات الفرعية المرتبطة بها.' : 'Select a muscle group to focus the anatomy view.'}
                       </span>
                     )}
                   </div>
                 </div>
 
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
-                  <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
+                <div className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5">
+                  <div className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
                     <Dumbbell className="h-4 w-4 text-health-green" />
                     <span>{isAr ? 'تمارين شائعة' : 'Popular exercises'}</span>
                   </div>
                   <div className="mt-3 space-y-3">
                     {popularExercises.map((exercise) => (
-                      <div key={exercise.name} className="rounded-2xl border border-slate-200 bg-white px-4 py-3">
-                        <div className="font-semibold text-slate-900">{exercise.name}</div>
-                        <div className="mt-1 text-sm text-slate-600">{exercise.description}</div>
+                      <div key={exercise.name} className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3">
+                        <div className="font-semibold text-slate-900 dark:text-white">{exercise.name}</div>
+                        <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">{exercise.description}</div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 text-sm text-slate-600">
-                  <div className="flex items-center gap-2 font-bold text-slate-900">
+                <div className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5 text-sm text-slate-600 dark:text-slate-300">
+                  <div className="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
                     <Share2 className="h-4 w-4 text-health-green" />
                     <span>{isAr ? 'الروابط والمشاركة' : 'Sharing and SEO'}</span>
                   </div>
@@ -664,9 +664,9 @@ export function ExerciseFinder({
                     {isAr
                       ? 'يمكنك مشاركة الرابط الحالي للاحتفاظ بنفس العضلة والفلاتر المختارة. كما أن المسارات الثابتة مثل '
                       : 'Share the current URL to preserve the selected muscle and active filters. Static page contexts like '}
-                    <span className="font-semibold text-slate-900">/exercises/chest</span>
+                    <span className="font-semibold text-slate-900 dark:text-white">/exercises/chest</span>
                     {isAr ? ' أو ' : ' or '}
-                    <span className="font-semibold text-slate-900">/exercises/legs</span>
+                    <span className="font-semibold text-slate-900 dark:text-white">/exercises/legs</span>
                     {isAr
                       ? ' تسهّل الوصول المباشر إلى قسم عضلي محدد.'
                       : ' can use the `pathMuscle` prop in this same component.'}
@@ -683,24 +683,24 @@ export function ExerciseFinder({
               </aside>
 
               <div className="space-y-6">
-                <section className="rounded-[1.5rem] border border-slate-200 bg-[linear-gradient(180deg,rgba(244,239,231,0.65),rgba(255,255,255,0.96))] p-5">
+                <section className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-[linear-gradient(180deg,rgba(244,239,231,0.65),rgba(255,255,255,0.96))] p-5">
                   <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                     <div className="max-w-2xl">
                       <div className="text-xs font-bold uppercase tracking-[0.16em] text-health-green">
                         {isAr ? 'تنقل أسرع داخل الصفحة' : 'Faster page flow'}
                       </div>
-                      <h2 id={workspaceHeadingId} className="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
+                      <h2 id={workspaceHeadingId} className="mt-2 text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
                         {isAr ? 'اختر الجزء الذي تريد التركيز عليه الآن' : 'Pick the part you want to focus on'}
                       </h2>
-                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                      <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                         {isAr
                           ? 'قسمنا الصفحة إلى 3 مسارات واضحة حتى لا تضطر للمرور على كل المحتوى في مرة واحدة. الفلاتر ثابتة، لكن العرض الرئيسي يتغير حسب المهمة التي تريدها.'
                           : 'The page is now split into 3 clear work modes, so you do not have to scan everything at once. Filters stay available while the main workspace changes with your goal.'}
                       </p>
                     </div>
 
-                    <div className="rounded-2xl border border-white/70 bg-white/80 px-4 py-3 text-sm text-slate-600">
-                      <div className="font-semibold text-slate-900">
+                    <div className="rounded-2xl border border-white/70 bg-white/80 dark:bg-slate-900/80 px-4 py-3 text-sm text-slate-600 dark:text-slate-300">
+                      <div className="font-semibold text-slate-900 dark:text-white">
                         {workspaceViews.find((view) => view.id === workspaceView)?.title}
                       </div>
                       <div className="mt-1">
@@ -734,8 +734,8 @@ export function ExerciseFinder({
                               {view.countLabel}
                             </span>
                           </div>
-                          <div className="mt-4 text-base font-bold text-slate-900">{view.title}</div>
-                          <p className="mt-1 text-sm leading-6 text-slate-600">{view.description}</p>
+                          <div className="mt-4 text-base font-bold text-slate-900 dark:text-white">{view.title}</div>
+                          <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-300">{view.description}</p>
                         </button>
                       );
                     })}
@@ -744,25 +744,25 @@ export function ExerciseFinder({
                   <div className="mt-5 flex flex-wrap gap-2">
                     <a
                       href={`#${sectionIds.filters}`}
-                      className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green"
+                      className="rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green"
                     >
                       {isAr ? 'الفلاتر' : 'Filters'}
                     </a>
                     <a
                       href={`#${sectionIds.results}`}
-                      className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green"
+                      className="rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green"
                     >
                       {isAr ? 'النتائج' : 'Results'}
                     </a>
                     <a
                       href={`#${sectionIds.systems}`}
-                      className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green"
+                      className="rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green"
                     >
                       {isAr ? 'الأنظمة' : 'Systems'}
                     </a>
                     <a
                       href={`#${sectionIds.schedule}`}
-                      className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green"
+                      className="rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green"
                     >
                       {isAr ? 'الخطة الأسبوعية' : 'Weekly plan'}
                     </a>
@@ -771,46 +771,46 @@ export function ExerciseFinder({
 
                 {workspaceView === 'browse' && (
                   <>
-                    <section id={sectionIds.results} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
-                      <h2 className="text-xl font-bold text-slate-900">
+                    <section id={sectionIds.results} className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5">
+                      <h2 className="text-xl font-bold text-slate-900 dark:text-white">
                         {isAr ? 'نتائج التمارين المفلترة' : 'Filtered exercise results'}
                       </h2>
-                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                      <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                         {isAr
                           ? 'ابدأ بالعضلة المستهدفة أولًا، ثم ضيّق النتائج حسب الهدف والمعدات حتى تبقى القائمة مناسبة وسهلة المراجعة.'
                           : 'Filter by anatomy first, then refine by training goal and equipment so the list stays relevant for both general gym use and movement-aware coaching.'}
                       </p>
 
                       <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                        <div className="rounded-2xl border border-white/70 bg-white/80 p-4">
+                        <div className="rounded-2xl border border-white/70 bg-white/80 dark:bg-slate-900/80 p-4">
                           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
                             <Sparkles className="h-4 w-4 text-health-green" />
                             <span>{isAr ? 'مناسب للمبتدئين' : 'Beginner ready'}</span>
                           </div>
-                          <div className="mt-3 text-2xl font-bold text-slate-900">{totalBeginnerExercises}</div>
-                          <p className="mt-1 text-sm text-slate-600">
+                          <div className="mt-3 text-2xl font-bold text-slate-900 dark:text-white">{totalBeginnerExercises}</div>
+                          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
                             {isAr ? 'خيارات سهلة للبدء أو للعودة التدريجية.' : 'Lower-complexity options for starting or returning.'}
                           </p>
                         </div>
 
-                        <div className="rounded-2xl border border-white/70 bg-white/80 p-4">
+                        <div className="rounded-2xl border border-white/70 bg-white/80 dark:bg-slate-900/80 p-4">
                           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
                             <Flame className="h-4 w-4 text-health-green" />
                             <span>{isAr ? 'تمارين قوة' : 'Strength focus'}</span>
                           </div>
-                          <div className="mt-3 text-2xl font-bold text-slate-900">{totalStrengthExercises}</div>
-                          <p className="mt-1 text-sm text-slate-600">
+                          <div className="mt-3 text-2xl font-bold text-slate-900 dark:text-white">{totalStrengthExercises}</div>
+                          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
                             {isAr ? 'تمارين مركبة ومباشرة لتطوير الأداء والقوة.' : 'Compound and direct options for performance-driven blocks.'}
                           </p>
                         </div>
 
-                        <div className="rounded-2xl border border-white/70 bg-white/80 p-4">
+                        <div className="rounded-2xl border border-white/70 bg-white/80 dark:bg-slate-900/80 p-4">
                           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
                             <CalendarRange className="h-4 w-4 text-health-green" />
                             <span>{isAr ? 'معدات متاحة' : 'Equipment range'}</span>
                           </div>
-                          <div className="mt-3 text-2xl font-bold text-slate-900">{totalEquipmentOptions}</div>
-                          <p className="mt-1 text-sm text-slate-600">
+                          <div className="mt-3 text-2xl font-bold text-slate-900 dark:text-white">{totalEquipmentOptions}</div>
+                          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
                             {isAr ? 'عدد أنواع المعدات المتوافقة مع الفلاتر الحالية.' : 'Distinct equipment types available under the current filters.'}
                           </p>
                         </div>
@@ -820,39 +820,39 @@ export function ExerciseFinder({
                     <section className="grid gap-4 md:grid-cols-3">
                       <Link
                         to={navigationPaths.dashboard(lang)}
-                        className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 transition hover:border-health-green/30 hover:bg-health-green/5"
+                        className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5 transition hover:border-health-green/30 hover:bg-health-green/5"
                       >
-                        <div className="text-sm font-bold text-slate-900">{isAr ? 'تابع تقدمك' : 'Track your progress'}</div>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <div className="text-sm font-bold text-slate-900 dark:text-white">{isAr ? 'تابع تقدمك' : 'Track your progress'}</div>
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr ? 'اربط تمارينك بالنتائج والقياسات داخل لوحة المتابعة.' : 'Connect your exercise choices to your saved results in the dashboard.'}
                         </p>
                       </Link>
                       <Link
                         to={navigationPaths.injuries(lang)}
-                        className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 transition hover:border-health-green/30 hover:bg-health-green/5"
+                        className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5 transition hover:border-health-green/30 hover:bg-health-green/5"
                       >
-                        <div className="text-sm font-bold text-slate-900">{isAr ? 'راجع الإصابات' : 'Review injury protocols'}</div>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <div className="text-sm font-bold text-slate-900 dark:text-white">{isAr ? 'راجع الإصابات' : 'Review injury protocols'}</div>
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr ? 'إذا كان عندك ألم أو مرحلة تأهيل، افتح بروتوكولات الإصابات قبل اختيار التمرين.' : 'If you are managing pain or rehab, open the injury library before choosing exercises.'}
                         </p>
                       </Link>
                       <Link
                         to={navigationPaths.diets(lang)}
-                        className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 transition hover:border-health-green/30 hover:bg-health-green/5"
+                        className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5 transition hover:border-health-green/30 hover:bg-health-green/5"
                       >
-                        <div className="text-sm font-bold text-slate-900">{isAr ? 'ادعم التمرين بالتغذية' : 'Support training with nutrition'}</div>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <div className="text-sm font-bold text-slate-900 dark:text-white">{isAr ? 'ادعم التمرين بالتغذية' : 'Support training with nutrition'}</div>
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr ? 'اختيار النظام الغذائي المناسب يساعدك على الاستشفاء والأداء.' : 'Pair your training with the right diet strategy for recovery and performance.'}
                         </p>
                       </Link>
                     </section>
 
                     {filteredExercises.length === 0 ? (
-                      <div className="rounded-[2rem] border border-dashed border-slate-200 bg-slate-50 px-6 py-14 text-center">
-                        <h2 className="text-2xl font-bold text-slate-900">
+                      <div className="rounded-[2rem] border border-dashed border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-6 py-14 text-center">
+                        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
                           {isAr ? 'لا توجد تمارين مطابقة' : 'No exercises found'}
                         </h2>
-                        <p className="mt-3 text-sm leading-7 text-slate-600">
+                        <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr
                             ? 'جرّب توسيع الفلاتر قليلًا مثل العضلة أو المستوى أو المعدات. أحيانًا الدمج الضيق جدًا يقلل النتائج بشكل مقصود.'
                             : 'Try broadening the muscle, sub-muscle, level, or equipment filters. Very narrow combinations are useful, but they can intentionally reduce the list.'}
@@ -874,13 +874,13 @@ export function ExerciseFinder({
                 )}
 
                 {workspaceView === 'systems' && (
-                  <section id={sectionIds.systems} className="rounded-[1.5rem] border border-slate-200 bg-[linear-gradient(180deg,rgba(248,250,252,0.98),rgba(255,255,255,0.98))] p-5">
+                  <section id={sectionIds.systems} className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-[linear-gradient(180deg,rgba(248,250,252,0.98),rgba(255,255,255,0.98))] p-5">
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                       <div>
-                        <h2 className="text-xl font-bold text-slate-900">
+                        <h2 className="text-xl font-bold text-slate-900 dark:text-white">
                           {isAr ? 'أنظمة تمرين جاهزة' : 'Ready training systems'}
                         </h2>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr
                             ? 'هذه أنظمة متنوعة مرتبطة بالهدف والمعدات والمستوى الحالي، ومبنية على تمارين موجودة فعليًا داخل الدليل مع مجموعات وتكرارات وراحة واضحة.'
                             : 'These systems are tied to real exercises already listed in the finder, with actual sets, reps, rest, and weekly structure.'}
@@ -890,7 +890,7 @@ export function ExerciseFinder({
                       <button
                         type="button"
                         onClick={resetFilters}
-                        className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green"
+                        className="inline-flex items-center justify-center rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green"
                       >
                         {isAr ? 'إعادة ضبط الفلاتر' : 'Reset filters'}
                       </button>
@@ -906,12 +906,12 @@ export function ExerciseFinder({
 
                 {workspaceView === 'schedule' && (
                   <>
-                    <section id={sectionIds.schedule} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                    <section id={sectionIds.schedule} className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5">
                       <div className="max-w-3xl">
-                        <h2 className="text-xl font-bold text-slate-900">
+                        <h2 className="text-xl font-bold text-slate-900 dark:text-white">
                           {isAr ? 'جدول أسبوعي مقترح' : 'Suggested weekly schedule'}
                         </h2>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr
                             ? 'هذه جداول تنفيذية حقيقية داخل الصفحة، وكل يوم مرتبط بتمارين محددة موجودة في قاعدة التمارين وليس مجرد عرض شكلي أو Demo.'
                             : 'These are executable weekly plans, and each day is tied to named exercises that already exist in the exercise library rather than placeholder demo content.'}
@@ -935,30 +935,30 @@ export function ExerciseFinder({
                     <section className="grid gap-4 md:grid-cols-3">
                       <Link
                         to={navigationPaths.dashboard(lang)}
-                        className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 transition hover:border-health-green/30 hover:bg-health-green/5"
+                        className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5 transition hover:border-health-green/30 hover:bg-health-green/5"
                       >
-                        <div className="text-sm font-bold text-slate-900">{isAr ? 'تابع تقدمك' : 'Track your progress'}</div>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <div className="text-sm font-bold text-slate-900 dark:text-white">{isAr ? 'تابع تقدمك' : 'Track your progress'}</div>
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr ? 'اربط الجدول الأسبوعي بلوحة المتابعة لتراقب الالتزام والتحسن.' : 'Connect your schedule to the dashboard so you can track adherence and progress.'}
                         </p>
                       </Link>
                       <button
                         type="button"
                         onClick={() => setWorkspaceView('systems')}
-                        className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-health-green/30 hover:bg-health-green/5"
+                        className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5 text-left transition hover:border-health-green/30 hover:bg-health-green/5"
                       >
-                        <div className="text-sm font-bold text-slate-900">{isAr ? 'ارجع للأنظمة' : 'Back to systems'}</div>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <div className="text-sm font-bold text-slate-900 dark:text-white">{isAr ? 'ارجع للأنظمة' : 'Back to systems'}</div>
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr ? 'قارن بين أكثر من نظام قبل اعتماد الجدول النهائي.' : 'Compare system structures again before locking in a weekly schedule.'}
                         </p>
                       </button>
                       <button
                         type="button"
                         onClick={() => setWorkspaceView('browse')}
-                        className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-health-green/30 hover:bg-health-green/5"
+                        className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5 text-left transition hover:border-health-green/30 hover:bg-health-green/5"
                       >
-                        <div className="text-sm font-bold text-slate-900">{isAr ? 'راجع التمارين' : 'Review exercises'}</div>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <div className="text-sm font-bold text-slate-900 dark:text-white">{isAr ? 'راجع التمارين' : 'Review exercises'}</div>
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr ? 'افتح قائمة التمارين لو أردت تبديل الحركات أو التأكد من تفاصيل التنفيذ.' : 'Open the exercise list if you want to swap movements or confirm exercise details.'}
                         </p>
                       </button>
@@ -966,37 +966,37 @@ export function ExerciseFinder({
                   </>
                 )}
 
-                <section className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <section className="rounded-[1.5rem] border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-5">
                   <div className="max-w-3xl">
-                    <h2 className="text-xl font-bold text-slate-900">
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-white">
                       {isAr ? 'أسئلة شائعة عن اختيار التمارين' : 'Exercise finder FAQ'}
                     </h2>
                     <div className="mt-4 space-y-4">
-                      <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                        <h3 className="font-semibold text-slate-900">
+                      <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+                        <h3 className="font-semibold text-slate-900 dark:text-white">
                           {isAr ? 'كيف أختار التمرين المناسب لكل عضلة؟' : 'How do I choose the right exercise for each muscle group?'}
                         </h3>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr
                             ? 'ابدأ باختيار العضلة الأساسية، ثم ضيق النتائج بالمعدات والمستوى وهدف التمرين. بعد ذلك راجع كروت التمارين أو تبويب الأنظمة الجاهزة لبناء جلسة كاملة.'
                             : 'Start with the main muscle, then narrow by equipment, level, and training goal. After that, review the exercise cards or the ready systems tab to build a full session.'}
                         </p>
                       </div>
-                      <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                        <h3 className="font-semibold text-slate-900">
+                      <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+                        <h3 className="font-semibold text-slate-900 dark:text-white">
                           {isAr ? 'هل أقدر أستخدم الصفحة لو عندي معدات محدودة؟' : 'Can I use this page with limited equipment?'}
                         </h3>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr
                             ? 'نعم، استخدم فلتر المعدات لاختيار وزن الجسم أو الدمبل أو الباند أو الأجهزة، وستظهر لك التمارين والأنظمة المناسبة لما هو متاح فعليًا.'
                             : 'Yes. Use the equipment filter to switch between bodyweight, dumbbell, band, machine, or barbell options and the list will adapt to what you actually have.'}
                         </p>
                       </div>
-                      <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                        <h3 className="font-semibold text-slate-900">
+                      <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+                        <h3 className="font-semibold text-slate-900 dark:text-white">
                           {isAr ? 'هل الصفحة مناسبة للبحث عن تمارين صدر أو ظهر أو رجل؟' : 'Is this page good for finding chest, back, or leg exercises?'}
                         </h3>
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
+                        <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                           {isAr
                             ? 'نعم، يوجد مسارات ثابتة وصفحات فرعية مثل الصدر والظهر والرجل والكتف والذراع والجذع، وده يسهل الوصول للمحتوى المناسب للمستخدم ولمحركات البحث.'
                             : 'Yes. The page supports fixed subpaths like chest, back, legs, shoulders, arms, and core, which makes it easier for users and search engines to reach focused content.'}
