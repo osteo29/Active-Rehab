@@ -132,8 +132,27 @@ const Navigation = memo(
       if (!isSidebarOpen) return;
 
       const previousOverflow = document.body.style.overflow;
+      const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      const drawer = document.getElementById('main-navigation-drawer');
+      const focusable = () => Array.from(drawer?.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex="0"]'
+      ) || []).filter(element => element.getClientRects().length > 0);
+      focusable()[0]?.focus();
       const closeOnEscape = (event: KeyboardEvent) => {
-        if (event.key === 'Escape') setIsSidebarOpen(false);
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          setIsSidebarOpen(false);
+        }
+        if (event.key !== 'Tab') return;
+        const items = focusable();
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (!first) { event.preventDefault(); return; }
+        if (event.shiftKey && (document.activeElement === first || !drawer?.contains(document.activeElement))) {
+          event.preventDefault(); last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || !drawer?.contains(document.activeElement))) {
+          event.preventDefault(); first.focus();
+        }
       };
 
       document.body.style.overflow = 'hidden';
@@ -142,6 +161,7 @@ const Navigation = memo(
       return () => {
         document.body.style.overflow = previousOverflow;
         window.removeEventListener('keydown', closeOnEscape);
+        if (previousFocus?.isConnected) previousFocus.focus();
       };
     }, [isSidebarOpen, setIsSidebarOpen]);
 
@@ -164,13 +184,14 @@ const Navigation = memo(
       }
     };
 
-    const brand = (
+    const brand = (textTone: 'light' | 'dark' = 'dark') => (
       <Link
         to={navigationPaths.home(lang)}
         onClick={handleBrandClick}
         className="group flex items-center gap-2.5"
       >
         <BrandLogo
+          textTone={textTone}
           imageClassName="transition-transform duration-300 group-hover:scale-105"
           subtitle="MOVE BETTER • FEEL BETTER"
         />
@@ -197,7 +218,7 @@ const Navigation = memo(
             >
               {/* Drawer Header */}
               <div className="flex items-center justify-between border-b border-slate-100 p-4 sm:p-5 dark:border-slate-800">
-                {brand}
+                {brand()} 
                 <button
                   onClick={() => setIsSidebarOpen(false)}
                   className="rounded-xl p-2 text-slate-500 transition-colors hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
@@ -507,10 +528,12 @@ const Navigation = memo(
                 onClick={() => setIsSidebarOpen(true)}
                 className="rounded-xl border border-white/10 bg-white/5 p-2 text-slate-200 transition hover:border-health-green/40 hover:bg-white/10"
                 aria-label={isAr ? 'فتح القائمة الرئيسية' : 'Open main menu'}
+                aria-controls="main-navigation-drawer"
+                aria-expanded={isSidebarOpen}
               >
                 <Menu className="h-5 w-5" />
               </button>
-              {brand}
+              {brand('light')}
             </div>
 
             {/* Center Desktop Navigation Links */}
