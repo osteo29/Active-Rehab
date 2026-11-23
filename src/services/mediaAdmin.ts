@@ -1,3 +1,4 @@
+import {validateMediaFile, validateMediaDimensions} from './mediaValidation';
 import {getCurrentUser, supabase} from '../lib/supabase';
 import type {Json, TableInsert, TableRow, TableUpdate} from '../lib/supabaseDatabase';
 
@@ -102,6 +103,8 @@ async function canvasToBlob(canvas: HTMLCanvasElement, type: string, quality?: n
 
 async function prepareImageAsset(file: File): Promise<PreparedImageAsset> {
   const image = await loadImageBitmap(file);
+  const dimensionError = validateMediaDimensions(image.naturalWidth, image.naturalHeight);
+  if (dimensionError) throw new Error(dimensionError);
   const main = drawToCanvas(image, MAX_MAIN_WIDTH);
   const thumbnail = drawToCanvas(image, MAX_THUMB_WIDTH);
   const blur = drawToCanvas(image, 24);
@@ -178,6 +181,8 @@ export async function deleteMediaAsset(id: string) {
 }
 
 export async function uploadMediaAsset(file: File, options: UploadMediaOptions) {
+  const fileError = validateMediaFile(file);
+  if (fileError) throw new Error(fileError);
   const client = ensureSupabase();
   const currentUser = await getCurrentUser().catch(() => null);
   const prepared = await prepareImageAsset(file);
