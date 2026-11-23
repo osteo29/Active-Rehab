@@ -112,6 +112,16 @@ export default function useAdminAccess(lang: Language) {
 
   useEffect(() => {
     let mounted = true;
+    let requestVersion = 0;
+    const resolveAccess = async (user: User | null) => {
+      const version = ++requestVersion;
+      // Revoke old capabilities immediately while a new identity is checked.
+      setState({...buildAccessState(lang, null, null), authChecked: false});
+      let adminRecord: AdminRecord | null = null;
+      try { adminRecord = await loadAdminRecord(user); } catch { /* Fail closed on network errors. */ }
+      if (!mounted || version !== requestVersion) return;
+      setState(buildAccessState(lang, user, adminRecord));
+    };
 
     const bootstrap = async () => {
       if (!isSupabaseConfigured) {
@@ -125,13 +135,13 @@ export default function useAdminAccess(lang: Language) {
         return;
       }
 
+      const version = requestVersion;
       try {
         const user = await getCurrentUser();
-        const adminRecord = await loadAdminRecord(user);
-        if (!mounted) return;
-        setState(buildAccessState(lang, user, adminRecord));
+        if (!mounted || version !== requestVersion) return;
+        await resolveAccess(user);
       } catch {
-        if (!mounted) return;
+        if (!mounted || version !== requestVersion) return;
         setState(buildAccessState(lang, null, null));
       }
     };
@@ -146,10 +156,7 @@ export default function useAdminAccess(lang: Language) {
 
     const {data} = onSupabaseAuthChange(async (_, session) => {
       if (!mounted) return;
-      const nextUser = session?.user || null;
-      const adminRecord = await loadAdminRecord(nextUser);
-      if (!mounted) return;
-      setState(buildAccessState(lang, nextUser, adminRecord));
+      await resolveAccess(session?.user || null);
     });
 
     return () => {

@@ -37,6 +37,10 @@ export default function AdminExercisesPage() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
+    if (!access.authChecked || !access.canManageExercises) {
+      setLoading(false);
+      return;
+    }
     let active = true;
     const load = async () => {
       try {
@@ -72,7 +76,7 @@ export default function AdminExercisesPage() {
     return () => {
       active = false;
     };
-  }, [isAr]);
+  }, [isAr, access.authChecked, access.canManageExercises]);
 
   const filteredItems = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -111,6 +115,7 @@ export default function AdminExercisesPage() {
   };
 
   const handleSave = async () => {
+    if (!access.canManageExercises || saving) return;
     if (!draft.slug.trim() || !draft.name.trim() || !draft.region.trim()) {
       setNotice(isAr ? 'الاسم والـ slug والمنطقة مطلوبة.' : 'Name, slug, and region are required.');
       return;

@@ -61,6 +61,10 @@ export default function AdminHomepagePage() {
   const [notice, setNotice] = useState('');
 
   useEffect(() => {
+    if (!access.authChecked || !access.canManageHomepage) {
+      setLoading(false);
+      return;
+    }
     let active = true;
     const load = async () => {
       try {
@@ -97,7 +101,7 @@ export default function AdminHomepagePage() {
     return () => {
       active = false;
     };
-  }, [isAr]);
+  }, [isAr, access.authChecked, access.canManageHomepage]);
 
   const draft = drafts[activeLang];
 
@@ -112,6 +116,7 @@ export default function AdminHomepagePage() {
   };
 
   const handleSave = async () => {
+    if (!access.canManageHomepage || saving) return;
     try {
       setSaving(true);
       await upsertHomepageSettings(draft);
