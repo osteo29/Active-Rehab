@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {LoaderCircle} from 'lucide-react';
 import {useNavigate} from 'react-router-dom';
-import {getCurrentSession, getSupabaseActionErrorMessage, onSupabaseAuthChange} from '../lib/supabase';
+import {getCurrentSession, getSupabaseActionErrorMessage, onSupabaseAuthChange, isSupabaseConfigured, getSupabaseConfigurationMessage} from '../lib/supabase';
 import {getPreferredLanguage} from '../services/languagePreference';
 
 export default function AuthCallbackPage() {
@@ -12,6 +12,10 @@ export default function AuthCallbackPage() {
     let mounted = true;
     const lang = getPreferredLanguage();
     const target = `/${lang}/`;
+    if (!isSupabaseConfigured) {
+      setError(getSupabaseConfigurationMessage(lang));
+      return () => { mounted = false; };
+    }
 
     const finishLogin = async () => {
       try {
