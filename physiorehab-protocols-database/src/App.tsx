@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import ProtocolDetail from './components/ProtocolDetail';
 import { db, auth } from './lib/firebase';
-import { collection, onSnapshot, query, addDoc, getDoc, doc } from 'firebase/firestore';
+import { collection, onSnapshot, query, addDoc, getDoc, doc, serverTimestamp } from 'firebase/firestore';
 import { onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
 import { Activity, LogIn, LogOut, Plus, Search, Loader2 } from 'lucide-react';
 
@@ -102,8 +102,8 @@ export default function App() {
       for (const p of fullData) {
         await addDoc(collection(db, 'protocols'), {
           ...p,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString()
+          createdAt: serverTimestamp(),
+          updatedAt: serverTimestamp()
         });
       }
       alert(`Successfully seeded ${fullData.length} protocols with full details (Precautions, Criteria, Cues) from the book!`);
