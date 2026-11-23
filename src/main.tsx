@@ -1,3 +1,4 @@
+import {migrateLegacyStorageKeys} from './services/storageMigration';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom';
@@ -6,6 +7,7 @@ import {applyThemePreference, getStoredThemePreference} from './hooks/useStoredT
 import {initConsentGatedScripts} from './services/consentLoader';
 import './index.css';
 
+migrateLegacyStorageKeys();
 applyThemePreference(getStoredThemePreference());
 initConsentGatedScripts();
 

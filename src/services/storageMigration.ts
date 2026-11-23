@@ -27,8 +27,12 @@ const RENAMED_KEYS: Array<[string, string]> = [
 
 const RENAMED_PREFIXES: Array<[string, string]> = [['physiohub_ai_cache_v1:', 'activerehab_ai_cache_v1:']];
 
-export function migrateLegacyStorageKeys(storage: Pick<Storage, 'getItem' | 'setItem' | 'removeItem' | 'key' | 'length'> = window.localStorage) {
+export function migrateLegacyStorageKeys(storage?: Pick<Storage, 'getItem' | 'setItem' | 'removeItem' | 'key' | 'length'>) {
   try {
+    if (!storage) {
+      if (typeof window === 'undefined') return;
+      storage = window.localStorage;
+    }
     for (const [oldKey, newKey] of RENAMED_KEYS) {
       const oldValue = storage.getItem(oldKey);
       if (oldValue === null) continue;
