@@ -131,7 +131,7 @@ export function ExerciseFinder({
 
   const staticContext = useMemo(() => getStaticSlugFilters(pathMuscle), [pathMuscle]);
   const subMuscleOptions = useMemo(() => getSubMuscleOptions(filters.muscle, isAr), [filters.muscle, isAr]);
-  const {exercises: exerciseRecords, loading: catalogLoading} = useExerciseCatalog();
+  const {exercises: exerciseRecords, loading: catalogLoading, error: catalogError} = useExerciseCatalog();
 
   const filteredExercises = useMemo(() => {
     const scopedExercises =
@@ -434,6 +434,9 @@ export function ExerciseFinder({
                 </button>
                 <span className="text-xs text-slate-500">{storageUnavailable ? (isAr ? 'الحفظ الدائم غير متاح في هذا المتصفح. اختياراتك لهذه الزيارة فقط.' : 'Browser storage unavailable. Saves last for this visit only.') : (isAr ? 'محفوظة على هذا الجهاز فقط، وليست خطة علاج.' : 'Saved on this device only, not a treatment plan.')}</span>
               </div>
+              {catalogError && <div role="status" className="my-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+                {isAr ? 'تعذر تحديث مكتبة التمارين الآن. نعرض النسخة المحفوظة مع التطبيق؛ حاول تحديث الصفحة لاحقًا.' : 'The exercise update could not be loaded. Showing the catalog included with the app; try refreshing later.'}
+              </div>}
               {filtersOpen ? (
                 <button
                   type="button"
