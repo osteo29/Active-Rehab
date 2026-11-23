@@ -32,7 +32,7 @@ describe('appCalculatorLogic localized numeric input', () => {
   it('validates required fields based on the active calculator', () => {
     expect(
       validateCalculatorInputs({
-        values: createValues({weight: ''}),
+        values: createValues({activeCalculator: 'BMI', weight: ''}),
         lang: 'en',
         t: translations.en,
       }),
