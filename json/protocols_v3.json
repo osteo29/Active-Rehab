@@ -953,9 +953,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.292540",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "knee",
-      "surgical": true
+      "surgical": true,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -981,6 +982,11 @@
         "journal": "Am J Sports",
         "year": 2010,
         "doi": ""
+      },
+      {
+        "raw": "MGB arthroscopic meniscal repair: phase VI, 6+ months | https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscus-repair.pdf | Clinician review required",
+        "title": "MGB arthroscopic meniscal repair: phase VI, 6+ months",
+        "url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscus-repair.pdf"
       }
     ],
     "phases": [
@@ -1325,15 +1331,30 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Only after surgeon clearance and completion of the source return-to-sport test battery; repair-specific restrictions still apply.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscus-repair.pdf"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_3_multi_plane_sport_specific_plyometrics",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_3_non_contact_practice_progressing_to_full_practice_and_full_play",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -1346,9 +1367,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.292668",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "knee",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -1390,6 +1412,11 @@
         "journal": "",
         "year": null,
         "doi": ""
+      },
+      {
+        "raw": "JOSPT 2019 patellofemoral pain CPG: combined hip and knee exercise | https://www.jospt.org/doi/10.2519/jospt.2019.0302 | Clinician review required",
+        "title": "JOSPT 2019 patellofemoral pain CPG: combined hip and knee exercise",
+        "url": "https://www.jospt.org/doi/10.2519/jospt.2019.0302"
       }
     ],
     "phases": [
@@ -1717,15 +1744,38 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "These are guideline exercise categories, not a fixed phase-4 prescription; select according to deficits and tolerance.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.jospt.org/doi/10.2519/jospt.2019.0302"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_4_resisted_squat",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_4_resisted_knee_extension",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_4_posterolateral_hip_strengthening",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -1738,9 +1788,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.292780",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "knee",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -1774,6 +1825,11 @@
         "journal": "Am J",
         "year": 2015,
         "doi": ""
+      },
+      {
+        "raw": "Rehabilitation of patellar tendinopathy: stage 3 | https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/ | Clinician review required",
+        "title": "Rehabilitation of patellar tendinopathy: stage 3",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/"
       }
     ],
     "phases": [
@@ -2042,15 +2098,54 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Only after movement-pattern and kinetic-chain deficits improve; monitor and quantify tendon loading, with high/low/medium load days.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_5_skipping",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_5_jumping",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_5_sprinting",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_5_bounding",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_5_agility_training",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -2418,9 +2513,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.292971",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "knee",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -2454,6 +2550,11 @@
         "journal": "",
         "year": null,
         "doi": ""
+      },
+      {
+        "raw": "MGB total knee arthroplasty: late post-operative rehabilitation | https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-total-knee-arthroplasty.pdf | Clinician review required",
+        "title": "MGB total knee arthroplasty: late post-operative rehabilitation",
+        "url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-total-knee-arthroplasty.pdf"
       }
     ],
     "phases": [
@@ -2796,15 +2897,30 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "High-impact activities, including running and plyometrics, are generally discouraged after total joint replacement. Surgeon clearance is required before any higher-impact activity.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-total-knee-arthroplasty.pdf"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_7_stationary_bicycle",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_7_swimming",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -4891,9 +5007,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.294571",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "ankle & foot",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -4927,6 +5044,11 @@
         "journal": "BJSM",
         "year": 2015,
         "doi": ""
+      },
+      {
+        "raw": "JOSPT 2024 midportion Achilles tendinopathy CPG | https://www.jospt.org/doi/10.2519/jospt.2024.0302 | Clinician review required",
+        "title": "JOSPT 2024 midportion Achilles tendinopathy CPG",
+        "url": "https://www.jospt.org/doi/10.2519/jospt.2024.0302"
       }
     ],
     "phases": [
@@ -5173,15 +5295,22 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "This source applies to midportion Achilles tendinopathy, not automatically to insertional disease or a tendon at risk of rupture. At least three sessions weekly, as highly loaded as tolerated, per clinician selection.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.jospt.org/doi/10.2519/jospt.2024.0302"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_14_progressive_achilles_tendon_loading_exercise",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -5194,9 +5323,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.294659",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "ankle & foot",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -5230,6 +5360,11 @@
         "journal": "",
         "year": null,
         "doi": ""
+      },
+      {
+        "raw": "JOSPT 2023 heel pain / plantar fasciitis CPG | https://www.jospt.org/doi/10.2519/jospt.2023.0303 | Clinician review required",
+        "title": "JOSPT 2023 heel pain / plantar fasciitis CPG",
+        "url": "https://www.jospt.org/doi/10.2519/jospt.2023.0303"
       }
     ],
     "phases": [
@@ -5502,15 +5637,29 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.jospt.org/doi/10.2519/jospt.2023.0303"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_15_plantar_fascia_specific_stretching",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_15_gastrocnemius_and_soleus_stretching",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -8167,9 +8316,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.295923",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "elbow & wrist",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -8187,6 +8337,11 @@
         "journal": "J Shoulder Elbow Surg",
         "year": 2010,
         "doi": ""
+      },
+      {
+        "raw": "JOSPT 2022 lateral elbow pain CPG | https://www.jospt.org/doi/10.2519/jospt.2022.0302 | Clinician review required",
+        "title": "JOSPT 2022 lateral elbow pain CPG",
+        "url": "https://www.jospt.org/doi/10.2519/jospt.2022.0302"
       }
     ],
     "phases": [
@@ -8402,15 +8557,38 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Choose and progress resisted wrist-extensor exercise according to symptoms and high-demand activity needs. Add shoulder/scapular training only when deficits are identified.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://www.jospt.org/doi/10.2519/jospt.2022.0302"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_23_isometric_resisted_wrist_extension",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_23_concentric_resisted_wrist_extension",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_23_eccentric_resisted_wrist_extension",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -8654,9 +8832,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.296226",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "hip",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -8666,6 +8845,11 @@
         "journal": "AJSM",
         "year": 2013,
         "doi": ""
+      },
+      {
+        "raw": "Aspetar 2019 hamstring injury rehabilitation: stage 3 | https://journal.aspetar.com/en/journals/volume-8-targeted-topic-hamstring-injuries-aspetar-experience/rehabilitation-and-return-to-sport-after-hamstring-injury | Clinician review required",
+        "title": "Aspetar 2019 hamstring injury rehabilitation: stage 3",
+        "url": "https://journal.aspetar.com/en/journals/volume-8-targeted-topic-hamstring-injuries-aspetar-experience/rehabilitation-and-return-to-sport-after-hamstring-injury"
       }
     ],
     "phases": [
@@ -8964,15 +9148,22 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "Introduce later-stage eccentric work only after the source criteria are met; adjust or stop exercises that provoke pain in the injured area. The existing calendar alone does not grant clearance.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://journal.aspetar.com/en/journals/volume-8-targeted-topic-hamstring-injuries-aspetar-experience/rehabilitation-and-return-to-sport-after-hamstring-injury"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_25_nordic_hamstring_exercise",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -8985,9 +9176,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.296386",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "hip",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -9005,6 +9197,11 @@
         "journal": "",
         "year": 2009,
         "doi": ""
+      },
+      {
+        "raw": "IJSPT hip/pelvis rehabilitation commentary: gluteal tendinopathy phase III | https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/ | Clinician review required",
+        "title": "IJSPT hip/pelvis rehabilitation commentary: gluteal tendinopathy phase III",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
       }
     ],
     "phases": [
@@ -9256,15 +9453,38 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "This is gluteal-tendinopathy guidance within the GTPS spectrum, not every cause of lateral hip pain; progress only after pain-free short-lever eccentric work.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_26_multi_plane_lunges_with_balance_challenges",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_26_step_up_with_eccentric_lowering",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_26_sport_specific_plyometric_training",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -10285,9 +10505,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.296855",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "shoulder",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -10313,13 +10534,18 @@
         "journal": "",
         "year": 2014,
         "doi": ""
+      },
+      {
+        "raw": "Nonoperative biceps tendinopathy/tear protocol | https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf | Clinician review required",
+        "title": "Nonoperative biceps tendinopathy/tear protocol",
+        "url": "https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf"
       }
     ],
     "phases": [
       {
         "phase_number": 1,
         "title": "Acute / Protection",
-        "timing": "",
+        "timing": "Approximately weeks 0-3; progression is criterion-based",
         "goals": [
           "Reduce pain and inflammation in Biceps Tendinopathy (Long Head)",
           "Protect injured structure",
@@ -10327,9 +10553,11 @@
           "Patient education"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Avoid aggravating movements",
           "Respect tissue healing timeline",
-          "Monitor for worsening or red flags"
+          "Monitor for worsening or red flags",
+          "Source (clinician review required): https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf"
         ],
         "criteria_to_progress": [
           "Pain \u22643/10 at rest",
@@ -10383,7 +10611,7 @@
       {
         "phase_number": 2,
         "title": "Subacute Strengthening",
-        "timing": "",
+        "timing": "Approximately weeks 4-8; progression is criterion-based",
         "goals": [
           "Progressive tissue loading",
           "Restore strength and ROM",
@@ -10391,9 +10619,11 @@
           "Functional ADL independence"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Monitor 24h pain response",
           "Avoid compensatory movement patterns",
-          "Progress load based on symptom response"
+          "Progress load based on symptom response",
+          "Source (clinician review required): https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf"
         ],
         "criteria_to_progress": [
           "Strength \u226575% limb symmetry",
@@ -10497,7 +10727,7 @@
       {
         "phase_number": 3,
         "title": "Return to Sport / Full Activity",
-        "timing": "",
+        "timing": "Approximately weeks 6-12; return-to-sport phase in source is approximately weeks 10-16, with physician clearance",
         "goals": [
           "Full strength symmetry \u226590%",
           "Sport/work-specific demands met",
@@ -10505,9 +10735,11 @@
           "Self-management strategies"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "10% weekly load increase rule",
           "Maintain long-term exercise program",
-          "Re-injury risk counselling"
+          "Re-injury risk counselling",
+          "Source (clinician review required): https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf"
         ],
         "criteria_to_progress": [
           "Functional tests \u226590% symmetry",
@@ -10943,9 +11175,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.297075",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "shoulder",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -10971,13 +11204,18 @@
         "journal": "",
         "year": 2014,
         "doi": ""
+      },
+      {
+        "raw": "Non-operative posterior instability protocol | https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf | Clinician review required",
+        "title": "Non-operative posterior instability protocol",
+        "url": "https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf"
       }
     ],
     "phases": [
       {
         "phase_number": 1,
         "title": "Acute / Protection",
-        "timing": "",
+        "timing": "Weeks 1-2: symptom reduction",
         "goals": [
           "Reduce pain and inflammation in Posterior Shoulder Instability",
           "Protect injured structure",
@@ -10985,9 +11223,11 @@
           "Patient education"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Avoid aggravating movements",
           "Respect tissue healing timeline",
-          "Monitor for worsening or red flags"
+          "Monitor for worsening or red flags",
+          "Source (clinician review required): https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf"
         ],
         "criteria_to_progress": [
           "Pain \u22643/10 at rest",
@@ -11041,7 +11281,7 @@
       {
         "phase_number": 2,
         "title": "Subacute Strengthening",
-        "timing": "",
+        "timing": "Weeks 2-6: progressive strengthening",
         "goals": [
           "Progressive tissue loading",
           "Restore strength and ROM",
@@ -11049,9 +11289,11 @@
           "Functional ADL independence"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Monitor 24h pain response",
           "Avoid compensatory movement patterns",
-          "Progress load based on symptom response"
+          "Progress load based on symptom response",
+          "Source (clinician review required): https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf"
         ],
         "criteria_to_progress": [
           "Strength \u226575% limb symmetry",
@@ -11155,7 +11397,7 @@
       {
         "phase_number": 3,
         "title": "Return to Sport / Full Activity",
-        "timing": "",
+        "timing": "Weeks 6-12: sport-specific training; return to sport is weeks 12-16 only after criteria and physician clearance",
         "goals": [
           "Full strength symmetry \u226590%",
           "Sport/work-specific demands met",
@@ -11163,9 +11405,11 @@
           "Self-management strategies"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "10% weekly load increase rule",
           "Maintain long-term exercise program",
-          "Re-injury risk counselling"
+          "Re-injury risk counselling",
+          "Source (clinician review required): https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf"
         ],
         "criteria_to_progress": [
           "Functional tests \u226590% symmetry",
@@ -11601,9 +11845,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.297262",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "shoulder",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -11629,13 +11874,18 @@
         "journal": "ANKLE & FOOT",
         "year": 2014,
         "doi": ""
+      },
+      {
+        "raw": "DBTH NHS shoulder calcific tendonitis exercise stages | https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf | Clinician review required",
+        "title": "DBTH NHS shoulder calcific tendonitis exercise stages",
+        "url": "https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf"
       }
     ],
     "phases": [
       {
         "phase_number": 1,
         "title": "Acute / Protection",
-        "timing": "",
+        "timing": "Initial exercises; source stage 2 starts at 3 weeks",
         "goals": [
           "Reduce pain and inflammation in Calcific Tendinitis",
           "Protect injured structure",
@@ -11643,9 +11893,11 @@
           "Patient education"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Avoid aggravating movements",
           "Respect tissue healing timeline",
-          "Monitor for worsening or red flags"
+          "Monitor for worsening or red flags",
+          "Source (clinician review required): https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf"
         ],
         "criteria_to_progress": [
           "Pain \u22643/10 at rest",
@@ -11699,7 +11951,7 @@
       {
         "phase_number": 2,
         "title": "Subacute Strengthening",
-        "timing": "",
+        "timing": "Source stage 2 starts at 3 weeks",
         "goals": [
           "Progressive tissue loading",
           "Restore strength and ROM",
@@ -11707,9 +11959,11 @@
           "Functional ADL independence"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Monitor 24h pain response",
           "Avoid compensatory movement patterns",
-          "Progress load based on symptom response"
+          "Progress load based on symptom response",
+          "Source (clinician review required): https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf"
         ],
         "criteria_to_progress": [
           "Strength \u226575% limb symmetry",
@@ -11813,7 +12067,7 @@
       {
         "phase_number": 3,
         "title": "Return to Sport / Full Activity",
-        "timing": "",
+        "timing": "Source stage 3 starts at 6 weeks, only after full pain-free movement; build regular activities gradually",
         "goals": [
           "Full strength symmetry \u226590%",
           "Sport/work-specific demands met",
@@ -11821,9 +12075,11 @@
           "Self-management strategies"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "10% weekly load increase rule",
           "Maintain long-term exercise program",
-          "Re-injury risk counselling"
+          "Re-injury risk counselling",
+          "Source (clinician review required): https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf"
         ],
         "criteria_to_progress": [
           "Functional tests \u226590% symmetry",
@@ -14073,9 +14329,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.298566",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "hip",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -14093,6 +14350,11 @@
         "journal": "Br J Sports Med",
         "year": 2015,
         "doi": ""
+      },
+      {
+        "raw": "IJSPT hip/pelvis rehabilitation commentary: adductor rehabilitation | https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/ | Clinician review required",
+        "title": "IJSPT hip/pelvis rehabilitation commentary: adductor rehabilitation",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
       }
     ],
     "phases": [
@@ -14380,15 +14642,38 @@
           "Safe return to full activity"
         ],
         "precautions": [
-          "Monitor for any recurrence of symptoms"
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
+          "The source gives a clinical goal of adduction strength at least 80% of abduction strength; sport-specific choices require the treating clinician.",
+          "Monitor for any recurrence of symptoms",
+          "Source (clinician review required): https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
         ],
         "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
+        "exercises": [
+          {
+            "exercise_ref": "source_44_standing_resisted_hip_adduction",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_44_seated_hip_adduction",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          },
+          {
+            "exercise_ref": "source_44_unilateral_lunge_with_reciprocal_arm_movement",
+            "dosage": {
+              "raw": "Individual dose to be set by the treating clinician; no dose supplied here."
+            },
+            "tags": [],
+            "clinical_cue_override": null
+          }
+        ]
       }
     ]
   },
@@ -15912,9 +16197,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.299316",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "knee",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -15940,13 +16226,18 @@
         "journal": "",
         "year": 2014,
         "doi": ""
+      },
+      {
+        "raw": "Tibial plateau ORIF rehabilitation protocol | https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf | Clinician review required",
+        "title": "Tibial plateau ORIF rehabilitation protocol",
+        "url": "https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf"
       }
     ],
     "phases": [
       {
         "phase_number": 1,
         "title": "Acute / Protection",
-        "timing": "",
+        "timing": "Weeks 0-6: protection; follow surgeon weight-bearing restrictions",
         "goals": [
           "Reduce pain and inflammation in Tibial Plateau Fracture (Post-op)",
           "Protect injured structure",
@@ -15954,9 +16245,11 @@
           "Patient education"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Avoid aggravating movements",
           "Respect tissue healing timeline",
-          "Monitor for worsening or red flags"
+          "Monitor for worsening or red flags",
+          "Source (clinician review required): https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf"
         ],
         "criteria_to_progress": [
           "Pain \u22643/10 at rest",
@@ -16010,7 +16303,7 @@
       {
         "phase_number": 2,
         "title": "Subacute Strengthening",
-        "timing": "",
+        "timing": "Weeks 6-8: clinician-supervised partial weight-bearing progression",
         "goals": [
           "Progressive tissue loading",
           "Restore strength and ROM",
@@ -16018,9 +16311,11 @@
           "Functional ADL independence"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Monitor 24h pain response",
           "Avoid compensatory movement patterns",
-          "Progress load based on symptom response"
+          "Progress load based on symptom response",
+          "Source (clinician review required): https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf"
         ],
         "criteria_to_progress": [
           "Strength \u226575% limb symmetry",
@@ -16124,7 +16419,7 @@
       {
         "phase_number": 3,
         "title": "Return to Sport / Full Activity",
-        "timing": "",
+        "timing": "Weeks 8-16: progressive activity; functional training from week 16; impact after week 20 only with physician clearance; full sport typically 6-8 months",
         "goals": [
           "Full strength symmetry \u226590%",
           "Sport/work-specific demands met",
@@ -16132,9 +16427,11 @@
           "Self-management strategies"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "10% weekly load increase rule",
           "Maintain long-term exercise program",
-          "Re-injury risk counselling"
+          "Re-injury risk counselling",
+          "Source (clinician review required): https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf"
         ],
         "criteria_to_progress": [
           "Functional tests \u226590% symmetry",
@@ -16899,9 +17196,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.299552",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "knee",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -16927,13 +17225,18 @@
         "journal": "SHOULDER",
         "year": 2014,
         "doi": ""
+      },
+      {
+        "raw": "MGB arthroscopic partial meniscectomy rehabilitation protocol | https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf | Clinician review required",
+        "title": "MGB arthroscopic partial meniscectomy rehabilitation protocol",
+        "url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf"
       }
     ],
     "phases": [
       {
         "phase_number": 1,
         "title": "Acute / Protection",
-        "timing": "",
+        "timing": "Day 0-7 after surgery",
         "goals": [
           "Reduce pain and inflammation in Meniscectomy (Post-operative)",
           "Protect injured structure",
@@ -16941,9 +17244,11 @@
           "Patient education"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Avoid aggravating movements",
           "Respect tissue healing timeline",
-          "Monitor for worsening or red flags"
+          "Monitor for worsening or red flags",
+          "Source (clinician review required): https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf"
         ],
         "criteria_to_progress": [
           "Pain \u22643/10 at rest",
@@ -16997,7 +17302,7 @@
       {
         "phase_number": 2,
         "title": "Subacute Strengthening",
-        "timing": "",
+        "timing": "Day 8 to week 2 after surgery",
         "goals": [
           "Progressive tissue loading",
           "Restore strength and ROM",
@@ -17005,9 +17310,11 @@
           "Functional ADL independence"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "Monitor 24h pain response",
           "Avoid compensatory movement patterns",
-          "Progress load based on symptom response"
+          "Progress load based on symptom response",
+          "Source (clinician review required): https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf"
         ],
         "criteria_to_progress": [
           "Strength \u226575% limb symmetry",
@@ -17111,7 +17418,7 @@
       {
         "phase_number": 3,
         "title": "Return to Sport / Full Activity",
-        "timing": "",
+        "timing": "Weeks 2-8 after surgery; unrestricted sport is a separate source phase at weeks 9-12 and requires the functional test criteria",
         "goals": [
           "Full strength symmetry \u226590%",
           "Sport/work-specific demands met",
@@ -17119,9 +17426,11 @@
           "Self-management strategies"
         ],
         "precautions": [
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician.",
           "10% weekly load increase rule",
           "Maintain long-term exercise program",
-          "Re-injury risk counselling"
+          "Re-injury risk counselling",
+          "Source (clinician review required): https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf"
         ],
         "criteria_to_progress": [
           "Functional tests \u226590% symmetry",
@@ -23275,9 +23584,10 @@
     "is_active": true,
     "metadata": {
       "created_at": "2026-05-08T08:28:45.302236",
-      "reviewed_by": "Clinical Expert System",
+      "reviewed_by": "Pending clinician review (source-mapped draft, 2026-11-23)",
       "body_region": "upper limb",
-      "surgical": false
+      "surgical": false,
+      "clinical_review_required": true
     },
     "references": [
       {
@@ -23287,6 +23597,11 @@
         "journal": "J Hand Surg Am",
         "year": 1979,
         "doi": ""
+      },
+      {
+        "raw": "AAOS 2024 radial tunnel exercise program | https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf | Clinician review required",
+        "title": "AAOS 2024 radial tunnel exercise program",
+        "url": "https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf"
       }
     ],
     "phases": [
@@ -23304,9 +23619,13 @@
           "Avoid resistive supination and radial deviation in acute phase",
           "No forceful gripping with wrist in flexion and forearm in",
           "Monitor for PIN palsy (posterior interosseous nerve) \u2014",
-          "NSAIDs may assist in acute nerve irritation phase"
+          "NSAIDs may assist in acute nerve irritation phase",
+          "Source (clinician review required): https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Exercises should not cause significant pain. If pain steadily worsens, exercises increase pain, or pain fails to improve after 6-12 weeks, consult the doctor or physical therapist.",
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician."
+        ],
         "exercises": [
           {
             "exercise_ref": "radial_nerve_slider",
@@ -23381,9 +23700,13 @@
         "precautions": [
           "Avoid heavy resistive supination until pain <3/10",
           "Monitor for symptom radiation into posterior forearm with loading",
-          "Progress gradually \u2014 24h pain rule applies"
+          "Progress gradually \u2014 24h pain rule applies",
+          "Source (clinician review required): https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Exercises should not cause significant pain. If pain steadily worsens, exercises increase pain, or pain fails to improve after 6-12 weeks, consult the doctor or physical therapist.",
+          "DRAFT: sourced content awaiting clinician review. Not an individualized prescription; progression and dose require the treating clinician."
+        ],
         "exercises": [
           {
             "exercise_ref": "wrist_extension",

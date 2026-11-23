@@ -7721,5 +7721,205 @@
       "elbow-extension-in-stretch"
     ],
     "status": "validated"
+  },
+  {
+    "id": "source_3_multi_plane_sport_specific_plyometrics",
+    "canonical_name": "Multi-plane sport-specific plyometrics",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscus-repair.pdf"
+  },
+  {
+    "id": "source_3_non_contact_practice_progressing_to_full_practice_and_full_play",
+    "canonical_name": "Non-contact practice progressing to full practice and full play",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscus-repair.pdf"
+  },
+  {
+    "id": "source_4_resisted_squat",
+    "canonical_name": "Resisted squat",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2019.0302"
+  },
+  {
+    "id": "source_4_resisted_knee_extension",
+    "canonical_name": "Resisted knee extension",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2019.0302"
+  },
+  {
+    "id": "source_4_posterolateral_hip_strengthening",
+    "canonical_name": "Posterolateral hip strengthening",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2019.0302"
+  },
+  {
+    "id": "source_5_skipping",
+    "canonical_name": "Skipping",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/"
+  },
+  {
+    "id": "source_5_jumping",
+    "canonical_name": "Jumping",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/"
+  },
+  {
+    "id": "source_5_sprinting",
+    "canonical_name": "Sprinting",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/"
+  },
+  {
+    "id": "source_5_bounding",
+    "canonical_name": "Bounding",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/"
+  },
+  {
+    "id": "source_5_agility_training",
+    "canonical_name": "Agility training",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/"
+  },
+  {
+    "id": "source_7_stationary_bicycle",
+    "canonical_name": "Stationary bicycle",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-total-knee-arthroplasty.pdf"
+  },
+  {
+    "id": "source_7_swimming",
+    "canonical_name": "Swimming",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-total-knee-arthroplasty.pdf"
+  },
+  {
+    "id": "source_14_progressive_achilles_tendon_loading_exercise",
+    "canonical_name": "Progressive Achilles tendon-loading exercise",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2024.0302"
+  },
+  {
+    "id": "source_15_plantar_fascia_specific_stretching",
+    "canonical_name": "Plantar-fascia-specific stretching",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2023.0303"
+  },
+  {
+    "id": "source_15_gastrocnemius_and_soleus_stretching",
+    "canonical_name": "Gastrocnemius and soleus stretching",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2023.0303"
+  },
+  {
+    "id": "source_23_isometric_resisted_wrist_extension",
+    "canonical_name": "Isometric resisted wrist extension",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2022.0302"
+  },
+  {
+    "id": "source_23_concentric_resisted_wrist_extension",
+    "canonical_name": "Concentric resisted wrist extension",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2022.0302"
+  },
+  {
+    "id": "source_23_eccentric_resisted_wrist_extension",
+    "canonical_name": "Eccentric resisted wrist extension",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://www.jospt.org/doi/10.2519/jospt.2022.0302"
+  },
+  {
+    "id": "source_25_nordic_hamstring_exercise",
+    "canonical_name": "Nordic hamstring exercise",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://journal.aspetar.com/en/journals/volume-8-targeted-topic-hamstring-injuries-aspetar-experience/rehabilitation-and-return-to-sport-after-hamstring-injury"
+  },
+  {
+    "id": "source_26_multi_plane_lunges_with_balance_challenges",
+    "canonical_name": "Multi-plane lunges with balance challenges",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
+  },
+  {
+    "id": "source_26_step_up_with_eccentric_lowering",
+    "canonical_name": "Step-up with eccentric lowering",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
+  },
+  {
+    "id": "source_26_sport_specific_plyometric_training",
+    "canonical_name": "Sport-specific plyometric training",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
+  },
+  {
+    "id": "source_44_standing_resisted_hip_adduction",
+    "canonical_name": "Standing resisted hip adduction",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
+  },
+  {
+    "id": "source_44_seated_hip_adduction",
+    "canonical_name": "Seated hip adduction",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
+  },
+  {
+    "id": "source_44_unilateral_lunge_with_reciprocal_arm_movement",
+    "canonical_name": "Unilateral lunge with reciprocal arm movement",
+    "clinical_cue": "",
+    "default_tags": [],
+    "status": "clinician_review_required",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/"
   }
 ]

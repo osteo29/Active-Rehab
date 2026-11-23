@@ -1,0 +1,201 @@
+[
+  {
+    "protocol_id": 3,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscus-repair.pdf",
+    "scope": "MGB arthroscopic meniscal repair: phase VI, 6+ months",
+    "review_required": true
+  },
+  {
+    "protocol_id": 4,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.jospt.org/doi/10.2519/jospt.2019.0302",
+    "scope": "JOSPT 2019 patellofemoral pain CPG: combined hip and knee exercise",
+    "review_required": true
+  },
+  {
+    "protocol_id": 5,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7716685/",
+    "scope": "Rehabilitation of patellar tendinopathy: stage 3",
+    "review_required": true
+  },
+  {
+    "protocol_id": 7,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-total-knee-arthroplasty.pdf",
+    "scope": "MGB total knee arthroplasty: late post-operative rehabilitation",
+    "review_required": true
+  },
+  {
+    "protocol_id": 14,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.jospt.org/doi/10.2519/jospt.2024.0302",
+    "scope": "JOSPT 2024 midportion Achilles tendinopathy CPG",
+    "review_required": true
+  },
+  {
+    "protocol_id": 15,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.jospt.org/doi/10.2519/jospt.2023.0303",
+    "scope": "JOSPT 2023 heel pain / plantar fasciitis CPG",
+    "review_required": true
+  },
+  {
+    "protocol_id": 23,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://www.jospt.org/doi/10.2519/jospt.2022.0302",
+    "scope": "JOSPT 2022 lateral elbow pain CPG",
+    "review_required": true
+  },
+  {
+    "protocol_id": 25,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://journal.aspetar.com/en/journals/volume-8-targeted-topic-hamstring-injuries-aspetar-experience/rehabilitation-and-return-to-sport-after-hamstring-injury",
+    "scope": "Aspetar 2019 hamstring injury rehabilitation: stage 3",
+    "review_required": true
+  },
+  {
+    "protocol_id": 26,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/",
+    "scope": "IJSPT hip/pelvis rehabilitation commentary: gluteal tendinopathy phase III",
+    "review_required": true
+  },
+  {
+    "protocol_id": 44,
+    "phase": 4,
+    "field": "exercises",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4223288/",
+    "scope": "IJSPT hip/pelvis rehabilitation commentary: adductor rehabilitation",
+    "review_required": true
+  },
+  {
+    "protocol_id": 31,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 31,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 31,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://skylineorthopedics.com/wp-content/uploads/2026/01/pt-nonop-biceps.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 33,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 33,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 33,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://kansasortho.com/sites/default/files/non-op-posterior-instability-protocol-2015.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 35,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 35,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 35,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://www.dbth.nhs.uk/wp-content/uploads/2023/08/WPR45490-Shoulder-Calcific-Tendonitus.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 50,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 50,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 50,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://www.bodenorthopedics.com/wp-content/uploads/2025/06/Tibial-Plateau-Fracture-ORIF.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 53,
+    "phase": 1,
+    "field": "timing",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 53,
+    "phase": 2,
+    "field": "timing",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 53,
+    "phase": 3,
+    "field": "timing",
+    "source": "https://www.massgeneralbrigham.org/content/dam/unified-xwalk/pdf/patient-education/english/rehabilitation-protocol-for-meniscectomy.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 72,
+    "phase": 1,
+    "field": "criteria_to_progress",
+    "source": "https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf",
+    "review_required": true
+  },
+  {
+    "protocol_id": 72,
+    "phase": 2,
+    "field": "criteria_to_progress",
+    "source": "https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf",
+    "review_required": true
+  }
+]
