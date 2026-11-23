@@ -41,13 +41,15 @@ type CalculationOptions = ValidationOptions;
 
 const requiresHeight = ['BMI', 'BMR', 'TDEE', 'Macros', 'IdealWeight', 'BodyFat', 'Deficit', 'WHtR'] as const;
 const requiresAge = ['BMR', 'TDEE', 'Macros', 'Deficit'] as const;
-const requiresWaistAndNeck = ['BodyFat', 'WHtR'] as const;
+const requiresWaist = ['BodyFat', 'WHtR'] as const;
+const requiresWeight = ['BMI', 'BMR', 'TDEE', 'Macros', 'Protein', 'Water', 'Deficit'] as const;
 
 function includesCalculator(list: readonly Exclude<CalculatorType, null>[], calculator: CalculatorType) {
   return calculator ? list.includes(calculator as Exclude<CalculatorType, null>) : false;
 }
 
 function toPositiveNumber(value: string) {
+  if (/[-−]/.test(value)) return 0;
   const parsed = parseLocalizedNumber(value);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
 }
@@ -58,18 +60,18 @@ function toMetricIfNeeded(value: number, unitSystem: 'metric' | 'imperial') {
 
 export function validateCalculatorInputs({values, lang, t}: ValidationOptions) {
   if (values.activeCalculator === 'Meal') return null;
-  if (!values.weight && values.activeCalculator !== 'IdealWeight') return t.errors.weight;
+  if (includesCalculator(requiresWeight, values.activeCalculator) && toPositiveNumber(values.weight) <= 0) return t.errors.weight;
   if (includesCalculator(requiresHeight, values.activeCalculator) && toPositiveNumber(values.height) <= 0) return t.errors.height;
   if (includesCalculator(requiresAge, values.activeCalculator) && toPositiveNumber(values.age) <= 0) return t.errors.age;
-  if (includesCalculator(requiresWaistAndNeck, values.activeCalculator)) {
+  if (includesCalculator(requiresWaist, values.activeCalculator)) {
     if (toPositiveNumber(values.waist) <= 0) return t.errors.waist;
-    if (toPositiveNumber(values.neck) <= 0) return t.errors.neck;
+    if (values.activeCalculator === 'BodyFat' && toPositiveNumber(values.neck) <= 0) return t.errors.neck;
     if (values.gender === 'female' && values.activeCalculator === 'BodyFat' && toPositiveNumber(values.hip) <= 0) {
       return t.errors.hip;
     }
   }
 
-  if (values.knowBodyFat && toPositiveNumber(values.bodyFatInput) <= 0) {
+  if (values.knowBodyFat && includesCalculator(['BMR', 'TDEE', 'Macros', 'Deficit'], values.activeCalculator) && toPositiveNumber(values.bodyFatInput) <= 0) {
     return lang === 'en' ? 'Please enter body fat percentage' : 'يرجى إدخال نسبة الدهون';
   }
 
