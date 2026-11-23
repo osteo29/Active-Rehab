@@ -374,9 +374,11 @@ export default function AnatomyPage() {
                           allowFullScreen
                         />
                       ) : (
-                        <div
+                        <button
+                          type="button"
                           onClick={() => setPlayingVideoId(ex.id)}
-                          className="group/thumb relative h-full w-full cursor-pointer overflow-hidden bg-slate-900 flex items-center justify-center"
+                          aria-label={`${isAr ? 'تشغيل' : 'Play'} ${isAr ? ex.nameAr : ex.nameEn}`}
+                          className="group/thumb relative block h-full w-full cursor-pointer overflow-hidden bg-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-health-green"
                         >
                           <img
                             src={`https://img.youtube.com/vi/${ex.youtubeId}/hqdefault.jpg`}
@@ -385,13 +387,13 @@ export default function AnatomyPage() {
                             loading="lazy"
                           />
                           <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px] transition group-hover/thumb:bg-black/10" />
-                          <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-health-green text-slate-950 shadow-xl transition-transform duration-300 group-hover/thumb:scale-110">
+                          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-health-green text-slate-950 shadow-xl transition-transform duration-300 group-hover/thumb:scale-110">
                             <Play className="h-6 w-6 fill-current pl-0.5" />
                           </div>
                           <div className="absolute bottom-2 right-2 rounded bg-black/70 px-2 py-0.5 text-[10px] font-bold text-white">
                             {ex.id}
                           </div>
-                        </div>
+                        </button>
                       )}
                     </div>
 
