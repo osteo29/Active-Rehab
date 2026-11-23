@@ -135,10 +135,10 @@ export default function DrugNutrientChecker({
               <Pill className="h-3.5 w-3.5" />
               <span>{isAr ? 'أداة أمان مهمة' : 'High-value safety tool'}</span>
             </div>
-            <h2 className="text-3xl font-black text-slate-900">
+            <h2 className="text-3xl font-black text-slate-900 dark:text-white">
               {isAr ? 'فحص أمان الدواء مع الغذاء والمكملات' : 'Medication, food, and supplement safety check'}
             </h2>
-            <p className="mt-2 max-w-2xl text-slate-600">
+            <p className="mt-2 max-w-2xl text-slate-600 dark:text-slate-300">
               {isAr
                 ? 'الأداة تبحث أولًا في قاعدة بيانات ثابتة للتداخلات الشائعة، ولو مفيش تطابق واضح تستخدم الذكاء الاصطناعي كمساعد إضافي بحذر.'
                 : 'The tool checks a fixed database of common interactions first, then uses AI carefully when there is no clear direct match.'}
@@ -146,9 +146,9 @@ export default function DrugNutrientChecker({
           </div>
         </div>
 
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-          <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-4 text-sm leading-7 text-slate-700">
-            <strong className="block text-slate-900">
+        <div className="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm md:p-8">
+          <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-4 text-sm leading-7 text-slate-700 dark:text-slate-200">
+            <strong className="block text-slate-900 dark:text-white">
               {isAr ? 'مهم للمستخدم العادي أيضًا' : 'Important for everyday users too'}
             </strong>
             <span>
@@ -164,7 +164,7 @@ export default function DrugNutrientChecker({
                 key={example}
                 type="button"
                 onClick={() => setQuery(example)}
-                className="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-600 hover:border-medical-blue hover:text-medical-blue"
+                className="rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-3 py-2 text-xs font-bold text-slate-600 dark:text-slate-300 hover:border-medical-blue hover:text-medical-blue"
               >
                 {example}
               </button>
@@ -182,7 +182,7 @@ export default function DrugNutrientChecker({
                     ? 'مثال: وارفارين وفيتامين K أو الميتفورمين وفيتامين B12'
                     : 'Example: Warfarin and vitamin K, or metformin and B12'
                 }
-                className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 outline-none focus:ring-2 focus:ring-medical-blue/30 rtl:pl-4 rtl:pr-12"
+                className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 py-4 pl-12 pr-4 outline-none focus:ring-2 focus:ring-medical-blue/30 rtl:pl-4 rtl:pr-12"
               />
             </div>
             <button
@@ -223,7 +223,7 @@ export default function DrugNutrientChecker({
               <div className={`flex items-start gap-3 ${cardTone.text}`}>
                 <Icon className="mt-0.5 h-6 w-6 shrink-0" />
                 <div className="flex-1">
-                  {result.title ? <div className="mb-1 text-base font-black text-slate-900">{result.title}</div> : null}
+                  {result.title ? <div className="mb-1 text-base font-black text-slate-900 dark:text-white">{result.title}</div> : null}
                   <div className="text-sm font-black uppercase tracking-widest">
                     {result.status === 'Danger'
                       ? isAr
@@ -241,7 +241,7 @@ export default function DrugNutrientChecker({
                             ? 'غير واضح'
                             : 'Unclear'}
                   </div>
-                  <div className="mt-2 inline-flex rounded-full bg-white/70 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">
+                  <div className="mt-2 inline-flex rounded-full bg-white/70 dark:bg-slate-900/70 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">
                     {result.source === 'database'
                       ? isAr
                         ? 'قاعدة بيانات ثابتة'
@@ -250,7 +250,7 @@ export default function DrugNutrientChecker({
                         ? 'مساعدة بالذكاء الاصطناعي'
                         : 'AI-assisted'}
                   </div>
-                  <div className="mt-2 text-sm text-slate-800">{result.summary}</div>
+                  <div className="mt-2 text-sm text-slate-800 dark:text-slate-100">{result.summary}</div>
                 </div>
               </div>
 
@@ -259,7 +259,7 @@ export default function DrugNutrientChecker({
                   <div className="mb-2 text-xs font-black uppercase tracking-widest text-slate-500">
                     {isAr ? 'التداخلات المحتملة' : 'Potential interactions'}
                   </div>
-                  <ul className="list-disc space-y-1 pl-5 text-sm text-slate-700">
+                  <ul className="list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-200">
                     {result.interactions.map((item, index) => (
                       <li key={index}>{item}</li>
                     ))}
@@ -272,7 +272,7 @@ export default function DrugNutrientChecker({
                   <div className="mb-2 text-xs font-black uppercase tracking-widest text-slate-500">
                     {isAr ? 'نصائح عملية' : 'Practical advice'}
                   </div>
-                  <ul className="list-disc space-y-1 pl-5 text-sm text-slate-700">
+                  <ul className="list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-200">
                     {result.practicalAdvice.map((item, index) => (
                       <li key={index}>{item}</li>
                     ))}

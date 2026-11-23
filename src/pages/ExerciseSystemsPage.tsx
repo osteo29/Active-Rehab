@@ -29,16 +29,16 @@ export default function ExerciseSystemsPage() {
           <ChevronRight className="h-4 w-4" />
           <Link to={navigationPaths.exercises(lang)} className="hover:text-health-green">{isAr ? 'التمارين' : 'Exercises'}</Link>
           <ChevronRight className="h-4 w-4" />
-          <span className="font-semibold text-slate-900">{isAr ? 'الأنظمة' : 'Systems'}</span>
+          <span className="font-semibold text-slate-900 dark:text-white">{isAr ? 'الأنظمة' : 'Systems'}</span>
         </nav>
 
-        <section className="rounded-[2rem] border border-slate-200 bg-[linear-gradient(140deg,#ffffff,#eefbf7)] p-6 sm:p-8">
+        <section className="rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-[linear-gradient(140deg,#ffffff,#eefbf7)] p-6 sm:p-8">
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-health-green/20 bg-health-green/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-health-green-dark">
               <Layers3 className="h-4 w-4" />
               <span>{isAr ? 'مركز الأنظمة' : 'Systems hub'}</span>
             </div>
-            <p className="text-base leading-8 text-slate-700">
+            <p className="text-base leading-8 text-slate-700 dark:text-slate-200">
               {isAr
                 ? 'هنا ستجد كل أنظمة التمارين مفصولة بوضوح: لكل نظام صفحة مستقلة فيها الفكرة العامة، الفرق بينه وبين غيره، الخطة الأسبوعية المقترحة، وروابط مباشرة لصفحات التمارين الخاصة بالمناطق العضلية.'
                 : 'This hub separates each workout system into its own page with a full explanation, direct comparisons, linked weekly planning, and connected exercise-region pages.'}
@@ -48,14 +48,14 @@ export default function ExerciseSystemsPage() {
 
         <section className="grid gap-4 lg:grid-cols-2">
           {TRAINING_SYSTEMS.map((system) => (
-            <div key={system.id} className="space-y-4 rounded-[1.8rem] border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+            <div key={system.id} className="space-y-4 rounded-[1.8rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 shadow-sm sm:p-5">
               <TrainingSystemCard system={system} isAr={isAr} />
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 p-4">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
                   <ArrowRightLeft className="h-4 w-4 text-health-green" />
                   <span>{isAr ? 'الخلاصة السريعة' : 'Quick comparison summary'}</span>
                 </div>
-                <p className="mt-2 text-sm leading-7 text-slate-700">
+                <p className="mt-2 text-sm leading-7 text-slate-700 dark:text-slate-200">
                   {isAr ? SYSTEM_DETAIL_CONTENT[system.id].overviewAr : SYSTEM_DETAIL_CONTENT[system.id].overviewEn}
                 </p>
               </div>

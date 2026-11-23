@@ -67,7 +67,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
         </div>
 
         {isExpanded && exercise.videoUrl ? (
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-black">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-black">
             <div className="relative aspect-[16/10]">
               <iframe
                 src={exercise.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
@@ -83,7 +83,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
 
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h3 className="text-xl font-bold text-slate-900">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">
               {highlightText(isAr ? (exercise.nameAr || EXERCISE_NAMES_AR[exercise.name] || exercise.name) : exercise.name, searchQuery)}
             </h3>
             {isAr && (exercise.nameAr || EXERCISE_NAMES_AR[exercise.name]) ? (
@@ -105,16 +105,16 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
           {highlightText(exercise.description, searchQuery)}
         </p>
 
-        <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-          <div className="text-sm text-slate-600">
-            <span className="font-bold text-slate-900">{exercise.muscles.length}</span>{' '}
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-4 py-3">
+          <div className="text-sm text-slate-600 dark:text-slate-300">
+            <span className="font-bold text-slate-900 dark:text-white">{exercise.muscles.length}</span>{' '}
             {isAr ? 'عضلات مستهدفة' : 'target zones'}
           </div>
           <button
             type="button"
             onClick={() => setIsExpanded((current) => !current)}
             aria-expanded={isExpanded}
-            className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 transition hover:border-health-green/30 hover:text-health-green"
+            className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-xs font-bold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green"
           >
             {isExpanded ? (isAr ? 'إخفاء التفاصيل' : 'Hide details') : (isAr ? 'عرض التفاصيل' : 'View details')}
           </button>
@@ -139,7 +139,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
               <div className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
                 {isAr ? 'تلميح تقني' : 'Coaching cue'}
               </div>
-              <p className="mt-1 text-sm text-slate-700">{exercise.tips}</p>
+              <p className="mt-1 text-sm text-slate-700 dark:text-slate-200">{exercise.tips}</p>
             </div>
 
             {exercise.rehabTip ? (
@@ -147,7 +147,7 @@ function ExerciseCard({exercise, isAr, searchQuery = ''}: {exercise: Exercise; i
                 <div className="text-xs font-bold uppercase tracking-[0.14em] text-health-green-dark">
                   {isAr ? 'ملاحظة تأهيل مناسبة للجيم' : 'Gym-friendly rehab note'}
                 </div>
-                <p className="mt-1 text-sm text-slate-700">{exercise.rehabTip}</p>
+                <p className="mt-1 text-sm text-slate-700 dark:text-slate-200">{exercise.rehabTip}</p>
               </div>
             ) : null}
           </div>

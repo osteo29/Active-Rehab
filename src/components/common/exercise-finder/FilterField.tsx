@@ -17,14 +17,14 @@ function FilterField({
 }) {
   return (
     <div className="space-y-2">
-      <label htmlFor={id} className="block text-sm font-semibold text-slate-700">
+      <label htmlFor={id} className="block text-sm font-semibold text-slate-700 dark:text-slate-200">
         {label}
       </label>
       <select
         id={id}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-health-green focus:ring-2 focus:ring-health-green/20"
+        className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none transition focus:border-health-green focus:ring-2 focus:ring-health-green/20"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -66,7 +66,7 @@ function ChipGroup({
 }) {
   return (
     <div className="space-y-2">
-      <div className="text-sm font-semibold text-slate-700">{label}</div>
+      <div className="text-sm font-semibold text-slate-700 dark:text-slate-200">{label}</div>
       <div className="flex flex-wrap gap-2">
         {options.map((option) => {
           const isActive = value === option.value;

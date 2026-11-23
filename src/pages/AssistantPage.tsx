@@ -108,7 +108,7 @@ export default function AssistantPage({
         noIndex
       />
 
-      <nav className="sticky top-0 z-50 border-b border-slate-100 bg-white/85 px-3 backdrop-blur-md sm:px-6 lg:px-8">
+      <nav className="sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 bg-white/85 dark:bg-slate-900/85 px-3 backdrop-blur-md sm:px-6 lg:px-8">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3">
           <Link to={navigationPaths.home(lang)} className="group">
             <BrandLogo imageClassName="transition-transform group-hover:scale-105" />
@@ -117,7 +117,7 @@ export default function AssistantPage({
           <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={onToggleTheme}
-              className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-slate-700 transition-all hover:border-health-green/30"
+              className="flex items-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 px-3 py-2 text-slate-700 dark:text-slate-200 transition-all hover:border-health-green/30"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
@@ -134,7 +134,7 @@ export default function AssistantPage({
 
             <Link
               to={navigationPaths.auth(lang)}
-              className="hidden items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 text-slate-700 transition-all hover:border-health-green/30 sm:flex"
+              className="hidden items-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-slate-700 dark:text-slate-200 transition-all hover:border-health-green/30 sm:flex"
             >
               <span className="text-xs font-bold">
                 {isAr ? 'الحساب' : 'Account'}
@@ -154,14 +154,14 @@ export default function AssistantPage({
 
       <div className="flex flex-1 flex-col">
         <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-5 sm:px-6 lg:px-8">
-          <div className="mb-6 rounded-[2rem] border border-slate-200 bg-white/80 p-5 shadow-sm sm:p-6">
+          <div className="mb-6 rounded-[2rem] border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 p-5 shadow-sm sm:p-6">
             <div className="mb-3 inline-flex items-center rounded-full border border-amber-200 bg-amber-100 px-3 py-1 text-[10px] font-black uppercase text-amber-700">
               {isAr ? 'نسخة تجريبية' : 'Beta version'}
             </div>
-            <h1 className="text-3xl font-black text-slate-900 sm:text-4xl">
+            <h1 className="text-3xl font-black text-slate-900 dark:text-white sm:text-4xl">
               {isAr ? 'مساعد Active Rehab' : 'Active Rehab Assistant'}
             </h1>
-            <p className="mt-2 max-w-2xl text-sm text-slate-600 sm:text-base">
+            <p className="mt-2 max-w-2xl text-sm text-slate-600 dark:text-slate-300 sm:text-base">
               {isAr
                 ? 'مساعد علاجي وغذائي يربط الإجابة بسياق المستخدم قدر الإمكان، مع لغة مهنية آمنة وغير تشخيصية.'
                 : 'A recovery-focused assistant that ties answers to the user context whenever possible, with a safe non-diagnostic tone.'}
@@ -172,13 +172,13 @@ export default function AssistantPage({
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="rounded-[1.75rem] border border-slate-200 bg-white/85 p-4 shadow-sm"
+                className="rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white/85 dark:bg-slate-900/85 p-4 shadow-sm"
               >
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-soft-blue text-health-green">
                   <item.icon className="h-5 w-5" />
                 </div>
-                <h2 className="mb-1 font-bold text-slate-900">{item.title}</h2>
-                <p className="text-sm leading-6 text-slate-600">{item.desc}</p>
+                <h2 className="mb-1 font-bold text-slate-900 dark:text-white">{item.title}</h2>
+                <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -198,7 +198,7 @@ Rules:
                 ? 'هذا الذكاء الاصطناعي لأغراض تعليمية فقط. استشر مختصًا لاتخاذ قرارات طبية.'
                 : 'This AI is for educational purposes. Consult a clinician for medical decisions.'
             }
-            className="flex-1 overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50"
+            className="flex-1 overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-800 shadow-xl shadow-slate-200/50"
             initialMessage={
               isAr
                 ? 'مرحبًا، أنا هنا لمساعدتك في أسئلة العلاج الطبيعي والتغذية. كيف يمكنني دعمك اليوم؟'
