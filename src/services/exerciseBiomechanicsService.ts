@@ -78,10 +78,10 @@ export type BodyIqExerciseEmbed = {
   movementPattern: string;
   primaryMuscle: string;
   secondaryMuscles: string;
-  youtubeId: string;
-  embedVideoUrl: string;
+  youtubeId: string | null;
+  embedVideoUrl: string | null;
   coachingCue: string;
-  embedIframeCode: string;
+  embedIframeCode: string | null;
 };
 
 export function getExerciseBiomechanics(exerciseId: string): ExerciseBiomechanics | null {
