@@ -19,7 +19,7 @@ function readDismissedState(storageKey: string) {
     return false;
   }
 
-  return window.localStorage.getItem(storageKey) === 'true';
+  try { return window.localStorage.getItem(storageKey) === 'true'; } catch { return false; }
 }
 
 function writeDismissedState(storageKey: string, value: boolean) {
@@ -27,12 +27,10 @@ function writeDismissedState(storageKey: string, value: boolean) {
     return;
   }
 
-  if (value) {
-    window.localStorage.setItem(storageKey, 'true');
-    return;
-  }
-
-  window.localStorage.removeItem(storageKey);
+  try {
+    if (value) window.localStorage.setItem(storageKey, 'true');
+    else window.localStorage.removeItem(storageKey);
+  } catch { /* Dismissal still applies in this mounted session. */ }
 }
 
 function isStandalone() {
