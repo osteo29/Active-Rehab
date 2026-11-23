@@ -1,22 +1,6 @@
+import {scrollToAnchorWhenReady} from '../utils/scrollToAnchor';
 import {useEffect} from 'react';
 
-// Sections on the home page render lazily (DeferredHomeSection), so an anchor
-// target like #food-db or #calculators may not exist yet when navigation
-// happens. Poll briefly until the element mounts, then scroll to it.
-function scrollToIdWhenReady(id: string, timeoutMs = 6000) {
-  const startedAt = Date.now();
-  const tryScroll = () => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({behavior: 'smooth', block: 'start'});
-      return;
-    }
-    if (Date.now() - startedAt < timeoutMs) {
-      window.setTimeout(tryScroll, 150);
-    }
-  };
-  tryScroll();
-}
 import {useLocation} from 'react-router-dom';
 import App from '../App';
 import ManagedSeo from '../components/seo/ManagedSeo';
@@ -46,15 +30,12 @@ export default function HomeRoute({
   const pageKey = calculatorPage ? 'calculator_detail' : scrollToId === 'calculators' ? 'calculators' : 'home';
 
   useEffect(() => {
-    if (!scrollToId) return;
-    scrollToIdWhenReady(scrollToId);
-  }, [scrollToId]);
-
-  useEffect(() => {
-    const id = location.hash.slice(1);
-    if (!id) return;
-    scrollToIdWhenReady(id);
-  }, [location.hash]);
+    let hashId = '';
+    try { hashId = decodeURIComponent(location.hash.slice(1)); } catch { hashId = location.hash.slice(1); }
+    const target = hashId || scrollToId;
+    if (!target) return;
+    return scrollToAnchorWhenReady(target);
+  }, [scrollToId, location.hash, calculatorSlug]);
 
   return (
     <>
