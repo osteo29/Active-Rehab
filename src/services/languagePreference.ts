@@ -1,6 +1,6 @@
 import type {Language} from './translations';
 
-export const LANGUAGE_STORAGE_KEY = 'physiohub_lang';
+export const LANGUAGE_STORAGE_KEY = 'activerehab_lang';
 export const LANGUAGE_CHANGE_EVENT = 'physiohub-language-change';
 
 export function getPreferredLanguage(): Language {

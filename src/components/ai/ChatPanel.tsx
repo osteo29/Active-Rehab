@@ -1,6 +1,7 @@
 import {type KeyboardEvent, useEffect, useMemo, useRef, useState} from 'react';
 import {motion} from 'motion/react';
 import {Clock3, CornerDownLeft, SendHorizonal, Sparkles} from 'lucide-react';
+import MarkdownMessage from './MarkdownMessage';
 import {
   askGeminiText,
   buildPersonalizedAiCacheKey,
@@ -182,7 +183,11 @@ export default function ChatPanel({
                       : 'border border-slate-200 bg-slate-50 text-slate-800'
                   }`}
                 >
-                  <div>{message.text}</div>
+                  {message.role === 'assistant' ? (
+                    <MarkdownMessage text={message.text} />
+                  ) : (
+                    <div className="whitespace-pre-wrap">{message.text}</div>
+                  )}
                   {message.role === 'assistant' && message.cached ? (
                     <div className="mt-2 inline-flex items-center gap-1 text-[11px] font-semibold text-slate-400">
                       <Clock3 className="h-3 w-3" />
