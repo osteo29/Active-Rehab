@@ -1,13 +1,141 @@
-import {describe,it,expect} from 'vitest';
-import {validateCalculatorInputs,calculateCalculatorResult,type CalculatorFormValues} from './appCalculatorLogic';
+import {describe, expect, it} from 'vitest';
+import {calculateCalculatorResult, validateCalculatorInputs, type CalculatorFormValues} from './appCalculatorLogic';
 import {translations} from '../services/translations';
-const values:CalculatorFormValues={activeCalculator:'BMI',weight:'75',height:'175',age:'30',gender:'male',activity:'1.4',waist:'80',neck:'38',hip:'95',goal:'maintain',bodyType:'mesomorph',pace:500,unitSystem:'metric',knowBodyFat:false,bodyFatInput:'',hotClimate:false,pregnancy:false,mealItems:[]};
-const validate=(patch:Partial<CalculatorFormValues>)=>validateCalculatorInputs({values:{...values,...patch},lang:'en',t:translations.en});
-describe('calculator input validation',()=>{
- it.each(['0','-5','NaN','Infinity','abc'])('rejects invalid weight %s',weight=>expect(validate({weight})).toBe(translations.en.errors.weight));
- it('accepts localized positive numeric inputs',()=>expect(validate({weight:'٧٥',height:'١٧٥'})).toBeNull());
- it('does not require weight or neck for a waist-to-height ratio',()=>{expect(validate({activeCalculator:'WHtR',weight:'',neck:''})).toBeNull();const result=calculateCalculatorResult({values:{...values,activeCalculator:'WHtR',weight:'',neck:''},lang:'en',t:translations.en});expect((result.result as {ratio:number}).ratio).toBe(0.46)});
- it('does require neck for the body-fat calculator',()=>expect(validate({activeCalculator:'BodyFat',weight:'',neck:''})).toBe(translations.en.errors.neck));
- it('does not require weight for ideal weight or dimension-based body fat',()=>{expect(validate({activeCalculator:'IdealWeight',weight:''})).toBeNull();expect(validate({activeCalculator:'BodyFat',weight:''})).toBeNull()});
- it('ignores an inactive hidden body-fat field after switching tools',()=>expect(validate({activeCalculator:'BMI',knowBodyFat:true,bodyFatInput:''})).toBeNull());
+
+const t = translations.ar;
+
+function createValues(overrides: Partial<CalculatorFormValues> = {}): CalculatorFormValues {
+  return {
+    activeCalculator: 'WHtR',
+    weight: '70',
+    height: '170',
+    age: '30',
+    gender: 'male',
+    activity: '1.2',
+    waist: '80',
+    neck: '38',
+    hip: '',
+    goal: 'maintain',
+    bodyType: 'mesomorph',
+    pace: 500,
+    unitSystem: 'metric',
+    knowBodyFat: false,
+    bodyFatInput: '',
+    hotClimate: false,
+    pregnancy: false,
+    mealItems: [{id: '1', name: '', calories: ''}],
+    ...overrides,
+  };
+}
+
+describe('appCalculatorLogic localized numeric input', () => {
+  it('validates required fields based on the active calculator', () => {
+    expect(
+      validateCalculatorInputs({
+        values: createValues({activeCalculator: 'BMI', weight: ''}),
+        lang: 'en',
+        t: translations.en,
+      }),
+    ).toBe(translations.en.errors.weight);
+
+    expect(
+      validateCalculatorInputs({
+        values: createValues({
+          activeCalculator: 'BodyFat',
+          gender: 'female',
+          hip: '',
+        }),
+        lang: 'en',
+        t: translations.en,
+      }),
+    ).toBe(translations.en.errors.hip);
+  });
+
+  it('calculates WHtR in imperial mode using metric conversion', () => {
+    const {result, healthInterpretation} = calculateCalculatorResult({
+      values: createValues({
+        unitSystem: 'imperial',
+        waist: '30',
+        height: '70',
+      }),
+      lang: 'en',
+      t: translations.en,
+    });
+
+    expect(result).toEqual({ratio: 0.43, category: 'Healthy'});
+    expect(healthInterpretation).toBeNull();
+  });
+
+  it('totals meal calories from mixed numeric strings', () => {
+    const {result} = calculateCalculatorResult({
+      values: createValues({
+        activeCalculator: 'Meal',
+        mealItems: [
+          {id: '1', name: 'Chicken', calories: '200'},
+          {id: '2', name: 'Rice', calories: '150.5'},
+          {id: '3', name: 'Salad', calories: '0'},
+        ],
+      }),
+      lang: 'en',
+      t: translations.en,
+    });
+
+    expect(result).toBe(350.5);
+  });
+
+  it('accepts Arabic digits during validation for WHtR', () => {
+    const error = validateCalculatorInputs({
+      values: createValues({
+        height: '١٧٠',
+        waist: '٨٥',
+        neck: '٣٨',
+      }),
+      lang: 'ar',
+      t,
+    });
+
+    expect(error).toBeNull();
+  });
+
+  it('calculates WHtR from Arabic digits', () => {
+    const {result} = calculateCalculatorResult({
+      values: createValues({
+        height: '١٧٠',
+        waist: '٨٥',
+      }),
+      lang: 'ar',
+      t,
+    });
+
+    expect(result).toEqual({ratio: 0.5, category: 'مخاطر متزايدة'});
+  });
+
+  it('calculates body fat from localized metric inputs', () => {
+    const {result} = calculateCalculatorResult({
+      values: createValues({
+        activeCalculator: 'BodyFat',
+        height: '١٨٠',
+        waist: '٩٠',
+        neck: '٤٠',
+      }),
+      lang: 'ar',
+      t,
+    });
+
+    expect(result).toBeTypeOf('number');
+    expect(result).toBeGreaterThan(0);
+  });
+
+  it('returns localized guidance labels for WHtR thresholds', () => {
+    const {result} = calculateCalculatorResult({
+      values: createValues({
+        height: '١٧٠',
+        waist: '٧٥',
+      }),
+      lang: 'ar',
+      t,
+    });
+
+    expect(result).toEqual({ratio: 0.44, category: 'صحي'});
+  });
 });

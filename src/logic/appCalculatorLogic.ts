@@ -49,6 +49,7 @@ function includesCalculator(list: readonly Exclude<CalculatorType, null>[], calc
 }
 
 function toPositiveNumber(value: string) {
+  if (/[-−]/.test(value)) return 0;
   const parsed = parseLocalizedNumber(value);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
 }
