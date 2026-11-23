@@ -12,3 +12,9 @@ export function isSafeContentLink(value: string): boolean {
 export function isValidContentSlug(value: string): boolean {
   return /^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(value.trim());
 }
+
+export function isSafeMediaPath(value: string): boolean {
+  if (isSafeContentLink(value)) return true;
+  // Existing media entries may store bucket-relative paths, not full URLs.
+  return /^(?!.*(?:^|\/)\.\.(?:\/|$))[a-zA-Z0-9_.-]+(?:\/[a-zA-Z0-9_.-]+)*$/.test(value.trim());
+}
