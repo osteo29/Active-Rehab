@@ -124,12 +124,16 @@ export default defineConfig(({mode}) => {
               return 'ai-vendor';
             }
 
-            if (
-              id.includes('/src/services/translations.ts') ||
-              id.includes('/src/services/foodData.ts') ||
-              id.includes('/src/services/injuryDatabase.ts')
-            ) {
-              return 'app-data';
+            if (id.includes('/src/services/translations.ts')) {
+              return 'translations';
+            }
+
+            if (id.includes('/src/services/injuryDatabase.ts')) {
+              return 'content-data';
+            }
+
+            if (id.includes('/src/services/foodData.ts')) {
+              return 'food-data';
             }
 
             if (
