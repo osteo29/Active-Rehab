@@ -95,7 +95,7 @@ export default function ExercisesPage() {
                 </div>
                 <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-health-green transition group-hover:text-health-green-dark">
                   <span>{isAr ? 'افتح الصفحة' : 'Open page'}</span>
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
                 </div>
               </Link>
             ))}
@@ -128,7 +128,7 @@ export default function ExercisesPage() {
                 </div>
                 <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-health-green transition group-hover:text-health-green-dark">
                   <span>{isAr ? 'افتح الصفحة' : 'Open page'}</span>
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
                 </div>
               </Link>
             ))}

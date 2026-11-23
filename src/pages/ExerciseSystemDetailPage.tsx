@@ -141,11 +141,11 @@ export default function ExerciseSystemDetailPage() {
             <div className="flex flex-wrap gap-3">
               <Link to={navigationPaths.exerciseSystems(lang)} className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green">
                 <span>{isAr ? 'كل الأنظمة' : 'All systems'}</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
               </Link>
               <Link to={navigationPaths.exercises(lang)} className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-health-green/30 hover:text-health-green">
                 <span>{isAr ? 'الصفحة الأساسية للتمارين' : 'Main exercises hub'}</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
               </Link>
             </div>
           </div>

@@ -27,16 +27,25 @@ export default function App({
   theme,
   onToggleTheme,
   initialCalculatorId = null,
+  lang: routeLang,
 }: {
   theme: 'light' | 'dark';
   onToggleTheme: () => void;
   initialCalculatorId?: CalculatorType;
+  lang: Language;
 }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [lang, setLang] = useState<Language>(() => {
-    const saved = localStorage.getItem('physiohub_lang');
-    return (saved as Language) || 'ar';
-  });
+  // Language follows the URL (routeLang). Local state only gives instant
+  // feedback while the language-switch navigation is in flight; the route
+  // always wins on the next render.
+  const [lang, setLang] = useState<Language>(routeLang);
+
+  useEffect(() => {
+    if (routeLang !== lang) {
+      setLang(routeLang);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [routeLang]);
 
   const t = translations[lang];
   const {

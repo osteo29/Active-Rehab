@@ -491,7 +491,7 @@ export default function ArticlePage() {
                       <p className="mt-2 text-sm leading-7 text-slate-600">{link.description}</p>
                       <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-health-green-dark">
                         <span>{lang === 'en' ? 'Open next step' : 'افتح الخطوة التالية'}</span>
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 rtl:-scale-x-100" />
                       </div>
                     </Link>
                   );
