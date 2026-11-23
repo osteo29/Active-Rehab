@@ -1,3 +1,4 @@
+import {downloadRecoveryCsv} from '../../services/recoveryCsv';
 import {memo, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {
@@ -65,6 +66,7 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
     deleteJourney,
   } = useMyRecovery();
 
+  const [exportError, setExportError] = useState('');
   const [newNoteText, setNewNoteText] = useState('');
   const [sliderPain, setSliderPain] = useState<number>(activeJourney?.painLevel ?? 4);
   const [isLoggingPain, setIsLoggingPain] = useState(false);
@@ -208,6 +210,7 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
+          <button type="button" onClick={() => {try {downloadRecoveryCsv(activeJourney,lang);setExportError('')}catch {setExportError(isAr ? 'تعذر التنزيل. حاول مرة أخرى.' : 'Download failed. Please try again.')}}} className="rounded-xl border border-slate-200 px-3.5 py-2 text-xs font-bold text-slate-700 dark:text-slate-200">{isAr ? 'تنزيل السجل CSV' : 'Download log CSV'}</button>
           <Link
             to={navigationPaths.injuryDetail(lang, activeJourney.injurySlug)}
             className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2 text-xs font-bold text-slate-700 transition hover:border-health-green/40 dark:border-slate-800 dark:bg-slate-800 dark:text-slate-200"
@@ -231,6 +234,8 @@ export const MyRecoveryJourney = memo(function MyRecoveryJourney({
         </div>
       </div>
 
+      <p className="mt-3 text-xs leading-5 text-slate-500">{isAr ? 'التنزيل يشمل سجل الألم والملاحظات لهذه الإصابة فقط، على جهازك. الملف يحتوي بيانات صحية شخصية؛ راجعه قبل مشاركته.' : 'Download includes this condition’s pain log and notes, on your device only. It contains personal health data; review before sharing.'}</p>
+      {exportError && <p role="alert" className="mt-2 text-sm text-rose-600">{exportError}</p>}
       {/* Phase progress visual stepper */}
       <div className="mt-6 rounded-2xl border border-slate-100 bg-slate-50/80 p-4 dark:border-slate-800/80 dark:bg-slate-950/60 sm:p-6">
         <div className="mb-4 flex items-center justify-between">
