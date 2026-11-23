@@ -65,6 +65,7 @@ const staticRoutes: RouteEntry[] = [
   {path: '/terms', changefreq: 'monthly', priority: '0.6', lastmod: GENERATED_LASTMOD},
   {path: '/cookies', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
   {path: '/disclaimer', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
+  {path: '/attribution', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
 ];
 
 function absoluteUrl(path: string) {
