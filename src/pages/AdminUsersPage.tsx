@@ -16,6 +16,10 @@ export default function AdminUsersPage() {
   const [notice, setNotice] = useState('');
 
   useEffect(() => {
+    if (!access.authChecked || !access.canManageUsers) {
+      setLoading(false);
+      return;
+    }
     let active = true;
     const load = async () => {
       try {
@@ -35,9 +39,10 @@ export default function AdminUsersPage() {
     return () => {
       active = false;
     };
-  }, [isAr]);
+  }, [isAr, access.authChecked, access.canManageUsers]);
 
   const handleFieldChange = async (user: AdminUserRow, field: keyof AdminUserRow, value: string | boolean) => {
+    if (!access.canManageUsers || savingId) return;
     try {
       setSavingId(user.id);
       const updated = await updateAdminUser(user.id, {[field]: value});
@@ -87,6 +92,7 @@ export default function AdminUsersPage() {
               <p className="text-sm text-slate-500">{isAr ? 'جار التحميل...' : 'Loading...'}</p>
             ) : (
               <div className="space-y-4">
+                {users.length === 0 ? <p>{isAr ? 'لا يوجد مستخدمون لعرضهم.' : 'No users to display.'}</p> : null}
                 {users.map((user) => (
                   <div key={user.id} className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                     <div className="grid gap-4 lg:grid-cols-[minmax(0,1.4fr),repeat(4,minmax(0,1fr))]">
@@ -99,7 +105,7 @@ export default function AdminUsersPage() {
                         <select
                           value={user.role || 'editor'}
                           onChange={(event) => void handleFieldChange(user, 'role', event.target.value)}
-                          disabled={savingId === user.id}
+                          disabled={savingId !== null}
                           className="w-full rounded-2xl border border-slate-200 px-3 py-2"
                         >
                           <option value="admin">Admin</option>
@@ -118,7 +124,7 @@ export default function AdminUsersPage() {
                             type="checkbox"
                             checked={Boolean(user[field as keyof AdminUserRow])}
                             onChange={(event) => void handleFieldChange(user, field as keyof AdminUserRow, event.target.checked)}
-                            disabled={savingId === user.id}
+                            disabled={savingId !== null}
                           />
                           <span className="font-bold text-slate-700">{label}</span>
                         </label>
@@ -129,7 +135,7 @@ export default function AdminUsersPage() {
               </div>
             )}
 
-            {notice ? <p className="mt-4 text-sm text-slate-600">{notice}</p> : null}
+            {notice ? <p role="status" aria-live="polite" className="mt-4 text-sm text-slate-600">{notice}</p> : null}
           </div>
         </AdminShell>
       </AdminAccessBoundary>
