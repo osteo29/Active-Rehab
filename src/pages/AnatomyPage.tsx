@@ -124,7 +124,7 @@ export default function AnatomyPage() {
             <p className="text-base leading-8 text-slate-600 dark:text-slate-300">
               {isAr
                 ? 'مرجع تشريحي تفاعلي لـ 107 عضلات بالصور الطبية المباشرة وتفاصيل المنشأ والاندغام والتعصيب، مع 117 تمرين تأهيلي موثق بمشغل فيديو مباشر وتوجيهات الأداء السريري.'
-                : 'Interactive clinical anatomy index of 107 human muscles with verified Wikimedia illustrations, full O/I/A/N/B specs, plus 117 rehabilitation exercises featuring inline video player & clinical coaching cues.'}
+                : 'Interactive clinical anatomy index of 107 human muscles with verified illustrations, full O/I/A/N/B specs, plus 117 rehabilitation exercises with clinical coaching cues and inline video demos where available.'}
             </p>
           </div>
 
@@ -359,7 +359,12 @@ export default function AnatomyPage() {
                   >
                     {/* Video Player Header */}
                     <div className="relative aspect-video w-full bg-slate-950">
-                      {isPlaying ? (
+                      {!ex.youtubeId ? (
+                        <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-slate-900 text-slate-500">
+                          <Film className="h-8 w-8" />
+                          <span className="text-xs font-bold">{isAr ? 'فيديو الشرح غير متاح بعد' : 'Video demo not available yet'}</span>
+                        </div>
+                      ) : isPlaying ? (
                         <iframe
                           src={`${ex.embedVideoUrl}?autoplay=1&rel=0&modestbranding=1`}
                           title={ex.nameEn}
@@ -439,26 +444,28 @@ export default function AnatomyPage() {
                       </div>
 
                       {/* Footer Actions */}
-                      <div className="flex items-center justify-between border-t border-slate-100 pt-3 text-xs font-bold text-slate-600 dark:border-slate-800 dark:text-slate-400">
-                        <button
-                          type="button"
-                          onClick={() => setPlayingVideoId(isPlaying ? null : ex.id)}
-                          className="inline-flex items-center gap-1.5 text-health-green hover:underline"
-                        >
-                          <Video className="h-3.5 w-3.5" />
-                          <span>{isPlaying ? (isAr ? 'إيقاف الفيديو' : 'Stop') : (isAr ? 'تشغيل مباشر' : 'Play Video')}</span>
-                        </button>
+                      {ex.youtubeId ? (
+                        <div className="flex items-center justify-between border-t border-slate-100 pt-3 text-xs font-bold text-slate-600 dark:border-slate-800 dark:text-slate-400">
+                          <button
+                            type="button"
+                            onClick={() => setPlayingVideoId(isPlaying ? null : ex.id)}
+                            className="inline-flex items-center gap-1.5 text-health-green hover:underline"
+                          >
+                            <Video className="h-3.5 w-3.5" />
+                            <span>{isPlaying ? (isAr ? 'إيقاف الفيديو' : 'Stop') : (isAr ? 'تشغيل مباشر' : 'Play Video')}</span>
+                          </button>
 
-                        <a
-                          href={`https://www.youtube.com/watch?v=${ex.youtubeId}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
-                        >
-                          <span>YouTube</span>
-                          <ExternalLink className="h-3 w-3" />
-                        </a>
-                      </div>
+                          <a
+                            href={`https://www.youtube.com/watch?v=${ex.youtubeId}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
+                          >
+                            <span>YouTube</span>
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 );
