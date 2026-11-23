@@ -1,3 +1,4 @@
+import {articleCategoryLabel} from '../services/articleCategoryLabels';
 import {ArrowRight, Search} from 'lucide-react';
 import {useMemo, useState} from 'react';
 import {Link} from 'react-router-dom';
@@ -35,11 +36,11 @@ export default function InsightsPage() {
 
     return articles.filter((article) => {
       const matchesCategory = category === 'all' || article.category === category;
-      const haystack = `${article.title} ${article.excerpt} ${article.category}`.toLowerCase();
+      const haystack = `${article.title} ${article.excerpt} ${articleCategoryLabel(article.category, lang)}`.toLowerCase();
       const matchesQuery = !normalizedQuery || haystack.includes(normalizedQuery);
       return matchesCategory && matchesQuery;
     });
-  }, [articles, category, query]);
+  }, [articles, category, query, lang]);
 
   const featuredArticle = filteredArticles[0];
   const remainingArticles = filteredArticles.slice(1);
@@ -93,7 +94,7 @@ export default function InsightsPage() {
           <div className="mt-6 flex flex-wrap gap-2">
             {categories.map((entry) => {
               const isActive = category === entry;
-              const label = entry === 'all' ? (lang === 'en' ? 'All topics' : 'كل الموضوعات') : entry;
+              const label = entry === 'all' ? (lang === 'en' ? 'All topics' : 'كل الموضوعات') : articleCategoryLabel(entry, lang);
 
               return (
                 <button
@@ -121,7 +122,7 @@ export default function InsightsPage() {
               className="group rounded-[2rem] border border-slate-200 bg-slate-900 p-6 text-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg sm:p-8"
             >
               <div className="mb-3 flex flex-wrap gap-3 text-sm text-white/70">
-                <span>{featuredArticle.category}</span>
+                <span>{articleCategoryLabel(featuredArticle.category, lang)}</span>
                 <span>&bull;</span>
                 <span>{featuredArticle.date}</span>
                 <span>&bull;</span>
@@ -188,7 +189,7 @@ export default function InsightsPage() {
                 className="group rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-health-green/30 hover:shadow-md"
               >
                 <div className="mb-3 flex flex-wrap gap-3 text-sm text-slate-400">
-                  <span>{article.category}</span>
+                  <span>{articleCategoryLabel(article.category, lang)}</span>
                   <span>&bull;</span>
                   <span>{article.date}</span>
                   <span>&bull;</span>
