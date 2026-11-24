@@ -5,6 +5,7 @@ export type SeoConfig = {
   description: string;
   canonicalPath: string; // "/:lang/privacy" or "/privacy"
   ogImage?: string; // absolute URL
+  publishedTime?: string; // article publish date (YYYY-MM-DD or ISO 8601), emitted only for real dates
   noIndex?: boolean;
   structuredData?: Array<{id: string; json: unknown}>;
   hreflangs?: Array<{lang: string; href: string}>; // [{ lang: 'en', href: '/en/...' }, { lang: 'ar', href: '/ar/...' }]
@@ -163,7 +164,7 @@ export function applySeo(config: SeoConfig) {
   const currentLang = currentLangMatch?.[1];
   const normalizedPath = normalizeCanonicalPath(config.canonicalPath, currentLang);
   const canonicalUrl = buildAbsoluteUrl(normalizedPath);
-  const ogImage = config.ogImage || buildAbsoluteUrl('/og-image.png');
+  const ogImage = config.ogImage || buildAbsoluteUrl('/og-image.jpg');
 
   if (currentLang) {
     document.documentElement.lang = currentLang;
@@ -185,8 +186,13 @@ export function applySeo(config: SeoConfig) {
   if (getOgType(normalizedPath) === 'article') {
     upsertMeta({property: 'article:author'}, 'Active Rehab');
     upsertMeta({property: 'article:publisher'}, 'https://www.facebook.com/Physionutrition.official/');
+    if (config.publishedTime && !Number.isNaN(Date.parse(config.publishedTime))) {
+      upsertMeta({property: 'article:published_time'}, new Date(config.publishedTime).toISOString());
+    } else {
+      document.head.querySelectorAll('meta[property="article:published_time"]').forEach(node => node.remove());
+    }
   } else {
-    document.head.querySelectorAll('meta[property="article:author"], meta[property="article:publisher"]').forEach(node => node.remove());
+    document.head.querySelectorAll('meta[property="article:author"], meta[property="article:publisher"], meta[property="article:published_time"]').forEach(node => node.remove());
   }
   upsertMeta({property: 'og:locale'}, currentLang === 'ar' ? 'ar_EG' : 'en_US');
   upsertMeta({property: 'og:site_name'}, DEFAULT_SITE_NAME);

@@ -216,14 +216,24 @@ export async function getFallbackArticles(lang: Language): Promise<Article[]> {
   return getArticles(lang);
 }
 
+export function mergeCloudWithFallback(cloudArticles: Article[], fallbackArticles: Article[]): Article[] {
+  const cloudSlugs = new Set(cloudArticles.map((article) => article.slug));
+  const merged = [
+    ...cloudArticles,
+    ...fallbackArticles.filter((article) => !cloudSlugs.has(article.slug)),
+  ];
+  return merged.sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0));
+}
+
 export async function loadPublishedArticles(lang: Language): Promise<Article[]> {
-  if (!isSupabaseConfigured) return getFallbackArticles(lang);
+  const fallbackArticles = await getFallbackArticles(lang);
+  if (!isSupabaseConfigured) return fallbackArticles;
 
   try {
     const cloudArticles = await listPublishedArticles(lang);
-    return cloudArticles.length ? cloudArticles : await getFallbackArticles(lang);
+    return mergeCloudWithFallback(cloudArticles, fallbackArticles);
   } catch {
-    return getFallbackArticles(lang);
+    return fallbackArticles;
   }
 }
 

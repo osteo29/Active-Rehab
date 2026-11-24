@@ -228,6 +228,7 @@ export default function InjuryProtocolsPage() {
                       className={`pointer-events-none absolute top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 dark:text-slate-500 ${isAr ? 'right-4' : 'left-4'}`}
                     />
                     <input
+                      aria-label={isAr ? lib.searchPlaceholder : 'Search by injury or protocol name'}
                       value={query}
                       onChange={(e) =>
                         startTransition(() => {
