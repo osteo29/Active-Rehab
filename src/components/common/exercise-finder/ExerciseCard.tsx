@@ -70,7 +70,7 @@ function ExerciseCard({exercise, isAr, searchQuery = '', saved = false, onToggle
           <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-black">
             <div className="relative aspect-[16/10]">
               <iframe
-                src={exercise.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
+                src={exercise.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/').replace('www.youtube.com/embed/', 'www.youtube-nocookie.com/embed/')}
                 title={`${exercise.name} exercise tutorial`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 referrerPolicy="strict-origin-when-cross-origin"
