@@ -10,56 +10,29 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://activerehab.vercel.app/en/insights/how-exercise-changes-your-body-complete-guide</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/how-exercise-changes-your-body-complete-guide" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/how-exercise-changes-your-body-complete-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/how-exercise-changes-your-body-complete-guide" />
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://activerehab.vercel.app/en/insights/bmr-vs-tdee-calorie-calculation-myth</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/bmr-vs-tdee-calorie-calculation-myth" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/bmr-vs-tdee-calorie-calculation-myth" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/bmr-vs-tdee-calorie-calculation-myth" />
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://activerehab.vercel.app/en/insights/gym-breathing-prevent-dizziness-and-boost-performance</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/gym-breathing-prevent-dizziness-and-boost-performance" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/gym-breathing-prevent-dizziness-and-boost-performance" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/gym-breathing-prevent-dizziness-and-boost-performance" />
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://activerehab.vercel.app/en/insights/heart-health-gym-performance-guide</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/heart-health-gym-performance-guide" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/heart-health-gym-performance-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/heart-health-gym-performance-guide" />
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://activerehab.vercel.app/en/insights/diet-myths-that-waste-your-progress</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/diet-myths-that-waste-your-progress" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/diet-myths-that-waste-your-progress" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/diet-myths-that-waste-your-progress" />
+    <loc>https://activerehab.vercel.app/en/insights/protein-after-acl-reconstruction</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/protein-after-acl-reconstruction" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/protein-after-acl-reconstruction" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/protein-after-acl-reconstruction" />
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://activerehab.vercel.app/en/insights/low-back-pain-rest-or-move</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/low-back-pain-rest-or-move" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/low-back-pain-rest-or-move" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/low-back-pain-rest-or-move" />
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://activerehab.vercel.app/en/insights/why-tracking-measurements-matters</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/why-tracking-measurements-matters" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/why-tracking-measurements-matters" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/why-tracking-measurements-matters" />
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://activerehab.vercel.app/en/insights/nutrition-after-injury-basics</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/nutrition-after-injury-basics" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/nutrition-after-injury-basics" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/nutrition-after-injury-basics" />
+    <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -91,29 +64,56 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://activerehab.vercel.app/en/insights/protein-after-acl-reconstruction</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/protein-after-acl-reconstruction" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/protein-after-acl-reconstruction" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/protein-after-acl-reconstruction" />
+    <loc>https://activerehab.vercel.app/en/insights/low-back-pain-rest-or-move</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/low-back-pain-rest-or-move" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/low-back-pain-rest-or-move" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/low-back-pain-rest-or-move" />
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://activerehab.vercel.app/en/insights/nutrition-after-injury-basics</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/nutrition-after-injury-basics" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/nutrition-after-injury-basics" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/nutrition-after-injury-basics" />
-    <lastmod>2026-03-18</lastmod>
+    <loc>https://activerehab.vercel.app/en/insights/diet-myths-that-waste-your-progress</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/diet-myths-that-waste-your-progress" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/diet-myths-that-waste-your-progress" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/diet-myths-that-waste-your-progress" />
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://activerehab.vercel.app/en/insights/why-tracking-measurements-matters</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/why-tracking-measurements-matters" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/why-tracking-measurements-matters" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/why-tracking-measurements-matters" />
-    <lastmod>2026-03-18</lastmod>
+    <loc>https://activerehab.vercel.app/en/insights/bmr-vs-tdee-calorie-calculation-myth</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/bmr-vs-tdee-calorie-calculation-myth" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/bmr-vs-tdee-calorie-calculation-myth" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/bmr-vs-tdee-calorie-calculation-myth" />
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://activerehab.vercel.app/en/insights/gym-breathing-prevent-dizziness-and-boost-performance</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/gym-breathing-prevent-dizziness-and-boost-performance" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/gym-breathing-prevent-dizziness-and-boost-performance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/gym-breathing-prevent-dizziness-and-boost-performance" />
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://activerehab.vercel.app/en/insights/heart-health-gym-performance-guide</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/heart-health-gym-performance-guide" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/heart-health-gym-performance-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/heart-health-gym-performance-guide" />
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://activerehab.vercel.app/en/insights/how-exercise-changes-your-body-complete-guide</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://activerehab.vercel.app/ar/insights/how-exercise-changes-your-body-complete-guide" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://activerehab.vercel.app/en/insights/how-exercise-changes-your-body-complete-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://activerehab.vercel.app/en/insights/how-exercise-changes-your-body-complete-guide" />
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
