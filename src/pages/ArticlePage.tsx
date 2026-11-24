@@ -397,6 +397,7 @@ export default function ArticlePage() {
         canonicalPath={canonicalPath}
         structuredData={structuredData}
         hreflangs={hreflangs}
+        publishedTime={article.date && !Number.isNaN(Date.parse(article.date)) ? article.date : undefined}
         templateValues={{
           articleTitle: article.title,
           articleExcerpt: article.excerpt,

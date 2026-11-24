@@ -80,6 +80,7 @@ export default function Seo(props: SeoConfig) {
     resolvedProps.description,
     resolvedProps.canonicalPath,
     resolvedProps.ogImage,
+    resolvedProps.publishedTime,
     resolvedProps.noIndex,
     resolvedProps.structuredData,
     resolvedProps.hreflangs,
