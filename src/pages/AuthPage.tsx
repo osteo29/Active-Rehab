@@ -299,6 +299,8 @@ export default function AuthPage({
                 <form className="space-y-4" onSubmit={handleSubmit}>
                   {mode === 'signup' ? (
                     <input
+                      type="text"
+                      autoComplete="name"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder={isAr ? 'الاسم الكامل' : 'Full name'}
@@ -308,6 +310,7 @@ export default function AuthPage({
 
                   <input
                     type="email"
+                    autoComplete="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={isAr ? 'البريد الإلكتروني' : 'Email address'}
@@ -317,6 +320,7 @@ export default function AuthPage({
 
                   <input
                     type="password"
+                    autoComplete={mode === 'signup' ? 'new-password' : 'current-password'}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder={isAr ? 'كلمة المرور' : 'Password'}
