@@ -176,6 +176,8 @@ function replaceMeta(html: string, title: string, description: string, canonical
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="robots" content="${noIndex ? 'noindex, nofollow' : 'index, follow'}" />
     <meta property="og:url" content="${canonical}" />
+    <meta property="og:locale" content="${lang === 'ar' ? 'ar_EG' : 'en_US'}" />
+    <meta property="og:locale:alternate" content="${lang === 'ar' ? 'en_US' : 'ar_EG'}" />
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
