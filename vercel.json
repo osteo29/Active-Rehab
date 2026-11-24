@@ -8,6 +8,13 @@
       "handle": "filesystem"
     },
     {
+      "src": "/(en|ar)/muscles",
+      "status": 301,
+      "headers": {
+        "Location": "/$1/anatomy"
+      }
+    },
+    {
       "src": "/(en|ar)/injuries/perthes-disease",
       "status": 301,
       "headers": {
