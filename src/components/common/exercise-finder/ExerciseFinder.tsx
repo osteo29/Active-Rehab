@@ -476,6 +476,7 @@ export function ExerciseFinder({
                   <button
                     type="button"
                     onClick={() => setFiltersOpen(false)}
+                    aria-label={isAr ? 'إغلاق الفلاتر' : 'Close filters'}
                     className="rounded-full border border-slate-200 dark:border-slate-700 p-2 text-slate-600 dark:text-slate-300"
                   >
                     <X className="h-4 w-4" />
