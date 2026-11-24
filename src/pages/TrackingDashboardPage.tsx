@@ -478,6 +478,7 @@ export default function TrackingDashboardPage() {
                   {isAr ? 'اختر المؤشر الذي تريد متابعته' : 'Choose the metric to analyze'}
                 </label>
                 <select
+                  aria-label={isAr ? 'اختر المؤشر الذي تريد متابعته' : 'Choose the metric to analyze'}
                   value={selectedMetricKey}
                   onChange={(event) => setSelectedMetricKey(event.target.value)}
                   className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm outline-none focus:border-health-green focus:ring-2 focus:ring-health-green/20"
