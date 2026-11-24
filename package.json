@@ -11,7 +11,7 @@
         "rehab:build": "node scripts/generate-rehab-protocols.mjs",
         "prebuild": "npm run generate:sitemap",
         "build": "vite build",
-        "postbuild": "npm run generate:prerender",
+        "postbuild": "npm run generate:prerender && node scripts/verify-prerender.mjs",
         "preview": "vite preview",
         "clean": "rimraf dist",
         "lint": "tsc --noEmit",
