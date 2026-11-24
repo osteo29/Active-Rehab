@@ -312,6 +312,7 @@ export default function AnatomyPage() {
                             src={muscle.image_url}
                             alt={muscle.name}
                             loading="lazy"
+                            decoding="async"
                             className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                           />
                           <div className="absolute top-2 left-2 rtl:left-auto rtl:right-2 rounded-md bg-black/60 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm">
@@ -416,6 +417,7 @@ export default function AnatomyPage() {
                           <img
                             src={`https://img.youtube.com/vi/${ex.youtubeId}/hqdefault.jpg`}
                             alt={ex.nameEn}
+                            decoding="async"
                             className="h-full w-full object-cover opacity-80 transition duration-300 group-hover/thumb:scale-105 group-hover/thumb:opacity-95"
                             loading="lazy"
                           />
@@ -550,6 +552,8 @@ export default function AnatomyPage() {
                   <img
                     src={activeMuscle.image_url}
                     alt={activeMuscle.name}
+                    loading="lazy"
+                    decoding="async"
                     className="mx-auto max-h-72 w-full object-contain"
                   />
                   <div className="mt-2 text-[11px] text-slate-400">
