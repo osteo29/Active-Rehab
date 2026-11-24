@@ -42,6 +42,7 @@ const NewsletterSection = memo(({lang}: {lang: Language}) => {
                 <Mail className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 group-focus-within:text-health-green transition-colors" />
                 <input
                   type="email"
+                  aria-label={lang === 'en' ? 'Enter your email' : 'أدخل بريدك الإلكتروني'}
                   placeholder={lang === 'en' ? 'Enter your email' : 'أدخل بريدك الإلكتروني'}
                   className={`w-full ${
                     lang === 'ar' ? 'pr-14 pl-6' : 'pl-14 pr-6'

@@ -221,6 +221,7 @@ export default function AnatomyPage() {
             <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 rtl:left-auto rtl:right-4" />
             <input
               type="text"
+              aria-label={activeTab === 'muscles' ? (isAr ? 'ابحث عن عضلة' : 'Search muscles') : (isAr ? 'ابحث عن تمرين' : 'Search exercises')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={

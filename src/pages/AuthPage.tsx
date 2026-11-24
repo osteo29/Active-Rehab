@@ -299,6 +299,7 @@ export default function AuthPage({
                 <form className="space-y-4" onSubmit={handleSubmit}>
                   {mode === 'signup' ? (
                     <input
+                      aria-label={isAr ? 'الاسم الكامل' : 'Full name'}
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder={isAr ? 'الاسم الكامل' : 'Full name'}
@@ -308,6 +309,7 @@ export default function AuthPage({
 
                   <input
                     type="email"
+                    aria-label={isAr ? 'البريد الإلكتروني' : 'Email address'}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={isAr ? 'البريد الإلكتروني' : 'Email address'}
@@ -317,6 +319,7 @@ export default function AuthPage({
 
                   <input
                     type="password"
+                    aria-label={isAr ? 'كلمة المرور' : 'Password'}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder={isAr ? 'كلمة المرور' : 'Password'}
