@@ -179,6 +179,8 @@ function replaceMeta(html: string, title: string, description: string, canonical
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="robots" content="${noIndex ? 'noindex, nofollow' : 'index, follow'}" />
     <meta property="og:url" content="${canonical}" />
+    <meta property="og:locale" content="${lang === 'ar' ? 'ar_EG' : 'en_US'}" />
+    <meta property="og:locale:alternate" content="${lang === 'ar' ? 'en_US' : 'ar_EG'}" />
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
@@ -187,7 +189,7 @@ function replaceMeta(html: string, title: string, description: string, canonical
   `;
 
   return html
-    .replace(/<html lang="[^"]+"/, `<html lang="${lang}"`)
+    .replace(/<html lang="[^"]+"/, `<html lang="${lang}" dir="${lang === 'ar' ? 'rtl' : 'ltr'}"`)
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
     .replace(/<meta name="description" content="[^"]*"\s*\/?>/, '')
     .replace(/<meta name="robots" content="[^"]*"\s*\/?>/g, '')
@@ -1072,7 +1074,7 @@ function exerciseSystemDetailRoute(lang: Lang, system: (typeof TRAINING_SYSTEMS)
     ),
   };
 }
-function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'terms' | 'cookies' | 'disclaimer'): RouteDefinition {
+function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'terms' | 'cookies' | 'disclaimer' | 'attribution'): RouteDefinition {
   const isAr = lang === 'ar';
 
   const config = {
@@ -1166,6 +1168,25 @@ function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'term
           isAr
             ? '<ul><li>حفظ تفضيلات اللغة والمظهر.</li><li>تذكر اختيارات الموافقة.</li><li>التقنيات الاختيارية تعمل فقط بعد القبول.</li></ul>'
             : '<ul><li>Remember language and theme preferences.</li><li>Store consent choices.</li><li>Enable optional analytics or ads only after consent.</li></ul>',
+        ),
+      ],
+    },
+    attribution: {
+      title: isAr ? 'الحقوق والنسب' : 'Attribution & Media Credits',
+      description: isAr
+        ? 'مصادر وتراخيص الصور التشريحية والوسائط المستخدمة في Active Rehab.'
+        : 'Sources and licenses for the anatomical images and media used in Active Rehab.',
+      eyebrow: isAr ? 'الحقوق' : 'Credits',
+      heading: isAr ? 'الحقوق والنسب' : 'Attribution & Media Credits',
+      intro: isAr
+        ? 'الرسوم التشريحية من ويكيميديا كومنز برخص حرة مع ذكر المؤلف والرخصة والمصدر.'
+        : 'Anatomical illustrations come from Wikimedia Commons under free licenses with author, license, and source listed.',
+      sections: [
+        section(
+          isAr ? 'ما الذي تجده هنا؟' : 'What you will find',
+          isAr
+            ? '<p>قائمة كاملة بالصور التشريحية مع المؤلف والرخصة ورابط المصدر، إضافة إلى ملاحظات عن مصغرات التمارين وفيديوهات يوتيوب المضمنة.</p>'
+            : '<p>A full list of anatomical images with author, license, and source link, plus notes on exercise thumbnails and embedded YouTube videos.</p>',
         ),
       ],
     },
@@ -1405,7 +1426,7 @@ const staticRoutes: RouteDefinition[] = [
     injuriesRoute(lang),
     dietsRoute(lang),
     ...dietRegimensCatalog.map((diet) => dietDetailRoute(lang, diet)),
-    ...(['about', 'contact', 'privacy', 'terms', 'cookies', 'disclaimer'] as const).map((page) => infoPageRoute(lang, page)),
+    ...(['about', 'contact', 'privacy', 'terms', 'cookies', 'disclaimer', 'attribution'] as const).map((page) => infoPageRoute(lang, page)),
     exercisesRoute(lang),
     ...EXERCISE_FINDER_STATIC_SLUGS.map((slug) => exercisesRoute(lang, slug)),
     exerciseSystemsRoute(lang),
