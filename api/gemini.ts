@@ -1,4 +1,5 @@
 import {validateAiRequest, readAiJsonBody} from '../src/services/aiRequestValidation';
+import {checkAiRateLimit} from '../src/services/aiRateLimit';
 import {GoogleGenAI} from '@google/genai';
 
 export default async function handler(
@@ -15,6 +16,14 @@ export default async function handler(
   const apiKey = (process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY || '').trim();
   if (!apiKey) {
     return res.status(500).json({error: 'Missing GEMINI_API_KEY on the server'});
+  }
+
+  const forwardedFor = (req as {headers?: Record<string, string | string[] | undefined>}).headers?.['x-forwarded-for'];
+  const clientKey = (Array.isArray(forwardedFor) ? forwardedFor[0] : forwardedFor)?.split(',')[0]?.trim() || 'unknown';
+  const rate = checkAiRateLimit(clientKey);
+  if (!rate.allowed) {
+    res.setHeader('Retry-After', String(rate.retryAfterSeconds));
+    return res.status(429).json({error: 'Too many requests. Please wait a moment and try again.'});
   }
 
   try {

@@ -275,6 +275,7 @@ export default function HealthProfileSection({
                   <input
                     id="architect-sleep-hours"
                     type="range"
+                    aria-label={t.architect.sleep}
                     min="4"
                     max="12"
                     step="0.5"

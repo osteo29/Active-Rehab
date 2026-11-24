@@ -163,7 +163,7 @@ export function applySeo(config: SeoConfig) {
   const currentLang = currentLangMatch?.[1];
   const normalizedPath = normalizeCanonicalPath(config.canonicalPath, currentLang);
   const canonicalUrl = buildAbsoluteUrl(normalizedPath);
-  const ogImage = config.ogImage || buildAbsoluteUrl('/og-image.png');
+  const ogImage = config.ogImage || buildAbsoluteUrl('/og-image.jpg');
 
   if (currentLang) {
     document.documentElement.lang = currentLang;
