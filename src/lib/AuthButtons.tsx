@@ -129,6 +129,8 @@ export default function AuthButtons({
               <img
                 src={avatarUrl}
                 alt={profileName}
+                loading="lazy"
+                decoding="async"
                 className="h-14 w-14 rounded-full border border-slate-200 object-cover"
               />
             ) : (

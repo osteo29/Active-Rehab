@@ -285,7 +285,7 @@ export default function AdminMediaPage() {
                   <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4">
                     {selectedAsset ? (
                       <div className="space-y-4">
-                        <img src={selectedAsset.public_url} alt={selectedAsset.alt_text || selectedAsset.file_name} className="h-48 w-full rounded-2xl object-cover" />
+                        <img loading="lazy" decoding="async" src={selectedAsset.public_url} alt={selectedAsset.alt_text || selectedAsset.file_name} className="h-48 w-full rounded-2xl object-cover" />
                         <label className="block space-y-2 text-sm font-bold text-slate-700">
                           <span>{isAr ? 'المجلد' : 'Folder'}</span>
                           <input value={selectedAsset.folder || ''} onChange={(event) => setAssets((current) => current.map((asset) => (asset.id === selectedAsset.id ? {...asset, folder: event.target.value} : asset)))} className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-health-green" />
