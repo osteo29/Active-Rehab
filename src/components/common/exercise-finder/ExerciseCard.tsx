@@ -1,4 +1,5 @@
 import {useState, type ReactNode} from 'react';
+import {Link} from 'react-router-dom';
 import {Bookmark, Dumbbell, Flame, Timer, type LucideProps} from 'lucide-react';
 
 import {Badge} from './FilterField';
@@ -6,6 +7,7 @@ import {toTitle, translateBadge} from './filter-utils';
 import {EXERCISE_FINDER_STATIC_ARABIC_LABELS, SUB_MUSCLE_AR_LABELS} from './constants';
 import {EXERCISE_NAMES_AR} from './exerciseNamesAr';
 import type {Exercise, ExerciseType, MainMuscle} from './types';
+import {getExerciseMuscleLinks, getExerciseProtocolLinks} from '../../../services/crossLinks';
 
 const MUSCLE_GRADIENT: Record<MainMuscle, string> = {
   chest: 'from-rose-500/90 to-pink-400/80',
@@ -53,6 +55,9 @@ function ExerciseCard({exercise, isAr, searchQuery = '', saved = false, onToggle
   };
   const isMultiMuscle = new Set(exercise.muscles.map((item) => item.split('_')[0])).size > 1;
   const [isExpanded, setIsExpanded] = useState(false);
+  const linkLang = isAr ? 'ar' : 'en';
+  const muscleLinks = getExerciseMuscleLinks(exercise.muscles, linkLang);
+  const protocolLinks = getExerciseProtocolLinks(exercise.mainMuscle, linkLang);
   const gradient = MUSCLE_GRADIENT[exercise.mainMuscle] || 'from-slate-500/90 to-gray-400/80';
   const TypeIcon = TYPE_ICON[exercise.exerciseType] || Dumbbell;
 
@@ -66,11 +71,36 @@ function ExerciseCard({exercise, isAr, searchQuery = '', saved = false, onToggle
           </span>
         </div>
 
+        {isExpanded && (muscleLinks.length > 0 || protocolLinks.length > 0) ? (
+          <div className="flex flex-col gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/40 px-4 py-3 text-xs">
+            {muscleLinks.length > 0 ? (
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-bold text-slate-500 dark:text-slate-400">{isAr ? 'العضلات في المكتبة التشريحية:' : 'Muscles in the anatomy library:'}</span>
+                {muscleLinks.map((link) => (
+                  <Link key={link.href} to={link.href} className="font-semibold text-health-green underline-offset-2 hover:underline">
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+            {protocolLinks.length > 0 ? (
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-bold text-slate-500 dark:text-slate-400">{isAr ? 'بروتوكولات تأهيل مرتبطة:' : 'Related rehab protocols:'}</span>
+                {protocolLinks.map((link) => (
+                  <Link key={link.href} to={link.href} className="font-semibold text-health-green underline-offset-2 hover:underline">
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
         {isExpanded && exercise.videoUrl ? (
           <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-black">
             <div className="relative aspect-[16/10]">
               <iframe
-                src={exercise.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
+                src={exercise.videoUrl.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/').replace('www.youtube.com/embed/', 'www.youtube-nocookie.com/embed/')}
                 title={`${exercise.name} exercise tutorial`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 referrerPolicy="strict-origin-when-cross-origin"
