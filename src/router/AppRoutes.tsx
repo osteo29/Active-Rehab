@@ -10,6 +10,7 @@ const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('../pages/TermsOfService'));
 const CookiePolicy = lazy(() => import('../pages/CookiePolicy'));
 const MedicalDisclaimer = lazy(() => import('../pages/MedicalDisclaimer'));
+const AttributionPage = lazy(() => import('../pages/AttributionPage'));
 const AboutPage = lazy(() => import('../pages/AboutPage'));
 const ContactPage = lazy(() => import('../pages/ContactPage'));
 const ArticlePage = lazy(() => import('../pages/ArticlePage'));
@@ -49,6 +50,11 @@ function LegacyRouteRedirect() {
   return <Navigate to={`/${preferredLang}${location.pathname}${location.search}${location.hash}`} replace />;
 }
 
+function MusclesRedirect() {
+  const {lang = 'en'} = useParams<{lang: 'en' | 'ar'}>();
+  return <Navigate to={navigationPaths.anatomy(lang)} replace />;
+}
+
 function InjuryProtocolsRedirect() {
   const {lang = 'en'} = useParams<{lang: 'en' | 'ar'}>();
   return <Navigate to={navigationPaths.injuries(lang)} replace />;
@@ -86,6 +92,7 @@ export default function AppRoutes({theme, onToggleTheme}: {theme: 'light' | 'dar
       <Route path="/:lang/terms" element={<TermsOfService />} />
       <Route path="/:lang/cookies" element={<CookiePolicy />} />
       <Route path="/:lang/disclaimer" element={<MedicalDisclaimer />} />
+      <Route path="/:lang/attribution" element={<AttributionPage />} />
       <Route path="/:lang/about" element={<AboutPage />} />
       <Route path="/:lang/contact" element={<ContactPage />} />
       <Route path="/:lang/insights" element={<InsightsPage />} />
@@ -105,7 +112,7 @@ export default function AppRoutes({theme, onToggleTheme}: {theme: 'light' | 'dar
       <Route path="/:lang/diets/:slug" element={<DietDetailPage />} />
       <Route path="/:lang/exercises" element={<ExercisesPage />} />
       <Route path="/:lang/anatomy" element={<AnatomyPage />} />
-      <Route path="/:lang/muscles" element={<AnatomyPage />} />
+      <Route path="/:lang/muscles" element={<MusclesRedirect />} />
       <Route path="/:lang/exercises/systems" element={<ExerciseSystemsPage />} />
       <Route path="/:lang/exercises/systems/:systemId" element={<ExerciseSystemDetailPage />} />
       <Route path="/:lang/exercises/lower_back" element={<LegacyExerciseSlugRedirect />} />
@@ -125,6 +132,7 @@ export default function AppRoutes({theme, onToggleTheme}: {theme: 'light' | 'dar
         '/terms',
         '/cookies',
         '/disclaimer',
+        '/attribution',
         '/about',
         '/contact',
         '/insights',

@@ -186,17 +186,3 @@ export const CalculatorLogic = {
     };
   }
 };
-
-/**
- * Environment Check for OneSignal (as requested)
- */
-export const checkEnvironment = () => {
-  const isAllowedDomain = !window.location.hostname.includes('localhost') && 
-                          !window.location.hostname.includes('127.0.0.1');
-  
-  // Placeholder for OneSignal initialization logic
-  if (isAllowedDomain) {
-    console.log('Environment check passed: Production/Preview domain detected.');
-    // OneSignal.init(...) would go here
-  }
-};

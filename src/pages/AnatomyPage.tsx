@@ -1,6 +1,7 @@
 import Seo from '../components/seo/Seo';
 import {buildHreflangs} from '../utils/langUrlHelper';
 import {useState, useMemo, useRef, useEffect} from 'react';
+import {useSearchParams} from 'react-router-dom';
 import {
   Activity,
   ArrowRight,
@@ -53,6 +54,13 @@ export default function AnatomyPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('all');
   const [activeMuscle, setActiveMuscle] = useState<MuscleDetail | null>(null);
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const slug = searchParams.get('muscle');
+    if (!slug) return;
+    const target = getAllMuscles().find((muscle) => muscle.slug === slug);
+    if (target) setActiveMuscle(target);
+  }, [searchParams]);
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
   const [modalPlayingVideo, setModalPlayingVideo] = useState<string | null>(null);
 
@@ -213,6 +221,7 @@ export default function AnatomyPage() {
             <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 rtl:left-auto rtl:right-4" />
             <input
               type="text"
+              aria-label={activeTab === 'muscles' ? (isAr ? 'ابحث عن عضلة' : 'Search muscles') : (isAr ? 'ابحث عن تمرين' : 'Search exercises')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={
@@ -303,6 +312,7 @@ export default function AnatomyPage() {
                             src={muscle.image_url}
                             alt={muscle.name}
                             loading="lazy"
+                            decoding="async"
                             className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                           />
                           <div className="absolute top-2 left-2 rtl:left-auto rtl:right-2 rounded-md bg-black/60 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm">
@@ -390,7 +400,7 @@ export default function AnatomyPage() {
                         </div>
                       ) : isPlaying ? (
                         <iframe
-                          src={`${ex.embedVideoUrl}${ex.embedVideoUrl?.includes('?') ? '&' : '?'}autoplay=1&rel=0`}
+                          src={`${ex.embedVideoUrl?.replace('www.youtube.com/embed/', 'www.youtube-nocookie.com/embed/')}${ex.embedVideoUrl?.includes('?') ? '&' : '?'}autoplay=1&rel=0`}
                           title={ex.nameEn}
                           className="h-full w-full border-0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -407,6 +417,7 @@ export default function AnatomyPage() {
                           <img
                             src={`https://img.youtube.com/vi/${ex.youtubeId}/hqdefault.jpg`}
                             alt={ex.nameEn}
+                            decoding="async"
                             className="h-full w-full object-cover opacity-80 transition duration-300 group-hover/thumb:scale-105 group-hover/thumb:opacity-95"
                             loading="lazy"
                           />
@@ -541,6 +552,8 @@ export default function AnatomyPage() {
                   <img
                     src={activeMuscle.image_url}
                     alt={activeMuscle.name}
+                    loading="lazy"
+                    decoding="async"
                     className="mx-auto max-h-72 w-full object-contain"
                   />
                   <div className="mt-2 text-[11px] text-slate-400">
@@ -564,7 +577,7 @@ export default function AnatomyPage() {
                 <div className="mt-5 overflow-hidden rounded-2xl border border-slate-800 bg-black">
                   <div className="relative aspect-video w-full">
                     <iframe
-                      src={`https://www.youtube.com/embed/${modalPlayingVideo}?autoplay=1&rel=0&modestbranding=1`}
+                      src={`https://www.youtube-nocookie.com/embed/${modalPlayingVideo}?autoplay=1&rel=0&modestbranding=1`}
                       title="Rehab Exercise"
                       className="h-full w-full border-0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

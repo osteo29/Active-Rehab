@@ -5,6 +5,7 @@ import Seo from '../components/seo/Seo';
 import {getCurrentUser, isSupabaseConfigured, onSupabaseAuthChange, type User} from '../lib/supabase';
 import type {InjuryPhase, InjuryProtocol} from '../services/injuryDatabase';
 import {getInjuryExerciseLinks} from '../services/injuryExerciseLinks';
+import {getMusclesForBodyRegion} from '../services/crossLinks';
 import {getNutritionGoalMatches} from '../services/injuryNutritionMatcher';
 import {getInjuryRehabLinks} from '../services/injuryRehabLinks';
 import {translateActivityContext, translateInjury} from '../services/injuryI18n';
@@ -408,6 +409,8 @@ export default function InjuryDetailPage() {
     bodyRegion: injury.bodyRegion,
     lang,
   });
+
+  const relatedMuscleLinks = getMusclesForBodyRegion(injury.bodyRegion, lang);
 
   const relatedRehabLinks = getInjuryRehabLinks({
     injuryId: injury.id,
@@ -983,6 +986,27 @@ export default function InjuryDetailPage() {
                         <div className="text-lg font-black text-slate-900 dark:text-white">{item.label}</div>
                         <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-health-green">
                           {isAr ? 'افتح القسم' : 'Open section'}
+                          <ArrowRight className={`h-4 w-4 ${isAr ? 'rotate-180' : ''}`} />
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {relatedMuscleLinks.length > 0 && (
+                <section className={injuryPanel}>
+                  <div className="mb-4 text-sm font-black text-slate-900 dark:text-white">{isAr ? 'العضلات المعنية في المكتبة التشريحية' : 'Muscles involved (anatomy library)'}</div>
+                  <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    {relatedMuscleLinks.map((item) => (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 transition hover:border-health-green/30 hover:bg-health-green/5 dark:border-slate-700 dark:bg-slate-950 dark:hover:bg-health-green/10"
+                      >
+                        <div className="text-lg font-black text-slate-900 dark:text-white">{item.label}</div>
+                        <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-health-green">
+                          {isAr ? 'افتح المكتبة التشريحية' : 'Open anatomy library'}
                           <ArrowRight className={`h-4 w-4 ${isAr ? 'rotate-180' : ''}`} />
                         </div>
                       </Link>

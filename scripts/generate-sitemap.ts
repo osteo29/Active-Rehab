@@ -12,7 +12,7 @@ import {getBuildArticles, getBuildInjuries} from './buildContentSource';
 const SITE_URL = getSiteUrl();
 const LANGUAGES = ['en', 'ar'] as const;
 type Language = (typeof LANGUAGES)[number];
-const GENERATED_LASTMOD = '2026-11-12';
+const GENERATED_LASTMOD = new Date().toISOString().slice(0, 10);
 
 type RouteEntry = {
   path: string;
@@ -65,6 +65,7 @@ const staticRoutes: RouteEntry[] = [
   {path: '/terms', changefreq: 'monthly', priority: '0.6', lastmod: GENERATED_LASTMOD},
   {path: '/cookies', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
   {path: '/disclaimer', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
+  {path: '/attribution', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
 ];
 
 function absoluteUrl(path: string) {
