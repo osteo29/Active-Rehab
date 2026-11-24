@@ -1,5 +1,4 @@
 import {useCallback, useEffect, useMemo, useState} from 'react';
-import {checkEnvironment} from '../services/calculators';
 import {foodDatabase, type FoodItem} from '../services/foodData';
 import {translations, type Language} from '../services/translations';
 import {buildCalculators, buildToolGroups} from '../features/tools/app/config';
@@ -154,10 +153,6 @@ export function useCalculatorWorkspace({
       return matchesSearch && matchesCategory;
     });
   }, [customFoods, foodCategory, foodSearch]);
-
-  useEffect(() => {
-    checkEnvironment();
-  }, []);
 
   useEffect(() => {
     try {
