@@ -225,7 +225,7 @@ export function AddInjuryWizard({ onClose, onSuccess }: AddInjuryWizardProps) {
           <h2 className="text-2xl font-bold text-white">
             {step === 1 ? 'معلومات الإصابة' : `المرحلة ${step - 1} من التعافي`}
           </h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-white">
+          <button onClick={onClose} aria-label="إغلاق" className="text-gray-400 hover:text-white">
             <X className="w-6 h-6" />
           </button>
         </div>

@@ -8,11 +8,12 @@ import {getInjuryPath} from '../src/services/injuryDatabase';
 import {INJURY_CANONICAL_PARENT_MAP, normalizeExerciseUrlSlug} from '../src/services/seoAliases';
 import {buildAbsoluteUrl, getSiteUrl} from '../src/services/site';
 import {getBuildArticles, getBuildInjuries} from './buildContentSource';
+import musclesLibraryData from '../json/muscles_library.json';
 
 const SITE_URL = getSiteUrl();
 const LANGUAGES = ['en', 'ar'] as const;
 type Language = (typeof LANGUAGES)[number];
-const GENERATED_LASTMOD = '2026-11-12';
+const GENERATED_LASTMOD = new Date().toISOString().slice(0, 10);
 
 type RouteEntry = {
   path: string;
@@ -41,6 +42,12 @@ const staticRoutes: RouteEntry[] = [
     lastmod: GENERATED_LASTMOD,
   })),
   {path: '/anatomy', changefreq: 'monthly', priority: '0.8', lastmod: '2026-11-23'},
+  ...Object.keys((musclesLibraryData as {muscles: Record<string, unknown>}).muscles).map((slug) => ({
+    path: `/anatomy/${slug}`,
+    changefreq: 'monthly',
+    priority: '0.7',
+    lastmod: GENERATED_LASTMOD,
+  })),
   {path: '/exercises', changefreq: 'weekly', priority: '0.9', lastmod: GENERATED_LASTMOD},
   {path: '/exercises/systems', changefreq: 'weekly', priority: '0.85', lastmod: GENERATED_LASTMOD},
   ...TRAINING_SYSTEMS.map((system) => ({
@@ -65,6 +72,7 @@ const staticRoutes: RouteEntry[] = [
   {path: '/terms', changefreq: 'monthly', priority: '0.6', lastmod: GENERATED_LASTMOD},
   {path: '/cookies', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
   {path: '/disclaimer', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
+  {path: '/attribution', changefreq: 'monthly', priority: '0.5', lastmod: GENERATED_LASTMOD},
 ];
 
 function absoluteUrl(path: string) {

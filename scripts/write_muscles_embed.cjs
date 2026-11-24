@@ -12,35 +12,35 @@ const musclesEmbedData = [
   {
     "id": "AN-002",
     "nameEn": "Splenius Capitis",
-    "nameAr": "العضلة الطاحلة الرأسية",
+    "nameAr": "العضلة الجبائرية الرأسية",
     "region": "Head & Neck",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Splenius_capitis.png/600px-Splenius_capitis.png"
   },
   {
     "id": "AN-003",
     "nameEn": "Splenius Cervicis",
-    "nameAr": "العضلة الطاحلة العنقية",
+    "nameAr": "العضلة الجبائرية العنقية",
     "region": "Head & Neck",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Splenius_cervicis.png/600px-Splenius_cervicis.png"
   },
   {
     "id": "AN-004",
     "nameEn": "Scalenus Anterior",
-    "nameAr": "العضلة الأخمصية الأمامية",
+    "nameAr": "العضلة السلمية الأمامية",
     "region": "Head & Neck",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Scalenus_anterior.png/600px-Scalenus_anterior.png"
   },
   {
     "id": "AN-005",
     "nameEn": "Scalenus Medius",
-    "nameAr": "العضلة الأخمصية المتوسطة",
+    "nameAr": "العضلة السلمية المتوسطة",
     "region": "Head & Neck",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Scalenus_medius.png/600px-Scalenus_medius.png"
   },
   {
     "id": "AN-006",
     "nameEn": "Scalenus Posterior",
-    "nameAr": "العضلة الأخمصية الخلفية",
+    "nameAr": "العضلة السلمية الخلفية",
     "region": "Head & Neck",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Scalenus_posterior.png/600px-Scalenus_posterior.png"
   },
@@ -243,14 +243,14 @@ const musclesEmbedData = [
   {
     "id": "AN-035",
     "nameEn": "Pronator Teres",
-    "nameAr": "العضلة الكابة المدورة",
+    "nameAr": "العضلة الكبة المدورة",
     "region": "Arm & Forearm",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Pronator_teres.png/600px-Pronator_teres.png"
   },
   {
     "id": "AN-036",
     "nameEn": "Pronator Quadratus",
-    "nameAr": "العضلة الكابة المربعة",
+    "nameAr": "العضلة الكبة المربعة",
     "region": "Arm & Forearm",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Pronator_quadratus.png/600px-Pronator_quadratus.png"
   },

@@ -13,6 +13,9 @@ import {CALCULATOR_PAGE_CONFIGS} from './src/services/calculatorPages';
 import {INJURY_CANONICAL_PARENT_MAP, normalizeExerciseUrlSlug} from './src/services/seoAliases';
 import {buildAbsoluteUrl, getSiteUrl} from './src/services/site';
 import {TRAINING_SYSTEMS} from './src/components/common/exercise-finder/data/training-systems';
+import musclesLibraryData from './json/muscles_library.json';
+import muscleExercisesIndex from './json/muscle_exercises_index.json';
+import videoPublishDates from './json/video-publish-dates.json';
 import {getBuildArticles, getBuildInjuries} from './scripts/buildContentSource';
 
 type Lang = 'en' | 'ar';
@@ -176,6 +179,8 @@ function replaceMeta(html: string, title: string, description: string, canonical
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="robots" content="${noIndex ? 'noindex, nofollow' : 'index, follow'}" />
     <meta property="og:url" content="${canonical}" />
+    <meta property="og:locale" content="${lang === 'ar' ? 'ar_EG' : 'en_US'}" />
+    <meta property="og:locale:alternate" content="${lang === 'ar' ? 'en_US' : 'ar_EG'}" />
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
@@ -184,7 +189,7 @@ function replaceMeta(html: string, title: string, description: string, canonical
   `;
 
   return html
-    .replace(/<html lang="[^"]+"/, `<html lang="${lang}"`)
+    .replace(/<html lang="[^"]+"/, `<html lang="${lang}" dir="${lang === 'ar' ? 'rtl' : 'ltr'}"`)
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
     .replace(/<meta name="description" content="[^"]*"\s*\/?>/, '')
     .replace(/<meta name="robots" content="[^"]*"\s*\/?>/g, '')
@@ -1069,7 +1074,7 @@ function exerciseSystemDetailRoute(lang: Lang, system: (typeof TRAINING_SYSTEMS)
     ),
   };
 }
-function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'terms' | 'cookies' | 'disclaimer'): RouteDefinition {
+function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'terms' | 'cookies' | 'disclaimer' | 'attribution'): RouteDefinition {
   const isAr = lang === 'ar';
 
   const config = {
@@ -1166,6 +1171,25 @@ function infoPageRoute(lang: Lang, page: 'about' | 'contact' | 'privacy' | 'term
         ),
       ],
     },
+    attribution: {
+      title: isAr ? 'الحقوق والنسب' : 'Attribution & Media Credits',
+      description: isAr
+        ? 'مصادر وتراخيص الصور التشريحية والوسائط المستخدمة في Active Rehab.'
+        : 'Sources and licenses for the anatomical images and media used in Active Rehab.',
+      eyebrow: isAr ? 'الحقوق' : 'Credits',
+      heading: isAr ? 'الحقوق والنسب' : 'Attribution & Media Credits',
+      intro: isAr
+        ? 'الرسوم التشريحية من ويكيميديا كومنز برخص حرة مع ذكر المؤلف والرخصة والمصدر.'
+        : 'Anatomical illustrations come from Wikimedia Commons under free licenses with author, license, and source listed.',
+      sections: [
+        section(
+          isAr ? 'ما الذي تجده هنا؟' : 'What you will find',
+          isAr
+            ? '<p>قائمة كاملة بالصور التشريحية مع المؤلف والرخصة ورابط المصدر، إضافة إلى ملاحظات عن مصغرات التمارين وفيديوهات يوتيوب المضمنة.</p>'
+            : '<p>A full list of anatomical images with author, license, and source link, plus notes on exercise thumbnails and embedded YouTube videos.</p>',
+        ),
+      ],
+    },
     disclaimer: {
       title: isAr ? 'إخلاء المسؤولية الطبي' : 'Medical Disclaimer',
       description: isAr
@@ -1205,17 +1229,204 @@ function anatomyRoute(lang: Lang): RouteDefinition {
     ])};
 }
 
+
+type MuscleRecord = {
+  id: string;
+  slug: string;
+  name: string;
+  name_ar?: string;
+  region: string;
+  origin?: string;
+  insertion?: string;
+  action?: string;
+  innervation?: string;
+  blood_supply?: string;
+  image_url?: string;
+  image_source?: string;
+  image_license?: string;
+};
+
+type MuscleExerciseEntry = {
+  id: string;
+  name: string;
+  name_ar?: string | null;
+  youtube_id?: string | null;
+  embed_video_url?: string | null;
+  coaching_cue_ar?: string | null;
+};
+
+const MUSCLE_LIBRARY = (musclesLibraryData as unknown as {muscles: Record<string, MuscleRecord>}).muscles;
+const MUSCLE_EXERCISE_INDEX = muscleExercisesIndex as unknown as Record<string, {primary?: MuscleExerciseEntry[]; stabilizer?: MuscleExerciseEntry[]}>;
+const VIDEO_PUBLISH_DATES = videoPublishDates as unknown as Record<string, string>;
+
+const MUSCLE_REGION_TO_EXERCISE_SLUG: Record<string, string> = {
+  neck: 'neck',
+  shoulder: 'shoulders',
+  arm: 'arms',
+  spine_core: 'back',
+  hip_pelvis: 'hip',
+  knee_thigh: 'legs',
+  ankle_foot: 'calves',
+};
+
+const MUSCLE_REGION_LABEL: Record<string, {en: string; ar: string}> = {
+  neck: {en: 'Neck & Head', ar: 'العنق والرأس'},
+  shoulder: {en: 'Shoulder', ar: 'الكتف'},
+  arm: {en: 'Arm & Hand', ar: 'الذراع واليد'},
+  spine_core: {en: 'Spine & Core', ar: 'الظهر والجذع'},
+  hip_pelvis: {en: 'Hip & Pelvis', ar: 'الورك والحوض'},
+  knee_thigh: {en: 'Thigh & Knee', ar: 'الفخذ والركبة'},
+  ankle_foot: {en: 'Leg, Ankle & Foot', ar: 'الساق والكاحل والقدم'},
+};
+
+function musclePageRoute(lang: Lang, muscle: MuscleRecord): RouteDefinition {
+  const isAr = lang === 'ar';
+  const slug = muscle.slug;
+  const name = text(isAr && muscle.name_ar ? muscle.name_ar : muscle.name);
+  const latinName = text(muscle.name);
+  const regionLabel = MUSCLE_REGION_LABEL[muscle.region];
+  const path = `/${lang}/anatomy/${slug}`;
+  const title = isAr ? `تشريح وتمارين ${name}` : `${latinName} anatomy and exercises`;
+  const description = isAr
+    ? `${name}: المنشأ والارتكاز والوظيفة والتعصيب، مع تمارين تأهيل مستهدفة بالفيديو.`
+    : `${latinName}: origin, insertion, action, innervation, and targeted rehab exercises with video guidance.`;
+
+  const factRows: Array<[string, string | undefined]> = isAr
+    ? [
+        ['المنشأ', muscle.origin],
+        ['الارتكاز', muscle.insertion],
+        ['الوظيفة', muscle.action],
+        ['التعصيب', muscle.innervation],
+        ['التروية الدموية', muscle.blood_supply],
+      ]
+    : [
+        ['Origin', muscle.origin],
+        ['Insertion', muscle.insertion],
+        ['Action', muscle.action],
+        ['Innervation', muscle.innervation],
+        ['Blood supply', muscle.blood_supply],
+      ];
+  const factList = factRows
+    .filter(([, value]) => value)
+    .map(([label, value]) => `<li><strong>${escapeHtml(label)}:</strong> ${escapeHtml(text(value as string))}</li>`)
+    .join('');
+
+  const indexEntry = MUSCLE_EXERCISE_INDEX[slug] || {};
+  const primary = indexEntry.primary || [];
+  const stabilizer = indexEntry.stabilizer || [];
+  const exerciseItem = (ex: MuscleExerciseEntry) => {
+    const exName = text(isAr && ex.name_ar ? ex.name_ar : ex.name);
+    const cue = isAr && ex.coaching_cue_ar ? `<p class="meta">${escapeHtml(text(ex.coaching_cue_ar))}</p>` : '';
+    const video = ex.youtube_id
+      ? ` <a href="https://www.youtube.com/watch?v=${ex.youtube_id}" rel="noopener noreferrer">${isAr ? 'شاهد الفيديو' : 'Watch video'}</a>`
+      : '';
+    return `<article class="card"><h3>${escapeHtml(exName)}${video}</h3>${cue}</article>`;
+  };
+  const exerciseSections: string[] = [];
+  if (primary.length) {
+    exerciseSections.push(
+      section(isAr ? 'تمارين أساسية تستهدف العضلة' : 'Primary exercises', `<div class="grid two">${primary.map(exerciseItem).join('')}</div>`),
+    );
+  }
+  if (stabilizer.length) {
+    exerciseSections.push(
+      section(
+        isAr ? 'تمارين تشارك فيها كعضلة مساعدة' : 'Stabilizer and synergist exercises',
+        `<ul class="link-list">${stabilizer.map((ex) => `<li>${escapeHtml(text(isAr && ex.name_ar ? ex.name_ar : ex.name))}</li>`).join('')}</ul>`,
+      ),
+    );
+  }
+
+  const imageSection = muscle.image_url
+    ? section(
+        isAr ? 'رسم تشريحي' : 'Anatomical illustration',
+        `<figure><img src="${muscle.image_url}" alt="${escapeHtml(isAr ? `رسم توضيحي لعضلة ${name}` : `${latinName} anatomical illustration`)}" loading="lazy" style="max-width:100%;height:auto;border-radius:12px" />${
+          muscle.image_source
+            ? `<figcaption class="meta">${isAr ? 'المصدر:' : 'Source:'} <a href="${muscle.image_source}" rel="noopener noreferrer">Wikimedia Commons</a>${muscle.image_license ? ` · ${escapeHtml(muscle.image_license)}` : ''}</figcaption>`
+            : ''
+        }</figure>`,
+      )
+    : '';
+
+  const exerciseSlug = MUSCLE_REGION_TO_EXERCISE_SLUG[muscle.region];
+  const regionLinks = [
+    `<li><a href="/${lang}/anatomy">${isAr ? 'العودة إلى مكتبة التشريح' : 'Back to the anatomy library'}</a></li>`,
+    exerciseSlug
+      ? `<li><a href="/${lang}/exercises/${normalizeExerciseUrlSlug(exerciseSlug)}">${isAr ? `تمارين منطقة ${regionLabel?.ar || ''}` : `${regionLabel?.en || ''} exercise guide`}</a></li>`
+      : '',
+    `<li><a href="/${lang}/injuries">${isAr ? 'بروتوكولات التأهيل من الإصابات' : 'Injury recovery protocols'}</a></li>`,
+  ]
+    .filter(Boolean)
+    .join('');
+
+  const body = layout(
+    lang,
+    isAr ? 'مكتبة التشريح' : 'Anatomy library',
+    isAr ? `${name} (${latinName})` : latinName,
+    description,
+    [
+      section(isAr ? 'نظرة تشريحية سريعة' : 'Anatomy at a glance', `<ul>${factList}</ul>`),
+      imageSection,
+      ...exerciseSections,
+      section(isAr ? 'روابط مرتبطة' : 'Related links', `<ul class="link-list">${regionLinks}</ul>`),
+    ].filter(Boolean),
+  );
+
+  const videoSchemas = primary
+    .filter((ex) => ex.youtube_id && VIDEO_PUBLISH_DATES[ex.youtube_id])
+    .map((ex) => ({
+      '@context': 'https://schema.org',
+      '@type': 'VideoObject',
+      name: text(ex.name),
+      description: `${text(ex.name)} rehabilitation exercise video targeting the ${latinName}.`,
+      thumbnailUrl: [`https://img.youtube.com/vi/${ex.youtube_id}/hqdefault.jpg`],
+      uploadDate: VIDEO_PUBLISH_DATES[ex.youtube_id as string],
+      embedUrl: ex.embed_video_url || `https://www.youtube.com/embed/${ex.youtube_id}`,
+      contentUrl: `https://www.youtube.com/watch?v=${ex.youtube_id}`,
+    }));
+
+  return {
+    path,
+    lang,
+    title,
+    description,
+    body,
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: title,
+        description,
+        url: absoluteUrl(path),
+        inLanguage: lang,
+        about: {'@type': 'AnatomicalStructure', name: latinName},
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {'@type': 'ListItem', position: 1, name: isAr ? 'الرئيسية' : 'Home', item: absoluteUrl(`/${lang}/`)},
+          {'@type': 'ListItem', position: 2, name: isAr ? 'مكتبة التشريح' : 'Anatomy library', item: absoluteUrl(`/${lang}/anatomy`)},
+          {'@type': 'ListItem', position: 3, name: isAr ? name : latinName, item: absoluteUrl(path)},
+        ],
+      },
+      ...videoSchemas,
+    ],
+  };
+}
+
 const staticRoutes: RouteDefinition[] = [
   ...(['en', 'ar'] as Lang[]).flatMap((lang) => [
     homeRoute(lang),
     anatomyRoute(lang),
+    ...Object.values(MUSCLE_LIBRARY).map((muscle) => musclePageRoute(lang, muscle)),
     calculatorsRoute(lang),
     ...CALCULATOR_PAGE_CONFIGS.map((calculator) => calculatorDetailRoute(lang, calculator)),
     insightsRoute(lang),
     injuriesRoute(lang),
     dietsRoute(lang),
     ...dietRegimensCatalog.map((diet) => dietDetailRoute(lang, diet)),
-    ...(['about', 'contact', 'privacy', 'terms', 'cookies', 'disclaimer'] as const).map((page) => infoPageRoute(lang, page)),
+    ...(['about', 'contact', 'privacy', 'terms', 'cookies', 'disclaimer', 'attribution'] as const).map((page) => infoPageRoute(lang, page)),
     exercisesRoute(lang),
     ...EXERCISE_FINDER_STATIC_SLUGS.map((slug) => exercisesRoute(lang, slug)),
     exerciseSystemsRoute(lang),
