@@ -104,7 +104,8 @@ export default function AppRoutes({theme, onToggleTheme}: {theme: 'light' | 'dar
       <Route path="/:lang/diets" element={<DietsRegimensPage />} />
       <Route path="/:lang/diets/:slug" element={<DietDetailPage />} />
       <Route path="/:lang/exercises" element={<ExercisesPage />} />
-      <Route path="/:lang/anatomy" element={<AnatomyPage />} />
+      <Route path="/:lang/anatomy/:muscle" element={<AnatomyPage />} />
+<Route path="/:lang/anatomy" element={<AnatomyPage />} />
       <Route path="/:lang/muscles" element={<AnatomyPage />} />
       <Route path="/:lang/exercises/systems" element={<ExerciseSystemsPage />} />
       <Route path="/:lang/exercises/systems/:systemId" element={<ExerciseSystemDetailPage />} />
