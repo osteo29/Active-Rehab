@@ -65,7 +65,7 @@
    "action": "Elevates 1st rib (inspiration); lateral flexion and rotation of cervical spine",
    "innervation": "Anterior rami of cervical nerves C4-C6",
    "blood_supply": "Ascending cervical artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Scalenus_anterior.png",
+   "image_url": "/anatomy/scalenus-anterior.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/b/bf/Scalenus_anterior.png\" alt=\"Scalenus Anterior\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Scalenus_anterior.png",
    "image_license": "Public domain"
@@ -82,7 +82,7 @@
    "action": "Elevates 1st rib; lateral flexion of neck",
    "innervation": "Anterior rami of cervical nerves C3-C8",
    "blood_supply": "Ascending cervical artery and deep cervical artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Scalenus_medius.png",
+   "image_url": "/anatomy/scalenus-medius.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/f/fa/Scalenus_medius.png\" alt=\"Scalenus Medius\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Scalenus_medius.png",
    "image_license": "Public domain"
@@ -99,7 +99,7 @@
    "action": "Elevates 2nd rib; lateral flexion of cervical spine",
    "innervation": "Anterior rami of cervical nerves C6-C8",
    "blood_supply": "Transverse cervical artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Scalenus_posterior.png",
+   "image_url": "/anatomy/scalenus-posterior.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/f/f3/Scalenus_posterior.png\" alt=\"Scalenus Posterior\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Scalenus_posterior.png",
    "image_license": "Public domain"
@@ -133,7 +133,7 @@
    "action": "Flexion of head and upper cervical spine",
    "innervation": "Anterior rami of C1-C3 spinal nerves",
    "blood_supply": "Ascending pharyngeal artery, vertebral artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Longus_capitis.png",
+   "image_url": "/anatomy/longus-capitis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/7/7d/Longus_capitis.png\" alt=\"Longus Capitis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Longus_capitis.png",
    "image_license": "Public domain"
@@ -201,7 +201,7 @@
    "action": "Elevation and retraction of mandible",
    "innervation": "Deep temporal nerves (CN V3 - Mandibular)",
    "blood_supply": "Deep temporal arteries",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Gray_%E2%80%94_musculus_temporalis.png",
+   "image_url": "/anatomy/temporalis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/3/35/Gray_%E2%80%94_musculus_temporalis.png\" alt=\"Temporalis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_temporalis.png",
    "image_license": "Public domain"
@@ -235,7 +235,7 @@
    "action": "External rotation, horizontal extension; arm elevation (particularly in posterior planes)",
    "innervation": "Suprascapular nerve (C5-C6)",
    "blood_supply": "Suprascapular artery, posterior circumflex humeral artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Infraspinatus.png",
+   "image_url": "/anatomy/infraspinatus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/1/1d/Infraspinatus.png\" alt=\"Infraspinatus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Infraspinatus.png",
    "image_license": "CC BY-SA 3.0"
@@ -575,7 +575,7 @@
    "action": "Elbow extension assist, dynamic stabilization of ulnohumeral joint",
    "innervation": "Radial nerve (triceps-anconeus branch); double innervation from posterior interosseous nerve branch in 70.4%",
    "blood_supply": "Interosseous recurrent artery, middle collateral artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Musculusanconeus2.png",
+   "image_url": "/anatomy/anconeus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/7/79/Musculusanconeus2.png\" alt=\"Anconeus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Musculusanconeus2.png",
    "image_license": "Public domain"
@@ -592,7 +592,7 @@
    "action": "Forearm pronation, weak elbow flexion",
    "innervation": "Median nerve (C6, C7)",
    "blood_supply": "Ulnar artery, anterior ulnar recurrent artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Gray_%E2%80%94_musculus_pronator_teres.png",
+   "image_url": "/anatomy/pronator-teres.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/4/44/Gray_%E2%80%94_musculus_pronator_teres.png\" alt=\"Pronator Teres\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_pronator_teres.png",
    "image_license": "Public domain"
@@ -609,7 +609,7 @@
    "action": "Forearm pronation (primary pronator)",
    "innervation": "Anterior interosseous nerve (branch of median nerve, C7-C8)",
    "blood_supply": "Anterior interosseous artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Gray_%E2%80%94_musculus_pronator_quadratus.png",
+   "image_url": "/anatomy/pronator-quadratus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/8/83/Gray_%E2%80%94_musculus_pronator_quadratus.png\" alt=\"Pronator Quadratus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_pronator_quadratus.png",
    "image_license": "Public domain"
@@ -626,7 +626,7 @@
    "action": "Forearm supination",
    "innervation": "Deep branch of radial nerve (C5, C6)",
    "blood_supply": "Radial recurrent artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Supinator.png",
+   "image_url": "/anatomy/supinator.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/6/68/Supinator.png\" alt=\"Supinator\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Supinator.png",
    "image_license": "Public domain"
@@ -643,7 +643,7 @@
    "action": "Wrist flexion, radial deviation",
    "innervation": "Median nerve (C6, C7)",
    "blood_supply": "Radial artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Gray_%E2%80%94_musculus_flexor_carpi_radialis.png",
+   "image_url": "/anatomy/flexor-carpi-radialis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/1/1e/Gray_%E2%80%94_musculus_flexor_carpi_radialis.png\" alt=\"Flexor Carpi Radialis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_flexor_carpi_radialis.png",
    "image_license": "Public domain"
@@ -677,7 +677,7 @@
    "action": "Weak wrist flexion, tenses palmar aponeurosis",
    "innervation": "Median nerve (C7-C8)",
    "blood_supply": "Branches from median nerve artery and ulnar artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Gray_%E2%80%94_musculus_palmaris_longus.png",
+   "image_url": "/anatomy/palmaris-longus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/6/6b/Gray_%E2%80%94_musculus_palmaris_longus.png\" alt=\"Palmaris Longus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_palmaris_longus.png",
    "image_license": "Public domain"
@@ -694,7 +694,7 @@
    "action": "Wrist extension, radial deviation",
    "innervation": "Radial nerve (C6, C7)",
    "blood_supply": "Radial artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Extensor_carpi_radialis_longus.png",
+   "image_url": "/anatomy/extensor-carpi-radialis-longus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/5/53/Extensor_carpi_radialis_longus.png\" alt=\"Extensor Carpi Radialis Longus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Extensor_carpi_radialis_longus.png",
    "image_license": "Public domain"
@@ -711,7 +711,7 @@
    "action": "Wrist extension, radial deviation",
    "innervation": "Posterior interosseous nerve (C6-C7)",
    "blood_supply": "Radial artery branches",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Gray_%E2%80%94_musculus_extensor_carpi_radialis_brevis.png",
+   "image_url": "/anatomy/extensor-carpi-radialis-brevis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/f/f8/Gray_%E2%80%94_musculus_extensor_carpi_radialis_brevis.png\" alt=\"Extensor Carpi Radialis Brevis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_extensor_carpi_radialis_brevis.png",
    "image_license": "Public domain"
@@ -728,7 +728,7 @@
    "action": "Wrist extension, ulnar deviation",
    "innervation": "Posterior interosseous nerve (C7-C8)",
    "blood_supply": "Posterior interosseous artery branches",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Gray_%E2%80%94_musculus_extensor_carpi_ulnaris.png",
+   "image_url": "/anatomy/extensor-carpi-ulnaris.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/6/6c/Gray_%E2%80%94_musculus_extensor_carpi_ulnaris.png\" alt=\"Extensor Carpi Ulnaris\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_extensor_carpi_ulnaris.png",
    "image_license": "Public domain"
@@ -745,7 +745,7 @@
    "action": "Extension of MCP joints of fingers 2-5; assists wrist extension",
    "innervation": "Posterior interosseous nerve (C7, C8)",
    "blood_supply": "Posterior interosseous artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Gray_%E2%80%94_musculus_extensor_digitorum.png",
+   "image_url": "/anatomy/extensor-digitorum.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/f/fb/Gray_%E2%80%94_musculus_extensor_digitorum.png\" alt=\"Extensor Digitorum\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gray_%E2%80%94_musculus_extensor_digitorum.png",
    "image_license": "Public domain"
@@ -961,7 +961,7 @@
    "action": "Lateral flexion and motion segment stabilization",
    "innervation": "Anterior and posterior rami of spinal nerves",
    "blood_supply": "Deep cervical and lumbar arteries",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Intertransversarii_muscles.jpg",
+   "image_url": "/anatomy/intertransversarii.jpg",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/e/ed/Intertransversarii_muscles.jpg\" alt=\"Intertransversarii\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Intertransversarii_muscles.jpg",
    "image_license": "Public domain"
@@ -1119,7 +1119,7 @@
    "action": "External rotation, abduction (particularly with hip in slight extension); hip stabilization",
    "innervation": "Nerve to piriformis (S1-S2)",
    "blood_supply": "Superior and inferior gluteal arteries",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Piriformis_muscle.PNG",
+   "image_url": "/anatomy/piriformis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/9/93/Piriformis_muscle.PNG\" alt=\"Piriformis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Piriformis_muscle.PNG",
    "image_license": "Public domain"
@@ -1136,7 +1136,7 @@
    "action": "External rotation, hip stabilization",
    "innervation": "Nerve to obturator internus (L5-S2)",
    "blood_supply": "Internal pudendal artery, obturator artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Obturator_internus_muscle-es.png",
+   "image_url": "/anatomy/obturator-internus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/1/1b/Obturator_internus_muscle-es.png\" alt=\"Obturator Internus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Obturator_internus_muscle-es.png",
    "image_license": "CC BY-SA 4.0"
@@ -1153,7 +1153,7 @@
    "action": "External rotation, adduction",
    "innervation": "Posterior branch of obturator nerve (L3-L4)",
    "blood_supply": "Obturator artery, medial circumflex femoral artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Obturator_externus.png",
+   "image_url": "/anatomy/obturator-externus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/6/6d/Obturator_externus.png\" alt=\"Obturator Externus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Obturator_externus.png",
    "image_license": "Public domain"
@@ -1170,7 +1170,7 @@
    "action": "Hip external rotation in extension, hip abduction in flexion",
    "innervation": "Nerve to obturator internus (L5-S2)",
    "blood_supply": "Inferior gluteal artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Gemellus_superior_muscle.PNG",
+   "image_url": "/anatomy/gemellus-superior.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/2/2a/Gemellus_superior_muscle.PNG\" alt=\"Gemellus Superior\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Gemellus_superior_muscle.PNG",
    "image_license": "Public domain"
@@ -1241,7 +1241,7 @@
    "action": "Weak trunk flexor, tenses iliac fascia",
    "innervation": "Anterior ramus of L1 spinal nerve",
    "blood_supply": "Lumbar arteries",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Musculus_psoas_minor.png",
+   "image_url": "/anatomy/psoas-minor.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/c/c1/Musculus_psoas_minor.png\" alt=\"Psoas Minor\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Musculus_psoas_minor.png",
    "image_license": "Public domain"
@@ -1278,7 +1278,7 @@
    "action": "Hip flexion, adduction; hip stabilizer during rotational movements",
    "innervation": "Femoral nerve (L2-L3), may receive accessory innervation from obturator nerve",
    "blood_supply": "Medial circumflex femoral artery, obturator artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Pectineus.png",
+   "image_url": "/anatomy/pectineus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/4/47/Pectineus.png\" alt=\"Pectineus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Pectineus.png",
    "image_license": "Public domain"
@@ -1409,7 +1409,7 @@
    "action": "Knee extension; acts as general joint stabilizer with activation independent of moment direction",
    "innervation": "Femoral nerve (L2-L4)",
    "blood_supply": "Lateral femoral circumflex artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Vastus_lateralis_muscle.png",
+   "image_url": "/anatomy/vastus-lateralis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/f/f2/Vastus_lateralis_muscle.png\" alt=\"Vastus Lateralis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Vastus_lateralis_muscle.png",
    "image_license": "Public domain"
@@ -1426,7 +1426,7 @@
    "action": "Terminal knee extension, medial patellar stabilization",
    "innervation": "Femoral nerve (L2-L4)",
    "blood_supply": "Descending genicular artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Vastus_medialis_muscle.png",
+   "image_url": "/anatomy/vastus-medialis-oblique-vmo.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/a/a3/Vastus_medialis_muscle.png\" alt=\"Vastus Medialis Oblique (VMO)\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Vastus_medialis_muscle.png",
    "image_license": "Public domain"
@@ -1582,7 +1582,7 @@
    "action": "Hip adduction and flexion assistance",
    "innervation": "Femoral nerve (L2, L3)",
    "blood_supply": "Medial circumflex femoral artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Pectineus.png",
+   "image_url": "/anatomy/pectineus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/4/47/Pectineus.png\" alt=\"Pectineus Minor\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Pectineus.png",
    "image_license": "Public domain"
@@ -1735,7 +1735,7 @@
    "action": "Great toe extension, assists ankle dorsiflexion",
    "innervation": "Deep peroneal nerve (L5-S1)",
    "blood_supply": "Anterior tibial artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Extensor_hallucis_longus.png",
+   "image_url": "/anatomy/extensor-hallucis-longus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/2/25/Extensor_hallucis_longus.png\" alt=\"Extensor Hallucis Longus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Extensor_hallucis_longus.png",
    "image_license": "Public domain"
@@ -1752,7 +1752,7 @@
    "action": "Toe extension (toes 2-5), assists ankle dorsiflexion",
    "innervation": "Deep peroneal nerve (L5-S1)",
    "blood_supply": "Anterior tibial artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Extensor_digitorum_longus.png",
+   "image_url": "/anatomy/extensor-digitorum-longus.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/0/08/Extensor_digitorum_longus.png\" alt=\"Extensor Digitorum Longus\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Extensor_digitorum_longus.png",
    "image_license": "Public domain"
@@ -1820,7 +1820,7 @@
    "action": "Flexion of PIP joints of toes 2-5, longitudinal arch support",
    "innervation": "Medial plantar nerve (S1, S2)",
    "blood_supply": "Medial and lateral plantar arteries",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flexor_digitorum_brevis.png",
+   "image_url": "/anatomy/flexor-digitorum-brevis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/6/69/Flexor_digitorum_brevis.png\" alt=\"Flexor Digitorum Brevis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Flexor_digitorum_brevis.png",
    "image_license": "Public domain"
@@ -1837,7 +1837,7 @@
    "action": "Abduction and flexion of great toe, supports medial longitudinal arch",
    "innervation": "Medial plantar nerve (S1, S2)",
    "blood_supply": "Medial plantar artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Abductor_hallucis.png",
+   "image_url": "/anatomy/abductor-hallucis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/b/bf/Abductor_hallucis.png\" alt=\"Abductor Hallucis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Abductor_hallucis.png",
    "image_license": "Public domain"
@@ -1854,7 +1854,7 @@
    "action": "Adduction of great toe, supports transverse arch",
    "innervation": "Deep branch of lateral plantar nerve (S2, S3)",
    "blood_supply": "Lateral plantar artery",
-   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Musculus_adductor_hallucis.png",
+   "image_url": "/anatomy/adductor-hallucis.png",
    "embed_code": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/f/f6/Musculus_adductor_hallucis.png\" alt=\"Adductor Hallucis\" loading=\"lazy\" />",
    "image_source": "https://commons.wikimedia.org/wiki/File:Musculus_adductor_hallucis.png",
    "image_license": "Public domain"
