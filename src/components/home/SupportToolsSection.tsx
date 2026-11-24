@@ -225,6 +225,7 @@ export default function SupportToolsSection({
                 <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 rtl:left-auto rtl:right-4" />
                 <input
                   type="text"
+                  aria-label={t.foodDb.searchPlaceholder}
                   placeholder={t.foodDb.searchPlaceholder}
                   value={foodSearch}
                   onChange={(event) => {
