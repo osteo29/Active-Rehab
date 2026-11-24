@@ -12,7 +12,7 @@ export default async function handler(
     return res.status(405).json({error: 'Method not allowed'});
   }
 
-  const apiKey = (process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY || '').trim();
+  const apiKey = (process.env.GEMINI_API_KEY || '').trim();
   if (!apiKey) {
     return res.status(500).json({error: 'Missing GEMINI_API_KEY on the server'});
   }
@@ -46,6 +46,7 @@ export default async function handler(
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents,
+      config: {abortSignal: AbortSignal.timeout(25_000)},
     });
 
     res.setHeader('Content-Type', 'application/json');
