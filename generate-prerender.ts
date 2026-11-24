@@ -184,7 +184,7 @@ function replaceMeta(html: string, title: string, description: string, canonical
   `;
 
   return html
-    .replace(/<html lang="[^"]+"/, `<html lang="${lang}"`)
+    .replace(/<html lang="[^"]+"/, `<html lang="${lang}" dir="${lang === 'ar' ? 'rtl' : 'ltr'}"`)
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
     .replace(/<meta name="description" content="[^"]*"\s*\/?>/, '')
     .replace(/<meta name="robots" content="[^"]*"\s*\/?>/g, '')
