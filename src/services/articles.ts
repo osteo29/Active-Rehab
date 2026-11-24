@@ -21,6 +21,55 @@ export const getArticles = (lang: Language): Article[] => {
   if (lang === 'ar') {
     return [
       {
+        id: 14,
+        slug: 'muscle-soreness-after-workout-doms',
+        title: 'ألم العضلات بعد التمرين: ما هو الـ DOMS وما الذي يساعد فعلًا؟',
+        excerpt:
+          'ألم العضلات المتأخر بعد التمرين شائع جدًا، خصوصًا مع تمرين جديد أو شدة أعلى. متى يكون طبيعيًا، ومتى يستحق الانتباه، وما الذي يساعد فعلًا على تخفيفه؟',
+        content: `كثير من الناس يبدأون تمرينًا جديدًا أو يرفعون شدة التمرين، وبعد يوم أو يومين يستيقظون على ألم وتيبس في العضلات يجعل صعود السلم مهمة صعبة. هذا هو ما يعرف بألم العضلات المتأخر، أو DOMS، وهو من أكثر التجارب شيوعًا في عالم التدريب.
+
+## ما هو الـ DOMS؟
+هو ألم وتيبس عضلي يظهر عادة بعد 12 إلى 24 ساعة من التمرين، ويصل لذروته غالبًا بين اليوم الأول والثالث، ثم يهدأ تدريجيًا خلال أيام. يظهر أكثر مع:
+* التمارين الجديدة على الجسم.
+* زيادة مفاجئة في الشدة أو الحجم.
+* التمارين التي تعتمد على الانقباض اللامركزي، مثل النزول البطيء في الاسكوات أو نزول السلم.
+
+## لماذا يحدث؟
+الاعتقاد القديم أن السبب تراكم حمض اللاكتيك، لكن حمض اللاكتيك يخرج من العضلة خلال ساعات قليلة بعد التمرين. التفسير الأقرب حاليًا أن السبب هو إجهاد دقيق في ألياف العضلة والنسيج الضام حولها، يتبعه استجابة التهابية طبيعية وحساسية مؤقتة في المنطقة. هذا جزء من عملية التكيف التي تجعل العضلة أقوى مع الوقت، وليس علامة ضرر خطير في أغلب الحالات.
+
+## الفرق بين الألم الطبيعي والإصابة
+الألم الطبيعي بعد التمرين عادة:
+* يظهر بعد ساعات من التمرين وليس لحظتها.
+* يكون في العضلة نفسها وعلى الجانبين معًا غالبًا.
+* يتحسن تدريجيًا خلال أيام قليلة.
+* يقل مع الإحماء والحركة الخفيفة.
+
+انتبه أكثر لو كان الألم:
+* حادًا وظهر لحظة التمرين.
+* مصحوبًا بتورم واضح أو كدمات.
+* في مفصل بعينه وليس في العضلة.
+* مستمرًا بلا تحسن لأكثر من أسبوع تقريبًا.
+* مصحوبًا بتغير لون البول إلى لون داكن جدًا بعد مجهود شديد، فهذه علامة تحتاج تقييمًا طبيًا عاجلًا.
+
+## ما الذي يساعد فعلًا؟
+لا يوجد حل سحري، لكن بعض الخيارات تساعد على تخفيف الإحساس:
+* الحركة الخفيفة: مشي أو تمرين خفيف جدًا ينشط الدورة الدموية ويخفف التيبس غالبًا.
+* النوم الجيد: جزء أساسي من الاستشفاء.
+* التغذية المناسبة: وجبة متوازنة فيها بروتين كافٍ تدعم إصلاح العضلة.
+* التدريج: أهم وسيلة وقاية هي زيادة الحمل تدريجيًا بدل القفزات الكبيرة.
+
+أما الإطالات الثابتة القوية أو محاولة "تحمل الألم" بتمارين شديدة فوق ألم واضح، فليست الطريقة الأذكى غالبًا.
+
+## هل أتمرن وأنا متألم؟
+في الألم الخفيف إلى المتوسط، التمرين الخفيف أو تدريب مجموعة عضلية مختلفة خيار مقبول. أما لو الألم يغير طريقة حركتك بشكل واضح، فالأفضل تقليل الشدة أو إعطاء المنطقة يومًا إضافيًا. المهم ألا يكون القرار خوفًا كاملًا من أي ألم، ولا تجاهلًا كاملًا لكل إشارة.
+
+## الخلاصة
+الـ DOMS جزء طبيعي من رحلة التدريب، خصوصًا مع كل جديد على الجسم، وهو ليس مقياسًا لجودة التمرين ولا دليلًا على الإصابة. التدرج في الحمل، والنوم، والتغذية، والحركة الخفيفة هي الأدوات الحقيقية للتعامل معه. ولو الألم خرج عن الصورة الطبيعية، التقييم مع أخصائي علاج طبيعي يوضح الصورة ويطمّنك على الخطوة التالية.`,
+        category: 'Training Recovery',
+        date: '2026-11-24',
+        icon: 'Flame',
+      },
+      {
         id: 13,
         slug: 'metabolic-aspects-of-exercise',
         title: 'الجوانب الأيضية للتمرين: كيف ينتج الجسم الطاقة أثناء النشاط البدني؟',
@@ -756,6 +805,54 @@ TDEE أو إجمالي الطاقة اليومية هو مجموع ما يحرق
 
   return [
     {
+      id: 14,
+      slug: 'muscle-soreness-after-workout-doms',
+      title: 'Muscle soreness after a workout: what DOMS means and what actually helps',
+      excerpt:
+        'Delayed onset muscle soreness is one of the most common training experiences. When is it normal, when does it deserve attention, and what actually helps it settle?',
+      content: `Many people start a new program or push their intensity a bit harder, and a day or two later they wake up with stiff, sore muscles that make stairs feel like a workout of their own. This is delayed onset muscle soreness, better known as DOMS, and it is one of the most common experiences in training.
+
+## What is DOMS?
+DOMS is muscle pain and stiffness that usually appears 12 to 24 hours after exercise, often peaks between day one and day three, then gradually settles. It shows up most with:
+* Exercises your body is not used to.
+* A sudden jump in intensity or volume.
+* Movements with a strong eccentric component, like lowering slowly in a squat or walking downhill.
+
+## Why does it happen?
+The old explanation blamed lactic acid buildup, but lactic acid clears from the muscle within a few hours after exercise. The current understanding points to microscopic stress in muscle fibers and the surrounding connective tissue, followed by a normal inflammatory response and temporary sensitivity in the area. In most cases this is part of the adaptation process that makes the muscle more resilient over time, not a sign of serious damage.
+
+## Normal soreness vs injury
+Typical post-workout soreness usually:
+* Appears hours after the workout, not during it.
+* Sits in the muscle itself, often on both sides.
+* Improves gradually over a few days.
+* Eases with a warm-up and light movement.
+
+Pay closer attention if the pain:
+* Is sharp and started during the exercise.
+* Comes with visible swelling or bruising.
+* Sits in a specific joint rather than the muscle.
+* Persists without improvement for more than about a week.
+* Comes with very dark urine after intense effort, which needs urgent medical assessment.
+
+## What actually helps?
+There is no magic fix, but a few options reliably help take the edge off:
+* Light movement: an easy walk or very light session gets blood flowing and often reduces stiffness.
+* Good sleep: a core part of recovery.
+* Appropriate nutrition: a balanced meal with enough protein supports muscle repair.
+* Progression: the best prevention is increasing load gradually instead of in big jumps.
+
+Aggressive static stretching or pushing hard workouts on top of clear soreness are usually not the smartest options.
+
+## Should you train while sore?
+With mild to moderate soreness, light training or working a different muscle group is a reasonable choice. If the pain clearly changes how you move, it is smarter to lower the intensity or give the area another day. The goal is neither fearing every bit of soreness nor ignoring every signal.
+
+## The takeaway
+DOMS is a normal part of training, especially with anything new to the body, and it is neither a measure of workout quality nor proof of injury. Gradual progression, sleep, nutrition, and light movement are the real tools for managing it. And when pain steps outside the normal picture, an assessment with a physical therapist clarifies what is going on and what the next step should be.`,
+      category: 'Training Recovery',
+      date: '2026-11-24',
+      icon: 'Flame',
+    },    {
       id: 13,
       slug: 'metabolic-aspects-of-exercise',
       title: 'Metabolic Aspects of Exercise: How the Body Produces Energy During Physical Activity',
