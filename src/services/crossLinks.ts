@@ -73,7 +73,7 @@ export function getExerciseMuscleLinks(muscleIds: string[], lang: Language): Cro
       const entry = muscles[slug];
       links.push({
         label: lang === 'ar' ? entry.name_ar || entry.name || slug : entry.name || slug,
-        href: `${navigationPaths.anatomy(lang)}?muscle=${slug}`,
+        href: `${navigationPaths.anatomy(lang)}/${slug}`,
       });
     }
   }
@@ -112,7 +112,7 @@ export function getMusclesForBodyRegion(bodyRegion: string, lang: Language): Cro
     if ((entry as any).region !== libraryRegion) continue;
     links.push({
       label: lang === 'ar' ? entry.name_ar || entry.name || slug : entry.name || slug,
-      href: `${navigationPaths.anatomy(lang)}?muscle=${slug}`,
+      href: `${navigationPaths.anatomy(lang)}/${slug}`,
     });
     if (links.length >= 3) break;
   }

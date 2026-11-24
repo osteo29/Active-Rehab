@@ -20,8 +20,8 @@ describe('cross-link integrity', () => {
   it('only emits anatomy links that point at real muscles on a real route', () => {
     for (const exercise of exercises) {
       for (const link of getExerciseMuscleLinks(exercise.muscles, 'en')) {
-        expect(link.href).toMatch(/^\/en\/anatomy\?muscle=[a-z0-9-]+$/);
-        const slug = link.href.split('muscle=')[1];
+        expect(link.href).toMatch(/^\/en\/anatomy\/[a-z0-9-]+$/);
+        const slug = link.href.replace('/en/anatomy/', '');
         expect(librarySlugs.has(slug)).toBe(true);
       }
     }
@@ -49,8 +49,8 @@ describe('cross-link integrity', () => {
   it('maps injury body regions to real library muscles without inventing links for unmapped regions', () => {
     for (const injury of getLocalCatalogInjuries('en')) {
       for (const link of getMusclesForBodyRegion(injury.bodyRegion, 'en')) {
-        expect(link.href).toMatch(/^\/en\/anatomy\?muscle=[a-z0-9-]+$/);
-        const slug = link.href.split('muscle=')[1];
+        expect(link.href).toMatch(/^\/en\/anatomy\/[a-z0-9-]+$/);
+        const slug = link.href.replace('/en/anatomy/', '');
         expect(librarySlugs.has(slug)).toBe(true);
       }
     }
@@ -60,7 +60,7 @@ describe('cross-link integrity', () => {
 
   it('produces arabic links on arabic routes', () => {
     for (const link of getExerciseMuscleLinks(['gluteus_medius'], 'ar')) {
-      expect(link.href.startsWith('/ar/anatomy?muscle=')).toBe(true);
+      expect(link.href.startsWith('/ar/anatomy/')).toBe(true);
     }
   });
 });

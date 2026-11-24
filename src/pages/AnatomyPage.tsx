@@ -1,5 +1,6 @@
 import Seo from '../components/seo/Seo';
 import {buildHreflangs} from '../utils/langUrlHelper';
+import {useNavigate, useParams} from 'react-router-dom';
 import {useState, useMemo, useRef, useEffect} from 'react';
 import {useSearchParams} from 'react-router-dom';
 import {
@@ -54,6 +55,8 @@ export default function AnatomyPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('all');
   const [activeMuscle, setActiveMuscle] = useState<MuscleDetail | null>(null);
+  const {muscle: muscleParam} = useParams<{muscle?: string}>();
+  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   useEffect(() => {
     const slug = searchParams.get('muscle');
@@ -73,7 +76,7 @@ export default function AnatomyPage() {
     document.body.style.overflow = 'hidden';
     items()[0]?.focus();
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {event.preventDefault();setActiveMuscle(null);setModalPlayingVideo(null);return;}
+      if (event.key === 'Escape') {event.preventDefault();navigate(`/${lang}/anatomy`);setModalPlayingVideo(null);return;}
       if (event.key !== 'Tab') return;
       const focusable = items();const first = focusable[0];const last = focusable[focusable.length-1];
       if (!first) {event.preventDefault();return;}
@@ -85,6 +88,19 @@ export default function AnatomyPage() {
   }, [activeMuscle?.slug]);
 
   const allMuscles = useMemo(() => getAllMuscles(lang), [lang]);
+
+  useEffect(() => {
+    if (!muscleParam) {
+      setActiveMuscle(null);
+      return;
+    }
+    const match = allMuscles.find((m) => m.slug === muscleParam);
+    if (match) {
+      setActiveMuscle(match);
+    } else {
+      navigate(`/${lang}/anatomy`, {replace: true});
+    }
+  }, [muscleParam, allMuscles, lang, navigate]);
   const allVideoExercises = useMemo(() => getAllBodyIqExercises(), []);
 
   // Filtered Muscles
@@ -141,7 +157,16 @@ export default function AnatomyPage() {
 
   return (
     <PageLayout title={pageTitle}>
-      <Seo title={isAr ? 'مكتبة التشريح والتمارين' : 'Anatomy and exercise library'} description={isAr ? 'مكتبة تعليمية للعضلات والتشريح الوظيفي والتمارين. ليست بديلًا عن التقييم الطبي.' : 'Educational muscle anatomy and exercise library, not a replacement for medical assessment.'} canonicalPath="/anatomy" hreflangs={buildHreflangs('/anatomy')}/>
+      <Seo
+        title={activeMuscle
+          ? (isAr ? `تشريح وتمارين ${activeMuscle.name_ar || activeMuscle.name}` : `${activeMuscle.name} anatomy and exercises`)
+          : (isAr ? 'مكتبة التشريح والتمارين' : 'Anatomy and exercise library')}
+        description={activeMuscle
+          ? (isAr ? `${activeMuscle.name_ar || activeMuscle.name}: المنشأ والارتكاز والوظيفة والتعصيب، مع تمارين تأهيل مستهدفة بالفيديو.` : `${activeMuscle.name}: origin, insertion, action, innervation, and targeted rehab exercises with video guidance.`)
+          : (isAr ? 'مكتبة تعليمية للعضلات والتشريح الوظيفي والتمارين. ليست بديلًا عن التقييم الطبي.' : 'Educational muscle anatomy and exercise library, not a replacement for medical assessment.')}
+        canonicalPath={activeMuscle ? `/anatomy/${activeMuscle.slug}` : '/anatomy'}
+        hreflangs={buildHreflangs(activeMuscle ? `/anatomy/${activeMuscle.slug}` : '/anatomy')}
+      />
       <div className="not-prose space-y-8">
         {/* Header Hero Section */}
         <section className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.15),transparent_55%),linear-gradient(180deg,#ffffff,#f8fafc)] p-6 sm:p-10 shadow-sm dark:border-slate-800 dark:bg-slate-900/90">
@@ -299,7 +324,7 @@ export default function AnatomyPage() {
                   <div
                     key={muscle.slug}
                     onClick={() => {
-                      setActiveMuscle(muscle);
+                      navigate(`/${lang}/anatomy/${muscle.slug}`);
                       setModalPlayingVideo(null);
                     }}
                     className="group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-health-green/40 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
@@ -527,7 +552,7 @@ export default function AnatomyPage() {
               <button
                 aria-label={isAr ? 'إغلاق تفاصيل العضلة' : 'Close muscle details'}
                 onClick={() => {
-                  setActiveMuscle(null);
+                  navigate(`/${lang}/anatomy`);
                   setModalPlayingVideo(null);
                 }}
                 className="absolute right-5 top-5 rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-800 dark:hover:text-white rtl:left-5 rtl:right-auto"
@@ -559,7 +584,7 @@ export default function AnatomyPage() {
                   <div className="mt-2 text-[11px] text-slate-400">
                     {isAr ? activeMuscle.image_caption_ar || 'رسم تشريحي من ويكيميديا كومنز' : activeMuscle.image_caption || 'Anatomical illustration from Wikimedia Commons'}
                     {activeMuscle.image_source && (
-                      <div className="mt-1 space-x-2">
+                      <div className="mt-1 flex justify-center gap-2">
                         <a href={activeMuscle.image_source} target="_blank" rel="noreferrer" className="underline">
                           {activeMuscle.image_author || 'Wikimedia Commons'}
                         </a>
