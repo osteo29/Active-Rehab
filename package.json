@@ -20,7 +20,8 @@
         "report:injury-content": "tsx scripts/generate-injury-content-report.ts",
         "organize:injury-data": "tsx scripts/organize-injury-data.ts",
         "protocols:sync": "tsx scripts/organize-injury-data.ts --sync-supabase",
-        "rehab:sync-supabase": "tsx scripts/sync-rehab-protocols-to-supabase.ts"
+        "rehab:sync-supabase": "tsx scripts/sync-rehab-protocols-to-supabase.ts",
+        "indexnow": "node scripts/submit-indexnow.mjs"
     },
     "dependencies": {
         "@google/genai": "^1.29.0",
