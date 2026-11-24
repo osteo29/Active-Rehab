@@ -399,7 +399,7 @@ export default function AnatomyPage() {
                         </div>
                       ) : isPlaying ? (
                         <iframe
-                          src={`${ex.embedVideoUrl}${ex.embedVideoUrl?.includes('?') ? '&' : '?'}autoplay=1&rel=0`}
+                          src={`${ex.embedVideoUrl?.replace('www.youtube.com/embed/', 'www.youtube-nocookie.com/embed/')}${ex.embedVideoUrl?.includes('?') ? '&' : '?'}autoplay=1&rel=0`}
                           title={ex.nameEn}
                           className="h-full w-full border-0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -573,7 +573,7 @@ export default function AnatomyPage() {
                 <div className="mt-5 overflow-hidden rounded-2xl border border-slate-800 bg-black">
                   <div className="relative aspect-video w-full">
                     <iframe
-                      src={`https://www.youtube.com/embed/${modalPlayingVideo}?autoplay=1&rel=0&modestbranding=1`}
+                      src={`https://www.youtube-nocookie.com/embed/${modalPlayingVideo}?autoplay=1&rel=0&modestbranding=1`}
                       title="Rehab Exercise"
                       className="h-full w-full border-0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
