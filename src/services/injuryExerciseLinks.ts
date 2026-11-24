@@ -161,3 +161,9 @@ export function getInjuryExerciseLinks({
     reason: lang === 'ar' ? item.reasonAr : item.reason,
   }));
 }
+
+/** True when the injury's recommendation seeds include the given exercise region. */
+export function injuryRecommendsRegion(injuryId: string, bodyRegion: string, regionSlug: string): boolean {
+  const seeds = uniqueSeeds([...(SPECIFIC_INJURY_MAP[injuryId] || []), ...(BODY_REGION_MAP[bodyRegion] || [])]);
+  return seeds.some((seed) => seed.slug === regionSlug);
+}
