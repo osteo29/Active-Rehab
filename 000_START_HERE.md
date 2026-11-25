@@ -5,10 +5,10 @@ This is the current starting point for the project.
 ## Current State
 
 - Live domain: `https://activerehab.vercel.app`
-- Total indexed URLs: `348`
+- Sitemap URLs (EN + AR): `568`
 - Published injury protocols: `100`
 - Internal injury library: `138`
-- Articles: `13`
+- Articles: `14`
 - Diet plans: `10`
 - Calculators: `11`
 - Exercise categories: `20`
