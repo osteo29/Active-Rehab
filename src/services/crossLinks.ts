@@ -81,13 +81,47 @@ export function getExerciseMuscleLinks(muscleIds: string[], lang: Language): Cro
 }
 
 /** Exercise -> injury rehab protocols that recommend its region (verified ids only). */
-export function getExerciseProtocolLinks(regionSlug: string, lang: Language): CrossLink[] {
+export function getExerciseProtocolLinks(regionSlug: string, lang: Language, limit = 3): CrossLink[] {
   const catalog = getLocalCatalogInjuries(lang);
   const links: CrossLink[] = [];
   for (const injury of catalog) {
     if (!injuryRecommendsRegion(injury.id, injury.bodyRegion, regionSlug)) continue;
     links.push({label: injury.name, href: navigationPaths.injuryDetail(lang, injury.slug)});
-    if (links.length >= 3) break;
+    if (links.length >= limit) break;
+  }
+  return links;
+}
+
+/** Total catalog protocols that recommend an exercise-finder region (drives "view all" labels). */
+export function countProtocolsForExerciseRegion(regionSlug: string): number {
+  const catalog = getLocalCatalogInjuries('en');
+  let count = 0;
+  for (const injury of catalog) {
+    if (injuryRecommendsRegion(injury.id, injury.bodyRegion, regionSlug)) count += 1;
+  }
+  return count;
+}
+
+/**
+ * Exercise-finder region -> the anatomy-library muscles its exercises target.
+ * Built purely from the exercises' own muscle ids resolved through the
+ * curated alias map, so every link is one an exercise card would already
+ * show. Callers pass the region's exercises; nothing is invented for
+ * regions whose exercises carry no resolvable muscle ids.
+ */
+export function getLibraryMusclesForExerciseRegion(
+  exercises: Array<{muscles?: string[]}>,
+  lang: Language,
+): CrossLink[] {
+  const seen = new Set<string>();
+  const links: CrossLink[] = [];
+  for (const exercise of exercises) {
+    if (!exercise.muscles) continue;
+    for (const link of getExerciseMuscleLinks(exercise.muscles, lang)) {
+      if (seen.has(link.href)) continue;
+      seen.add(link.href);
+      links.push(link);
+    }
   }
   return links;
 }

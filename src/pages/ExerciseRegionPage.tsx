@@ -22,6 +22,11 @@ import type {StaticMuscleSlug} from '../components/common/exercise-finder/types'
 
 import Seo from '../components/seo/Seo';
 import {getLocalCatalogInjuries, getRelatedCatalogInjuriesByIds, type InjuryCatalogEntry} from '../services/injuryService';
+import {
+  countProtocolsForExerciseRegion,
+  getExerciseProtocolLinks,
+  getLibraryMusclesForExerciseRegion,
+} from '../services/crossLinks';
 import {REHAB_REGION_CONFIG} from '../services/rehabRegionConfig';
 import {denormalizeExerciseUrlSlug, normalizeExerciseUrlSlug} from '../services/seoAliases';
 import {prepareMedicalText} from '../services/textEncoding';
@@ -48,6 +53,24 @@ export default function ExerciseRegionPage() {
   const fallbackRelatedInjuries = useMemo(
     () => (rehabConfig ? getLocalCatalogInjuries(lang).filter((injury) => rehabConfig.relatedInjuryIds.includes(injury.id)) : []),
     [lang, rehabConfig],
+  );
+  const libraryMuscleLinks = useMemo(
+    () =>
+      region
+        ? getLibraryMusclesForExerciseRegion(
+            catalogExercises.filter((exercise) => exercise.region === region),
+            lang,
+          )
+        : [],
+    [catalogExercises, region, lang],
+  );
+  const regionProtocolLinks = useMemo(
+    () => (region ? getExerciseProtocolLinks(region, lang, 4) : []),
+    [region, lang],
+  );
+  const regionProtocolTotal = useMemo(
+    () => (region ? countProtocolsForExerciseRegion(region) : 0),
+    [region],
   );
 
   useEffect(() => {
@@ -84,6 +107,7 @@ export default function ExerciseRegionPage() {
   const exercises = catalogExercises.filter((exercise) => exercise.region === region);
   const systems = getSystemsForRegion(region).slice(0, 3);
   const visibleRelatedInjuries = relatedInjuries.length ? relatedInjuries : fallbackRelatedInjuries;
+  const showRegionProtocols = regionProtocolLinks.length > 0 && !(rehabConfig && visibleRelatedInjuries.length > 0);
   const canonicalPath = `/exercises/${normalizeExerciseUrlSlug(region)}`;
 
   const seoTitle = isAr
@@ -150,6 +174,11 @@ export default function ExerciseRegionPage() {
             <a href="#region-anatomy" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
               {isAr ? 'ملخص المنطقة' : 'Region overview'}
             </a>
+            {libraryMuscleLinks.length > 0 ? (
+              <a href="#region-hub" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
+                {isAr ? 'مكتبة التشريح' : 'Anatomy library'}
+              </a>
+            ) : null}
             {rehabConfig ? (
               <a href="#rehab-guidance" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
                 {isAr ? 'التوجيه العلاجي' : 'Rehab guidance'}
@@ -240,6 +269,75 @@ export default function ExerciseRegionPage() {
             </div>
           </article>
         </section>
+
+        {libraryMuscleLinks.length > 0 || showRegionProtocols ? (
+          <section id="region-hub" className={`grid gap-6${libraryMuscleLinks.length > 0 && showRegionProtocols ? ' lg:grid-cols-2' : ''}`}>
+            {libraryMuscleLinks.length > 0 ? (
+              <article className="rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm sm:p-8">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                  <Network className="h-4 w-4 text-health-green" />
+                  <span>{isAr ? 'عضلات المنطقة في مكتبة التشريح' : 'Region muscles in the anatomy library'}</span>
+                </div>
+                <p className="mixed-text mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                  {isAr
+                    ? 'كل عضلة هنا تفتح صفحة التشريح الكاملة لها: المنشأ والارتكاز والوظيفة والتعصيب وتمارينها المصورة.'
+                    : 'Each muscle opens its full anatomy page: origin, insertion, action, innervation, and its video exercises.'}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {libraryMuscleLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-800 shadow-sm transition hover:border-health-green/40 hover:text-health-green dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
+                    >
+                      <span>{link.label}</span>
+                      <ChevronRight className="h-3 w-3 text-slate-400 rtl:rotate-180" />
+                    </Link>
+                  ))}
+                </div>
+                <Link to={navigationPaths.anatomy(lang)} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-health-green transition hover:text-health-green-dark">
+                  <span>{isAr ? 'افتح مكتبة التشريح كاملة' : 'Open the full anatomy library'}</span>
+                  <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
+                </Link>
+              </article>
+            ) : null}
+
+            {showRegionProtocols ? (
+              <article className="rounded-[1.75rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm sm:p-8">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                  <Activity className="h-4 w-4 text-health-green" />
+                  <span>{isAr ? 'بروتوكولات تأهيل تستخدم تمارين هذه المنطقة' : 'Rehab protocols using these exercises'}</span>
+                </div>
+                <p className="mixed-text mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                  {isAr
+                    ? 'صفحات الإصابات دي بتوصي بتمارين من نفس المنطقة داخل برامج التأهيل بتاعتها.'
+                    : 'These injury guides recommend exercises from this region inside their rehab programs.'}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {regionProtocolLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-800 shadow-sm transition hover:border-health-green/40 hover:text-health-green dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
+                    >
+                      <span>{link.label}</span>
+                      <ChevronRight className="h-3 w-3 text-slate-400 rtl:rotate-180" />
+                    </Link>
+                  ))}
+                  {regionProtocolTotal > regionProtocolLinks.length ? (
+                    <Link
+                      to={navigationPaths.injuries(lang)}
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-dashed border-health-green/40 bg-health-green/5 px-3 py-1.5 text-xs font-bold text-health-green transition hover:bg-health-green/10"
+                    >
+                      <span>{isAr ? `كل البروتوكولات (${regionProtocolTotal})` : `All ${regionProtocolTotal} protocols`}</span>
+                      <ArrowRight className="h-3 w-3 rtl:-scale-x-100" />
+                    </Link>
+                  ) : null}
+                </div>
+              </article>
+            ) : null}
+          </section>
+        ) : null}
 
         {rehabConfig && visibleRelatedInjuries.length > 0 ? (
           <section id="related-injuries" className="space-y-5">
