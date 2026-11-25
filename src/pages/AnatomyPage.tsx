@@ -1,6 +1,6 @@
 import Seo from '../components/seo/Seo';
-import {buildHreflangs} from '../utils/langUrlHelper';
-import {useNavigate, useParams} from 'react-router-dom';
+import {buildHreflangs, navigationPaths} from '../utils/langUrlHelper';
+import {Link, useNavigate, useParams} from 'react-router-dom';
 import {useState, useMemo, useRef, useEffect} from 'react';
 import {useSearchParams} from 'react-router-dom';
 import {
@@ -33,6 +33,17 @@ import {
   type MuscleTargetedExercises,
   type BodyIqExerciseEmbed,
 } from '../services/exerciseBiomechanicsService';
+import {
+  countInjuriesForLibraryRegion,
+  getExerciseRegionForMuscleRegion,
+  getInjuriesForLibraryRegion,
+} from '../services/crossLinks';
+import {normalizeExerciseUrlSlug} from '../services/seoAliases';
+import {
+  EXERCISE_FINDER_STATIC_ARABIC_LABELS,
+  EXERCISE_FINDER_STATIC_LABELS,
+} from '../components/common/exercise-finder/constants';
+import type {StaticMuscleSlug} from '../components/common/exercise-finder/types';
 
 const REGION_CATEGORIES = [
   {id: 'all', en: 'All Regions', ar: 'جميع المناطق'},
@@ -152,6 +163,15 @@ export default function AnatomyPage() {
     if (!activeMuscle) return {primary: [], stabilizer: []};
     return getMuscleTargetedExercises(activeMuscle.slug);
   }, [activeMuscle]);
+
+  const activeMuscleInjuries = useMemo(
+    () => (activeMuscle ? getInjuriesForLibraryRegion(activeMuscle.region, lang) : []),
+    [activeMuscle, lang],
+  );
+  const activeMuscleInjuryTotal = activeMuscle ? countInjuriesForLibraryRegion(activeMuscle.region) : 0;
+  const activeMuscleExerciseRegion = activeMuscle
+    ? (getExerciseRegionForMuscleRegion(activeMuscle.region) as StaticMuscleSlug | null)
+    : null;
 
   const pageTitle = isAr ? 'مكتبة التشريح والتمارين المصورة' : 'Clinical Anatomy & Video Rehabilitation Engine';
 
@@ -731,6 +751,59 @@ export default function AnatomyPage() {
                   </div>
                 )}
               </div>
+
+              {/* Train this region in the exercise library */}
+              {activeMuscleExerciseRegion && (
+                <div className="mt-6">
+                  <Link
+                    to={`${navigationPaths.exercises(lang)}/${normalizeExerciseUrlSlug(activeMuscleExerciseRegion)}`}
+                    className="flex items-center justify-between gap-3 rounded-2xl border border-health-green/30 bg-health-green/5 px-4 py-3 transition hover:border-health-green/60 hover:bg-health-green/10"
+                  >
+                    <div className="flex items-center gap-2 text-sm font-black text-slate-900 dark:text-white">
+                      <Dumbbell className="h-4 w-4 text-health-green" />
+                      <span>
+                        {isAr
+                          ? `تدريب منطقة ${EXERCISE_FINDER_STATIC_ARABIC_LABELS[activeMuscleExerciseRegion]} في مكتبة التمارين`
+                          : `Train ${EXERCISE_FINDER_STATIC_LABELS[activeMuscleExerciseRegion]} in the exercise library`}
+                      </span>
+                    </div>
+                    <ArrowRight className="h-4 w-4 text-health-green rtl:rotate-180" />
+                  </Link>
+                </div>
+              )}
+
+              {/* Related injuries and protocols for this region */}
+              {activeMuscleInjuries.length > 0 && (
+                <div className="mt-6 space-y-3">
+                  <div className="flex items-center gap-2 text-sm font-black text-slate-900 dark:text-white">
+                    <Activity className="h-4 w-4 text-health-green" />
+                    <span>{isAr ? 'إصابات وبروتوكولات مرتبطة بهذه المنطقة' : 'Injuries and protocols for this region'}</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {activeMuscleInjuries.map((link) => (
+                      <Link
+                        key={link.href}
+                        to={link.href}
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-800 shadow-sm transition hover:border-health-green/40 hover:text-health-green dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
+                      >
+                        <span>{link.label}</span>
+                        <ChevronRight className="h-3 w-3 text-slate-400 rtl:rotate-180" />
+                      </Link>
+                    ))}
+                    {activeMuscleInjuryTotal > activeMuscleInjuries.length && (
+                      <Link
+                        to={navigationPaths.injuries(lang)}
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-dashed border-health-green/40 bg-health-green/5 px-3 py-1.5 text-xs font-bold text-health-green transition hover:bg-health-green/10"
+                      >
+                        {isAr
+                          ? `كل إصابات المنطقة (${activeMuscleInjuryTotal})`
+                          : `All ${activeMuscleInjuryTotal} region protocols`}
+                        <ArrowRight className="h-3 w-3 rtl:rotate-180" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         )}

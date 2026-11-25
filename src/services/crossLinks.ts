@@ -81,15 +81,72 @@ export function getExerciseMuscleLinks(muscleIds: string[], lang: Language): Cro
 }
 
 /** Exercise -> injury rehab protocols that recommend its region (verified ids only). */
-export function getExerciseProtocolLinks(regionSlug: string, lang: Language): CrossLink[] {
+export function getExerciseProtocolLinks(regionSlug: string, lang: Language, limit = 3): CrossLink[] {
   const catalog = getLocalCatalogInjuries(lang);
   const links: CrossLink[] = [];
   for (const injury of catalog) {
     if (!injuryRecommendsRegion(injury.id, injury.bodyRegion, regionSlug)) continue;
     links.push({label: injury.name, href: navigationPaths.injuryDetail(lang, injury.slug)});
-    if (links.length >= 3) break;
+    if (links.length >= limit) break;
   }
   return links;
+}
+
+/** Total catalog protocols that recommend an exercise-finder region (drives "view all" labels). */
+export function countProtocolsForExerciseRegion(regionSlug: string): number {
+  const catalog = getLocalCatalogInjuries('en');
+  let count = 0;
+  for (const injury of catalog) {
+    if (injuryRecommendsRegion(injury.id, injury.bodyRegion, regionSlug)) count += 1;
+  }
+  return count;
+}
+
+/** Exercise-finder region -> anatomy-library slugs its exercises target (verified aliases only). */
+export function getLibraryMuscleSlugsForExerciseRegion(
+  exercises: Array<{muscles?: string[]}>,
+): string[] {
+  const seen = new Set<string>();
+  const slugs: string[] = [];
+  for (const exercise of exercises) {
+    if (!exercise.muscles) continue;
+    for (const id of exercise.muscles) {
+      for (const slug of resolveLibraryMuscleSlugs(id)) {
+        if (seen.has(slug)) continue;
+        seen.add(slug);
+        slugs.push(slug);
+      }
+    }
+  }
+  return slugs;
+}
+
+/** Library slugs -> anatomy page links, skipping any slug missing from the library. */
+export function getMuscleLinksForSlugs(slugs: string[], lang: Language): CrossLink[] {
+  const links: CrossLink[] = [];
+  for (const slug of slugs) {
+    const entry = muscles[slug];
+    if (!entry) continue;
+    links.push({
+      label: lang === 'ar' ? entry.name_ar || entry.name || slug : entry.name || slug,
+      href: `${navigationPaths.anatomy(lang)}/${slug}`,
+    });
+  }
+  return links;
+}
+
+/**
+ * Exercise-finder region -> the anatomy-library muscles its exercises target.
+ * Built purely from the exercises' own muscle ids resolved through the
+ * curated alias map, so every link is one an exercise card would already
+ * show. Callers pass the region's exercises; nothing is invented for
+ * regions whose exercises carry no resolvable muscle ids.
+ */
+export function getLibraryMusclesForExerciseRegion(
+  exercises: Array<{muscles?: string[]}>,
+  lang: Language,
+): CrossLink[] {
+  return getMuscleLinksForSlugs(getLibraryMuscleSlugsForExerciseRegion(exercises), lang);
 }
 
 const BODY_REGION_TO_LIBRARY_REGION: Record<string, string> = {
@@ -103,18 +160,69 @@ const BODY_REGION_TO_LIBRARY_REGION: Record<string, string> = {
   neck: 'neck',
 };
 
-/** Protocol/injury -> muscle-library entries for its body region (verified mapping only). */
-export function getMusclesForBodyRegion(bodyRegion: string, lang: Language): CrossLink[] {
+/** Protocol/injury body region -> muscle-library slugs (verified mapping only). */
+export function getMuscleSlugsForBodyRegion(bodyRegion: string): string[] {
   const libraryRegion = BODY_REGION_TO_LIBRARY_REGION[bodyRegion.toLowerCase().trim()];
   if (!libraryRegion) return [];
-  const links: CrossLink[] = [];
+  const slugs: string[] = [];
   for (const [slug, entry] of Object.entries(muscles)) {
     if ((entry as any).region !== libraryRegion) continue;
-    links.push({
-      label: lang === 'ar' ? entry.name_ar || entry.name || slug : entry.name || slug,
-      href: `${navigationPaths.anatomy(lang)}/${slug}`,
-    });
-    if (links.length >= 3) break;
+    slugs.push(slug);
+  }
+  return slugs;
+}
+
+/** Protocol/injury -> muscle-library entries for its body region (verified mapping only). */
+export function getMusclesForBodyRegion(bodyRegion: string, lang: Language, limit = 3): CrossLink[] {
+  return getMuscleLinksForSlugs(getMuscleSlugsForBodyRegion(bodyRegion).slice(0, limit), lang);
+}
+
+/**
+ * Library muscle region -> injury catalog entries. Exact inverse of
+ * BODY_REGION_TO_LIBRARY_REGION, so every emitted link rests on the same
+ * verified region mapping used elsewhere on the site. Regions with no
+ * mapped catalog injuries (e.g. neck) return an empty list rather than an
+ * invented link.
+ */
+export function getInjuriesForLibraryRegion(libraryRegion: string, lang: Language, limit = 4): CrossLink[] {
+  const catalog = getLocalCatalogInjuries(lang);
+  const links: CrossLink[] = [];
+  for (const injury of catalog) {
+    const mapped = BODY_REGION_TO_LIBRARY_REGION[injury.bodyRegion.toLowerCase().trim()];
+    if (mapped !== libraryRegion) continue;
+    links.push({label: injury.name, href: navigationPaths.injuryDetail(lang, injury.slug)});
+    if (links.length >= limit) break;
   }
   return links;
+}
+
+/** Total catalog injuries mapped to a library region (drives "view all" labels). */
+export function countInjuriesForLibraryRegion(libraryRegion: string): number {
+  const catalog = getLocalCatalogInjuries('en');
+  let count = 0;
+  for (const injury of catalog) {
+    const mapped = BODY_REGION_TO_LIBRARY_REGION[injury.bodyRegion.toLowerCase().trim()];
+    if (mapped === libraryRegion) count += 1;
+  }
+  return count;
+}
+
+/**
+ * Library muscle region -> exercise-finder region slug, for "train this
+ * region" links from anatomy pages. Values are verified against
+ * EXERCISE_FINDER_STATIC_SLUGS in crossLinks.test.ts; a region with no
+ * honest counterpart maps to nothing.
+ */
+const LIBRARY_REGION_TO_EXERCISE_REGION: Record<string, string> = {
+  shoulder: 'shoulders',
+  arm: 'arms',
+  spine_core: 'core',
+  hip_pelvis: 'glutes',
+  knee_thigh: 'legs',
+  ankle_foot: 'calves',
+  neck: 'neck',
+};
+
+export function getExerciseRegionForMuscleRegion(libraryRegion: string): string | null {
+  return LIBRARY_REGION_TO_EXERCISE_REGION[libraryRegion] || null;
 }

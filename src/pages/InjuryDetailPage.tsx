@@ -1,11 +1,12 @@
 import {lazy, Suspense, useEffect, useState} from 'react';
-import {Activity, AlertTriangle, ArrowRight, CheckCircle2, ChevronDown, Clock3, LockKeyhole, Pill, ShieldAlert, Sparkles, Stethoscope, Tags} from 'lucide-react';
+import {Activity, AlertTriangle, ArrowRight, CheckCircle2, ChevronDown, Clock3, LockKeyhole, Pill, Play, ShieldAlert, Sparkles, Stethoscope, Tags} from 'lucide-react';
 import {Link, Navigate, useParams} from 'react-router-dom';
 import Seo from '../components/seo/Seo';
 import {getCurrentUser, isSupabaseConfigured, onSupabaseAuthChange, type User} from '../lib/supabase';
 import type {InjuryPhase, InjuryProtocol} from '../services/injuryDatabase';
 import {getInjuryExerciseLinks} from '../services/injuryExerciseLinks';
-import {getMusclesForBodyRegion} from '../services/crossLinks';
+import {getMuscleLinksForSlugs, getMuscleSlugsForBodyRegion, getMusclesForBodyRegion} from '../services/crossLinks';
+import {getVideoExercisesForMuscles} from '../services/exerciseBiomechanicsService';
 import {getNutritionGoalMatches} from '../services/injuryNutritionMatcher';
 import {getInjuryRehabLinks} from '../services/injuryRehabLinks';
 import {translateActivityContext, translateInjury} from '../services/injuryI18n';
@@ -410,7 +411,12 @@ export default function InjuryDetailPage() {
     lang,
   });
 
-  const relatedMuscleLinks = getMusclesForBodyRegion(injury.bodyRegion, lang);
+  const regionMuscleSlugs = getMuscleSlugsForBodyRegion(injury.bodyRegion);
+  const relatedMuscleLinks = getMusclesForBodyRegion(injury.bodyRegion, lang, 6);
+  const muscleLabelBySlug = new Map(
+    getMuscleLinksForSlugs(regionMuscleSlugs, lang).map((link) => [link.href.split('/').pop() || '', link.label]),
+  );
+  const guidedVideoExercises = getVideoExercisesForMuscles(regionMuscleSlugs, 3);
 
   const relatedRehabLinks = getInjuryRehabLinks({
     injuryId: injury.id,
@@ -984,6 +990,9 @@ export default function InjuryDetailPage() {
                         className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 transition hover:border-health-green/30 hover:bg-health-green/5 dark:border-slate-700 dark:bg-slate-950 dark:hover:bg-health-green/10"
                       >
                         <div className="text-lg font-black text-slate-900 dark:text-white">{item.label}</div>
+                        {item.reason ? (
+                          <p className="mixed-text mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">{item.reason}</p>
+                        ) : null}
                         <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-health-green">
                           {isAr ? 'افتح القسم' : 'Open section'}
                           <ArrowRight className={`h-4 w-4 ${isAr ? 'rotate-180' : ''}`} />
@@ -1007,6 +1016,52 @@ export default function InjuryDetailPage() {
                         <div className="text-lg font-black text-slate-900 dark:text-white">{item.label}</div>
                         <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-health-green">
                           {isAr ? 'افتح المكتبة التشريحية' : 'Open anatomy library'}
+                          <ArrowRight className={`h-4 w-4 ${isAr ? 'rotate-180' : ''}`} />
+                        </div>
+                      </Link>
+                    ))}
+                    {regionMuscleSlugs.length > relatedMuscleLinks.length && (
+                      <Link
+                        to={`/${lang}/anatomy`}
+                        className="rounded-[1.5rem] border border-dashed border-health-green/40 bg-health-green/5 p-5 transition hover:bg-health-green/10"
+                      >
+                        <div className="text-lg font-black text-health-green">
+                          {isAr ? `كل عضلات المنطقة (${regionMuscleSlugs.length})` : `All ${regionMuscleSlugs.length} region muscles`}
+                        </div>
+                        <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-health-green">
+                          {isAr ? 'افتح المكتبة التشريحية' : 'Open anatomy library'}
+                          <ArrowRight className={`h-4 w-4 ${isAr ? 'rotate-180' : ''}`} />
+                        </div>
+                      </Link>
+                    )}
+                  </div>
+                </section>
+              )}
+
+              {guidedVideoExercises.length > 0 && (
+                <section className={injuryPanel}>
+                  <div className="mb-4 text-sm font-black text-slate-900 dark:text-white">{isAr ? 'تمارين مصورة موجهة لهذه المنطقة' : 'Guided video exercises for this region'}</div>
+                  <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    {guidedVideoExercises.map(({muscleSlug, exercise}) => (
+                      <Link
+                        key={exercise.id}
+                        to={`/${lang}/anatomy/${muscleSlug}`}
+                        className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 transition hover:border-health-green/30 hover:bg-health-green/5 dark:border-slate-700 dark:bg-slate-950 dark:hover:bg-health-green/10"
+                      >
+                        <div className="flex items-center justify-between gap-2">
+                          <div className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
+                            {muscleLabelBySlug.get(muscleSlug) || muscleSlug}
+                          </div>
+                          {exercise.youtube_id ? (
+                            <span className="inline-flex items-center gap-1 rounded bg-rose-500/10 px-1.5 py-0.5 text-[10px] font-bold text-rose-600 dark:text-rose-400">
+                              <Play className="h-2.5 w-2.5 fill-current" />
+                              <span>{isAr ? 'فيديو' : 'Video'}</span>
+                            </span>
+                          ) : null}
+                        </div>
+                        <div className="mt-3 text-lg font-black text-slate-900 dark:text-white">{isAr ? exercise.name_ar || exercise.name : exercise.name}</div>
+                        <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-health-green">
+                          {isAr ? 'افتح الفيديو في صفحة العضلة' : 'Open video on the muscle page'}
                           <ArrowRight className={`h-4 w-4 ${isAr ? 'rotate-180' : ''}`} />
                         </div>
                       </Link>
