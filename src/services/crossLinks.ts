@@ -102,6 +102,39 @@ export function countProtocolsForExerciseRegion(regionSlug: string): number {
   return count;
 }
 
+/** Exercise-finder region -> anatomy-library slugs its exercises target (verified aliases only). */
+export function getLibraryMuscleSlugsForExerciseRegion(
+  exercises: Array<{muscles?: string[]}>,
+): string[] {
+  const seen = new Set<string>();
+  const slugs: string[] = [];
+  for (const exercise of exercises) {
+    if (!exercise.muscles) continue;
+    for (const id of exercise.muscles) {
+      for (const slug of resolveLibraryMuscleSlugs(id)) {
+        if (seen.has(slug)) continue;
+        seen.add(slug);
+        slugs.push(slug);
+      }
+    }
+  }
+  return slugs;
+}
+
+/** Library slugs -> anatomy page links, skipping any slug missing from the library. */
+export function getMuscleLinksForSlugs(slugs: string[], lang: Language): CrossLink[] {
+  const links: CrossLink[] = [];
+  for (const slug of slugs) {
+    const entry = muscles[slug];
+    if (!entry) continue;
+    links.push({
+      label: lang === 'ar' ? entry.name_ar || entry.name || slug : entry.name || slug,
+      href: `${navigationPaths.anatomy(lang)}/${slug}`,
+    });
+  }
+  return links;
+}
+
 /**
  * Exercise-finder region -> the anatomy-library muscles its exercises target.
  * Built purely from the exercises' own muscle ids resolved through the
@@ -113,17 +146,7 @@ export function getLibraryMusclesForExerciseRegion(
   exercises: Array<{muscles?: string[]}>,
   lang: Language,
 ): CrossLink[] {
-  const seen = new Set<string>();
-  const links: CrossLink[] = [];
-  for (const exercise of exercises) {
-    if (!exercise.muscles) continue;
-    for (const link of getExerciseMuscleLinks(exercise.muscles, lang)) {
-      if (seen.has(link.href)) continue;
-      seen.add(link.href);
-      links.push(link);
-    }
-  }
-  return links;
+  return getMuscleLinksForSlugs(getLibraryMuscleSlugsForExerciseRegion(exercises), lang);
 }
 
 const BODY_REGION_TO_LIBRARY_REGION: Record<string, string> = {

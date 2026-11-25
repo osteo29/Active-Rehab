@@ -58,4 +58,16 @@ describe('ExerciseRegionPage region hub', () => {
       .filter((a) => (a.getAttribute('href') || '').startsWith('/en/injuries/'));
     expect(protocolLinks.length).toBeGreaterThan(0);
   });
+
+  it('surfaces clinical video exercises that open in the anatomy library', () => {
+    renderAt('/en/exercises/shoulders');
+    expect(screen.getByText('Clinical video exercises for the same muscles')).toBeTruthy();
+    const openLinks = screen
+      .getAllByText('Open in the anatomy library')
+      .map((el) => el.closest('a')?.getAttribute('href') || '');
+    expect(openLinks.length).toBeGreaterThan(0);
+    for (const href of openLinks) {
+      expect(href).toMatch(/^\/en\/anatomy\/[a-z0-9-]+$/);
+    }
+  });
 });

@@ -1,6 +1,6 @@
 import NotFound from './NotFound';
 import {useEffect, useMemo, useState} from 'react';
-import {Activity, ArrowRight, ChevronRight, Dumbbell, Network} from 'lucide-react';
+import {Activity, ArrowRight, ChevronRight, Dumbbell, Network, Play} from 'lucide-react';
 import {Link, Navigate, useParams} from 'react-router-dom';
 
 import {ExerciseCard} from '../components/common/exercise-finder/ExerciseCard';
@@ -25,8 +25,10 @@ import {getLocalCatalogInjuries, getRelatedCatalogInjuriesByIds, type InjuryCata
 import {
   countProtocolsForExerciseRegion,
   getExerciseProtocolLinks,
-  getLibraryMusclesForExerciseRegion,
+  getLibraryMuscleSlugsForExerciseRegion,
+  getMuscleLinksForSlugs,
 } from '../services/crossLinks';
+import {getVideoExercisesForMuscles} from '../services/exerciseBiomechanicsService';
 import {REHAB_REGION_CONFIG} from '../services/rehabRegionConfig';
 import {denormalizeExerciseUrlSlug, normalizeExerciseUrlSlug} from '../services/seoAliases';
 import {prepareMedicalText} from '../services/textEncoding';
@@ -54,15 +56,22 @@ export default function ExerciseRegionPage() {
     () => (rehabConfig ? getLocalCatalogInjuries(lang).filter((injury) => rehabConfig.relatedInjuryIds.includes(injury.id)) : []),
     [lang, rehabConfig],
   );
-  const libraryMuscleLinks = useMemo(
+  const libraryMuscleSlugs = useMemo(
     () =>
       region
-        ? getLibraryMusclesForExerciseRegion(
+        ? getLibraryMuscleSlugsForExerciseRegion(
             catalogExercises.filter((exercise) => exercise.region === region),
-            lang,
           )
         : [],
-    [catalogExercises, region, lang],
+    [catalogExercises, region],
+  );
+  const libraryMuscleLinks = useMemo(
+    () => getMuscleLinksForSlugs(libraryMuscleSlugs, lang),
+    [libraryMuscleSlugs, lang],
+  );
+  const clinicalVideos = useMemo(
+    () => getVideoExercisesForMuscles(libraryMuscleSlugs, 6),
+    [libraryMuscleSlugs],
   );
   const regionProtocolLinks = useMemo(
     () => (region ? getExerciseProtocolLinks(region, lang, 4) : []),
@@ -108,6 +117,7 @@ export default function ExerciseRegionPage() {
   const systems = getSystemsForRegion(region).slice(0, 3);
   const visibleRelatedInjuries = relatedInjuries.length ? relatedInjuries : fallbackRelatedInjuries;
   const showRegionProtocols = regionProtocolLinks.length > 0 && !(rehabConfig && visibleRelatedInjuries.length > 0);
+  const muscleLabelByHref = new Map(libraryMuscleLinks.map((link) => [link.href, link.label]));
   const canonicalPath = `/exercises/${normalizeExerciseUrlSlug(region)}`;
 
   const seoTitle = isAr
@@ -177,6 +187,11 @@ export default function ExerciseRegionPage() {
             {libraryMuscleLinks.length > 0 ? (
               <a href="#region-hub" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
                 {isAr ? 'مكتبة التشريح' : 'Anatomy library'}
+              </a>
+            ) : null}
+            {clinicalVideos.length > 0 ? (
+              <a href="#clinical-videos" className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
+                {isAr ? 'تمارين تأهيلية مصورة' : 'Clinical videos'}
               </a>
             ) : null}
             {rehabConfig ? (
@@ -336,6 +351,57 @@ export default function ExerciseRegionPage() {
                 </div>
               </article>
             ) : null}
+          </section>
+        ) : null}
+
+        {clinicalVideos.length > 0 ? (
+          <section id="clinical-videos" className="space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-black text-slate-900 dark:text-white">{isAr ? 'تمارين تأهيلية مصورة لنفس العضلات' : 'Clinical video exercises for the same muscles'}</h2>
+                <p className="mixed-text mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                  {isAr
+                    ? 'من مكتبة التشريح: العضلات نفسها التي تستهدفها تمارين هذه المنطقة، بتمارين تأهيلية بالفيديو والإرشاد داخل صفحة كل عضلة.'
+                    : 'From the anatomy library: the same muscles this region trains, with guided rehab videos inside each muscle page.'}
+                </p>
+              </div>
+              <Link to={navigationPaths.anatomy(lang)} className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:border-health-green/30 hover:text-health-green">
+                <span>{isAr ? 'مكتبة التشريح' : 'Anatomy library'}</span>
+                <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
+              </Link>
+            </div>
+
+            <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
+              {clinicalVideos.map(({muscleSlug, exercise}) => {
+                const muscleHref = `${navigationPaths.anatomy(lang)}/${muscleSlug}`;
+                return (
+                  <Link
+                    key={exercise.id}
+                    to={muscleHref}
+                    className="group rounded-[1.6rem] border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-health-green/30"
+                  >
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+                        {muscleLabelByHref.get(muscleHref) || muscleSlug}
+                      </div>
+                      {exercise.youtube_id ? (
+                        <span className="inline-flex items-center gap-1 rounded bg-rose-500/10 px-1.5 py-0.5 text-[10px] font-bold text-rose-600 dark:text-rose-400">
+                          <Play className="h-2.5 w-2.5 fill-current" />
+                          <span>{isAr ? 'فيديو' : 'Video'}</span>
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="mixed-text mt-3 text-lg font-black leading-8 text-slate-900 dark:text-white">
+                      {safeText(isAr ? exercise.name_ar || exercise.name : exercise.name)}
+                    </div>
+                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-health-green transition group-hover:text-health-green-dark">
+                      <span>{isAr ? 'افتح في مكتبة التشريح' : 'Open in the anatomy library'}</span>
+                      <ArrowRight className="h-4 w-4 rtl:-scale-x-100" />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </section>
         ) : null}
 

@@ -146,3 +146,30 @@ export function getBodyIqExercise(id: string): BodyIqExerciseEmbed | null {
 export function getBiomechanicsAuditSummary() {
   return (biomechanicsData as any).audit_summary || null;
 }
+
+export type MuscleVideoExercise = {
+  muscleSlug: string;
+  exercise: MuscleExerciseReference;
+};
+
+/**
+ * Video exercises across several library muscles, primary movers first,
+ * then stabilizers. Deduped by exercise id so a shared exercise appears
+ * once, under the first muscle that claims it. Unknown slugs contribute
+ * nothing rather than an invented entry.
+ */
+export function getVideoExercisesForMuscles(muscleSlugs: string[], limit = 6): MuscleVideoExercise[] {
+  const seen = new Set<string>();
+  const results: MuscleVideoExercise[] = [];
+  const push = (muscleSlug: string, list: MuscleExerciseReference[]) => {
+    for (const exercise of list) {
+      if (results.length >= limit) return;
+      if (seen.has(exercise.id)) continue;
+      seen.add(exercise.id);
+      results.push({muscleSlug, exercise});
+    }
+  };
+  for (const slug of muscleSlugs) push(slug, getMuscleTargetedExercises(slug).primary);
+  for (const slug of muscleSlugs) push(slug, getMuscleTargetedExercises(slug).stabilizer);
+  return results;
+}
