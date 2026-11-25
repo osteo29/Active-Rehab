@@ -118,3 +118,53 @@ export function getMusclesForBodyRegion(bodyRegion: string, lang: Language): Cro
   }
   return links;
 }
+
+/**
+ * Library muscle region -> injury catalog entries. Exact inverse of
+ * BODY_REGION_TO_LIBRARY_REGION, so every emitted link rests on the same
+ * verified region mapping used elsewhere on the site. Regions with no
+ * mapped catalog injuries (e.g. neck) return an empty list rather than an
+ * invented link.
+ */
+export function getInjuriesForLibraryRegion(libraryRegion: string, lang: Language, limit = 4): CrossLink[] {
+  const catalog = getLocalCatalogInjuries(lang);
+  const links: CrossLink[] = [];
+  for (const injury of catalog) {
+    const mapped = BODY_REGION_TO_LIBRARY_REGION[injury.bodyRegion.toLowerCase().trim()];
+    if (mapped !== libraryRegion) continue;
+    links.push({label: injury.name, href: navigationPaths.injuryDetail(lang, injury.slug)});
+    if (links.length >= limit) break;
+  }
+  return links;
+}
+
+/** Total catalog injuries mapped to a library region (drives "view all" labels). */
+export function countInjuriesForLibraryRegion(libraryRegion: string): number {
+  const catalog = getLocalCatalogInjuries('en');
+  let count = 0;
+  for (const injury of catalog) {
+    const mapped = BODY_REGION_TO_LIBRARY_REGION[injury.bodyRegion.toLowerCase().trim()];
+    if (mapped === libraryRegion) count += 1;
+  }
+  return count;
+}
+
+/**
+ * Library muscle region -> exercise-finder region slug, for "train this
+ * region" links from anatomy pages. Values are verified against
+ * EXERCISE_FINDER_STATIC_SLUGS in crossLinks.test.ts; a region with no
+ * honest counterpart maps to nothing.
+ */
+const LIBRARY_REGION_TO_EXERCISE_REGION: Record<string, string> = {
+  shoulder: 'shoulders',
+  arm: 'arms',
+  spine_core: 'core',
+  hip_pelvis: 'glutes',
+  knee_thigh: 'legs',
+  ankle_foot: 'calves',
+  neck: 'neck',
+};
+
+export function getExerciseRegionForMuscleRegion(libraryRegion: string): string | null {
+  return LIBRARY_REGION_TO_EXERCISE_REGION[libraryRegion] || null;
+}

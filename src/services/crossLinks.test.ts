@@ -1,8 +1,10 @@
 import {describe, expect, it} from 'vitest';
-import {getExerciseMuscleLinks, getExerciseProtocolLinks, getMusclesForBodyRegion, resolveLibraryMuscleSlugs} from './crossLinks';
+import {countInjuriesForLibraryRegion, getExerciseMuscleLinks, getExerciseRegionForMuscleRegion, getExerciseProtocolLinks, getInjuriesForLibraryRegion, getMusclesForBodyRegion, resolveLibraryMuscleSlugs} from './crossLinks';
 import {getLocalCatalogInjuries} from './injuryService';
 import musclesData from '../../json/muscles_library.json';
 import {EXERCISES as exercises} from '../components/common/exercise-finder/data/exercises';
+import {EXERCISE_FINDER_STATIC_SLUGS} from '../components/common/exercise-finder/constants';
+import type {StaticMuscleSlug} from '../components/common/exercise-finder/types';
 
 const librarySlugs = new Set(Object.keys((musclesData as any).muscles));
 const catalogSlugs = new Set(getLocalCatalogInjuries('en').map((injury) => injury.slug));
@@ -62,5 +64,40 @@ describe('cross-link integrity', () => {
     for (const link of getExerciseMuscleLinks(['gluteus_medius'], 'ar')) {
       expect(link.href.startsWith('/ar/anatomy/')).toBe(true);
     }
+  });
+});
+
+describe('anatomy outbound links', () => {
+  it('maps library regions to real catalog injuries via the verified region map', () => {
+    const withInjuries = ['knee_thigh', 'shoulder', 'hip_pelvis', 'ankle_foot', 'arm', 'spine_core'];
+    for (const region of withInjuries) {
+      const links = getInjuriesForLibraryRegion(region, 'en');
+      expect(links.length).toBeGreaterThan(0);
+      for (const link of links) {
+        expect(link.href).toMatch(/^\/en\/injuries\/[a-z0-9-]+$/);
+        expect(catalogSlugs.has(link.href.replace('/en/injuries/', ''))).toBe(true);
+      }
+      expect(countInjuriesForLibraryRegion(region)).toBeGreaterThanOrEqual(links.length);
+    }
+  });
+
+  it('returns nothing for a library region with no mapped catalog injuries', () => {
+    expect(getInjuriesForLibraryRegion('neck', 'en')).toEqual([]);
+    expect(countInjuriesForLibraryRegion('neck')).toBe(0);
+    expect(getInjuriesForLibraryRegion('not_a_region', 'en')).toEqual([]);
+  });
+
+  it('respects the link limit', () => {
+    expect(getInjuriesForLibraryRegion('knee_thigh', 'en', 2)).toHaveLength(2);
+  });
+
+  it('maps every library muscle region to a real exercise-finder region slug', () => {
+    const libraryRegions = ['shoulder', 'arm', 'spine_core', 'hip_pelvis', 'knee_thigh', 'ankle_foot', 'neck'];
+    for (const region of libraryRegions) {
+      const slug = getExerciseRegionForMuscleRegion(region);
+      expect(slug).not.toBeNull();
+      expect(EXERCISE_FINDER_STATIC_SLUGS.includes(slug as StaticMuscleSlug)).toBe(true);
+    }
+    expect(getExerciseRegionForMuscleRegion('not_a_region')).toBeNull();
   });
 });
