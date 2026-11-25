@@ -1,9 +1,11 @@
 // @vitest-environment jsdom
 
 import {Suspense, type ReactNode} from 'react';
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {cleanup, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
-import {describe, expect, it, vi} from 'vitest';
+import {afterEach, describe, expect, it, vi} from 'vitest';
+
+afterEach(cleanup);
 
 vi.mock('../components/seo/Seo', () => ({
   default: () => null,
@@ -33,7 +35,23 @@ vi.mock('../services/injuryI18n', () => ({
 }));
 
 vi.mock('../services/injuryExerciseLinks', () => ({
-  getInjuryExerciseLinks: () => [],
+  getInjuryExerciseLinks: () => [
+    {
+      slug: 'quadriceps',
+      label: 'Quadriceps exercises',
+      href: '/en/exercises/quadriceps',
+      reason: 'Useful for rebuilding knee strength.',
+    },
+  ],
+}));
+
+vi.mock('../services/exerciseBiomechanicsService', () => ({
+  getVideoExercisesForMuscles: () => [
+    {
+      muscleSlug: 'vastus-medialis-oblique-vmo',
+      exercise: {id: 'ex-tke', name: 'Terminal knee extension', provenance: 'body_iq_verified', youtube_id: 'abc123'},
+    },
+  ],
 }));
 
 vi.mock('../services/injuryRehabLinks', () => ({
@@ -186,5 +204,32 @@ describe('InjuryDetailPage', () => {
     expect(screen.getAllByText('Unlock the rest of this protocol').length).toBeGreaterThan(0);
     expect(screen.getAllByRole('link', {name: /create account/i})[0]).toHaveAttribute('href', '/en/auth?mode=signup');
     expect(screen.getAllByRole('link', {name: /sign in/i})[0]).toHaveAttribute('href', '/en/auth?mode=signin');
+  });
+
+  it('shows exercise reasons, expanded muscle links, and guided video exercises', async () => {
+    render(
+      <Suspense fallback={<div>loading</div>}>
+        <MemoryRouter initialEntries={['/en/injuries/test-injury']}>
+          <Routes>
+            <Route path="/:lang/injuries/:slug" element={<InjuryDetailPage />} />
+          </Routes>
+        </MemoryRouter>
+      </Suspense>,
+    );
+
+    await waitFor(() => {
+      expect(screen.getAllByText(/Test Injury/i).length).toBeGreaterThan(0);
+    });
+
+    expect(screen.getByText('Quadriceps exercises')).toBeInTheDocument();
+    expect(screen.getByText('Useful for rebuilding knee strength.')).toBeInTheDocument();
+
+    expect(screen.getByText('Muscles involved (anatomy library)')).toBeInTheDocument();
+    expect(screen.getByText(/All \d+ region muscles/)).toBeInTheDocument();
+
+    expect(screen.getByText('Guided video exercises for this region')).toBeInTheDocument();
+    expect(screen.getByText('Terminal knee extension')).toBeInTheDocument();
+    const videoLink = screen.getByText('Open video on the muscle page').closest('a');
+    expect(videoLink?.getAttribute('href')).toBe('/en/anatomy/vastus-medialis-oblique-vmo');
   });
 });

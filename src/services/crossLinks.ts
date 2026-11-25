@@ -160,20 +160,21 @@ const BODY_REGION_TO_LIBRARY_REGION: Record<string, string> = {
   neck: 'neck',
 };
 
-/** Protocol/injury -> muscle-library entries for its body region (verified mapping only). */
-export function getMusclesForBodyRegion(bodyRegion: string, lang: Language): CrossLink[] {
+/** Protocol/injury body region -> muscle-library slugs (verified mapping only). */
+export function getMuscleSlugsForBodyRegion(bodyRegion: string): string[] {
   const libraryRegion = BODY_REGION_TO_LIBRARY_REGION[bodyRegion.toLowerCase().trim()];
   if (!libraryRegion) return [];
-  const links: CrossLink[] = [];
+  const slugs: string[] = [];
   for (const [slug, entry] of Object.entries(muscles)) {
     if ((entry as any).region !== libraryRegion) continue;
-    links.push({
-      label: lang === 'ar' ? entry.name_ar || entry.name || slug : entry.name || slug,
-      href: `${navigationPaths.anatomy(lang)}/${slug}`,
-    });
-    if (links.length >= 3) break;
+    slugs.push(slug);
   }
-  return links;
+  return slugs;
+}
+
+/** Protocol/injury -> muscle-library entries for its body region (verified mapping only). */
+export function getMusclesForBodyRegion(bodyRegion: string, lang: Language, limit = 3): CrossLink[] {
+  return getMuscleLinksForSlugs(getMuscleSlugsForBodyRegion(bodyRegion).slice(0, limit), lang);
 }
 
 /**
