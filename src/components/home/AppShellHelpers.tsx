@@ -1,4 +1,4 @@
-import {Activity, BookOpen, Brain, Calculator, Calendar, ChevronRight, ClipboardList, Droplets, Filter, Flame, Globe, GraduationCap, HeartPulse, HelpCircle, Info, Menu, Percent, Plus, Scale, Search, ShieldAlert, Sparkles, Stethoscope, Tag, Trash2, Utensils, X, Zap} from 'lucide-react';
+import {Activity, BookOpen, Brain, Calculator, Calendar, ChevronRight, ClipboardList, Droplets, Filter, Flame, Globe, GraduationCap, HeartPulse, HelpCircle, Info, Menu, Moon, Percent, Plus, Scale, Search, ShieldAlert, Sparkles, Stethoscope, Tag, Trash2, Utensils, X, Zap} from 'lucide-react';
 import {Suspense, useEffect, useRef, useState, type ComponentType, type ReactNode} from 'react';
 
 const ICONS: Record<string, ComponentType<{className?: string}>> = {
@@ -6,6 +6,7 @@ const ICONS: Record<string, ComponentType<{className?: string}>> = {
   Calculator,
   BookOpen,
   Menu,
+  Moon,
   X,
   ChevronRight,
   Stethoscope,
