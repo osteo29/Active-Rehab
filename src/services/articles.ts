@@ -21,6 +21,53 @@ export const getArticles = (lang: Language): Article[] => {
   if (lang === 'ar') {
     return [
       {
+        id: 16,
+        slug: 'sleep-and-recovery-training-adaptation',
+        title: 'النوم والاستشفاء: لماذا يحدث التقدم الحقيقي أثناء نومك؟',
+        excerpt:
+          'التمرين هو المؤثر فقط، أما التكيف الحقيقي فيحدث أثناء الاستشفاء، والنوم أقوى أدواته. ماذا يحدث في جسمك أثناء النوم، وكم ساعة تحتاج، وكيف يؤثر الحرمان على الأداء وخطر الإصابة؟',
+        content: `كثير من الناس يركزون على التمرين نفسه: البرنامج، الأوزان، عدد الحصص الأسبوعية. لكن الحقيقة أن التمرين هو المؤثر فقط؛ أما التقدم الفعلي، من بناء العضلة إلى تحسن اللياقة وتثبيت المهارة، فيحدث أثناء الاستشفاء. والنوم هو أقوى أدوات الاستشفاء على الإطلاق، وأكثرها إهمالًا.
+
+## ماذا يحدث في جسمك أثناء النوم؟
+النوم ليس إغلاقًا مؤقتًا للجسم، بل ورشة إصلاح منظمة:
+* تفرز الغدة النخامية دفقات من هرمون النمو، وأكبرها أثناء النوم العميق، وهو هرمون أساسي في إصلاح الأنسجة وبناء العضلات.
+* يرتفع معدل تصنيع البروتين العضلي، وهو العملية التي تُصلح بها ألياف العضلة بعد مجهود التمرين.
+* يستعيد الجهاز العصبي توازنه بعد إجهاد التدريب، فيتحسن التنسيق ورد الفعل في اليوم التالي.
+* يعيد المخ تنظيم الذاكرة الحركية، فالمهارات التي تتدرب عليها تثبت أثناء النوم.
+
+## النوم وبناء العضلة
+الأبحاث التي فحصت نقص النوم وجدت أنه يدفع الجسم في اتجاه هدمي: ينخفض تصنيع البروتين العضلي، وترتفع هرمونات الإجهاد مثل الكورتيزول، وتقل مستويات هرمون النمو والتستوستيرون. المعنى العملي: نفس التمرين ونفس التغذية قد ينتجان استجابة أضعف عندما ينقص النوم. وقد وصفت مراجعة علمية النوم بأنه عامل قد يفصل بين استجابة تدريبية جيدة وأخرى ضعيفة حتى مع نفس البرنامج.
+
+## النوم والأداء الرياضي
+في دراسة معروفة على لاعبي كرة سلة جامعيين، طُلب منهم إطالة نومهم اليومي نحو عشر ساعات لعدة أسابيع. والنتيجة كانت تحسن سرعة الجري ودقة التسديد، مع تحسن واضح في الحالة المزاجية والتركيز. الرسالة العملية: كثير من المتدربين يؤدون دون مستواهم الحقيقي ببساطة لأنهم معتادون على نقص النوم ولم يجربوا مستواهم مع نوم كافٍ.
+
+## الحرمان التراكمي: الخطر الذي لا تشعر به
+في دراسة كلاسيكية، نام المشاركون ست ساعات فقط يوميًا لمدة أسبوعين. تدهور أداؤهم في الانتباه وسرعة رد الفعل تدريجيًا حتى وصل مستوى يعادل السهر ليلة كاملة، بينما استقر شعورهم الذاتي بالنعاس وكأنهم تعودوا على الوضع. أي أنك قد لا تشعر بحجم التدهور، لكنه موجود ويتراكم مع كل ليلة قصيرة.
+
+## النوم وخطر الإصابة
+دراسة على رياضيين مراهقين وجدت أن من ينامون أقل من ثماني ساعات كانوا أكثر عرضة للإصابة بشكل واضح مقارنة بمن ينامون ثماني ساعات أو أكثر، وبلغ الفرق نحو 1.7 ضعف. التفسير منطقي: نقص النوم يضعف التركيز والتنسيق ورد الفعل، ويقلل جودة إصلاح الأنسجة، فيرتفع احتمال الخطأ الحركي والإجهاد المتراكم.
+
+## كم ساعة تحتاج فعلًا؟
+التوصية العلمية للبالغين هي سبع ساعات أو أكثر كل ليلة، وأغلب الناس يحتاجون بين سبع وتسع ساعات. المتدربون في فترات الحمل العالي قد يحتاجون أكثر من ذلك. والانتظام لا يقل أهمية عن المدة: النوم والاستيقاظ في مواعيد متقاربة يوميًا يدعم الساعة البيولوجية أكثر من محاولة تعويض أسبوع كامل بنوم طويل في الإجازة.
+
+## نصائح عملية لنوم أفضل
+* ثبّت موعد النوم والاستيقاظ قدر الإمكان، حتى في العطلات.
+* اجعل غرفة النوم مظلمة وباردة وهادئة.
+* قلل الكافيين بعد العصر؛ فتأثيره يبقى في الجسم ساعات طويلة.
+* خفف الشاشات الساطعة في الساعة الأخيرة قبل النوم.
+* لو لاحظت أن التمرين الشديد قبل النوم مباشرة يؤخر نومك، قدّم موعد الحصة قليلًا.
+* قيلولة قصيرة من عشرين إلى ثلاثين دقيقة قد تساعد في الأيام المجهدة دون أن تفسد نوم الليل.
+
+## متى تستشير مختصًا؟
+الأرق العرضي طبيعي ويمر. لكن راجع طبيبًا لو استمر الأرق أسابيع، أو كان الشخير عاليًا مع توقفات ملحوظة في التنفس، أو كان النعاس الشديد نهارًا موجودًا رغم ساعات نوم كافية، فهذه علامات تستحق التقييم.
+
+## الخلاصة
+النوم ليس رفاهية ولا وقتًا ضائعًا؛ هو المرحلة التي يتحول فيها التمرين إلى تقدم حقيقي. سبع إلى تسع ساعات منتظمة، في بيئة نوم جيدة، تحسن الأداء وتسرّع الاستشفاء وتقلل خطر الإصابة. ولو تتذكر جملة واحدة: لا تحسب حصص التمرين فقط، احسب ساعات نومك أيضًا.`,
+        category: 'Training Recovery',
+        date: '2026-11-28',
+        icon: 'Moon',
+      },
+      {
         id: 15,
         slug: 'smart-warm-up-performance-and-injury-prevention',
         title: 'الإحماء الذكي: لماذا يهم وكيف تؤديه بطريقة صحيحة؟',
@@ -850,6 +897,53 @@ TDEE أو إجمالي الطاقة اليومية هو مجموع ما يحرق
   }
 
   return [
+    {
+      id: 16,
+      slug: 'sleep-and-recovery-training-adaptation',
+      title: 'Sleep and recovery: why real progress happens while you sleep',
+      excerpt:
+        'Training is only the stimulus; adaptation happens during recovery, and sleep is its most powerful tool. What happens in your body during sleep, how much you need, and how sleep loss affects performance and injury risk.',
+      content: `Many people focus on the workout itself: the program, the weights, the weekly sessions. But training is only the stimulus. The actual progress, from building muscle to improving fitness and locking in skills, happens during recovery. And sleep is the most powerful recovery tool of all, and the most neglected.
+
+## What happens in your body during sleep?
+Sleep is not a temporary shutdown; it is an organized repair workshop:
+* The pituitary gland releases pulses of growth hormone, the largest during deep sleep, a key hormone for tissue repair and muscle building.
+* Muscle protein synthesis rises, the process that repairs muscle fibers after training stress.
+* The nervous system regains its balance after training fatigue, so coordination and reaction time are better the next day.
+* The brain reorganizes motor memory, so the skills you practiced get consolidated during sleep.
+
+## Sleep and muscle building
+Research on sleep loss found that it pushes the body in a catabolic direction: muscle protein synthesis drops, stress hormones like cortisol rise, and growth hormone and testosterone levels fall. Practically: the same training and the same nutrition can produce a weaker response when sleep is short. One scientific review described sleep as a factor that can separate a good training response from a poor one, even with the same program.
+
+## Sleep and athletic performance
+In a well-known study on collegiate basketball players, athletes were asked to extend their nightly sleep toward ten hours for several weeks. The result: faster sprint times, better shooting accuracy, and clear improvements in mood and focus. The practical message: many trainees perform below their real level simply because they are used to short sleep and have never experienced what they can do fully rested.
+
+## Cumulative sleep loss: the danger you do not feel
+In a classic study, participants slept only six hours per night for two weeks. Their attention and reaction time declined gradually until they matched the level of a full night without sleep, while their subjective sleepiness plateaued as if they had adapted. In other words, you may not feel the size of the decline, but it is there and it accumulates with every short night.
+
+## Sleep and injury risk
+A study on adolescent athletes found that those sleeping less than eight hours were clearly more likely to get injured than those sleeping eight hours or more, with a difference of about 1.7 times. The explanation is logical: short sleep weakens focus, coordination, and reaction time, and reduces the quality of tissue repair, so the chance of movement errors and accumulated strain rises.
+
+## How many hours do you actually need?
+The scientific recommendation for adults is seven hours or more per night, and most people need between seven and nine hours. Trainees in high-load phases may need more. Regularity matters as much as duration: sleeping and waking at roughly the same times every day supports the body clock more than trying to pay back a whole week with one long weekend sleep.
+
+## Practical tips for better sleep
+* Keep your sleep and wake times as consistent as possible, even on weekends.
+* Make the bedroom dark, cool, and quiet.
+* Cut caffeine after mid-afternoon; it stays in the body for many hours.
+* Dim bright screens in the last hour before bed.
+* If you notice that very hard training right before bed delays your sleep, move the session a bit earlier.
+* A short nap of twenty to thirty minutes can help on demanding days without ruining night sleep.
+
+## When to see a specialist?
+Occasional insomnia is normal and passes. But see a doctor if insomnia lasts for weeks, if snoring is loud with noticeable breathing pauses, or if severe daytime sleepiness persists despite enough hours in bed; these signs deserve evaluation.
+
+## The bottom line
+Sleep is not a luxury and not wasted time; it is the phase where training turns into real progress. Seven to nine consistent hours, in a good sleep environment, improve performance, speed recovery, and reduce injury risk. And if you remember one line: do not only count your training sessions, count your sleeping hours too.`,
+      category: 'Training Recovery',
+      date: '2026-11-28',
+      icon: 'Moon',
+    },
     {
       id: 15,
       slug: 'smart-warm-up-performance-and-injury-prevention',
