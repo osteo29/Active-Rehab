@@ -1589,7 +1589,7 @@
   },
   {
     "id": "deadlift_light",
-    "canonical_name": "Deadlift, light)",
+    "canonical_name": "Hip Hinge (Romanian Deadlift, light)",
     "clinical_cue": "Hip extensor loading pattern — critical for sport and daily function",
     "default_tags": [
       "hip",
@@ -1678,8 +1678,8 @@
   },
   {
     "id": "eccentric",
-    "canonical_name": "+ eccentric)",
-    "clinical_cue": "Heavy slow resistance — standard dumbbell wrist curl variation Wrist Radial",
+    "canonical_name": "Wrist Extension (concentric + eccentric)",
+    "clinical_cue": "Heavy slow resistance — standard dumbbell wrist curl variation",
     "default_tags": [
       "eccentric",
       "hamstring",
@@ -1699,7 +1699,7 @@
   {
     "id": "drills",
     "canonical_name": "Drills",
-    "clinical_cue": "Forehand backhand progression — technique coaching to reduce latearm ball contact Grip",
+    "clinical_cue": "Forehand backhand progression — technique coaching to reduce latearm ball contact",
     "default_tags": [],
     "status": "validated"
   },
@@ -1760,8 +1760,8 @@
   },
   {
     "id": "48_72h",
-    "canonical_name": "48–72h",
-    "clinical_cue": "4/day in first 48h; compression bandage",
+    "canonical_name": "RICE Protocol / Compression",
+    "clinical_cue": "Reduce haematoma — ice 15 min × 4/day in first 48h; compression bandage",
     "default_tags": [
       "strength"
     ],
@@ -2270,7 +2270,7 @@
   {
     "id": "isometric_thumb_extension",
     "canonical_name": "Isometric Thumb Extension",
-    "clinical_cue": "EPL + APL — combined isometric loading for first compartment Thumb",
+    "clinical_cue": "EPL + APL — combined isometric loading for first compartment",
     "default_tags": [
       "isometric",
       "mobility",
@@ -2491,7 +2491,7 @@
   {
     "id": "sumo_squat",
     "canonical_name": "Sumo Squat",
-    "clinical_cue": "Closed-chain adductor loading — keep adduction force within comfort Side-lying",
+    "clinical_cue": "Closed-chain adductor loading — keep adduction force within comfort",
     "default_tags": [
       "closed_chain",
       "strength"
@@ -3097,7 +3097,7 @@
   {
     "id": "lateral_lunge",
     "canonical_name": "Lateral Lunge",
-    "clinical_cue": "Frontal plane hip loading — SIJ compression in adduction Running",
+    "clinical_cue": "Frontal plane hip loading — SIJ compression in adduction",
     "default_tags": [
       "balance",
       "closed_chain",
@@ -3669,7 +3669,7 @@
   {
     "id": "retrograde_massage",
     "canonical_name": "Retrograde Massage",
-    "clinical_cue": "Elevate hand above heart — retrograde massage from fingertip to palm Intrinsic",
+    "clinical_cue": "Elevate hand above heart — retrograde massage from fingertip to palm",
     "default_tags": [
       "mobility"
     ],
@@ -4659,7 +4659,7 @@
   {
     "id": "continuous_easy_run",
     "canonical_name": "Continuous Easy Run",
-    "clinical_cue": "Transition to sustained running — flat surface, controlled pace Single-leg",
+    "clinical_cue": "Transition to sustained running — flat surface, controlled pace",
     "default_tags": [
       "balance",
       "calf",
@@ -5043,8 +5043,8 @@
   },
   {
     "id": "60_70",
-    "canonical_name": "60–70°)",
-    "clinical_cue": "Mid-range isometric — immediate analgesic effect; avoid full extension Isometric Tricep Push",
+    "canonical_name": "Isometric Tricep Extension (elbow 60–70°)",
+    "clinical_cue": "Mid-range isometric — immediate analgesic effect; avoid full extension",
     "default_tags": [
       "isometric",
       "mobility",
@@ -5241,7 +5241,7 @@
   {
     "id": "scapular_strengthening",
     "canonical_name": "Scapular Strengthening",
-    "clinical_cue": "Restore scapular stability — essential for throwing biomechanics Shoulder ER",
+    "clinical_cue": "Restore scapular stability — essential for throwing biomechanics",
     "default_tags": [
       "strength"
     ],
@@ -5484,7 +5484,7 @@
   {
     "id": "progressive_dorsiflexion_resistance",
     "canonical_name": "Progressive Dorsiflexion Resistance",
-    "clinical_cue": "Strength symmetry goal — use graded resistance band or weight boot Functional",
+    "clinical_cue": "Strength symmetry goal — use graded resistance band or weight boot",
     "default_tags": [
       "strength"
     ],
@@ -5492,7 +5492,7 @@
   },
   {
     "id": "afo",
-    "canonical_name": "AFO)",
+    "canonical_name": "Functional Gait Training (without AFO)",
     "clinical_cue": "Normal heel-strike gait retraining — progress distance and terrain",
     "default_tags": [],
     "status": "validated"
