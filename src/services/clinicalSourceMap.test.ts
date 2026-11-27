@@ -21,6 +21,6 @@ describe('source-mapped clinical drafts', () => {
     expect(tka.exercises).toHaveLength(2);
   });
   it('does not fill unrelated conditions by analogy', () => {
-    for (const id of [48,49,87,95,96]) expect(protocols.find(p => p.id === id)!.phases[3].exercises).toHaveLength(0);
+    for (const id of [48,49,87,95,96]) expect((protocols.find(p => p.id === id)!.phases[3]?.exercises ?? [])).toHaveLength(0);
   });
 });

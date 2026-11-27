@@ -922,25 +922,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -2482,25 +2463,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -4009,25 +3971,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -4254,8 +4197,7 @@
         "criteria_to_progress": [
           "Full or near-full ROM",
           "Symmetrical strength",
-          "Full functional return",
-          "Clinical Practice Guidelines"
+          "Full functional return"
         ],
         "exercises": [
           {
@@ -4629,25 +4571,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -5001,25 +4924,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -5611,8 +5515,7 @@
         "criteria_to_progress": [
           "Running 30 min pain-free",
           "Morning pain <2/10",
-          "Return to sport",
-          "Foot Ankle Surg"
+          "Return to sport"
         ],
         "exercises": [
           {
@@ -6046,25 +5949,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -6105,7 +5989,8 @@
         "precautions": [
           "Screen for red flags: cauda equina, fracture, malignancy",
           "Avoid prolonged bed rest \u2014 stay active within pain tolerance",
-          "No heavy lifting or sustained flexion loading"
+          "No heavy lifting or sustained flexion loading",
+          "NSAIDs may be prescribed \u2014 not a substitute for movement"
         ],
         "criteria_to_progress": [
           "Pain \u22644/10 with daily activities",
@@ -6370,12 +6255,7 @@
         "criteria_to_progress": [
           "Pain-free with full work and recreational demands",
           "Independent home exercise program",
-          "Psychological readiness and confidence",
-          "Non-specific low back pain",
-          "Prevention and treatment of low back pain: evidence, challenges, and promising directions",
-          "European guidelines for the management of chronic non-specific low back pain",
-          "Eur Spine J.",
-          "Exercise therapy for treatment of non-specific low back pain"
+          "Psychological readiness and confidence"
         ],
         "exercises": [
           {
@@ -6462,25 +6342,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -6743,18 +6604,13 @@
         ],
         "precautions": [
           "Recurrence rate ~25\u201330% within 2 years \u2014 maintain strengthening",
-          "Ergonomic assessment for return to manual work"
+          "Ergonomic assessment for return to manual work",
+          "Surgical referral if symptoms persist >12 weeks"
         ],
         "criteria_to_progress": [
           "Pain-free with all functional demands",
           "Neurological symptoms fully resolved",
-          "Self-managed home program in place",
-          "Spine J.",
-          "Comparative clinical effectiveness of management strategies for sciatica",
-          "Health Technol Assess.",
-          "Surgery versus conservative management of sciatica due to lumbar herniated disc",
-          "Eur Spine J.",
-          "Herniated lumbar intervertebral disk"
+          "Self-managed home program in place"
         ],
         "exercises": [
           {
@@ -6856,25 +6712,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -7129,17 +6966,15 @@
           "Long-term self-management program"
         ],
         "precautions": [
-          "Return to sport, manual work, and recreational demands"
+          "Return to sport, manual work, and recreational demands",
+          "Surgical referral if symptoms persist >12 weeks with inadequate response",
+          "MRI correlation for surgical planning if needed",
+          "Maintain ergonomic setup long-term"
         ],
         "criteria_to_progress": [
           "Arm pain fully resolved",
           "Neurological signs cleared",
-          "Full return to sport/work without restriction",
-          "Am Fam Physician.",
-          "Instr Course Lect.",
-          "Spine J.",
-          "Manipulation and mobilisation for neck pain contrasted against an inactive control",
-          "Active neck muscle training in the treatment of chronic neck pain among women"
+          "Full return to sport/work without restriction"
         ],
         "exercises": [
           {
@@ -7213,25 +7048,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -7551,12 +7367,7 @@
         "criteria_to_progress": [
           "Pain-free with all sport demands",
           "No neurological symptoms with loading",
-          "Clinician and surgeon clearance for full return",
-          "Diagnosis and conservative management of degenerative lumbar spondylolisthesis",
-          "Eur Spine J.",
-          "Spine J.",
-          "Specific stabilising exercise for spinal and pelvic pain",
-          "The natural history of spondylolysis and spondylolisthesis"
+          "Clinician and surgeon clearance for full return"
         ],
         "exercises": [
           {
@@ -7660,25 +7471,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -7777,7 +7569,9 @@
         "timing": "Week 6\u201316",
         "goals": [
           "Restore hip abductor, extensor, and external rotator strength",
-          "Normalise lumbopelvic motor control and gait mechanics"
+          "Normalise lumbopelvic motor control and gait mechanics",
+          "Progressive closed-chain loading within safe range",
+          "Return to full ADLs and low-impact recreational activities"
         ],
         "precautions": [
           "Avoid deep squat (>90\u00b0 hip flexion) until pain-free at 90\u00b0",
@@ -7888,10 +7682,7 @@
         "criteria_to_progress": [
           "Hop test LSI \u226590%",
           "Running 30 min pain-free",
-          "Full sport participation without pain or locking",
-          "The hip joint: arthroscopic procedures and postoperative rehabilitation",
-          "Acetabular labral tears",
-          "Clinical examination and physical assessment of hip joint-related pain in athletes"
+          "Full sport participation without pain or locking"
         ],
         "exercises": [
           {
@@ -7979,25 +7770,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -8128,7 +7900,12 @@
         "phase_number": 2,
         "title": "Progressive Strengthening",
         "timing": "Week 6\u201312",
-        "goals": [],
+        "goals": [
+          "Restore hip abductor and extensor strength \u2014 eliminate Trendelenburg gait",
+          "Progress to unassisted ambulation on all surfaces",
+          "Normalise stair ascent and descent",
+          "Begin progressive closed-chain strengthening"
+        ],
         "precautions": [
           "THA precautions remain until surgeon formally clears (typically 6\u201312 weeks)",
           "Avoid high-impact loading \u2014 no running yet",
@@ -8234,8 +8011,7 @@
         "criteria_to_progress": [
           "Walking 30 min without pain or assistive device",
           "Lower limb strength \u226580% symmetry",
-          "Effectiveness of physiotherapy exercise following hip arthroplasty",
-          "Physiother Can."
+          "Surgeon clearance for recreational activity at 6-month review"
         ],
         "exercises": [
           {
@@ -8310,25 +8086,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -8518,8 +8275,7 @@
         "criteria_to_progress": [
           "Full sport or work duration without pain",
           "Wrist extensor strength LSI \u226590%",
-          "Patient Pain-free Patient-Rated Tennis Elbow Evaluation (PRTEE) score \u226410",
-          "J Shoulder Elbow Surg."
+          "Patient Pain-free Patient-Rated Tennis Elbow Evaluation (PRTEE) score \u226410"
         ],
         "exercises": [
           {
@@ -8765,11 +8521,7 @@
         "criteria_to_progress": [
           "Wrist ROM \u226590% of contralateral side",
           "Grip strength \u226590% symmetry",
-          "Pain-free with all sport and occupational demands",
-          "J Hand Ther.",
-          "Physiotherapy for distal radius fractures",
-          "Physiotherapy.",
-          "J Bone Joint Surg."
+          "Pain-free with all sport and occupational demands"
         ],
         "exercises": [
           {
@@ -8827,25 +8579,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -8898,7 +8631,8 @@
         "criteria_to_progress": [
           "Walking pain-free without antalgic gait",
           "Isometric strength 70% or greater of contralateral side",
-          "Pain \u22643/10 during all"
+          "Pain \u22643/10 during all",
+          "Pain \u22643/10 during all Phase 1 exercises"
         ],
         "exercises": [
           {
@@ -9379,9 +9113,7 @@
         "criteria_to_progress": [
           "Running 30 min pain-free on flat surface",
           "Hop test LSI \u226590%",
-          "Full sport return without lateral hip pain",
-          "Hip abductor muscle volumes in women with greater trochanteric pain syndrome",
-          "J Sci Med Sport."
+          "Full sport return without lateral hip pain"
         ],
         "exercises": [
           {
@@ -9973,25 +9705,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -10242,11 +9955,7 @@
         "criteria_to_progress": [
           "Full overhead sport/work demands met without provocation",
           "No arm paraesthesia or vascular symptoms",
-          "Self-management program independent",
-          "J Man Manip Ther.",
-          "Treatment for thoracic outlet syndrome",
-          "Conservative treatment of thoracic outlet syndrome",
-          "Eur Med Phys."
+          "Self-management program independent"
         ],
         "exercises": [
           {
@@ -10317,25 +10026,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -10544,25 +10234,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -10886,25 +10557,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -11214,25 +10866,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -11556,25 +11189,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -11884,25 +11498,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -12226,25 +11821,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -12397,10 +11973,7 @@
         "criteria_to_progress": [
           "Full sport or work duration without medial elbow pain",
           "Wrist flexor strength LSI \u226590%",
-          "PRTEE medial equivalent (PRIME) score \u226410",
-          "Hand Clin.",
-          "Lateral epicondylitis of the elbow",
-          "EFORT Open Rev."
+          "PRTEE medial equivalent (PRIME) score \u226410"
         ],
         "exercises": [
           {
@@ -12735,25 +12308,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -12862,7 +12416,9 @@
         "title": "Strengthening & Function Restoration",
         "timing": "Week 6\u201316",
         "goals": [
-          "Restore grip and pinch strength"
+          "Restore grip and pinch strength",
+          "Return to full occupational and recreational hand use",
+          "Maintain symptom control with activity modification strategies"
         ],
         "precautions": [
           "Continue night splinting until symptom-free \u2014 typically 3\u20136 months",
@@ -12871,11 +12427,7 @@
         "criteria_to_progress": [
           "Grip strength \u226585% of contralateral side",
           "Symptom-free at 3\u20136 months with splint weaning",
-          "Full return to occupational and recreational hand demands",
-          "Carpal tunnel syndrome: effectiveness of physical therapy",
-          "Arch Phys Med Rehabil.",
-          "Nerve-conduction studies in carpal tunnel syndrome",
-          "Carpal tunnel syndrome: updated evidence and new questions"
+          "Full return to occupational and recreational hand demands"
         ],
         "exercises": [
           {
@@ -12907,25 +12459,6 @@
       {
         "phase_number": 3,
         "title": "Phase 3: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
         "timing": "Ongoing",
         "goals": [
           "Maintain full strength and mobility",
@@ -13133,8 +12666,8 @@
         ],
         "criteria_to_progress": [
           "Full functional demands without pain",
-          "Nonsurgical treatment for De Quervain's disease",
-          "J Hand Surg Am."
+          "Finkelstein's test pain-free",
+          "LSI \u226590% for thumb strength"
         ],
         "exercises": [
           {
@@ -13362,12 +12895,7 @@
         "criteria_to_progress": [
           "Wrist ROM \u226590% of contralateral side",
           "Grip strength \u226590% symmetry",
-          "Pain-free sport and occupational demands",
-          "Plast Reconstr Surg.",
-          "J Bone Joint Surg.",
-          "Acute central band scaphoid fractures",
-          "J Hand Surg Am.",
-          "Cast immobilisation versus surgical fixation of acute scaphoid fractures"
+          "Pain-free sport and occupational demands"
         ],
         "exercises": [
           {
@@ -13407,25 +12935,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -13637,11 +13146,7 @@
         "criteria_to_progress": [
           "Pain-free with all sport and occupational demands",
           "Forearm rotation LSI \u226590%",
-          "Grip strength \u226590% symmetry",
-          "Tech Hand Up Extrem Surg.",
-          "The ulnocarpal and distal radioulnar joint",
-          "J Bone Joint Surg.",
-          "Hand Clin."
+          "Grip strength \u226590% symmetry"
         ],
         "exercises": [
           {
@@ -13709,25 +13214,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -13885,7 +13371,8 @@
         ],
         "criteria_to_progress": [
           "Hip abductor strength \u226580% symmetry",
-          "Pain \u22642/10 during all phase 2 exercises"
+          "Pain \u22642/10 during all phase 2 exercises",
+          "Movement quality: no excessive IR or anterior pelvic tilt in squatting and stair tasks"
         ],
         "exercises": [
           {
@@ -14016,9 +13503,7 @@
         "criteria_to_progress": [
           "Hop test LSI \u226590%",
           "Running and cutting pain-free",
-          "Full sport return without groin or anterior hip pain",
-          "Physical impairments in symptomatic femoroacetabular impingement",
-          "Physiotherapy for people with hip-related pain"
+          "Full sport return without groin or anterior hip pain"
         ],
         "exercises": [
           {
@@ -14120,25 +13605,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -14316,10 +13782,7 @@
         "criteria_to_progress": [
           "Full sprint at 100% effort without pain or apprehension",
           "Full kicking power without anterior hip pain",
-          "Hop test LSI \u226590%",
-          "Groin injuries in athletes",
-          "Am Fam Physician.",
-          "The association of hip strength and flexibility with the incidence of adductor muscle strains in professional ice hockey players"
+          "Hop test LSI \u226590%"
         ],
         "exercises": [
           {
@@ -14676,8 +14139,7 @@
         "criteria_to_progress": [
           "Full sprint at 100% without groin pain",
           "Full kicking power and cutting tolerance",
-          "Hop test LSI \u226590%",
-          "Management of acute adductor longus injuries in male football players"
+          "Hop test LSI \u226590%"
         ],
         "exercises": [
           {
@@ -14905,7 +14367,8 @@
         ],
         "criteria_to_progress": [
           "Sitting tolerance \u226545 min without pain",
-          "Deep gluteal pain \u22641/10 with all"
+          "Deep gluteal pain \u22641/10 with all",
+          "Hip ER strength \u226580% symmetry"
         ],
         "exercises": [
           {
@@ -14999,11 +14462,7 @@
         ],
         "criteria_to_progress": [
           "Running 30 min on flat without deep gluteal pain",
-          "No sciatic symptoms with sport-specific demands",
-          "Eur Spine J.",
-          "Diagnosis and management of piriformis syndrome",
-          "J Am Osteopath Assoc.",
-          "Arch Phys Med Rehabil."
+          "No sciatic symptoms with sport-specific demands"
         ],
         "exercises": [
           {
@@ -15087,25 +14546,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -15261,7 +14701,8 @@
         "title": "Progressive Strengthening",
         "timing": "Weeks 8\u201324",
         "goals": [
-          "Hip and quadriceps strength improvement \u2014 key for pain reduction and function in OA"
+          "Hip and quadriceps strength improvement \u2014 key for pain reduction and function in OA",
+          "Improve walking speed, stair function, and community mobility"
         ],
         "precautions": [
           "Pain should not exceed 5/10 during exercise (tolerable exertion level)",
@@ -15309,7 +14750,10 @@
           "Sustain strength and function gains achieved in Phase 2",
           "Delay progression to THA through active lifestyle"
         ],
-        "precautions": [],
+        "precautions": [
+          "Exercise is safe and beneficial for hip OA \u2014 do not stop exercising during mild flares, modify intensity instead",
+          "Annual review \u2014 monitor radiographic and functional progression"
+        ],
         "criteria_to_progress": [],
         "exercises": [
           {
@@ -15385,25 +14829,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -15574,10 +14999,7 @@
         ],
         "criteria_to_progress": [
           "Running 30 min pain-free (snap may persist \u2014 this is acceptable if pain-free)",
-          "Full sport and dance tolerance without pain",
-          "Hip Int.",
-          "Etiology, diagnosis, and treatment of runners' snapping hip syndrome",
-          "Arthroscopic treatment of the snapping iliopsoas tendon"
+          "Full sport and dance tolerance without pain"
         ],
         "exercises": [
           {
@@ -15633,25 +15055,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -15963,25 +15366,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -16291,25 +15675,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -16633,25 +15998,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -16962,25 +16308,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -17290,25 +16617,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -17632,25 +16940,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -17898,12 +17187,7 @@
         "criteria_to_progress": [
           "Hop test LSI \u226590%",
           "Running 30 min pain-free",
-          "Sport-specific demands met without pain",
-          "J Foot Ankle Surg.",
-          "Peroneal tendon tears with and without ankle instability",
-          "Foot Ankle Int.",
-          "Peroneal tendon injuries",
-          "J Bone Joint Surg Am."
+          "Sport-specific demands met without pain"
         ],
         "exercises": [
           {
@@ -18171,11 +17455,7 @@
         "criteria_to_progress": [
           "Single-leg heel raise \u226525 reps without pain",
           "Running 30 min pain-free",
-          "Full sport participation without arch pain",
-          "J Bone Joint Surg.",
-          "Effect of orthotics and midsole hardness on pain and function in PTTD",
-          "Foot Ankle Int.",
-          "Conservative management in posterior tibial tendon dysfunction"
+          "Full sport participation without arch pain"
         ],
         "exercises": [
           {
@@ -18393,7 +17673,8 @@
         "precautions": [
           "Avoid deep inversion stretches",
           "Progress surfaces gradually \u2014 monitor subtalar pain",
-          "Proprioception restoration"
+          "Proprioception restoration",
+          "Use taping/brace for sport activities"
         ],
         "criteria_to_progress": [
           "Walking 30 min pain-free",
@@ -18511,13 +17792,7 @@
         "criteria_to_progress": [
           "Running 30 min on flat, pain-free",
           "Hop test LSI \u226590%",
-          "Return to full sport without lateral hindfoot pain",
-          "Chir Organi Mov.",
-          "J Foot Ankle Surg.",
-          "MR imaging of the tarsal sinus and canal",
-          "Radiology.",
-          "Subtalar arthroscopy for sinus tarsi syndrome",
-          "Arthroscopy."
+          "Return to full sport without lateral hindfoot pain"
         ],
         "exercises": [
           {
@@ -18736,7 +18011,10 @@
         ],
         "precautions": [
           "Restore ankle and foot ROM",
-          "Normalise gait pattern"
+          "Normalise gait pattern",
+          "Progress WB based on pain AND radiographic healing",
+          "Avoid barefoot walking until full FWB in shoes",
+          "Monitor for refracture \u2014 use lateral support footwear"
         ],
         "criteria_to_progress": [
           "FWB in shoe without pain",
@@ -18853,13 +18131,7 @@
         "criteria_to_progress": [
           "Hop test LSI \u226590%",
           "Running 30 min pain-free",
-          "Radiographic union confirmed",
-          "Ann Surg.",
-          "Fifth metatarsal Jones fractures in the athlete",
-          "Foot Ankle Int.",
-          "Treatment of proximal fifth metatarsal fractures",
-          "Injury.",
-          "Return to sport after Jones fracture fixation in NFL players"
+          "Radiographic union confirmed"
         ],
         "exercises": [
           {
@@ -18935,25 +18207,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -18994,11 +18247,13 @@
         "precautions": [
           "Strict NWB unless surgeon permits TTWB",
           "Monitor wound for signs of infection",
-          "No ankle ROM exercises until surgeon clearance (typically week 2)"
+          "No ankle ROM exercises until surgeon clearance (typically week 2)",
+          "Anticoagulation per medical team \u2014 DVT risk high"
         ],
         "criteria_to_progress": [
           "Wound healed, sutures removed",
-          "Pain \u22643/10 at rest"
+          "Pain \u22643/10 at rest",
+          "Surgeon clearance for PWB/FWB at 6-week review"
         ],
         "exercises": [
           {
@@ -19056,7 +18311,9 @@
         ],
         "precautions": [
           "Restore ankle ROM \u2014 dorsiflexion priority",
-          "Calf and peroneal strength"
+          "Calf and peroneal strength",
+          "Follow surgeon WB progression \u2014 do not advance without clearance",
+          "Monitor hardware for discomfort with loading"
         ],
         "criteria_to_progress": [
           "FWB without device",
@@ -19156,9 +18413,7 @@
         "criteria_to_progress": [
           "Hop test LSI \u226590%",
           "Running 30 min pain-free",
-          "Physiotherapy.",
-          "Early weightbearing and range of motion vs. delayed in unstable ankle fractures",
-          "Injury."
+          "Surgeon clearance at 4\u20136 month review"
         ],
         "exercises": [
           {
@@ -19239,25 +18494,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -19303,7 +18539,8 @@
         ],
         "criteria_to_progress": [
           "Wound healed",
-          "Swelling significantly reduced"
+          "Swelling significantly reduced",
+          "Surgeon clearance for progressive WB at 6-week review"
         ],
         "exercises": [
           {
@@ -19374,7 +18611,8 @@
         "precautions": [
           "Avoid narrow footwear for 6 months",
           "No running or high-impact until ROM and strength restored",
-          "Normal gait pattern restoration"
+          "Normal gait pattern restoration",
+          "Monitor for hallux valgus recurrence (poor footwear, muscle weakness)"
         ],
         "criteria_to_progress": [
           "Hallux MTP DF \u226560\u00b0",
@@ -19460,10 +18698,7 @@
         "criteria_to_progress": [
           "Hallux MTP DF \u226560\u00b0 full active ROM",
           "20 single-leg calf raises pain-free",
-          "Running and sport pain-free",
-          "Surgery vs orthosis vs watchful waiting for hallux valgus",
-          "Foot Ankle Int.",
-          "First ray hypermobility and hallux valgus deformity"
+          "Running and sport pain-free"
         ],
         "exercises": [
           {
@@ -19539,25 +18774,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -19829,11 +19045,7 @@
         "criteria_to_progress": [
           "Running 30 min pain-free",
           "Dorsiflexion strength LSI \u226590%",
-          "Full sport participation without anterior ankle pain",
-          "Radiology.",
-          "Tibialis anterior tendon rupture",
-          "J Am Podiatr Med Assoc.",
-          "Isometric exercise induces analgesia in tendinopathy"
+          "Full sport participation without anterior ankle pain"
         ],
         "exercises": [
           {
@@ -19919,25 +19131,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -20255,10 +19448,7 @@
         "criteria_to_progress": [
           "Community ambulation \u226530 min with manageable symptoms",
           "Quality of life scores improving (ODI, ZCQ)",
-          "Self-managed home program established",
-          "Nonoperative treatment for lumbar spinal stenosis with neurogenic claudication",
-          "Low back disorders",
-          "Arch Phys Med Rehabil."
+          "Self-managed home program established"
         ],
         "exercises": [
           {
@@ -20642,12 +19832,7 @@
         "criteria_to_progress": [
           "Pain-free with all sport and work demands",
           "Independent maintenance program",
-          "No recurrence for 4 weeks",
-          "Pathogenesis, diagnosis, and treatment of lumbar zygapophysial (facet) joint pain",
-          "Anesthesiology.",
-          "Pain Pract.",
-          "Reliability of spinal palpation for diagnosis of back and neck pain",
-          "Spine."
+          "No recurrence for 4 weeks"
         ],
         "exercises": [
           {
@@ -20720,25 +19905,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -21038,11 +20204,7 @@
         "criteria_to_progress": [
           "SIJ belt-free for all activities",
           "Running 20 min pain-free",
-          "Full sport/work demands tolerated",
-          "Eur Spine J.",
-          "Evidence-based diagnosis and treatment of the painful sacroiliac joint",
-          "J Man Manip Ther.",
-          "Pain Physician."
+          "Full sport/work demands tolerated"
         ],
         "exercises": [
           {
@@ -21420,11 +20582,7 @@
         "criteria_to_progress": [
           "Running 30 min pain-free",
           "No sciatic referral with any activity",
-          "Full sport participation",
-          "J Am Osteopath Assoc.",
-          "The piriformis muscle syndrome: an exploration of anatomical context, pathophysiological hypotheses and diagnostic criteria",
-          "Eur Spine J.",
-          "Spine."
+          "Full sport participation"
         ],
         "exercises": [
           {
@@ -21451,25 +20609,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -21713,13 +20852,7 @@
         "criteria_to_progress": [
           "Pain-free with all sport demands",
           "Full cervical ROM and strength",
-          "Self-managed exercise program in place",
-          "Pain Physician.",
-          "The cervical zygapophysial joints as a source of neck pain",
-          "Spine.",
-          "Manipulation and mobilisation for neck pain",
-          "Active neck muscle training in the treatment of chronic neck pain",
-          "Examination of a clinical prediction rule to identify patients with neck pain likely to benefit from thoracic spine thrust manipulation"
+          "Self-managed exercise program in place"
         ],
         "exercises": [
           {
@@ -21774,25 +20907,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -22028,11 +21142,7 @@
         "criteria_to_progress": [
           "Pain-free with all activity demands",
           "Psychological readiness and confidence",
-          "Self-managed without ongoing therapy",
-          "Spine.",
-          "Comprehensive physiotherapy exercise programme or advice for chronic whiplash",
-          "Managing Injuries of the Neck Trial (MINT)",
-          "Retraining cervical joint position sense: the effect of two exercise regimes"
+          "Self-managed without ongoing therapy"
         ],
         "exercises": [
           {
@@ -22072,25 +21182,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -22151,7 +21242,8 @@
         ],
         "criteria_to_progress": [
           "Pain \u22644/10 with walking",
-          "Neurological status intact"
+          "Neurological status intact",
+          "Fracture clinically stable at 6-week review"
         ],
         "exercises": [
           {
@@ -22383,9 +21475,7 @@
         "criteria_to_progress": [
           "Full independence with all activities of daily living",
           "No further fractures",
-          "DEXA scan monitoring established",
-          "Osteoporos Int.",
-          "Exercise for preventing falls in older people living in the community"
+          "DEXA scan monitoring established"
         ],
         "exercises": [
           {
@@ -22707,13 +21797,7 @@
         ],
         "criteria_to_progress": [
           "No pain with daily or sporting activities",
-          "Maintenance program independently performed",
-          "J Bone Joint Surg Am.",
-          "Eur Spine J.",
-          "The natural history and long-term follow-up of Scheuermann kyphosis",
-          "J Bone Joint Surg.",
-          "Kyphosis: Physiotherapy and surgical management",
-          "Scoliosis."
+          "Maintenance program independently performed"
         ],
         "exercises": [
           {
@@ -22770,25 +21854,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -23066,12 +22131,7 @@
         "criteria_to_progress": [
           "Pain-free with all functional demands",
           "No myelopathic signs",
-          "Surgeon clearance for full activity",
-          "Neurosurgery.",
-          "J Bone Joint Surg.",
-          "Herniated thoracic disks",
-          "Neurol Clin.",
-          "Eur Spine J."
+          "Surgeon clearance for full activity"
         ],
         "exercises": [
           {
@@ -23404,18 +22464,15 @@
         "precautions": [
           "Return to manual work, sport, and recreational activities",
           "Avoid heavy spinal loading without adequate core",
-          "Prevent adjacent segment disease"
+          "Prevent adjacent segment disease",
+          "Ergonomic assessment for return to manual work \u2014 technique coaching essential"
         ],
         "criteria_to_progress": [
           "Pain-free with all work and recreational demands",
           "Neurological function fully restored",
           "Core endurance \u2014 plank \u226560 sec, dead bug full 3 \u00d7 10",
-          "Early active rehabilitation after surgery for lumbar disc herniation",
-          "Spine.",
-          "Early aggressive exercise for postoperative rehabilitation after discectomy",
-          "Active therapy for chronic low back pain",
-          "Eur Spine J.",
-          "Elbow & Wrist Evidence-Based"
+          "Elbow & Wrist Evidence-Based",
+          "Surgeon clearance at 3\u20136 month review"
         ],
         "exercises": [
           {
@@ -23540,25 +22597,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -23602,7 +22640,12 @@
           "Nighttime elbow extension splint (0\u201330\u00b0 flexion) \u2014 key intervention",
           "Refer if progressive motor weakness, intrinsic wasting, or"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Tingling symptoms reducing in ring and small fingers",
+          "Elbow flexion provocation test negative or improving",
+          "Nighttime splinting tolerated",
+          "Ready for progressive neural loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "elbow_extension_splinting",
@@ -23707,7 +22750,12 @@
           "Avoid heavy carrying with elbow flexed",
           "Monitor for grip weakness progression"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Paresthesia \u2264 mild with full daily activity",
+          "Elbow flexion test negative at 60 seconds",
+          "Grip strength >75% of uninvolved side",
+          "Ready for return to full upper limb loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "ulnar_nerve_slider",
@@ -23817,10 +22865,9 @@
           "Continue ergonomic modifications lifelong"
         ],
         "criteria_to_progress": [
-          "Conservative interventions for treating ulnar neuropathy at the elbow",
-          "Conservative treatment of the cubital tunnel syndrome",
-          "J Hand Surg Eur.",
-          "J Hand Surg Am."
+          "Grip strength \u226590% of uninvolved side",
+          "No provoked paresthesia with full upper limb loading",
+          "Return to sport and work without restriction"
         ],
         "exercises": [
           {
@@ -23874,25 +22921,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -23944,7 +22972,11 @@
           "Source (clinician review required): https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf",
           "AAOS pain safety rule: exercises should not cause significant pain. Consult the doctor or physical therapist if pain worsens, exercise increases pain, or symptoms do not improve after 6-12 weeks. This is not clearance to progress."
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Pain \u22643/10 with resisted supination",
+          "No signs of PIN palsy",
+          "Ready for progressive loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "radial_nerve_slider",
@@ -24023,7 +23055,12 @@
           "Source (clinician review required): https://www.orthoinfo.org/globalassets/pdfs/2024-therapeutic-exercise-program-for-radial-tunnel-syndrome.pdf",
           "AAOS pain safety rule: exercises should not cause significant pain. Consult the doctor or physical therapist if pain worsens, exercise increases pain, or symptoms do not improve after 6-12 weeks. This is not clearance to progress."
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Resisted supination pain-free or \u22642/10",
+          "Wrist extension strength >75% symmetry",
+          "No forearm radiation with loading",
+          "Ready for sport/work-specific loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "wrist_extension",
@@ -24115,10 +23152,9 @@
           "Gradual return to repetitive upper limb sports (tennis, golf)"
         ],
         "criteria_to_progress": [
-          "J Hand Surg Am.",
-          "Radial tunnel syndrome",
-          "Incidence and prevalence of upper extremity musculoskeletal disorders",
-          "The posterior interosseous nerve compression test"
+          "Strength symmetry \u226590% supination and wrist extension",
+          "Return to full sport and work without lateral forearm pain",
+          "No radial nerve provocation with functional tasks"
         ],
         "exercises": [
           {
@@ -24189,25 +23225,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -24251,7 +23268,12 @@
           "Avoid resisted finger flexion against resistance in first 2 weeks",
           "Buddy taping not required unless adjacent digit instability"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Triggering absent or significantly reduced",
+          "Active finger flexion: full composite fist forming",
+          "Wound healed (post-op)",
+          "Ready for progressive loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "retrograde_massage",
@@ -24308,7 +23330,12 @@
           "Monitor for triggering recurrence \u2014 report to surgeon if returns",
           "Scar management post-op from week 3 once healed"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Full composite fist \u2014 fingertip to distal palmar crease",
+          "Grip strength >75% of uninvolved hand",
+          "No triggering with full flexion",
+          "Ready for return to full activity"
+        ],
         "exercises": [
           {
             "exercise_ref": "tendon_gliding",
@@ -24411,10 +23438,9 @@
           "Surgical referral if triggering recurs despite injection \u00d7 2"
         ],
         "criteria_to_progress": [
-          "Am J Phys Med Rehabil.",
-          "J Hand Surg Eur.",
-          "Percutaneous trigger finger release",
-          "Treatment of trigger fingers"
+          "Grip strength \u226590% of uninvolved hand",
+          "Full active ROM \u2014 no triggering",
+          "Return to full occupational and recreational function"
         ],
         "exercises": [
           {
@@ -24455,25 +23481,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -24518,7 +23525,12 @@
           "If bony mallet >33% articular surface or volar subluxation \u2014 surgical referral",
           "Check skin integrity under splint at every session \u2014 pressure sores risk"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "8 weeks continuous immobilisation completed",
+          "No extensor lag at DIP joint",
+          "Skin integrity maintained",
+          "Ready for graduated flexion introduction"
+        ],
         "exercises": [
           {
             "exercise_ref": "dip_extension_splinting",
@@ -24574,7 +23586,12 @@
           "Night splinting for further 6 weeks after day weaning",
           "No heavy gripping or resisted DIP flexion until week 12"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Full active DIP extension \u2014 zero lag",
+          "DIP flexion \u226560\u00b0",
+          "No tendon re-rupture signs",
+          "Ready for progressive strengthening"
+        ],
         "exercises": [
           {
             "exercise_ref": "active_dip_flexion",
@@ -24645,11 +23662,10 @@
           "Monitor for swan-neck deformity \u2014 PIP hyperextension compensating for DIP lag"
         ],
         "criteria_to_progress": [
-          "J Hand Surg Eur.",
-          "Interventions for treating mallet finger injuries",
-          "A modified splint for mallet finger",
-          "J Hand Surg.",
-          "Current practice in the management of acute mallet finger injuries"
+          "DIP extension 0\u00b0 \u2014 no lag",
+          "DIP flexion \u226580\u00b0",
+          "Grip strength \u226590% of uninvolved hand",
+          "Return to full sport and work"
         ],
         "exercises": [
           {
@@ -24718,25 +23734,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -24780,7 +23777,12 @@
           "Acute traumatic boutonniere: 6 weeks continuous PIP splinting",
           "Surgical referral if fixed deformity >30\u00b0 or failed"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "6 weeks PIP extension splinting completed",
+          "Passive PIP extension 0\u00b0 achieved",
+          "No fixed flexion contracture development",
+          "Ready for graduated PIP mobilisation"
+        ],
         "exercises": [
           {
             "exercise_ref": "pip_extension_splinting",
@@ -24852,7 +23854,12 @@
           "If boutonniere recurs \u2014 resume full-time splinting",
           "Do not rush PIP flexion \u2014 central slip failure risk"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "PIP extension 0\u00b0 \u2014 no lag",
+          "PIP flexion \u226590\u00b0",
+          "No boutonniere pattern during active motion",
+          "Ready for progressive strengthening"
+        ],
         "exercises": [
           {
             "exercise_ref": "active_pip_flexion",
@@ -24937,11 +23944,9 @@
           "Surgical referral for fixed deformity not responding to splinting"
         ],
         "criteria_to_progress": [
-          "Conservative management of boutonniere deformity",
-          "J Hand Ther.",
-          "Rupture of the central slip of the extensor hood of the finger",
-          "J Bone Joint Surg Br.",
-          "The boutonniere deformity"
+          "PIP extension 0\u00b0, flexion \u2265100\u00b0",
+          "Grip strength \u226590% of uninvolved hand",
+          "No deformity recurrence with full loading"
         ],
         "exercises": [
           {
@@ -25001,25 +24006,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -25071,7 +24057,12 @@
           "No resisted gripping \u2014 repair rupture risk highest first 4 weeks",
           "Immediate referral if tendon re-rupture suspected (sudden extension regain with loss of flexion)"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "No signs of tendon rupture (sudden pain or snap with exercise)",
+          "Wound healing progressing",
+          "Passive composite fist achieved",
+          "Ready for early active motion (surgeon clearance at 4 weeks)"
+        ],
         "exercises": [
           {
             "exercise_ref": "place_and_hold",
@@ -25138,7 +24129,12 @@
           "Avoid heavy resisted gripping until week 8",
           "Monitor for adhesion signs: reduced active vs passive ROM difference"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Active composite fist \u226575% total active motion (TAM)",
+          "No extensor lag",
+          "Grip strength >50% of uninvolved hand",
+          "Ready for progressive resistance"
+        ],
         "exercises": [
           {
             "exercise_ref": "active_composite_fist",
@@ -25233,9 +24229,9 @@
           "Contact sport: buddy tape for 6 months post-repair"
         ],
         "criteria_to_progress": [
-          "J Hand Surg Am.",
-          "Plast Reconstr Surg.",
-          "J Hand Surg Eur."
+          "TAM \u226590% of uninvolved hand",
+          "Grip strength \u226590% of uninvolved hand",
+          "Return to full occupational and sport demands"
         ],
         "exercises": [
           {
@@ -25310,25 +24306,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -25372,7 +24349,12 @@
           "Zone V\u2013VIII (dorsal hand/wrist): Dynamic extension splint or static wrist 40\u201345\u00b0 extension",
           "No resisted finger/wrist flexion in first 4 weeks \u2014 repair rupture risk"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Wound healed and sutures removed",
+          "No extensor lag development",
+          "Passive composite flexion maintained",
+          "Surgeon clearance for active mobilisation at 4\u20135 weeks"
+        ],
         "exercises": [
           {
             "exercise_ref": "passive_mcp_flexion",
@@ -25444,7 +24426,12 @@
           "No resisted wrist flexion until week 8",
           "Avoid heavy gripping until tendon repair matures (week 8\u201310)"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "No extensor lag at any joint",
+          "Composite fist \u226570% total active motion",
+          "Wrist extension \u226545\u00b0",
+          "Ready for progressive resistance"
+        ],
         "exercises": [
           {
             "exercise_ref": "active_composite_flexion_extension",
@@ -25553,11 +24540,9 @@
           "Monitor for late extensor lag in first 6 months"
         ],
         "criteria_to_progress": [
-          "Extensor tendon: anatomy, injury, and reconstruction",
-          "Plast Reconstr Surg.",
-          "Biomechanical characteristics of extensor tendons",
-          "J Hand Surg Am.",
-          "J Hand Ther."
+          "Full active ROM \u2014 lag-free",
+          "Grip strength \u226590% of uninvolved hand",
+          "Return to full sport and work without restriction"
         ],
         "exercises": [
           {
@@ -25647,25 +24632,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -25709,7 +24675,12 @@
           "No forceful gripping or pinching until wound fully healed",
           "Skin graft patients: immobilise graft site per surgeon \u2014 5\u20137 days"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Wound healed and sutures/clips removed",
+          "Oedema significantly reduced",
+          "MCP extension deficit \u226410\u00b0 maintained",
+          "PIP extension progressing"
+        ],
         "exercises": [
           {
             "exercise_ref": "active_finger_flexion_extension",
@@ -25766,7 +24737,12 @@
           "Avoid heavy gripping until 8 weeks",
           "Monitor for Dupuytren's recurrence \u2014 cord re-formation in first 12 months"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "MCP extension deficit \u22645\u00b0",
+          "PIP extension deficit \u226420\u00b0 (goal \u226410\u00b0)",
+          "Grip strength >70% of uninvolved hand",
+          "Scar softening and flattening"
+        ],
         "exercises": [
           {
             "exercise_ref": "tendon_gliding",
@@ -25875,12 +24851,9 @@
           "Re-operation if functionally limiting recurrence with MCP >30\u00b0 contracture"
         ],
         "criteria_to_progress": [
-          "J Hand Surg Eur.",
-          "J Hand Ther.",
-          "Dupuytren disease: an overview of evidence-based treatment",
-          "Arch Phys Med Rehabil.",
-          "Recurrence of Dupuytren's contracture: a consensus-based definition",
-          "Plast Reconstr Surg."
+          "Maximum extension achieved (biological limit respected)",
+          "Grip strength \u226590% of uninvolved hand",
+          "Return to full occupational and sport function"
         ],
         "exercises": [
           {
@@ -25936,25 +24909,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -25998,7 +24952,12 @@
           "Thumb spica splint: MCP in 0\u201320\u00b0 flexion, wrist neutral, IP free",
           "No radial deviation or valgus stress at MCP"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Pain \u22643/10 with daily splinted activities",
+          "Oedema resolving at MCP joint",
+          "Radiographic confirmation \u2014 no avulsion fracture displacement",
+          "Grade I\u2013II ligament \u2014 ready for active mobilisation"
+        ],
         "exercises": [
           {
             "exercise_ref": "thumb_spica_splinting",
@@ -26053,7 +25012,12 @@
           "Continue splint for sport and high-demand activities to week 12",
           "No full power pinch until week 8\u201310"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "MCP flexion \u2265 50\u00b0 and full extension",
+          "Pinch strength >75% of uninvolved hand",
+          "No valgus instability on clinical testing",
+          "Ready for sport-specific loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "thumb_mcp_active_flexion_extension",
@@ -26155,11 +25119,9 @@
           "Surgical referral if instability persists or strength not recovering"
         ],
         "criteria_to_progress": [
-          "J Bone Joint Surg Br.",
-          "Injuries to the ulnar collateral ligament of the thumb",
-          "Ligamentous injuries to the thumb MCP joint",
-          "J Hand Surg Am.",
-          "J Hand Surg Eur."
+          "Pinch strength \u226590% of uninvolved hand",
+          "Valgus stress test negative",
+          "Full return to sport with protective thumb guard"
         ],
         "exercises": [
           {
@@ -26186,25 +25148,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -26249,7 +25192,12 @@
           "Vascular injury: axillary artery \u2014 assess radial pulse and forearm perfusion",
           "Nerve injury: axillary nerve (deltoid) \u2014 assess lateral shoulder sensation"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Pain \u22644/10 at rest",
+          "Fracture site not tender to direct palpation (clinical healing signs)",
+          "Radiographic evidence of early callus or fracture stability at 4\u20136 week X-ray",
+          "Ready for active-assisted shoulder motion"
+        ],
         "exercises": [
           {
             "exercise_ref": "pendular_exercises",
@@ -26345,9 +25293,14 @@
         ],
         "precautions": [
           "No lifting >1 kg until radiographic union confirmed (typically week 6\u20138)",
-          "Avoid aggressive passive stretching \u2014 non-union risk in poor bone quality (elderly)"
+          "Avoid aggressive passive stretching \u2014 non-union risk in poor bone quality (elderly)",
+          "AROM to pain-free range only \u2014 not into impingement arc"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Shoulder flexion \u2265120\u00b0 active",
+          "ER \u2265 30\u00b0 active (fracture pattern dependent)",
+          "Ready for progressive resistive strengthening"
+        ],
         "exercises": [
           {
             "exercise_ref": "supine_active_shoulder_flexion",
@@ -26423,10 +25376,9 @@
           "No ballistic or overhead sport until 16\u201320 weeks minimum"
         ],
         "criteria_to_progress": [
-          "J Bone Joint Surg Am.",
-          "Interventions for treating proximal humeral fractures in adults",
-          "The natural history of the proximal humerus fracture",
-          "J Bone Joint Surg Br."
+          "Shoulder flexion \u2265160\u00b0, ER \u226560\u00b0",
+          "Strength \u226590% symmetry \u2014 rotator cuff and deltoid",
+          "Return to full overhead sport and occupational demands"
         ],
         "exercises": [
           {
@@ -26530,25 +25482,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -26592,7 +25525,12 @@
           "No passive stretching into pain in first 48 hours",
           "Ice, compression, elevation \u2014 PRICE protocol \u00d7 48\u201372 hours"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Walking pain-free without crutches",
+          "Knee flexion \u226590\u00b0 without pain",
+          "Swelling/bruising stabilised",
+          "Ready for progressive loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "ankle_pumps",
@@ -26670,7 +25608,12 @@
           "No contact sport until strength and ROM criteria met",
           "Monitor for myositis ossificans \u2014 if hardening of haematoma palpable, refer for ultrasound"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Knee flexion full ROM (\u2265130\u00b0) pain-free",
+          "Quadriceps strength >80% of uninvolved limb (dynamometry)",
+          "Jogging pain-free on flat surface",
+          "Ready for sport-specific loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "straight_leg_raise",
@@ -26800,10 +25743,10 @@
           "High recurrence rate (20\u201330%) \u2014 prophylactic strengthening required"
         ],
         "criteria_to_progress": [
-          "Knee Surg Sports Traumatol Arthrosc.",
-          "Hamstring and quadriceps injuries in athletes \u2014 a special challenge",
-          "Quadriceps contusions: west point update",
-          "Hamstring muscle injuries in professional football"
+          "Quadriceps strength LSI \u226590% (isokinetic or single-leg press)",
+          "Single-leg hop test LSI \u226590%",
+          "Full sprint and sport demands without pain",
+          "Psychological readiness \u2014 ACL-RSI or equivalent confidence scale"
         ],
         "exercises": [
           {
@@ -26833,7 +25776,7 @@
               "duration_sec": null,
               "frequency_per_week": null,
               "exercise_type": "repetition",
-              "raw": "Week 4: 60% \u2192 week 5: 80% \u2192 week 6: 95% \u2192 week"
+              "raw": "Week 4: 60% \u2192 week 5: 80% \u2192 week 6: 95% \u2192 week 7: full sprint"
             },
             "tags": [],
             "clinical_cue_override": null
@@ -26896,25 +25839,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -26958,7 +25882,12 @@
           "Crutches if FWB painful",
           "DVT risk in extensive calf strain \u2014 monitor for calf hardness, warmth, Homan's sign"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Walking pain-free without heel raise",
+          "Palpation tenderness reducing \u2014 medial gastrocnemius",
+          "Single-leg heel raise beginning to be attempted",
+          "Ready for progressive loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "price_protocol",
@@ -27049,7 +25978,12 @@
           "Avoid full sprint and jumping until strength criteria met",
           "Eccentric loading preferred over concentric in early loading"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "20 single-leg calf raises pain-free",
+          "Plantarflexion strength >80% symmetry",
+          "Jogging pain-free \u2014 flat surface",
+          "Ready for plyometric and sprint loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "calf_raise",
@@ -27127,8 +26061,10 @@
           "Hill running and plyometrics \u2014 introduce last"
         ],
         "criteria_to_progress": [
-          "Calf muscle strain injuries in sport",
-          "Gastrocnemius strain grading and return to sport"
+          "Single-leg heel raise \u226525 reps and strength LSI \u226590%",
+          "Hop test LSI \u226590%",
+          "Full sprint and sport without pain",
+          "Psychological readiness for competition"
         ],
         "exercises": [
           {
@@ -27191,25 +26127,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -27261,7 +26178,11 @@
           "No kicking or explosive hip flexion",
           "PRICE protocol \u00d7 48\u201372 hours"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Walking pain-free without hip flexor guarding",
+          "Hip flexion \u226590\u00b0 without pain",
+          "Ready for progressive quadriceps loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "price_protocol",
@@ -27354,7 +26275,12 @@
           "Avoid kicking and sprint until criteria met",
           "Rectus femoris crosses hip and knee \u2014 address both joints"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Full hip flexion and knee extension ROM",
+          "Quadriceps strength >80% symmetry",
+          "Jogging pain-free \u2014 flat surface",
+          "Ready for sprint and kicking loads"
+        ],
         "exercises": [
           {
             "exercise_ref": "leg_press",
@@ -27468,10 +26394,10 @@
           "Graduated sprint return before contact return"
         ],
         "criteria_to_progress": [
-          "Muscle injuries in sports \u2014 new insights on diagnosis and management",
-          "Muscles Ligaments Tendons J.",
-          "Injury patterns in professional soccer players",
-          "AJR Am J Roentgenol."
+          "Quadriceps strength LSI \u226590%",
+          "Single-leg hop test LSI \u226590%",
+          "Full sprint and kicking without pain",
+          "Return to full training cleared by sports physician"
         ],
         "exercises": [
           {
@@ -27559,25 +26485,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -27629,7 +26536,11 @@
           "Rule out piriformis involvement \u2014 sciatic nerve irritation possible",
           "PRICE protocol \u00d7 48\u201372 hours"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Pain \u22643/10 with walking",
+          "Gluteal palpation tenderness reducing",
+          "Ready for progressive strengthening"
+        ],
         "exercises": [
           {
             "exercise_ref": "price_protocol",
@@ -27724,7 +26635,11 @@
           "Monitor for piriformis syndrome \u2014 seated pain and sciatic radiation",
           "24-hour pain rule \u2014 guide load progression"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Single-leg bridge \u00d7 20 without pain",
+          "Jogging pain-free \u2014 flat surface",
+          "Ready for sport-specific loading"
+        ],
         "exercises": [
           {
             "exercise_ref": "glute_bridge",
@@ -27853,10 +26768,8 @@
           "Monitor for proximal hamstring tendinopathy as secondary sequela"
         ],
         "criteria_to_progress": [
-          "Hip pathology in the athletic population",
-          "J Bone Joint Surg Am.",
-          "Low load exercises targeting the gluteal muscle group",
-          "J Strength Cond Res."
+          "Single-leg hop test LSI \u226590%",
+          "Full sprint and sport demands without pain"
         ],
         "exercises": [
           {
@@ -27949,25 +26862,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -28051,7 +26945,12 @@
           "Rule out relative energy deficiency in sport (RED-S) \u2014",
           "Bone stress index screening: DEXA scan, blood panel (Vit"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "Pain-free with all daily weight-bearing activities",
+          "No tibial pain with hop test (when clinically ready)",
+          "MRI or CT healing evidence (if initial imaging taken)",
+          "Predisposing factors identified and addressed"
+        ],
         "exercises": [
           {
             "exercise_ref": "deep_water_running",
@@ -28161,7 +27060,12 @@
           "Avoid hard surfaces initially \u2014 track or treadmill preferred",
           "Avoid back-to-back running days until 30 min continuous running tolerated"
         ],
-        "criteria_to_progress": [],
+        "criteria_to_progress": [
+          "30 min continuous walking pain-free",
+          "20 min continuous running pain-free on flat surface",
+          "No tibial pain during or 24 hours after running sessions",
+          "Ready for structured run program"
+        ],
         "exercises": [
           {
             "exercise_ref": "walking_program",
@@ -28254,11 +27158,10 @@
           "Gradual surface progression: track \u2192 road \u2192 trail"
         ],
         "criteria_to_progress": [
-          "Tibial stress fractures in runners",
-          "Med Sci Sports Exerc.",
-          "J Strength Cond Res.",
-          "The relationship between lower extremity stress fractures and running mechanics",
-          "Clin Biomech."
+          "Running full training volume without tibial pain",
+          "Competition/race completed without pain",
+          "Bone health factors addressed \u2014 nutrition and load management plan in place",
+          "Running gait optimised \u2014 cadence and foot strike corrected"
         ],
         "exercises": [
           {
@@ -28301,25 +27204,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -28597,11 +27481,7 @@
         "criteria_to_progress": [
           "Running 45 min at race pace without pain",
           "Hop test LSI \u226590%",
-          "Full sport-specific demands met without tibial symptoms",
-          "The diagnosis and treatment of medial tibial stress syndrome",
-          "Exercise-related leg pain in female collegiate athletes",
-          "J Athl Train.",
-          "Risk factors for medial tibial stress syndrome in physically active individuals"
+          "Full sport-specific demands met without tibial symptoms"
         ],
         "exercises": [
           {
@@ -28690,25 +27570,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -29033,10 +27894,7 @@
         "criteria_to_progress": [
           "Running 30 min pain-free",
           "Hop test LSI \u226590%",
-          "Full sport-specific demands without groin or hip pain",
-          "Sports Health.",
-          "Med Sci Sports Exerc.",
-          "Femoral stress fractures"
+          "Full sport-specific demands without groin or hip pain"
         ],
         "exercises": [
           {
@@ -29104,25 +27962,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -29411,8 +28250,7 @@
         "criteria_to_progress": [
           "Pec major strength \u226590% symmetry",
           "Full bench press with sport-specific load pain-free",
-          "Sport-specific demands met without pain or weakness",
-          "J Shoulder Elbow Surg."
+          "Sport-specific demands met without pain or weakness"
         ],
         "exercises": [
           {
@@ -29516,25 +28354,6 @@
             "Increase rest"
           ]
         }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
-        }
       }
     ]
   },
@@ -29588,7 +28407,8 @@
         "criteria_to_progress": [
           "Wound healed, sutures removed",
           "Elbow AROM: 30\u2013130\u00b0 (within surgeon guidelines)",
-          "No neurovascular complications"
+          "No neurovascular complications",
+          "Surgeon clearance for progressive loading at 6-week review"
         ],
         "exercises": [
           {
@@ -29807,13 +28627,7 @@
         "criteria_to_progress": [
           "Biceps strength LSI \u226590% (dynamometer)",
           "Supination strength \u226590% symmetry",
-          "Heavy lifting and sport-specific demands pain-free",
-          "Endobutton repair of distal biceps tendon ruptures",
-          "J Shoulder Elbow Surg.",
-          "Distal biceps tendon rupture",
-          "Elbow strength and endurance in patients with a ruptured distal biceps tendon",
-          "Surgical repair of distal biceps tendon rupture in athletes",
-          "Knee Surg Sports Traumatol Arthrosc."
+          "Heavy lifting and sport-specific demands pain-free"
         ],
         "exercises": [
           {
@@ -30184,10 +28998,7 @@
         "criteria_to_progress": [
           "Triceps strength LSI \u226590%",
           "Throwing or pressing to full sport demand without pain",
-          "Running and sport-specific test pain-free",
-          "Am Fam Physician.",
-          "Triceps tendon ruptures",
-          "A treatment algorithm for managing Achilles tendinopathy: new treatment options"
+          "Running and sport-specific test pain-free"
         ],
         "exercises": [
           {
@@ -30302,25 +29113,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -30550,10 +29342,7 @@
         "criteria_to_progress": [
           "Full sport participation without heel pain",
           "Normal calf flexibility and strength",
-          "Family educated on load management and recurrence prevention",
-          "J Am Podiatr Med Assoc.",
-          "Heel pain in children: a practical approach",
-          "Paediatrics."
+          "Family educated on load management and recurrence prevention"
         ],
         "exercises": [
           {
@@ -30638,25 +29427,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -30908,12 +29678,7 @@
         "criteria_to_progress": [
           "Full pitching at game speed and distance without pain",
           "Rotator cuff strength symmetry maintained",
-          "Pitch count limits being respected",
-          "Guthrie Clin Bull.",
-          "Physeal injuries of the proximal humerus",
-          "Med Sci Sports Exerc.",
-          "Official pitch count guidelines for youth baseball.",
-          "Risk of serious injury for young baseball pitchers"
+          "Pitch count limits being respected"
         ],
         "exercises": [
           {
@@ -30979,25 +29744,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -31245,13 +29991,7 @@
         "criteria_to_progress": [
           "Full sport training and match participation without pain",
           "Plyometric and agility demands met",
-          "Family understands recurrence risk and self-management strategies",
-          "Curr Opin Pediatr.",
-          "Magnetic resonance imaging of Osgood-Schlatter disease",
-          "Skeletal Radiol.",
-          "Osgood-Schlatter disease: a 2020 update of a common knee condition in children",
-          "Osgood-Schlatter disease",
-          "StatPearls."
+          "Family understands recurrence risk and self-management strategies"
         ],
         "exercises": [
           {
@@ -31295,25 +30035,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -31561,14 +30282,7 @@
         "criteria_to_progress": [
           "Full unrestricted sport training and competition",
           "Patellar pole non-tender",
-          "Athlete and family confident in self-management",
-          "Acta Radiol.",
-          "En f\u00f6rut icke beskriven sjukdom i patella",
-          "Hygiea.",
-          "Osgood Schlatter syndrome",
-          "Curr Opin Pediatr.",
-          "Injuries and conditions of the extensor mechanism of the paediatric knee",
-          "Radiographics."
+          "Athlete and family confident in self-management"
         ],
         "exercises": [
           {
@@ -31626,25 +30340,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -31842,7 +30537,8 @@
         ],
         "criteria_to_progress": [
           "Hip ROM: abduction \u226540\u00b0, flexion \u2265120\u00b0",
-          "Trendelenburg gait resolved or significantly improved"
+          "Trendelenburg gait resolved or significantly improved",
+          "Femoral head shape adequate on X-ray review"
         ],
         "exercises": [
           {
@@ -31940,10 +30636,7 @@
         ],
         "criteria_to_progress": [
           "Hip strength and ROM optimised for residual deformity",
-          "Child and family understand long-term monitoring requirements",
-          "J Bone Joint Surg Am.",
-          "Perthes disease: conservative treatment",
-          "Management of Perthes disease"
+          "Child and family understand long-term monitoring requirements"
         ],
         "exercises": [
           {
@@ -31988,25 +30681,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -32230,12 +30904,7 @@
         "criteria_to_progress": [
           "Tibialis anterior \u22654/5 MRC (ideally 5/5)",
           "Safe walking and running without AFO",
-          "Return to functional work and sport demands",
-          "Neurol Sci.",
-          "The foot drop",
-          "Semin Musculoskelet Radiol.",
-          "Peroneal nerve palsy after total knee arthroplasty",
-          "Neurology."
+          "Return to functional work and sport demands"
         ],
         "exercises": [
           {
@@ -32331,25 +31000,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -32624,11 +31274,7 @@
           "Return to functional work and recreational activities",
           "Pain \u22643/10 with all daily demands",
           "Independent self-management program in place",
-          "Psychological wellbeing maintained",
-          "Graded motor imagery is effective for long-standing complex regional pain syndrome",
-          "J Pain Res.",
-          "Mechanisms-based classifications of musculoskeletal pain",
-          "Interventions for treating pain and disability in adults with complex regional pain syndrome"
+          "Psychological wellbeing maintained"
         ],
         "exercises": [
           {
@@ -32696,25 +31342,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -32822,7 +31449,7 @@
               "duration_sec": null,
               "frequency_per_week": null,
               "exercise_type": "hold",
-              "raw": "min)"
+              "raw": "Until resolved"
             },
             "tags": [],
             "clinical_cue_override": null
@@ -32943,12 +31570,7 @@
           "Full contact practice completed without symptoms",
           "Cervical and shoulder strength maintained",
           "Recurrence prevention program in place",
-          "Physician clearance for return to competition",
-          "Phys Med Rehabil Clin N Am.",
-          "Neuropraxia of the cervical spinal cord with transient quadriplegia",
-          "J Bone Joint Surg Am.",
-          "Burners: a preventable injury in contact sports",
-          "Burners and stingers"
+          "Physician clearance for return to competition"
         ],
         "exercises": [
           {
@@ -33008,25 +31630,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -33311,12 +31914,7 @@
         "criteria_to_progress": [
           "Thoracic kyphosis angle improved or stabilised",
           "Pain-free with all daily and sport demands",
-          "Independent maintenance program adhered to",
-          "Mayo Clin Proc.",
-          "Exercise to reduce hyperkyphosis in older women",
-          "Am J Public Health.",
-          "Postural correction for thoracic kyphosis in older adults",
-          "Arch Phys Med Rehabil."
+          "Independent maintenance program adhered to"
         ],
         "exercises": [
           {
@@ -33343,25 +31941,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]
@@ -33653,14 +32232,7 @@
           "Full pain-free jaw opening \u226540 mm maintained",
           "Eating all food textures without restriction",
           "Independent self-management program in place",
-          "Stress and bruxism management strategies implemented",
-          "J Craniomandib Disord.",
-          "Diagnosis and treatment of temporomandibular disorders",
-          "Am Fam Physician.",
-          "J Oral Rehabil.",
-          "Effectiveness of manual therapy and therapeutic exercise for temporomandibular disorders",
-          "Myofascial temporomandibular disorder",
-          "Curr Rheumatol Rev."
+          "Stress and bruxism management strategies implemented"
         ],
         "exercises": [
           {
@@ -33739,25 +32311,6 @@
             "Reduce load",
             "Increase rest"
           ]
-        }
-      },
-      {
-        "phase_number": 4,
-        "title": "Phase 4: Long-term Maintenance & Return to Sport",
-        "timing": "Ongoing",
-        "goals": [
-          "Maintain full strength and mobility",
-          "Safe return to full activity"
-        ],
-        "precautions": [
-          "Monitor for any recurrence of symptoms"
-        ],
-        "criteria_to_progress": [],
-        "exercises": [],
-        "progression_logic": {
-          "rpe_target": 8,
-          "load_progression": "Maintenance",
-          "regression_options": []
         }
       }
     ]

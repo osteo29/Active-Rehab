@@ -2260,8 +2260,8 @@
   },
   {
     "id": "progression",
-    "canonical_name": "Progression",
-    "clinical_cue": "Typing, gripping, writing with wrist neutral — ergonomic technique Median Nerve Mobilisation",
+    "canonical_name": "Functional Task Progression",
+    "clinical_cue": "Typing, gripping, writing with wrist neutral — ergonomic technique",
     "default_tags": [
       "strength"
     ],
@@ -4338,8 +4338,7 @@
   },
   {
     "id": "progressive_sessions",
-    "canonical_name": "Progressive sessions",
-    "clinical_cue": "7: full sprint",
+    "canonical_name": "Sprint Progression (60% → 100%)",
     "default_tags": [],
     "status": "validated"
   },
@@ -5531,7 +5530,7 @@
   },
   {
     "id": "movements",
-    "canonical_name": "Movements",
+    "canonical_name": "Graded Motor Imagery — Imagined Movements",
     "clinical_cue": "Stage 2 GMI — mentally rehearse painfree movement without physical movement",
     "default_tags": [],
     "status": "validated"
@@ -5545,7 +5544,7 @@
   },
   {
     "id": "desensitisation",
-    "canonical_name": "Desensitisation",
+    "canonical_name": "Desensitisation (graded textures)",
     "clinical_cue": "Cotton wool to washcloth to towel to brush — progressive tactile stimulation",
     "default_tags": [],
     "status": "validated"
@@ -5636,8 +5635,8 @@
   },
   {
     "id": "rest_from_contact_if_symptoms_15",
-    "canonical_name": "Rest from Contact (if symptoms >15",
-    "clinical_cue": "Until resolved Protect recovering neural structures — modified training only",
+    "canonical_name": "Rest from Contact (if symptoms >15 min)",
+    "clinical_cue": "Protect recovering neural structures — modified training only",
     "default_tags": [],
     "status": "validated"
   },
