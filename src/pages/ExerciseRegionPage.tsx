@@ -15,6 +15,7 @@ import {
   EXERCISE_FINDER_STATIC_ARABIC_LABELS,
   EXERCISE_FINDER_STATIC_LABELS,
   EXERCISE_FINDER_STATIC_SLUGS,
+  STATIC_GROUP_MUSCLES,
 } from '../components/common/exercise-finder/constants';
 import {TrainingSystemCard} from '../components/common/exercise-finder/TrainingSystemCard';
 import {WeeklyPlanCard} from '../components/common/exercise-finder/WeeklyPlanCard';
@@ -113,7 +114,10 @@ export default function ExerciseRegionPage() {
 
   const label = isAr ? EXERCISE_FINDER_STATIC_ARABIC_LABELS[region] : EXERCISE_FINDER_STATIC_LABELS[region];
   const content = REGION_CONTENT[region];
-  const exercises = catalogExercises.filter((exercise) => exercise.region === region);
+  const regionMuscles = STATIC_GROUP_MUSCLES[region];
+  const exercises = catalogExercises.filter(
+    (exercise) => exercise.region === region || regionMuscles.includes(exercise.mainMuscle),
+  );
   const systems = getSystemsForRegion(region).slice(0, 3);
   const visibleRelatedInjuries = relatedInjuries.length ? relatedInjuries : fallbackRelatedInjuries;
   const showRegionProtocols = regionProtocolLinks.length > 0 && !(rehabConfig && visibleRelatedInjuries.length > 0);
