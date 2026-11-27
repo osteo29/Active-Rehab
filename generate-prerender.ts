@@ -236,9 +236,10 @@ function writeRootShell() {
     <main class="seo-shell" dir="ltr">
       <span class="eyebrow">Active Rehab</span>
       <h1>Active Rehab</h1>
-      <p class="muted">Choose your preferred language to continue to the main site sections.</p>
+      <p class="muted">An educational physical therapy and clinical nutrition platform: staged injury rehab protocols, health calculators, and bilingual articles.</p>
+      <p class="muted" dir="rtl" lang="ar">منصة تعليمية للعلاج الطبيعي والتغذية العلاجية: بروتوكولات تأهيل للإصابات، وحاسبات صحية، ومقالات باللغتين.</p>
       <section class="card">
-        <h2>Choose a language</h2>
+        <h2>Choose a language / اختر اللغة</h2>
         <ul class="link-list">
           <li><a href="/en/">English</a></li>
           <li><a href="/ar/">العربية</a></li>
@@ -251,7 +252,7 @@ function writeRootShell() {
     replaceMeta(
       template,
       'Active Rehab',
-      'Language gateway for the Active Rehab website.',
+      'Educational physical therapy and clinical nutrition platform: injury rehab protocols, health calculators, and bilingual articles. منصة تعليمية للعلاج الطبيعي والتغذية.',
       canonical,
       'en',
       false,

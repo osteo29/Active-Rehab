@@ -68,6 +68,52 @@ export const getArticles = (lang: Language): Article[] => {
         icon: 'Moon',
       },
       {
+        id: 15,
+        slug: 'smart-warm-up-performance-and-injury-prevention',
+        title: 'الإحماء الذكي: لماذا يهم وكيف تؤديه بطريقة صحيحة؟',
+        excerpt:
+          'الإحماء ليس مجرد عادة قبل التمرين. الأبحاث تشير إلى أنه يحسن الأداء، والبرامج المنظمة للإحماء تقلل خطر الإصابة. إليك ما يحدث داخل جسمك وكيف تبني إحماء عمليًا.',
+        content: `كثير من الناس يتعاملون مع الإحماء كخطوة شكلية: دقيقتان على المشاية ثم مباشرة إلى الحديد. لكن الإحماء له أساس علمي حقيقي، وبناؤه بطريقة صحيحة يصنع فرقًا ملموسًا في الأداء وفي تقليل خطر الإصابة.
+
+## ماذا يحدث داخل الجسم أثناء الإحماء؟
+عندما تبدأ الحركة التدريجية، يحدث عدد من التغيرات المفيدة:
+* ترتفع درجة حرارة العضلات، وهذا يحسن سرعة العمليات الأيضية داخلها وكفاءة انقباضها.
+* يزداد تدفق الدم إلى العضلات العاملة، فيصل الأكسجين بشكل أفضل.
+* تتحسن سرعة توصيل الإشارات العصبية، فيصبح التنسيق بين العصب والعضلة أنعم.
+* تزداد مرونة الأوتار والأنسجة المحيطة بالمفاصل مع الحرارة، فتتحمل الحركة بشكل أفضل.
+
+مراجعة شاملة نُشرت في مجلة القوة والتكيين وجدت أن الإحماء يحسن الأداء في الغالبية العظمى من الدراسات التي فحصته، سواء في السرعة أو القوة أو التحمل.
+
+## هل يقلل الإحماء خطر الإصابة فعلًا؟
+الإجابة المختصرة: نعم، خاصة عندما يكون منظمًا. برامج الإحماء العصبي العضلي، وهي برامج قصيرة تجمع بين التوازن والتحكم في الحركة وتمارين الهبوط الصحيح، أظهرت في المراجعات العلمية قدرة واضحة على تقليل إصابات الأطراف السفلية، خصوصًا عند الشباب والرياضيين. هذه البرامج لا تحتاج معدات، وتستغرق عادة من عشر إلى خمس عشرة دقيقة.
+
+الفكرة ببساطة أن الإحماء الجيد لا يسخّن العضلة فقط، بل يجهز الجهاز العصبي والمفاصل لأنماط الحركة القادمة.
+
+## ماذا عن الإطالات الثابتة قبل التمرين؟
+هنا تغيرت النظرة خلال السنوات الأخيرة. الدراسات التي فحصت الإطالة الثابتة الطويلة، مثل تثبيت وضعية إطالة ثلاثين ثانية أو أكثر قبل مجهود قوي مباشرة، وجدت أنها قد تقلل القوة والقدرة الانفجارية مؤقتًا. لذلك الاتجاه الحالي قبل التمرين هو:
+* الإطالات الديناميكية: حركات متكررة عبر مدى حركي كامل مثل أرجحة الساق أو فتح الحوض.
+* ترك الإطالات الثابتة الطويلة لما بعد التمرين أو في جلسات منفصلة، حيث تظل مفيدة للمرونة.
+
+## كيف تبني إحماء عمليًا؟
+هيكل بسيط يناسب أغلب التمارين:
+* البداية العامة: خمس دقائق من حركة خفيفة ترفع النبض ودرجة حرارة الجسم، مثل المشي السريع أو الدراجة.
+* التنشيط الديناميكي: حركات تشبه ما ستقوم به في التمرين، بمدى حركي يتسع تدريجيًا.
+* التدرج نحو الحمل: إذا كان تمرينك بالأوزان، ابدأ الحركة نفسها بوزن خفيف جدًا ثم زد تدريجيًا حتى وزنك التدريبي.
+
+القاعدة الذهبية: الإحماء يجهزك للتمرين الذي أمامك، وليس تمرينًا منفصلًا بحد ذاته.
+
+## علامات إحماء كافٍ
+* ارتفاع بسيط في معدل النبض وتنفس أسرع قليلًا.
+* إحساس بالدفء أو تعرق خفيف.
+* شعور أن المفاصل تتحرك بحرية في المدى المطلوب.
+
+## الخلاصة
+الإحماء استثمار صغير بعائد كبير: أداء أفضل واستعداد عصبي وعضلي أعلى وخطر إصابة أقل، خصوصًا مع البرامج المنظمة. عشر إلى خمس عشرة دقيقة ذكية قبل التمرين تستحق مكانها في كل جلسة، والإطالات الديناميكية قبل التمرين والثابتة بعده هي التوزيع الأنسب لأغلب الناس.`,
+        category: 'Training Basics',
+        date: '2026-11-26',
+        icon: 'Flame',
+      },
+      {
         id: 14,
         slug: 'muscle-soreness-after-workout-doms',
         title: 'ألم العضلات بعد التمرين: ما هو الـ DOMS وما الذي يساعد فعلًا؟',
@@ -899,6 +945,51 @@ Sleep is not a luxury and not wasted time; it is the phase where training turns 
       icon: 'Moon',
     },
     {
+      id: 15,
+      slug: 'smart-warm-up-performance-and-injury-prevention',
+      title: 'The smart warm-up: why it matters and how to do it right',
+      excerpt:
+        'A warm-up is not just a ritual before training. Research shows it improves performance, and structured warm-up programs reduce injury risk. Here is what happens inside your body and how to build a practical one.',
+      content: `Many people treat the warm-up as a formality: two minutes on the treadmill, then straight to the weights. But warming up has real science behind it, and building it properly makes a measurable difference in both performance and injury risk.
+
+## What happens inside the body during a warm-up?
+When you start moving gradually, several useful changes take place:
+* Muscle temperature rises, which improves the speed of metabolic processes inside the muscle and the efficiency of its contraction.
+* Blood flow to the working muscles increases, delivering oxygen more effectively.
+* Nerve signal conduction speeds up, smoothing the coordination between nerve and muscle.
+* Tendons and the tissues around the joints become more pliable with warmth, handling movement better.
+
+A comprehensive review published in the Journal of Strength and Conditioning Research found that warming up improved performance in the large majority of outcomes studied, across speed, strength, and endurance tasks.
+
+## Does warming up actually reduce injury risk?
+The short answer: yes, especially when it is structured. Neuromuscular warm-up programs, short routines that combine balance, movement control, and proper landing mechanics, have shown a clear ability in scientific reviews to reduce lower-limb injuries, particularly in youth and team-sport athletes. These programs need no equipment and usually take ten to fifteen minutes.
+
+The idea is simple: a good warm-up does not just heat the muscle, it prepares the nervous system and the joints for the movement patterns ahead.
+
+## What about static stretching before a workout?
+This is where the picture has shifted in recent years. Studies examining long static stretches, holding a stretch for thirty seconds or more right before a strong effort, found they can temporarily reduce strength and explosive power. So the current direction before training is:
+* Dynamic stretching: repeated movements through a full range of motion, like leg swings or hip openers.
+* Keeping long static stretches for after the workout or in separate sessions, where they remain useful for flexibility.
+
+## How do you build a practical warm-up?
+A simple structure that fits most sessions:
+* General start: five minutes of light movement that raises your heart rate and body temperature, like brisk walking or an easy bike.
+* Dynamic activation: movements that resemble what you are about to train, with a range of motion that grows gradually.
+* Ramp toward the load: if you are lifting, perform the movement itself with a very light weight first, then build up gradually to your working weight.
+
+The golden rule: the warm-up prepares you for the session in front of you, it is not a workout of its own.
+
+## Signs your warm-up was enough
+* A slight rise in heart rate and slightly faster breathing.
+* A feeling of warmth or light sweating.
+* A sense that your joints move freely through the range you need.
+
+## The takeaway
+A warm-up is a small investment with a big return: better performance, higher neuromuscular readiness, and lower injury risk, especially with structured programs. Ten to fifteen smart minutes before training earns its place in every session, and dynamic stretching before with static stretching after is the right split for most people.`,
+      category: 'Training Basics',
+      date: '2026-11-26',
+      icon: 'Flame',
+    },    {
       id: 14,
       slug: 'muscle-soreness-after-workout-doms',
       title: 'Muscle soreness after a workout: what DOMS means and what actually helps',
